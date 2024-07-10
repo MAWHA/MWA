@@ -1,0 +1,55 @@
+{
+    "drink":{
+        "next":[
+            "huipo",
+            "water"
+        ]
+    },
+    "huipo":{
+        "recognition":"OCR",
+        "expected":"剩余购买次数",
+        "roi":[
+            280, 485, 218, 52
+        ],
+        "action":"Click",
+        "target":[
+            615, 75, 0, 0
+        ],
+        "next":"quit_fork"
+    },
+    "water":{
+        "recognition":"OCR",
+        "expected":"药剂",
+        "roi":[
+            244, 132, 130, 36
+        ],
+        "action":"Click",
+        "next":[
+            "sub_2daywater",
+            "quit_fork"
+        ]
+    },
+    "sub_2daywater":{
+        "recognition":"TemplateMatch",
+        "template":"dst/2day.png",
+        "threshold":0.85,
+        "action":"Click",
+        "target_offset":[
+            -10, 35, 0, 0
+        ],
+        "next":[
+            "sub_drink",
+            "quit_fork"
+        ]
+    },
+    "sub_drink":{
+        "recognition":"TemplateMatch",
+        "template":"Collect/04.png",
+        "action":"Click"
+    },
+    "quit_fork":{
+        "recognition":"TemplateMatch",
+        "template":"dst/fork.png",
+        "action":"Click"
+    }
+}

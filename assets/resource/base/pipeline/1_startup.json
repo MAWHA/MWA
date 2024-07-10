@@ -1,0 +1,89 @@
+{
+    "StartUp": {
+        "next": [
+            "Sub_StartWuhua",
+            "Sub_CloseAnnouncement",
+            "Sub_StartGame",
+            "Sub_AccumulatedSignIn",
+            "Sub_AccumulatedSignInExit",
+            "Sub_StartUp"
+        ]
+    },
+    "Sub_StartUp": {
+        "next": [
+            "StartUp"
+        ]
+    },
+    "Sub_StartWuhua": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
+        "post_wait_freezes":10000,
+        "next":[
+            "update",
+            "Sub_CloseAnnouncement"
+        ]
+    },
+    "update":{
+        "recognition":"OCR",
+        "expected":"终端数据更新",
+        "roi":[
+            403, 249, 474, 111
+        ],
+        "action":"Click",
+        "post_wait_freezes":7000,
+        "target":[
+            765, 430, 0, 0
+        ],
+        "next":[
+        ]
+    },
+    "Sub_CloseAnnouncement":{
+        "is_sub": true,
+        "recognition":"TemplateMatch",
+        "template": "Startup/announcement_outer.png",
+        "action": "Click",
+        "next":[
+            "Sub_StartGame"
+        ]
+    },
+    "Sub_StartGame":{
+        "is_sub": true,
+        "recognition":"OCR",
+        "expected":"抵制不良游戏",
+        "action":"Click",
+        "next":[
+            "Sub_AccumulatedSignIn"
+        ]
+    },
+    "Sub_AccumulatedSignIn":{
+        "is_sub": true,
+        "post_delay":10000,
+        "next":[
+            "Sub_GetResource",
+            "Sub_AccumulatedSignInExit",
+            "stop"
+        ]
+    },
+    "stop":{
+        "action":"StopTask"
+    },
+    "Sub_AccumulatedSignInExit":{
+        "is_sub": true,
+        "recognition":"TemplateMatch",
+        "template":"Startup/AccumulatedSignInExit.png",
+        "action":"Click"
+    },
+    "Sub_GetResource":{
+        "is_sub": true,
+        "recognition":"OCR",
+        "expected":"获得物资",
+        "action":"Click",
+        "next":[
+            "DoubleClick"
+        ]
+    },
+    "DoubleClick":{
+        "action":"Click"
+    }
+}

@@ -3,73 +3,306 @@
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "method": "Search",
-                "class_name": ".*",
-                "window_name": "Visual Studio"
-            }
         }
     ],
     "resource": [
         {
-            "name": "官服",
-            "path": [
-                "{PROJECT_DIR}/resource/base"
-            ]
-        },
-        {
             "name": "B 服",
             "path": [
-                "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/resource/bilibili"
+                "{PROJECT_DIR}/resource/base"
             ]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "启动",
+            "entry": "StartUp"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
+            "name": "器者征集",
+            "entry": "Collect_operators"
+        }, 
+        {
+            "name": "派遣公司",
+            "entry": "pqgs"
+        }, 
+        {
+            "name": "每日免费礼包",
+            "entry": "business_kiosk"
+        },
+        {
+            "name": "易物所",
+            "entry": "Barter_random"
+        },  
+        {
+            "name": "在主界面喝一瓶2天内过期的水（需要喝水请选择，无需则无视，注意！目前仅支持还剩两天就过期的水）",
+            "entry": "drink_a_2day_water"
+        },  
+        {
+            "name": "演训",
+            "entry": "kaishi",
             "option": [
-                "任务选项1"
+                "选择关卡",
+                "打哪个",
+                "打几次"
             ]
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
+            "name": "资源",
+            "entry": "resource_all",
             "option": [
-                "任务选项1"
-            ],
-            "param": {}
+                "选择关卡",
+                "打哪个",
+                "打几次"
+            ]
+        },
+        {
+            "name": "领取日常(包括游历)",
+            "entry": "task1"
+        },
+        {
+            "name": "邮箱",
+            "entry": "Mail"
         }
     ],
     "option": {
-        "任务选项1": {
+        "选择关卡": {
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "冬谷币（演训用）",
                     "param": {
-                        "OcrTask": {
-                            "text": "文本1"
+                        "StartTraining": {
+                            "next": "Cash"
                         }
                     }
                 },
                 {
-                    "name": "文本2",
+                    "name": "教材（演训用）",
                     "param": {
-                        "OcrTask": {
-                            "text": "文本2"
+                        "StartTraining": {
+                            "next": "Experience"
+                        }
+                    }
+                },
+                {
+                    "name": "装备（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "Weapon"
+                        }
+                    }
+                },
+                {
+                    "name": "宿卫（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "Defender"
+                        }
+                    }
+                },
+                {
+                    "name": "构术（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "Caster"
+                        }
+                    }
+                },
+                {
+                    "name": "远击（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "Ranger"
+                        }
+                    }
+                },
+                {
+                    "name": "轻锐（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "LightMelee"
+                        }
+                    }
+                },
+                {
+                    "name": "战略（演训用）",
+                    "param": {
+                        "StartTraining": {
+                            "next": "Tactical"
+                        }
+                    }
+                },
+                {
+                    "name": "第一章（资源用）",
+                    "param": {
+                        "resource_all": {
+                            "next": "resource_one"
+                        }
+                    }
+                },
+                {
+                    "name": "第二章（资源用）",
+                    "param": {
+                        "resource_all": {
+                            "next": "resource_two"
+                        }
+                    }
+                },
+                {
+                    "name": "第三章（资源用）",
+                    "param": {
+                        "resource_all": {
+                            "next": "resource_three"
+                        }
+                    }
+                },
+                {
+                    "name": "第四章（资源用）",
+                    "param": {
+                        "resource_all": {
+                            "next": "resource_four"
+                        }
+                    }
+                },
+                {
+                    "name": "第五章（资源用）",
+                    "param": {
+                        "resource_all": {
+                            "next": "resource_five"
+                        }
+                    }
+                }           
+            ]
+        },
+        "打哪个":{
+            "cases":[
+                {
+                    "name":"第一关（子）（演训用）",
+                    "param":{
+                        "xuanze":{
+                            "next":"SelectStage01"
+                        }
+                    }
+                },
+                {
+                    "name":"第二关（丑）（演训用）",
+                    "param":{
+                        "xuanze":{
+                            "next":"SelectStage02"
+                        }
+                    }
+                },
+                {
+                    "name":"第三关（寅）（演训用）",
+                    "param":{
+                        "xuanze":{
+                            "next":"SelectStage03"
+                        }
+                    }
+                },
+                {
+                    "name":"第四关（卯）（演训用）",
+                    "param":{
+                        "xuanze":{
+                            "next":"SelectStage04"
+                        }
+                    }
+                },
+                {
+                    "name":"第五关（辰）（演训用）",
+                    "param":{
+                        "xuanze":{
+                            "next":"SelectStage05"
+                        }
+                    }
+                },
+                {
+                    "name":"第一关（壹）（资源用）",
+                    "param":{
+                        "resource":{
+                            "next":"ancient_both_sea_cantonese_often1"
+                        }
+                    }
+                },
+                {
+                    "name":"第二关（贰）（资源用）",
+                    "param":{
+                        "resource":{
+                            "next":"ancient_both_sea_cantonese_often2"
+                        }
+                    }
+                },
+                {
+                    "name":"第三关（叁）（资源用）",
+                    "param":{
+                        "resource":{
+                            "next":"ancient_both_sea_cantonese_often3"
+                        }
+                    }
+                },
+                {
+                    "name":"第四关（肆）（资源用）",
+                    "param":{
+                        "resource":{
+                            "next":"ancient_both_sea_cantonese_often4"
+                        }
+                    }
+                },
+                {
+                    "name":"第五关（伍）（资源用）",
+                    "param":{
+                        "resource":{
+                            "next":"ancient_both_sea_cantonese_often5"
+                        }
+                    }
+                }
+            ]
+        },
+        "打几次":{
+            "cases":[
+                {
+                    "name":"打一次（速通没解锁专用）",
+                    "param":{
+                        "fast":{
+                            "next":"Start1"
+                        }
+                    }
+                },
+                {
+                    "name":"打一次（速通解锁专用）",
+                    "param":{
+                        "fast":{
+                            "next":"Speedrun1x"
+                        }
+                    }
+                },
+                {
+                    "name":"打两次（速通解锁专用）",
+                    "param":{
+                        "fast":{
+                            "next":"Speedrun2x"
+                        }
+                    }
+                },
+                {
+                    "name":"打四次（速通解锁专用）",
+                    "param":{
+                        "fast":{
+                            "next":"Speedrun4x"
+                        }
+                    }
+                },
+                {
+                    "name":"打十次（速通解锁专用）",
+                    "param":{
+                        "fast":{
+                            "next":"Speedrun10x"
                         }
                     }
                 }
             ]
         }
-    }
+    },
+    
+    "version": "v0.0.1"
 }
