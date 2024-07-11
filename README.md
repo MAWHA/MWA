@@ -26,7 +26,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 - [📄教程文档](https://github.com/MAWHA/MWA/blob/main/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
 - [🎞️视频教程]()暂未更新
 
-## 下载：https://github.com/MAWHA/MWA/releases/
+## [下载](https://github.com/MAWHA/MWA/releases/)
 
 0. 使用win的，无论是au  or  iu，请下载后缀为“x86_64”的，苏菲平板请下载后缀为“aarch64”的。
 
