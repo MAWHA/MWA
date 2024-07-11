@@ -1,15 +1,17 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
-  <img alt="LOGO" src="https://github.com/MAWHA/.github/blob/main/logo" width="256" height="256" />
+  <img alt="LOGO" src="https://github.com/MAWHA/.github/blob/main/logo.png" width="256" height="256" />
 </p>
 
 <div align="center">
 
-# MWA  （欢迎各位大佬加入MWA的开发和优化）
+# MWA  
 
 MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 基于图像识别技术，一键完成全部日常任务，解放双手！
+
+（欢迎各位大佬加入MWA的开发和优化）
 
 持续更新中~
 
