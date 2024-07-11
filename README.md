@@ -24,7 +24,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 ## MWA使用教程
 
 - [📄教程文档](https://github.com/MAWHA/MWA/blob/main/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
-- [🎞️视频教程](https://www.bilibili.com/video/BV1yr421E7MW)
+- [🎞️视频教程]()暂未更新
 
 ## 下载：https://github.com/MAWHA/MWA/releases/
 
