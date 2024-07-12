@@ -42,6 +42,8 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 2. 欢迎各位大佬加入MWA的开发和优化。
 
+## [常见问题](https://github.com/MAWHA/.github/blob/main/cjwt.md)
+
 ### 参与开发
 
 #### Windows
