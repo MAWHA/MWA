@@ -97,9 +97,20 @@
         "expected":"开始征集",
         "action":"Click",
         "next":[
-            "jia"
+            "jia",
+            "no_solicitation"
         ]
     },
+    "no_solicitation":{
+        "recognition":"OCR",
+        "expected":"缺少道具",
+        "action":"Click",
+        "next":[
+            "Quit"
+        ]
+    },
+
+
     "jia":{
         "recognition":"TemplateMatch",
         "template":"Collect/03.png",
