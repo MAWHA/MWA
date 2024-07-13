@@ -30,7 +30,8 @@
         "template": "Company/hqgy.png",
         "action": "Click",
         "next": [
-            "sqgydj"
+            "sqgydj",
+            "quit"
         ]
     },
     "quit": {
