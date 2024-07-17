@@ -21,11 +21,16 @@
         {
             "name": "器者征集",
             "entry": "Collect_operators"
-        }, 
+        },
         {
             "name": "派遣公司",
-            "entry": "pqgs"
-        }, 
+            "entry": "dispatch_company_all",
+            "option": [
+                "领取资源、好感、售卖机",
+                "社教模拟仪",
+                "制造物品"
+            ]
+        },
         {
             "name": "每日免费礼包",
             "entry": "business_kiosk"
@@ -33,11 +38,11 @@
         {
             "name": "易物所",
             "entry": "Barter_random"
-        },  
+        },
         {
             "name": "在主界面喝一瓶2天内过期的水（需要喝水请选择，无需则无视，注意！目前仅支持还剩两天就过期的水）",
             "entry": "drink_a_2day_water"
-        },  
+        },
         {
             "name": "演训",
             "entry": "kaishi",
@@ -171,138 +176,284 @@
                             "next": "resource_five"
                         }
                     }
-                }           
+                }
             ]
         },
-        "打哪个":{
-            "cases":[
+        "打哪个": {
+            "cases": [
                 {
-                    "name":"第一关（子）（演训用）",
-                    "param":{
-                        "xuanze":{
-                            "next":"SelectStage01"
+                    "name": "第一关（子）（演训用）",
+                    "param": {
+                        "xuanze": {
+                            "next": "SelectStage01"
                         }
                     }
                 },
                 {
-                    "name":"第二关（丑）（演训用）",
-                    "param":{
-                        "xuanze":{
-                            "next":"SelectStage02"
+                    "name": "第二关（丑）（演训用）",
+                    "param": {
+                        "xuanze": {
+                            "next": "SelectStage02"
                         }
                     }
                 },
                 {
-                    "name":"第三关（寅）（演训用）",
-                    "param":{
-                        "xuanze":{
-                            "next":"SelectStage03"
+                    "name": "第三关（寅）（演训用）",
+                    "param": {
+                        "xuanze": {
+                            "next": "SelectStage03"
                         }
                     }
                 },
                 {
-                    "name":"第四关（卯）（演训用）",
-                    "param":{
-                        "xuanze":{
-                            "next":"SelectStage04"
+                    "name": "第四关（卯）（演训用）",
+                    "param": {
+                        "xuanze": {
+                            "next": "SelectStage04"
                         }
                     }
                 },
                 {
-                    "name":"第五关（辰）（演训用）",
-                    "param":{
-                        "xuanze":{
-                            "next":"SelectStage05"
+                    "name": "第五关（辰）（演训用）",
+                    "param": {
+                        "xuanze": {
+                            "next": "SelectStage05"
                         }
                     }
                 },
                 {
-                    "name":"第一关（壹）（资源用）",
-                    "param":{
-                        "resource":{
-                            "next":"ancient_both_sea_cantonese_often1"
+                    "name": "第一关（壹）（资源用）",
+                    "param": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often1"
                         }
                     }
                 },
                 {
-                    "name":"第二关（贰）（资源用）",
-                    "param":{
-                        "resource":{
-                            "next":"ancient_both_sea_cantonese_often2"
+                    "name": "第二关（贰）（资源用）",
+                    "param": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often2"
                         }
                     }
                 },
                 {
-                    "name":"第三关（叁）（资源用）",
-                    "param":{
-                        "resource":{
-                            "next":"ancient_both_sea_cantonese_often3"
+                    "name": "第三关（叁）（资源用）",
+                    "param": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often3"
                         }
                     }
                 },
                 {
-                    "name":"第四关（肆）（资源用）",
-                    "param":{
-                        "resource":{
-                            "next":"ancient_both_sea_cantonese_often4"
+                    "name": "第四关（肆）（资源用）",
+                    "param": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often4"
                         }
                     }
                 },
                 {
-                    "name":"第五关（伍）（资源用）",
-                    "param":{
-                        "resource":{
-                            "next":"ancient_both_sea_cantonese_often5"
+                    "name": "第五关（伍）（资源用）",
+                    "param": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often5"
                         }
                     }
                 }
             ]
         },
-        "打几次":{
-            "cases":[
+        "打几次": {
+            "cases": [
                 {
-                    "name":"打一次（速通没解锁专用）",
-                    "param":{
-                        "fast":{
-                            "next":"Start1"
+                    "name": "打一次（速通没解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "Start1"
                         }
                     }
                 },
                 {
-                    "name":"打一次（速通解锁专用）",
-                    "param":{
-                        "fast":{
-                            "next":"Speedrun1x"
+                    "name": "打一次（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "Speedrun1x"
                         }
                     }
                 },
                 {
-                    "name":"打两次（速通解锁专用）",
-                    "param":{
-                        "fast":{
-                            "next":"Speedrun2x"
+                    "name": "打两次（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "Speedrun2x"
                         }
                     }
                 },
                 {
-                    "name":"打四次（速通解锁专用）",
-                    "param":{
-                        "fast":{
-                            "next":"Speedrun4x"
+                    "name": "打四次（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "Speedrun4x"
                         }
                     }
                 },
                 {
-                    "name":"打十次（速通解锁专用）",
-                    "param":{
-                        "fast":{
-                            "next":"Speedrun10x"
+                    "name": "打十次（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "Speedrun10x"
+                        }
+                    }
+                }
+            ]
+        },
+        "领取资源、好感、售卖机": {
+            "cases": [
+                {
+                    "name": "领取奖励",
+                    "param": {
+                        "entry_dispath_one": {
+                            "name": "dispath_resources"
+                        }
+                    }
+                }
+            ]
+        },
+        "社教模拟仪": {
+            "cases": [
+                {
+                    "name": "初级社会指南",
+                    "param": {
+                        "dispath_company_collect": {
+                            "next": "dispatch_social_one"
+                        }
+                    }
+                },
+                {
+                    "name": "中级社会指南",
+                    "param": {
+                        "dispath_company_collect": {
+                            "next": "dispatch_social_tow"
+                        }
+                    }
+                },
+                {
+                    "name": "高级社会指南",
+                    "param": {
+                        "dispath_company_collect": {
+                            "next": "dispatch_social_three"
+                        }
+                    }
+                },
+                {
+                    "name": "进阶社会指南",
+                    "param": {
+                        "dispath_company_collect": {
+                            "next": "dispatch_social_four"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取",
+                    "param": {
+                        "dispath_company_collect": {
+                            "next": "dc_back"
+                        }
+                    }
+                }
+            ]
+        },
+        "制造物品": {
+            "cases": [
+                {
+                    "name": "蓝色装备",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_one"
+                        }
+                    }
+                },
+                {
+                    "name": "铜石墨条（蓝装升级）",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_tow"
+                        }
+                    }
+                },
+                {
+                    "name": "银石墨条（黄装升级）",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_three"
+                        }
+                    }
+                },
+                {
+                    "name": "100装备经验",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_four"
+                        }
+                    }
+                },
+                {
+                    "name": "1型钢材",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_five_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明1",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_six_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明2",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_seven_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "高级制造申请",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_eight_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "2型钢材",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_nine_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明3",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "fabricate_ten_Swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "不制造",
+                    "param": {
+                        "fabricate_all": {
+                            "next": "dc_back"
                         }
                     }
                 }
             ]
         }
-    },
-    
-    "version": "v0.0.1"
+    }
 }
