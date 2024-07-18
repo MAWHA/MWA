@@ -6,6 +6,7 @@
             "Sub_StartGame",
             "Sub_AccumulatedSignIn",
             "Sub_AccumulatedSignInExit",
+            "convened",
             "Sub_StartUp"
         ]
     },
@@ -19,9 +20,16 @@
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
         "post_wait_freezes": 10000,
+        "timeout": 20000,
+        "timeout_next": [
+            "update",
+            "Sub_CloseAnnouncement",
+            "convened"
+        ],
         "next": [
             "update",
-            "Sub_CloseAnnouncement"
+            "Sub_CloseAnnouncement",
+            "convened"
         ]
     },
     "update": {
@@ -35,18 +43,30 @@
         ],
         "action": "Click",
         "post_wait_freezes": 7000,
+        "timeout": 20000,
+        "timeout_next": [
+            "update",
+            "Sub_CloseAnnouncement"
+        ],
         "target": [
             765,
             430,
             0,
             0
         ],
-        "next": []
+        "next": [
+            "Sub_CloseAnnouncement"
+        ]
     },
     "Sub_CloseAnnouncement": {
         "recognition": "TemplateMatch",
         "template": "Startup/announcement_outer.png",
         "action": "Click",
+        "timeout": 20000,
+        "timeout_next": [
+            "Sub_CloseAnnouncement",
+            "Sub_StartGame"
+        ],
         "next": [
             "Sub_StartGame"
         ]
@@ -62,6 +82,13 @@
     "Sub_AccumulatedSignIn": {
         "action": "Click",
         "post_delay": 10000,
+        "timeout": 20000,
+        "timeout_next": [
+            "Sub_AccumulatedSignIn",
+            "Sub_GetResource",
+            "Sub_AccumulatedSignInExit",
+            "convened"
+        ],
         "next": [
             "Sub_GetResource",
             "Sub_AccumulatedSignInExit",
@@ -88,6 +115,8 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
+            "Sub_GetResource",
+            "Sub_AccumulatedSignInExit",
             "stop"
         ]
     },

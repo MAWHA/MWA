@@ -120,6 +120,39 @@
             480
         ],
         "next": [
+            "vitality_one",
+            "vending_machine"
+        ]
+    },
+    "vitality_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/21.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "vitality_tow"
+        ]
+    },
+    "vitality_tow": {
+        "recognition": "TemplateMatch",
+        "template": "Company/22.png",
+        "action": "Click",
+        "target": [
+            255,
+            665,
+            0,
+            0
+        ],
+        "post_wait_freezes": 3000,
+        "next": [
+            "vitality_back"
+        ]
+    },
+    "vitality_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "next": [
             "vending_machine"
         ]
     },
@@ -414,16 +447,16 @@
         ]
     },
     "fabricate_tow": {
-        "recognition": "TemplateMatch",
-        "template": "Company/12.png",
+        "recognition": "OCR",
+        "expected": "饰铜",
         "action": "Click",
         "next": [
             "fabricate_max_2"
         ]
     },
     "fabricate_three": {
-        "recognition": "TemplateMatch",
-        "template": "Company/13.png",
+        "recognition": "OCR",
+        "expected": "錾银",
         "action": "Click",
         "next": [
             "fabricate_max_2"
