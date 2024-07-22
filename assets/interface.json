@@ -68,6 +68,14 @@
         {
             "name": "邮箱",
             "entry": "Mail"
+        },
+        {
+            "name": "博物研学",
+            "entry": "museum_Research",
+            "option": [
+                "选择哪个",
+                "初始buff"
+            ]
         }
     ],
     "option": {
@@ -313,7 +321,7 @@
                     "name": "领取奖励",
                     "param": {
                         "entry_dispath_one": {
-                            "name": "dispath_resources"
+                            "next": "dispath_resources"
                         }
                     }
                 }
@@ -454,6 +462,63 @@
                     }
                 }
             ]
+        },
+        "选择哪个": {
+            "cases": [
+                {
+                    "name": "雪景寒林图",
+                    "param": {
+                        "Research": {
+                            "next": "snowscape"
+                        }
+                    }
+                },
+                {
+                    "name": "千里江山图 （暂无）",
+                    "param": {
+                        "Research": {
+                            "next": "landscape"
+                        }
+                    }
+                },
+                {
+                    "name": "溪山旅行图 （暂无）",
+                    "param": {
+                        "Research": {
+                            "next": "journey"
+                        }
+                    }
+                }
+            ]
+        },
+        "初始buff": {
+            "cases": [
+                {
+                    "name": "神射",
+                    "param": {
+                        "snowscape": {
+                            "next": "Marksmanship"
+                        }
+                    }
+                },
+                {
+                    "name": "炽刀",
+                    "param": {
+                        "snowscape": {
+                            "next": "Blazing_Knife"
+                        }
+                    }
+                },
+                {
+                    "name": "术法精通",
+                    "param": {
+                        "snowscape": {
+                            "next": "Spells"
+                        }
+                    }
+                }
+            ]
         }
-    }
+    },
+    "version": "v0.0.1"
 }

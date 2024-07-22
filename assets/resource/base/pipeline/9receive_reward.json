@@ -1,32 +1,35 @@
 {
-    "task1":{
-        "next":[
+    "task1": {
+        "next": [
             "daily1",
             "weekly1",
             "travel1",
             "mission1"
         ]
     },
-    "daily1":{
-        "recognition":"OCR",
-        "expected":"任务",
-        "roi":[
-            1149, 650, 74, 40
+    "daily1": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            1149,
+            650,
+            74,
+            40
         ],
-        "action":"Click",
-        "next":[
+        "action": "Click",
+        "next": [
             "all1",
             "receive1",
             "weekly1",
             "Quti1"
         ]
     },
-    "all1":{
-        "recognition":"OCR",
-        "expected":"全部领取",
-        "action":"Click",
-        "post_delay":5000,
-        "next":[
+    "all1": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
             "material1",
             "receive1",
             "weekly1",
@@ -34,94 +37,112 @@
             "Quti1"
         ]
     },
-    "material1":{
-        "recognition":"OCR",
-        "expected":"获得物资",
-        "action":"Click",
-        "next":[
+    "material1": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "next": [
             "weekly1",
             "Quti1"
         ]
     },
-    "weekly1":{
-        "recognition":"OCR",
-        "expected":"周常",
-        "roi":[
-            80, 310, 100, 98
+    "weekly1": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "roi": [
+            80,
+            310,
+            100,
+            98
         ],
-        "action":"Click",
-        "next":[
+        "action": "Click",
+        "next": [
             "all1",
             "material1",
             "receive1",
             "Quti1"
         ]
     },
-    "receive1":{
-        "recognition":"OCR",
-        "expected":"领取",
-        "roi":[
-            1097, 275, 69, 39
+    "receive1": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1097,
+            275,
+            69,
+            39
         ],
-        "pre_wait_freezes":3000,
-        "action":"Click",
-        "next":[
+        "pre_wait_freezes": 3000,
+        "action": "Click",
+        "next": [
             "material1",
             "weekly1",
             "Quti1"
         ]
     },
-    "travel1":{
-        "recognition":"OCR",
-        "expected":"游历",
-        "roi":[
-            773, 656, 60, 36
+    "travel1": {
+        "recognition": "OCR",
+        "expected": "游历",
+        "roi": [
+            773,
+            656,
+            60,
+            36
         ],
-        "action":"Click",
-        "next":[
+        "action": "Click",
+        "next": [
             "mission1",
             "all1",
             "Quti1"
         ]
     },
-    "mission1":{
-        "recognition":"OCR",
-        "expected":"任务",
-        "roi":[
-            29, 300, 79, 39
+    "mission1": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            29,
+            300,
+            79,
+            39
         ],
-        "action":"Click",
-        "next":[
+        "action": "Click",
+        "next": [
             "all1",
             "challenge",
             "reward1",
             "Quit"
         ]
     },
-    "challenge":{
-        "recognition":"OCR",
-        "expected":"挑战",
-        "action":"Click",
-        "next":[
+    "challenge": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "action": "Click",
+        "next": [
             "all1",
             "reward1",
             "Quti1"
         ]
     },
-    "reward1":{
-        "recognition":"OCR",
-        "expected":"奖励",
-        "action":"Click",
-        "next":[
+    "reward1": {
+        "recognition": "OCR",
+        "expected": "奖励",
+        "roi": [
+            23,
+            134,
+            97,
+            81
+        ],
+        "action": "Click",
+        "next": [
             "all1",
             "Quit"
         ]
     },
-    "Quti1":{
-        "recognition":"TemplateMatch",
-        "template":"receive_reward/02.png",
-        "action":"Click",
-        "next":[
+    "Quti1": {
+        "recognition": "TemplateMatch",
+        "template": "receive_reward/02.png",
+        "action": "Click",
+        "next": [
             "travel1",
             "mission1",
             "challenge"
