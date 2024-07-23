@@ -1,0 +1,113 @@
+{
+    "dissect_weapon": {
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1002,
+            647,
+            107,
+            50
+        ],
+        "next": [
+            "dissect_button"
+        ]
+    },
+    "dissect_button": {
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1139,
+            61,
+            117,
+            42
+        ],
+        "next": [
+            "select_tier"
+        ]
+    },
+    "select_tier": {
+        "next": [
+            "blue",
+            "red",
+            "yellow"
+        ]
+    },
+    "red": {
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            585,
+            659,
+            128,
+            51
+        ],
+        "next": [
+            "yellow"
+        ]
+    },
+    "yellow": {
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            464,
+            664,
+            118,
+            39
+        ],
+        "next": [
+            "blue"
+        ]
+    },
+    "blue": {
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            339,
+            663,
+            124,
+            41
+        ],
+        "next": [
+            "confirm"
+        ]
+    },
+    "confirm": {
+        "target": [
+            1082,
+            654,
+            128,
+            48
+        ],
+        "post_delay": 2000,
+        "action": "Click",
+        "next": [
+            "center_confirm"
+        ]
+    },
+    "center_confirm": {
+        "target": [
+            693,
+            440,
+            159,
+            54
+        ],
+        "post_delay": 2000,
+        "action": "Click",
+        "next": [
+            "exit01"
+        ]
+    },
+    "exit01": {
+        "recognition": "TemplateMatch",
+        "template": "receive_reward/01.png",
+        "action": "Click",
+        "next": [
+            "exit02"
+        ]
+    },
+    "exit02": {
+        "recognition": "TemplateMatch",
+        "template": "receive_reward/02.png",
+        "action": "Click"
+    }
+}

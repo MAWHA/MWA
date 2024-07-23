@@ -76,6 +76,13 @@
                 "选择哪个",
                 "初始buff"
             ]
+        },
+        {
+            "name":"分解装备",
+            "entry":"dissect_weapon",
+            "option":[
+                "分解的装备的最大品质"
+            ]
         }
     ],
     "option": {
@@ -514,6 +521,34 @@
                     "param": {
                         "snowscape": {
                             "next": "Spells"
+                        }
+                    }
+                }
+            ]
+        },
+        "分解的装备的最大品质":{
+            "cases":[
+                {
+                    "name":"炽级",
+                    "param":{
+                        "select_tier":{
+                            "next":"red"
+                        }
+                    }
+                },
+                {
+                    "name":"耀级",
+                    "param":{
+                        "select_tier":{
+                            "next":"yellow"
+                        }
+                    }
+                },
+                {
+                    "name":"凌级",
+                    "param":{
+                        "select_tier":{
+                            "next":"blue"
                         }
                     }
                 }
