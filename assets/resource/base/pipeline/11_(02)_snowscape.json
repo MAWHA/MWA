@@ -1117,8 +1117,8 @@
         ]
     },
     "snow_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/22.png",
+        "recognition": "OCR",
+        "expected": "林图喝茶",
         "action": "Click",
         "roi": [
             594,
