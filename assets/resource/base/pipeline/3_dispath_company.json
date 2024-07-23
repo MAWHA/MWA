@@ -196,7 +196,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/coin_flip.png",
         "action": "Click",
-        "post_wait_freezes": 3000,
+        "post_delay": 7000,
         "roi": [
             771,
             293,
@@ -208,8 +208,8 @@
         ]
     },
     "coin_flip_click_space": {
-        "recognition": "TemplateMatch",
-        "template": "Company/click_space.png",
+        "recognition": "OCR",
+        "expected": "点击空白",
         "action": "Click",
         "post_delay": 3000,
         "roi": [
@@ -456,7 +456,7 @@
     },
     "fabricate_three": {
         "recognition": "OCR",
-        "expected": "錾银",
+        "expected": "银",
         "action": "Click",
         "next": [
             "fabricate_max_2"
