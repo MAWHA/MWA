@@ -2,7 +2,7 @@
 Author: Night-stars-1 nujj1042633805@gmail.com
 Date: 2024-07-18 23:52:39
 LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2024-07-27 00:49:04
+LastEditTime: 2024-07-27 11:18:11
 '''
 import json
 import time
@@ -54,7 +54,7 @@ async def main():
 
     maa_inst.register_recognizer("event_select", event_select)
 
-    await maa_inst.run_task("Marksmanship")
+    await maa_inst.run_task("war_one")
 
 
 class EventSelect(CustomRecognizer):
@@ -68,20 +68,24 @@ class EventSelect(CustomRecognizer):
         )
         pos_data = json.loads(pos_data)
         if len(pos_data["all"]) < 1:
+            print("事件标题获取失败")
             return False, (0, 0, 100, 100), "事件标题获取失败"
         text_data = pos_data["all"][0]
         title = text_data["text"]
         score = text_data["score"]
-        option = DATA[title]
-        print(f"识别到{title}, 相似度: {int(score * 100)}%, 选择: {option}")
-        status, option_rect, _ = context.run_recognition(
-            image,
-            "OCR",
-            {"OCR": {"recognition": "OCR", "expected": option, "roi": [598, 383, 478, 217]}},
-        )
-        print(f"识别结果: {status}, 坐标: {option_rect}")
-        context.click(int(option_rect[0] + option_rect[2] / 2), int(option_rect[1] + option_rect[3] / 2))
-        return status, (0, 0, 100, 100), "事件选择"
+        if (option := DATA[title]):
+            print(f"识别到{title}, 相似度: {int(score * 100)}%, 选择: {option}")
+            status, option_rect, _ = context.run_recognition(
+                image,
+                "OCR",
+                {"OCR": {"recognition": "OCR", "expected": option, "roi": [598, 383, 478, 217]}},
+            )
+            print(f"识别结果: {status}, 坐标: {option_rect}")
+            context.click(int(option_rect[0] + option_rect[2] / 2), int(option_rect[1] + option_rect[3] / 2))
+            return status, (0, 0, 100, 100), "事件选择"
+        else:
+            print("事件标题获取失败")
+            return False, (0, 0, 100, 100), "事件标题获取失败"
 
 event_select = EventSelect()
 
