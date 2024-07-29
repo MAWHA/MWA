@@ -19,17 +19,71 @@
         "is_sub": true,
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
-        "post_wait_freezes": 10000,
+        "post_delay": 5000,
         "timeout": 20000,
         "timeout_next": [
+            "advice",
+            "misinterpretation",
+            "examine",
             "update",
             "Sub_CloseAnnouncement",
             "convened"
         ],
         "next": [
+            "advice",
+            "misinterpretation",
+            "examine",
             "update",
             "Sub_CloseAnnouncement",
             "convened"
+        ]
+    },
+    "misinterpretation": {
+        "recognition": "OCR",
+        "expected": "曲解",
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "timeout": 20000,
+        "timeout_next": [
+            "update",
+            "Sub_CloseAnnouncement"
+        ],
+        "next": [
+            "examine",
+            "update",
+            "Sub_CloseAnnouncement"
+        ]
+    },
+    "advice": {
+        "recognition": "OCR",
+        "expected": "健康游戏忠告",
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "timeout": 20000,
+        "timeout_next": [
+            "update",
+            "Sub_CloseAnnouncement"
+        ],
+        "next": [
+            "misinterpretation",
+            "examine",
+            "update",
+            "Sub_CloseAnnouncement"
+        ]
+    },
+    "examine": {
+        "recognition": "OCR",
+        "expected": "正在检查更新",
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "timeout": 20000,
+        "timeout_next": [
+            "update",
+            "Sub_CloseAnnouncement"
+        ],
+        "next": [
+            "update",
+            "Sub_CloseAnnouncement"
         ]
     },
     "update": {
@@ -42,7 +96,7 @@
             111
         ],
         "action": "Click",
-        "post_wait_freezes": 7000,
+        "post_delay": 10000,
         "timeout": 20000,
         "timeout_next": [
             "update",
@@ -60,7 +114,13 @@
     },
     "Sub_CloseAnnouncement": {
         "recognition": "TemplateMatch",
-        "template": "Startup/announcement_outer.png",
+        "template": "Startup/12.png",
+        "roi": [
+            1063,
+            27,
+            197,
+            157
+        ],
         "action": "Click",
         "timeout": 20000,
         "timeout_next": [

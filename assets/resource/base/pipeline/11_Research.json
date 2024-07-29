@@ -6,8 +6,8 @@
         ]
     },
     "museum": {
-        "recognition": "TemplateMatch",
-        "template": "Research/01.png",
+        "recognition": "OCR",
+        "expected": "博物",
         "roi": [
             1087,
             283,

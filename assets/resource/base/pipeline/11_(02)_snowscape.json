@@ -114,8 +114,8 @@
             0
         ],
         "next": [
-            "advance_two",
-            "fixed_two"
+            "advance_tow",
+            "fixed_tow"
         ]
     },
     "advance_one_man": {
@@ -131,38 +131,33 @@
             0
         ],
         "next": [
-            "advance_two",
-            "fixed_two"
+            "advance_tow",
+            "fixed_tow"
         ]
     },
-    "advance_two": {
+    "advance_tow": {
         "recognition": "TemplateMatch",
         "template": "Research/09.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "event_select",
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
             "war_one",
             "cultural_relic",
             "terminal",
             "without_one",
             "abandon_one"
-        ]
-    },
-    "event_select": {
-        "recognition": "Custom",
-        "post_delay": 1000,
-        "custom_recognition": "event_select",
-        "custom_recognition_param": {
-            "name": "选择遇到的事件"
-        },
-        "next": [
-            "predestination",
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
         ]
     },
     "abandon_one": {
@@ -171,10 +166,10 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "abandon_two"
+            "abandon_tow"
         ]
     },
-    "abandon_two": {
+    "abandon_tow": {
         "recognition": "TemplateMatch",
         "template": "Research/116.png",
         "action": "Click",
@@ -205,10 +200,10 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "without_two"
+            "without_tow"
         ]
     },
-    "without_two": {
+    "without_tow": {
         "recognition": "TemplateMatch",
         "template": "Research/111.png",
         "action": "Click",
@@ -244,10 +239,10 @@
             314
         ],
         "next": [
-            "stwoage"
+            "stowage"
         ]
     },
-    "stwoage": {
+    "stowage": {
         "recognition": "OCR",
         "expected": "收纳",
         "action": "Click",
@@ -379,9 +374,9 @@
         "post_delay": 2000,
         "next": [
             "upgrade_one",
-            "upgrade_two",
+            "upgrade_tow",
             "descending_one",
-            "descending_two",
+            "descending_tow",
             "upgrade_three",
             "upgrade_four",
             "upgrade_five",
@@ -427,9 +422,9 @@
         ],
         "next": [
             "revise",
-            "advance_two_women",
-            "advance_two_man",
-            "upgrade_two"
+            "advance_tow_women",
+            "advance_tow_man",
+            "upgrade_tow"
         ]
     },
     "revise": {
@@ -438,11 +433,11 @@
         "action": "DoNothing",
         "post_wait_freezes": 2000,
         "next": [
-            "upgrade_two",
-            "descending_two"
+            "upgrade_tow",
+            "descending_tow"
         ]
     },
-    "upgrade_two": {
+    "upgrade_tow": {
         "recognition": "TemplateMatch",
         "template": "Research/16.png",
         "action": "Click",
@@ -477,8 +472,8 @@
         "next": [
             "revise_2",
             "upgrade_three",
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "revise_2": {
@@ -526,8 +521,8 @@
         "next": [
             "revise_3",
             "upgrade_four",
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "revise_3": {
@@ -575,8 +570,8 @@
         "next": [
             "revise_4",
             "upgrade_five",
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "revise_4": {
@@ -623,8 +618,8 @@
         ],
         "next": [
             "revise_5",
-            "advance_two_man",
-            "advance_two_women",
+            "advance_tow_man",
+            "advance_tow_women",
             "upgrade_six"
         ]
     },
@@ -673,8 +668,8 @@
         "next": [
             "revise_6",
             "upgrade_one",
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "revise_6": {
@@ -685,8 +680,8 @@
         "next": [
             "upgrade_one",
             "descending_one",
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "descending_one": {
@@ -704,7 +699,7 @@
             "choose"
         ]
     },
-    "descending_two": {
+    "descending_tow": {
         "recognition": "OCR",
         "expected": "降阶",
         "action": "Click",
@@ -779,13 +774,12 @@
             "choose_6"
         ]
     },
-    "advance_two_women": {
+    "advance_tow_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             260,
             -15,
@@ -793,11 +787,11 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_three"
         ]
     },
-    "advance_two_man": {
+    "advance_tow_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
         "green_mask": true,
@@ -810,7 +804,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_three"
         ]
     },
@@ -820,7 +814,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             100,
             -130,
@@ -828,7 +821,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_four"
         ]
     },
@@ -845,7 +838,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_four"
         ]
     },
@@ -855,7 +848,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             310,
             100,
@@ -863,7 +855,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_five"
         ]
     },
@@ -880,7 +872,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_five"
         ]
     },
@@ -890,7 +882,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             240,
             -40,
@@ -898,7 +889,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_six"
         ]
     },
@@ -915,7 +906,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_six"
         ]
     },
@@ -925,15 +916,14 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             240,
-            20,
+            15,
             0,
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_seven"
         ]
     },
@@ -945,12 +935,12 @@
         "action": "Click",
         "target_offset": [
             240,
-            20,
+            15,
             0,
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_seven"
         ]
     },
@@ -960,7 +950,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             320,
             20,
@@ -968,7 +957,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_eight"
         ]
     },
@@ -985,7 +974,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_eight"
         ]
     },
@@ -995,7 +984,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             280,
             0,
@@ -1003,7 +991,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_nine"
         ]
     },
@@ -1020,7 +1008,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_nine"
         ]
     },
@@ -1030,7 +1018,6 @@
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             200,
             -30,
@@ -1038,7 +1025,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_one"
         ]
     },
@@ -1055,7 +1042,7 @@
             0
         ],
         "next": [
-            "advance_two",
+            "advance_tow",
             "fixed_one"
         ]
     },
@@ -1065,10 +1052,10 @@
             "advance_one_women"
         ]
     },
-    "fixed_two": {
+    "fixed_tow": {
         "next": [
-            "advance_two_man",
-            "advance_two_women"
+            "advance_tow_man",
+            "advance_tow_women"
         ]
     },
     "fixed_three": {
@@ -1499,12 +1486,12 @@
         "action": "DoNothing",
         "post_wait_freezes": 7000,
         "next": [
-            "war_two",
+            "war_tow",
             "war_three",
             "war_four"
         ]
     },
-    "war_two": {
+    "war_tow": {
         "recognition": "OCR",
         "expected": "中",
         "action": "Click",
@@ -1530,7 +1517,7 @@
         "next": [
             "front_one",
             "front_one_2",
-            "front_two",
+            "front_tow",
             "front_three",
             "front_four",
             "front_four_2",
@@ -1553,7 +1540,7 @@
         "post_delay": 1000,
         "next": [
             "front_one_2",
-            "front_two",
+            "front_tow",
             "front_three",
             "front_four",
             "front_four_2",
@@ -1576,7 +1563,7 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "front_two",
+            "front_tow",
             "front_three",
             "front_four",
             "front_four_2",
@@ -1593,7 +1580,7 @@
             "war_new_state"
         ]
     },
-    "front_two": {
+    "front_tow": {
         "recognition": "OCR",
         "expected": "会心一击",
         "action": "Click",
@@ -1879,12 +1866,12 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "remind_two",
+            "remind_tow",
             "remind_three",
             "remind_all"
         ]
     },
-    "remind_two": {
+    "remind_tow": {
         "recognition": "TemplateMatch",
         "template": "Research/77.png",
         "action": "Click",
