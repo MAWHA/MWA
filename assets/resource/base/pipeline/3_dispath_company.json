@@ -20,6 +20,7 @@
     },
     "dispath_company_collect": {
         "next": [
+            "entry_dispath_one",
             "dispatch_social_one",
             "dispatch_social_tow",
             "dispatch_social_three",

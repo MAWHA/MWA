@@ -1,6 +1,6 @@
 {
-    "xuanze":{
-        "next":[
+    "xuanze": {
+        "next": [
             "SelectStage01",
             "SelectStage02",
             "SelectStage03",
@@ -9,58 +9,73 @@
             "fast"
         ]
     },
-    "SelectStage01":{
-        "recognition":"OCR",
-        "expected":"子",
-        "action":"Click",
-        "target_offset":[
-            0, -40, 0, 0
+    "SelectStage01": {
+        "recognition": "OCR",
+        "expected": "子",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -40,
+            0,
+            0
         ],
-        "next":[
+        "next": [
             "fast"
         ]
     },
-    "SelectStage02":{
-        "recognition":"OCR",
-        "expected":"丑",
-        "action":"Click",
-        "target_offset":[
-            0, -50, 0, 0
+    "SelectStage02": {
+        "recognition": "OCR",
+        "expected": "丑",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -50,
+            0,
+            0
         ],
-        "next":[
+        "next": [
             "fast"
         ]
     },
-    "SelectStage03":{
-        "recognition":"OCR",
-        "expected":"寅",
-        "action":"Click",
-        "target_offset":[
-            0, -50, 0, 0
+    "SelectStage03": {
+        "recognition": "OCR",
+        "expected": "寅",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -50,
+            0,
+            0
         ],
-        "next":[
+        "next": [
             "fast"
         ]
     },
-    "SelectStage04":{
-        "recognition":"OCR",
-        "expected":"卯",
-        "action":"Click",
-        "target_offset":[
-            0, -50, 0, 0
+    "SelectStage04": {
+        "recognition": "OCR",
+        "expected": "卯",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -50,
+            0,
+            0
         ],
-        "next":[
+        "next": [
             "fast"
         ]
     },
-    "SelectStage05":{
-        "recognition":"OCR",
-        "expected":"辰",
-        "action":"Click",
-        "target_offset":[
-            0, -50, 0, 0
+    "SelectStage05": {
+        "recognition": "OCR",
+        "expected": "辰",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -50,
+            0,
+            0
         ],
-        "next":[
+        "next": [
             "fast"
         ]
     }
