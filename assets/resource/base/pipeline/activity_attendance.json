@@ -1,0 +1,122 @@
+{
+    "activity_attendance": {
+        "next": [
+            "activity",
+            "attendance"
+        ]
+    },
+    "activity": {
+        "recognition": "OCR",
+        "expected": "活动",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            300,
+            90,
+            90
+        ],
+        "next": [
+            "attendance"
+        ]
+    },
+    "attendance": {
+        "recognition": "OCR",
+        "expected": "山水自鸣",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            255,
+            717
+        ],
+        "next": [
+            "attendance_tow",
+            "attendance_three",
+            "attendance_four",
+            "Quit"
+        ]
+    },
+    "attendance_tow": {
+        "recognition": "TemplateMatch",
+        "template": "activity/01.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            135,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            265,
+            520,
+            1015,
+            200
+        ],
+        "next": [
+            "activity_get"
+        ]
+    },
+    "attendance_three": {
+        "recognition": "TemplateMatch",
+        "template": "activity/01.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            265,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            265,
+            520,
+            1015,
+            200
+        ],
+        "next": [
+            "activity_get"
+        ]
+    },
+    "attendance_four": {
+        "recognition": "TemplateMatch",
+        "template": "activity/01.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            385,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            265,
+            520,
+            1015,
+            200
+        ],
+        "next": [
+            "activity_get",
+            "Quit"
+        ]
+    },
+    "activity_get": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "roi": [
+            930,
+            70,
+            310,
+            570
+        ],
+        "next": [
+            "Quit"
+        ]
+    }
+}

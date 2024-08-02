@@ -9,7 +9,9 @@
             66
         ],
         "action": "Click",
+        "post_delay": 1000,
         "next": [
+            "max_water",
             "Swipe_drink",
             "drink"
         ]
@@ -24,9 +26,12 @@
         ],
         "end": [
             400,
-            345,
+            445,
             0,
             0
+        ],
+        "next": [
+            "drink"
         ]
     }
 }
