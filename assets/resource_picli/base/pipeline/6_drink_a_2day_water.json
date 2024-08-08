@@ -1,0 +1,37 @@
+{
+    "drink_a_2day_water": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/stamina.png",
+        "roi": [
+            1188,
+            259,
+            67,
+            66
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "max_water",
+            "Swipe_drink",
+            "drink"
+        ]
+    },
+    "Swipe_drink": {
+        "action": "Swipe",
+        "begin": [
+            400,
+            245,
+            0,
+            0
+        ],
+        "end": [
+            400,
+            445,
+            0,
+            0
+        ],
+        "next": [
+            "drink"
+        ]
+    }
+}

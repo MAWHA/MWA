@@ -9,7 +9,7 @@
         {
             "name": "B 服",
             "path": [
-                "{PROJECT_DIR}/resource/base"
+                "{PROJECT_DIR}/resource_picli/base"
             ]
         }
     ],
@@ -28,7 +28,8 @@
             "option": [
                 "领取资源、好感、售卖机",
                 "社教模拟仪",
-                "制造物品"
+                "制造物品",
+                "是否喝茶"
             ]
         },
         {
@@ -352,7 +353,7 @@
                     "name": "中级社会指南",
                     "param": {
                         "dispath_company_collect": {
-                            "next": "dispatch_social_tow"
+                            "next": "dispatch_social_two"
                         }
                     }
                 },
@@ -396,7 +397,7 @@
                     "name": "铜石墨条（蓝装升级）",
                     "param": {
                         "fabricate_all": {
-                            "next": "fabricate_tow"
+                            "next": "fabricate_two"
                         }
                     }
                 },
@@ -468,6 +469,26 @@
                     "name": "不制造",
                     "param": {
                         "fabricate_all": {
+                            "next": "dc_back"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否喝茶": {
+            "cases": [
+                {
+                    "name": "喝茶",
+                    "param": {
+                        "dispatch_company_all": {
+                            "next": "tea"
+                        }
+                    }
+                },
+                {
+                    "name": "不喝茶",
+                    "param": {
+                        "dispatch_company_all": {
                             "next": "dc_back"
                         }
                     }

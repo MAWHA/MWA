@@ -1,0 +1,204 @@
+{
+    "Collect_operators": {
+        "next": [
+            "Collecting",
+            "Sub_ReceiveOperators"
+        ]
+    },
+    "Collecting": {
+        "recognition": "OCR",
+        "expected": "器者征集",
+        "action": "Click",
+        "next": [
+            "Sub_ReceiveOperators",
+            "ReceiveCollect"
+        ]
+    },
+    "Sub_ReceiveOperators": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/02.png",
+        "action": "Click",
+        "next": [
+            "ReceiveCollect"
+        ]
+    },
+    "ReceiveCollect": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "next": [
+            "changan",
+            "quit2"
+        ]
+    },
+    "changan": {
+        "recognition": "OCR",
+        "expected": "长按",
+        "action": "Swipe",
+        "begin": [
+            645,
+            635,
+            0,
+            0
+        ],
+        "end": [
+            645,
+            635,
+            0,
+            0
+        ],
+        "duration": 3000,
+        "post_delay": 3000,
+        "next": [
+            "Skip"
+        ]
+    },
+    "Skip": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/05.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "outcome"
+        ]
+    },
+    "outcome": {
+        "recognition": "OCR",
+        "expected": "征集结果",
+        "action": "Click",
+        "target": [
+            645,
+            625,
+            0,
+            0
+        ],
+        "next": [
+            "get"
+        ]
+    },
+    "get": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "next": [
+            "Collecting2",
+            "back"
+        ]
+    },
+    "quit2": {
+        "recognition": "OCR",
+        "expected": "当前没有已经完成的征集队列",
+        "next": [
+            "back"
+        ]
+    },
+    "back": {
+        "action": "Click",
+        "target": [
+            330,
+            360,
+            0,
+            0
+        ],
+        "next": [
+            "Collecting2"
+        ]
+    },
+    "Collecting2": {
+        "recognition": "OCR",
+        "expected": "开始征集",
+        "action": "Click",
+        "next": [
+            "jia",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "full": {
+        "recognition": "OCR",
+        "expected": "队列已满",
+        "next": [
+            "Quit"
+        ]
+    },
+    "no_solicitation": {
+        "recognition": "OCR",
+        "expected": "缺少道具",
+        "action": "Click",
+        "next": [
+            "Quit"
+        ]
+    },
+    "jia": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia2"
+        ]
+    },
+    "jia2": {
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia3"
+        ]
+    },
+    "jia3": {
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia4"
+        ]
+    },
+    "jia4": {
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou"
+        ]
+    },
+    "gou": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/04.png",
+        "action": "Click",
+        "next": [
+            "Quit"
+        ]
+    },
+    "Quit": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click"
+    },
+    "Quit_2": {
+        "recognition": "OCR",
+        "expected": "招集",
+        "action": "DoNothing",
+        "next": [
+            "Quit_2",
+            "Quit"
+        ]
+    }
+}

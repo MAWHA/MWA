@@ -1,0 +1,23 @@
+{
+    "Mail": {
+        "next": [
+            "EnterMail"
+        ]
+    },
+    "EnterMail": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/mail.png",
+        "action": "Click",
+        "next": [
+            "ReceiveMail"
+        ]
+    },
+    "ReceiveMail": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "next": [
+            "Quit"
+        ]
+    }
+}

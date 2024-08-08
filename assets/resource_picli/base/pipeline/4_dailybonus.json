@@ -1,0 +1,67 @@
+{
+    "business_kiosk": {
+        "next": [
+            "shangting",
+            "libao",
+            "richang",
+            "donggu",
+            "Quit"
+        ]
+    },
+    "shangting": {
+        "recognition": "OCR",
+        "expected": "商亭",
+        "action": "Click",
+        "next": [
+            "libao"
+        ]
+    },
+    "libao": {
+        "recognition": "OCR",
+        "expected": "礼包",
+        "action": "Click",
+        "next": [
+            "richang"
+        ]
+    },
+    "richang": {
+        "recognition": "OCR",
+        "expected": "日常",
+        "action": "Click",
+        "next": [
+            "donggu"
+        ]
+    },
+    "donggu": {
+        "recognition": "OCR",
+        "expected": "每日",
+        "action": "Click",
+        "target": [
+            365,
+            665,
+            0,
+            0
+        ],
+        "next": [
+            "goumai"
+        ]
+    },
+    "goumai": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "obtain1"
+        ]
+    },
+    "obtain1": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "next": [
+            "Quit"
+        ]
+    }
+}

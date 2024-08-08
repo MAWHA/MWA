@@ -36,13 +36,13 @@ def install_deps():
     )
 
 
-def install_resource():
+def install_resource_picli():
 
     configure_ocr_model()
 
     shutil.copytree(
-        working_dir / "assets" / "resource",
-        install_path / "resource",
+        working_dir / "assets" / "resource_picli",
+        install_path / "resource_picli",
         dirs_exist_ok=True,
     )
     shutil.copy2(
@@ -72,7 +72,7 @@ def install_chores():
 
 if __name__ == "__main__":
     install_deps()
-    install_resource()
+    install_resource_picli()
     install_chores()
 
     print(f"Install to {install_path} successfully.")

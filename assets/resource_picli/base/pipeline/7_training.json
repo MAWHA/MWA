@@ -1,0 +1,143 @@
+{
+    "kaishi": {
+        "next": [
+            "EnterTraining",
+            "StartTraining"
+        ]
+    },
+    "EnterTraining": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/training.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "StartTraining"
+        ]
+    },
+    "StartTraining": {
+        "recognition": "OCR",
+        "expected": "今日开放",
+        "action": "Click",
+        "target": [
+            260,
+            295,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "Cash",
+            "Experience",
+            "Weapon",
+            "Defender",
+            "Caster",
+            "Ranger",
+            "LightMelee",
+            "Tactical"
+        ]
+    },
+    "Cash": {
+        "recognition": "OCR",
+        "expected": "冬谷币",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Experience": {
+        "recognition": "OCR",
+        "expected": "教材",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Weapon": {
+        "recognition": "OCR",
+        "expected": "装备",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Defender": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/110.png",
+        "action": "Click",
+        "next": [
+            "Defender1"
+        ]
+    },
+    "Defender1": {
+        "recognition": "OCR",
+        "expected": "宿卫",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Caster": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/110.png",
+        "action": "Click",
+        "next": [
+            "Caster1"
+        ]
+    },
+    "Caster1": {
+        "recognition": "OCR",
+        "expected": "构术",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Ranger": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/110.png",
+        "action": "Click",
+        "next": [
+            "Ranger1"
+        ]
+    },
+    "Ranger1": {
+        "recognition": "OCR",
+        "expected": "远击",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "LightMelee": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/110.png",
+        "action": "Click",
+        "next": [
+            "LightMelee1"
+        ]
+    },
+    "LightMelee1": {
+        "recognition": "OCR",
+        "expected": "轻锐",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    },
+    "Tactical": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/110.png",
+        "action": "Click",
+        "next": [
+            "Tactical1"
+        ]
+    },
+    "Tactical1": {
+        "recognition": "OCR",
+        "expected": "战略",
+        "action": "Click",
+        "next": [
+            "xuanze"
+        ]
+    }
+}

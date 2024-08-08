@@ -1,0 +1,531 @@
+{
+    "resource_all": {
+        "next": [
+            "resource_one",
+            "resource_two",
+            "resource_three",
+            "resource_four",
+            "resource_five"
+        ]
+    },
+    "resource_one": {
+        "next": [
+            "execute_one",
+            "come_ancient",
+            "big_map_one",
+            "ancient"
+        ]
+    },
+    "execute_one": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "come_ancient",
+            "big_map_one",
+            "ancient"
+        ]
+    },
+    "come_ancient": {
+        "recognition": "OCR",
+        "expected": "来古",
+        "next": [
+            "Swipe1"
+        ]
+    },
+    "big_map_one": {
+        "recognition": "OCR",
+        "expected": "大地图",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "ancient"
+        ]
+    },
+    "ancient": {
+        "recognition": "TemplateMatch",
+        "template": "resource/02.png",
+        "roi": [
+            126,
+            598,
+            41,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "hide_one"
+        ]
+    },
+    "hide_one": {
+        "recognition": "TemplateMatch",
+        "template": "resource/03.png",
+        "roi": [
+            42,
+            608,
+            28,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "Swipe1"
+        ]
+    },
+    "Swipe1": {
+        "action": "Swipe",
+        "begin": [
+            856,
+            330,
+            0,
+            0
+        ],
+        "end": [
+            200,
+            485,
+            0,
+            0
+        ],
+        "next": [
+            "Swipe2"
+        ]
+    },
+    "Swipe2": {
+        "action": "Swipe",
+        "begin": [
+            995,
+            315,
+            0,
+            0
+        ],
+        "end": [
+            500,
+            445,
+            0,
+            0
+        ],
+        "next": [
+            "Swipe3"
+        ]
+    },
+    "Swipe3": {
+        "action": "Swipe",
+        "begin": [
+            830,
+            293,
+            0,
+            0
+        ],
+        "end": [
+            335,
+            405,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource"
+        ]
+    },
+    "resource_two": {
+        "next": [
+            "execute_two",
+            "Biandu",
+            "big_map_two",
+            "both"
+        ]
+    },
+    "execute_two": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Biandu",
+            "big_map_two",
+            "both"
+        ]
+    },
+    "Biandu": {
+        "recognition": "OCR",
+        "expected": "汴都",
+        "post_delay": 1000,
+        "next": [
+            "Swipe4"
+        ]
+    },
+    "big_map_two": {
+        "recognition": "OCR",
+        "expected": "大地图",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "both"
+        ]
+    },
+    "both": {
+        "recognition": "TemplateMatch",
+        "template": "resource/04.png",
+        "roi": [
+            242,
+            598,
+            38,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "hide_two"
+        ]
+    },
+    "hide_two": {
+        "recognition": "TemplateMatch",
+        "template": "resource/03.png",
+        "roi": [
+            42,
+            608,
+            28,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "Swipe4"
+        ]
+    },
+    "Swipe4": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            355,
+            0,
+            0
+        ],
+        "end": [
+            965,
+            390,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource"
+        ]
+    },
+    "resource_three": {
+        "next": [
+            "execute_three",
+            "deut_sea",
+            "big_map_three",
+            "sea"
+        ]
+    },
+    "execute_three": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "deut_sea",
+            "big_map_three",
+            "sea"
+        ]
+    },
+    "deut_sea": {
+        "recognition": "OCR",
+        "expected": "申海",
+        "post_delay": 1000,
+        "next": [
+            "Swipe5"
+        ]
+    },
+    "big_map_three": {
+        "recognition": "OCR",
+        "expected": "大地图",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "sea"
+        ]
+    },
+    "sea": {
+        "recognition": "TemplateMatch",
+        "template": "resource/05.png",
+        "roi": [
+            357,
+            598,
+            42,
+            82
+        ],
+        "action": "Click",
+        "next": [
+            "hide_three"
+        ]
+    },
+    "hide_three": {
+        "recognition": "TemplateMatch",
+        "template": "resource/03.png",
+        "roi": [
+            42,
+            608,
+            28,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "Swipe5"
+        ]
+    },
+    "Swipe5": {
+        "action": "Swipe",
+        "begin": [
+            795,
+            590,
+            0,
+            0
+        ],
+        "end": [
+            795,
+            130,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource",
+            "Swipe6"
+        ]
+    },
+    "Swipe6": {
+        "action": "Swipe",
+        "begin": [
+            110,
+            350,
+            0,
+            0
+        ],
+        "end": [
+            1110,
+            350,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource"
+        ]
+    },
+    "resource_four": {
+        "next": [
+            "execute_four",
+            "cantonese_prefecture",
+            "big_map_four",
+            "cantonese"
+        ]
+    },
+    "execute_four": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "cantonese_prefecture",
+            "big_map_four",
+            "cantonese"
+        ]
+    },
+    "cantonese_prefecture": {
+        "recognition": "OCR",
+        "expected": "粤州",
+        "next": [
+            "Swipe7"
+        ]
+    },
+    "big_map_four": {
+        "recognition": "OCR",
+        "expected": "大地图",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "cantonese"
+        ]
+    },
+    "cantonese": {
+        "recognition": "TemplateMatch",
+        "template": "resource/06.png",
+        "roi": [
+            471,
+            595,
+            42,
+            86
+        ],
+        "action": "Click",
+        "next": [
+            "hide_four"
+        ]
+    },
+    "hide_four": {
+        "recognition": "TemplateMatch",
+        "template": "resource/03.png",
+        "roi": [
+            42,
+            608,
+            28,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "Swipe7"
+        ]
+    },
+    "Swipe7": {
+        "action": "Swipe",
+        "begin": [
+            275,
+            375,
+            0,
+            0
+        ],
+        "end": [
+            730,
+            300,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource"
+        ]
+    },
+    "resource_five": {
+        "next": [
+            "execute_five",
+            "often_quiet",
+            "big_map_five",
+            "often"
+        ]
+    },
+    "execute_five": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "often_quiet",
+            "big_map_five",
+            "often"
+        ]
+    },
+    "often_quiet": {
+        "recognition": "OCR",
+        "expected": "常安",
+        "next": [
+            "Swipe8"
+        ]
+    },
+    "big_map_five": {
+        "recognition": "OCR",
+        "expected": "大地图",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "often"
+        ]
+    },
+    "often": {
+        "recognition": "TemplateMatch",
+        "template": "resource/07.png",
+        "roi": [
+            584,
+            597,
+            45,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "hide_five"
+        ]
+    },
+    "hide_five": {
+        "recognition": "TemplateMatch",
+        "template": "resource/03.png",
+        "roi": [
+            42,
+            608,
+            28,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "Swipe8"
+        ]
+    },
+    "Swipe8": {
+        "action": "Swipe",
+        "begin": [
+            1115,
+            255,
+            0,
+            0
+        ],
+        "end": [
+            475,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "resource"
+        ]
+    },
+    "resource": {
+        "recognition": "OCR",
+        "expected": "资源",
+        "action": "Click",
+        "next": [
+            "ancient_both_sea_cantonese_often1",
+            "ancient_both_sea_cantonese_often2",
+            "ancient_both_sea_cantonese_often3",
+            "ancient_both_sea_cantonese_often4",
+            "ancient_both_sea_cantonese_often5"
+        ]
+    },
+    "ancient_both_sea_cantonese_often1": {
+        "recognition": "OCR",
+        "expected": "壹",
+        "action": "Click",
+        "next": [
+            "fast"
+        ]
+    },
+    "ancient_both_sea_cantonese_often2": {
+        "recognition": "OCR",
+        "expected": "贰",
+        "action": "Click",
+        "next": [
+            "fast"
+        ]
+    },
+    "ancient_both_sea_cantonese_often3": {
+        "recognition": "OCR",
+        "expected": "叁",
+        "action": "Click",
+        "next": [
+            "fast"
+        ]
+    },
+    "ancient_both_sea_cantonese_often4": {
+        "recognition": "OCR",
+        "expected": "肆",
+        "action": "Click",
+        "next": [
+            "fast"
+        ]
+    },
+    "ancient_both_sea_cantonese_often5": {
+        "recognition": "OCR",
+        "expected": "伍",
+        "action": "Click",
+        "next": [
+            "fast"
+        ]
+    }
+}
