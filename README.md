@@ -78,7 +78,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 感谢以下开发者对本项目作出的贡献:
 
 <a href="https://github.com/MAWHA/MWA/graphs/contributors">
-  <img src="https://github.com/MAWHA/MWA&max=1000" />
+  <img src="https://contrib.rocks/image?repo=MAWHA/MWA&max=1000" />
 </a>
 
 ## 声明
