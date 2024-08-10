@@ -1,0 +1,100 @@
+{
+    "entry_two": {
+        "next": [
+            "vending_machine",
+            "vending_machine_reward",
+            "entry_dispath_two"
+        ]
+    },
+    "entry_dispath_two": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "entry_dispath_two",
+            "vending_machine",
+            "vending_machine_reward"
+        ]
+    },
+    "vending_machine": {
+        "recognition": "TemplateMatch",
+        "template": "Company/office.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            345,
+            51,
+            345,
+            266
+        ],
+        "next": [
+            "vending_machine_reward",
+            "vending_home",
+            "dc_back"
+        ]
+    },
+    "vending_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "dispath_company_collect",
+            "entry_dispath_four",
+            "tea",
+            "vitality"
+        ]
+    },
+    "vending_machine_reward": {
+        "recognition": "TemplateMatch",
+        "template": "Company/vending_machine_reward.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            123,
+            11,
+            231,
+            201
+        ],
+        "target": [
+            203,
+            69,
+            41,
+            34
+        ],
+        "next": [
+            "coin_flip"
+        ]
+    },
+    "coin_flip": {
+        "recognition": "TemplateMatch",
+        "template": "Company/coin_flip.png",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "roi": [
+            771,
+            293,
+            340,
+            232
+        ],
+        "next": [
+            "coin_flip_click_space"
+        ]
+    },
+    "coin_flip_click_space": {
+        "recognition": "OCR",
+        "expected": "点击空白",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            988,
+            107,
+            240,
+            480
+        ],
+        "next": [
+            "vending_home"
+        ]
+    }
+}

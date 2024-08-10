@@ -1,0 +1,327 @@
+{
+    "fabricate": {
+        "next": [
+            "entry_dispath_four",
+            "fabricate_all",
+            "dc_back"
+        ]
+    },
+    "entry_dispath_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "fabricate_all",
+            "dc_back"
+        ]
+    },
+    "fabricate_all": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_one",
+            "fabricate_two",
+            "fabricate_three",
+            "fabricate_four",
+            "fabricate_five_Swipe",
+            "fabricate_six_Swipe",
+            "fabricate_seven_Swipe",
+            "fabricate_eight_Swipe",
+            "fabricate_nine_Swipe",
+            "fabricate_ten_Swipe"
+        ]
+    },
+    "fabricate_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/11.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_two": {
+        "recognition": "OCR",
+        "expected": "饰铜",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_three": {
+        "recognition": "OCR",
+        "expected": "银",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/14.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_five_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_five"
+        ]
+    },
+    "fabricate_five": {
+        "recognition": "TemplateMatch",
+        "template": "Company/15.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_six_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_six"
+        ]
+    },
+    "fabricate_six": {
+        "recognition": "TemplateMatch",
+        "template": "Company/16.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_seven_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_seven"
+        ]
+    },
+    "fabricate_seven": {
+        "recognition": "TemplateMatch",
+        "template": "Company/17.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_eight_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_eight_Swipe_2"
+        ]
+    },
+    "fabricate_eight_Swipe_2": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_eight"
+        ]
+    },
+    "fabricate_eight": {
+        "recognition": "TemplateMatch",
+        "template": "Company/18.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_nine_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_nine_Swipe_2"
+        ]
+    },
+    "fabricate_nine_Swipe_2": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_nine"
+        ]
+    },
+    "fabricate_nine": {
+        "recognition": "TemplateMatch",
+        "template": "Company/19.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_ten_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_ten_Swipe_2"
+        ]
+    },
+    "fabricate_ten_Swipe_2": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_ten"
+        ]
+    },
+    "fabricate_ten": {
+        "recognition": "TemplateMatch",
+        "template": "Company/20.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_max_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_max.png",
+        "action": "Click",
+        "roi": [
+            1040,
+            512,
+            80,
+            71
+        ],
+        "next": [
+            "fabricate_social_book_2"
+        ]
+    },
+    "fabricate_social_book_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_social_book.png",
+        "action": "Click",
+        "roi": [
+            870,
+            618,
+            301,
+            73
+        ],
+        "next": [
+            "verify_fabricate_2"
+        ]
+    },
+    "verify_fabricate_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/verify_fabricate.png",
+        "action": "Click",
+        "roi": [
+            678,
+            387,
+            188,
+            76
+        ],
+        "next": [
+            "tea_home"
+        ]
+    }
+}

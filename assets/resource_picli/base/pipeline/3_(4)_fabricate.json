@@ -1,0 +1,478 @@
+{
+    "fabricate": {
+        "next": [
+            "entry_dispath_four",
+            "dc_back"
+        ]
+    },
+    "entry_dispath_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "fabricate_all_one",
+            "fabricate_all_two",
+            "fabricate_all_three",
+            "fabricate_all_four",
+            "fabricate_all_five",
+            "fabricate_all_six",
+            "fabricate_all_seven",
+            "fabricate_all_eight",
+            "fabricate_all_nine",
+            "fabricate_all_ten",
+            "entry_dispath_four",
+            "dc_back"
+        ]
+    },
+    "fabricate_all_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_one"
+        ]
+    },
+    "fabricate_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/11.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_two": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_two"
+        ]
+    },
+    "fabricate_two": {
+        "recognition": "OCR",
+        "expected": "饰铜",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_three": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_three"
+        ]
+    },
+    "fabricate_three": {
+        "recognition": "OCR",
+        "expected": "银",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_four"
+        ]
+    },
+    "fabricate_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/14.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_five": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_five_Swipe"
+        ]
+    },
+    "fabricate_five_Swipe": {
+        "action": "Swipe",
+        "post_delay": 3000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_five"
+        ]
+    },
+    "fabricate_five": {
+        "recognition": "TemplateMatch",
+        "template": "Company/15.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_six": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_six_Swipe"
+        ]
+    },
+    "fabricate_six_Swipe": {
+        "action": "Swipe",
+        "post_delay": 3000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_six"
+        ]
+    },
+    "fabricate_six": {
+        "recognition": "TemplateMatch",
+        "template": "Company/16.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_seven": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_seven_Swipe"
+        ]
+    },
+    "fabricate_seven_Swipe": {
+        "action": "Swipe",
+        "post_delay": 3000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_seven"
+        ]
+    },
+    "fabricate_seven": {
+        "recognition": "TemplateMatch",
+        "template": "Company/17.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_eight": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_eight_Swipe"
+        ]
+    },
+    "fabricate_eight_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_eight_Swipe_2"
+        ]
+    },
+    "fabricate_eight_Swipe_2": {
+        "action": "Swipe",
+        "post_delay": 5000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_eight"
+        ]
+    },
+    "fabricate_eight": {
+        "recognition": "TemplateMatch",
+        "template": "Company/18.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_nine": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_nine_Swipe"
+        ]
+    },
+    "fabricate_nine_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_nine_Swipe_2"
+        ]
+    },
+    "fabricate_nine_Swipe_2": {
+        "action": "Swipe",
+        "post_delay": 5000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_nine"
+        ]
+    },
+    "fabricate_nine": {
+        "recognition": "TemplateMatch",
+        "template": "Company/19.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_all_ten": {
+        "recognition": "TemplateMatch",
+        "template": "Company/10.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            17,
+            272,
+            151,
+            137
+        ],
+        "next": [
+            "fabricate_ten_Swipe"
+        ]
+    },
+    "fabricate_ten_Swipe": {
+        "action": "Swipe",
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_ten_Swipe_2"
+        ]
+    },
+    "fabricate_ten_Swipe_2": {
+        "action": "Swipe",
+        "post_delay": 5000,
+        "begin": [
+            265,
+            305,
+            0,
+            0
+        ],
+        "end": [
+            265,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "fabricate_ten"
+        ]
+    },
+    "fabricate_ten": {
+        "recognition": "TemplateMatch",
+        "template": "Company/20.png",
+        "action": "Click",
+        "next": [
+            "fabricate_max_2"
+        ]
+    },
+    "fabricate_max_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_max.png",
+        "action": "Click",
+        "roi": [
+            1040,
+            512,
+            80,
+            71
+        ],
+        "next": [
+            "fabricate_social_book_2"
+        ]
+    },
+    "fabricate_social_book_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_social_book.png",
+        "action": "Click",
+        "roi": [
+            870,
+            618,
+            301,
+            73
+        ],
+        "next": [
+            "verify_fabricate_2"
+        ]
+    },
+    "verify_fabricate_2": {
+        "recognition": "TemplateMatch",
+        "template": "Company/verify_fabricate.png",
+        "action": "Click",
+        "roi": [
+            678,
+            387,
+            188,
+            76
+        ],
+        "next": [
+            "fabricate_home"
+        ]
+    },
+    "fabricate_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "tea",
+            "vitality"
+        ]
+    }
+}

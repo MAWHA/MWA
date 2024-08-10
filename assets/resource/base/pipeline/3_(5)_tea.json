@@ -1,9 +1,22 @@
 {
     "tea": {
         "next": [
-            "entry_dispath_one",
+            "entry_dispath_five",
             "tearoom",
-            "tea_two"
+            "tea_two",
+            "Instrument"
+        ]
+    },
+    "entry_dispath_five": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "entry_dispath_five",
+            "tearoom",
+            "tea_two",
+            "Instrument"
         ]
     },
     "tearoom": {
@@ -18,7 +31,8 @@
             295
         ],
         "next": [
-            "tea"
+            "tea",
+            "Instrument"
         ]
     },
     "tea_two": {
@@ -43,7 +57,7 @@
         "action": "DoNothing",
         "post_delay": 1000,
         "next": [
-            "home"
+            "tea_home"
         ]
     },
     "drink_tea": {
@@ -105,8 +119,14 @@
             "Company\\26.png"
         ],
         "action": "Click",
+        "target_offset": [
+            -30,
+            100,
+            0,
+            0
+        ],
         "green_mask": true,
-        "pre_wait_freezes": 200,
+        "pre_wait_freezes": 100,
         "next": [
             "invite",
             "Instrument"
@@ -213,17 +233,31 @@
     },
     "Go_to_Induction": {
         "recognition": "OCR",
-        "expected": "前往感应",
+        "expected": "感应",
         "action": "Click",
-        "post_delay": 5000,
+        "post_delay": 3000,
+        "target_offset": [
+            0,
+            -390,
+            0,
+            0
+        ],
         "roi": [
-            250,
-            230,
-            260,
-            250
+            220,
+            200,
+            900,
+            400
         ],
         "next": [
-            "Quit"
+            "tea_two",
+            "tearoom",
+            "tea",
+            "tea_home"
         ]
+    },
+    "tea_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click"
     }
 }

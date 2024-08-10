@@ -2,7 +2,11 @@
     "drink": {
         "next": [
             "huipo",
-            "water"
+            "water",
+            "max_water",
+            "Swipe_drink",
+            "drink",
+            "drink_a_2day_water"
         ]
     },
     "huipo": {
@@ -66,8 +70,10 @@
         "recognition": "TemplateMatch",
         "template": "Collect/04.png",
         "action": "Click",
+        "post_delay": 3000,
         "next": [
-            "drink_a_2day_water"
+            "drink_a_2day_water",
+            "quit_fork"
         ]
     },
     "quit_fork": {

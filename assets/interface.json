@@ -29,7 +29,8 @@
                 "领取资源、好感、售卖机",
                 "社教模拟仪",
                 "制造物品",
-                "是否喝茶"
+                "是否喝茶",
+                "是否领取活力值"
             ]
         },
         {
@@ -332,8 +333,8 @@
                 {
                     "name": "领取奖励",
                     "param": {
-                        "entry_dispath_one": {
-                            "next": "dispath_resources"
+                        "entry_one": {
+                            "next": "entry_dispath_one"
                         }
                     }
                 }
@@ -344,7 +345,7 @@
                 {
                     "name": "初级社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_one"
                         }
                     }
@@ -352,7 +353,7 @@
                 {
                     "name": "中级社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_two"
                         }
                     }
@@ -360,7 +361,7 @@
                 {
                     "name": "高级社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_three"
                         }
                     }
@@ -368,16 +369,16 @@
                 {
                     "name": "进阶社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_four"
                         }
                     }
                 },
                 {
-                    "name": "不领取",
+                    "name": "不领取(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
                     "param": {
-                        "dispath_company_collect": {
-                            "next": "dc_back"
+                        "entry_dispath_three": {
+                            "next": []
                         }
                     }
                 }
@@ -388,88 +389,88 @@
                 {
                     "name": "蓝色装备",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_one"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_one"
                         }
                     }
                 },
                 {
                     "name": "铜石墨条（蓝装升级）",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_two"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_two"
                         }
                     }
                 },
                 {
                     "name": "银石墨条（黄装升级）",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_three"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_three"
                         }
                     }
                 },
                 {
                     "name": "100装备经验",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_four"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_four"
                         }
                     }
                 },
                 {
                     "name": "1型钢材",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_five_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_five"
                         }
                     }
                 },
                 {
                     "name": "资质证明1",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_six_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_six"
                         }
                     }
                 },
                 {
                     "name": "资质证明2",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_seven_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_seven"
                         }
                     }
                 },
                 {
                     "name": "高级制造申请",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_eight_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_eight"
                         }
                     }
                 },
                 {
                     "name": "2型钢材",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_nine_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_nine"
                         }
                     }
                 },
                 {
                     "name": "资质证明3",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_ten_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_ten"
                         }
                     }
                 },
                 {
-                    "name": "不制造",
+                    "name": "不制造(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
                     "param": {
-                        "fabricate_all": {
-                            "next": "dc_back"
+                        "entry_dispath_four": {
+                            "next": []
                         }
                     }
                 }
@@ -480,16 +481,36 @@
                 {
                     "name": "喝茶",
                     "param": {
-                        "dispatch_company_all": {
-                            "next": "tea"
+                        "tea": {
+                            "next": "entry_dispath_five"
                         }
                     }
                 },
                 {
-                    "name": "不喝茶",
+                    "name": "不喝茶(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
                     "param": {
                         "dispatch_company_all": {
-                            "next": "dc_back"
+                            "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "是否领取活力值": {
+            "cases": [
+                {
+                    "name": "领取",
+                    "param": {
+                        "vitality": {
+                            "next": "entry_dispath_six"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取【反正是派遣公司的最后一个任务（暂时），无所谓，这个可以用】",
+                    "param": {
+                        "dispatch_company_all": {
+                            "next": []
                         }
                     }
                 }
