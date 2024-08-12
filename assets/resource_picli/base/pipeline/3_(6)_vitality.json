@@ -2,7 +2,7 @@
     "vitality": {
         "next": [
             "entry_dispath_six",
-            "vitality"
+            "vitality_one"
         ]
     },
     "entry_dispath_six": {
@@ -16,9 +16,15 @@
         ]
     },
     "vitality_one": {
-        "recognition": "TemplateMatch",
-        "template": "Company/21.png",
+        "recognition": "OCR",
+        "expected": "舍",
         "action": "Click",
+        "roi": [
+            425,
+            435,
+            200,
+            230
+        ],
         "post_delay": 2000,
         "next": [
             "vitality_two"
