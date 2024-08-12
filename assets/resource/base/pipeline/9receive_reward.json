@@ -20,7 +20,7 @@
         "next": [
             "all1",
             "weekly1",
-            "Quti1"
+            "Quit1"
         ]
     },
     "all1": {
@@ -28,11 +28,18 @@
         "expected": "全部领取",
         "action": "Click",
         "post_delay": 5000,
+        "roi": [
+            0,
+            575,
+            1280,
+            150
+        ],
         "next": [
             "material1",
             "weekly1",
-            "reward1",
-            "Quti1"
+            "mission1",
+            "challenge",
+            "reward1"
         ]
     },
     "material1": {
@@ -40,8 +47,11 @@
         "expected": "获得物资",
         "action": "Click",
         "next": [
+            "all1",
             "weekly1",
-            "Quti1"
+            "mission1",
+            "reward1",
+            "Quit"
         ]
     },
     "weekly1": {
@@ -57,7 +67,7 @@
         "next": [
             "all1",
             "material1",
-            "Quti1"
+            "Quit1"
         ]
     },
     "travel1": {
@@ -72,8 +82,7 @@
         "action": "Click",
         "next": [
             "mission1",
-            "all1",
-            "Quti1"
+            "all1"
         ]
     },
     "mission1": {
@@ -99,8 +108,7 @@
         "action": "Click",
         "next": [
             "all1",
-            "reward1",
-            "Quti1"
+            "reward1"
         ]
     },
     "reward1": {
@@ -118,14 +126,13 @@
             "Quit"
         ]
     },
-    "Quti1": {
+    "Quit1": {
         "recognition": "TemplateMatch",
-        "template": "receive_reward/02.png",
+        "template": "receive_reward\\01.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "travel1",
-            "mission1",
-            "challenge"
+            "travel1"
         ]
     }
 }
