@@ -82,6 +82,8 @@
         "action": "Click",
         "next": [
             "mission1",
+            "challenge",
+            "reward1",
             "all1"
         ]
     },
@@ -89,10 +91,10 @@
         "recognition": "OCR",
         "expected": "任务",
         "roi": [
-            29,
-            300,
-            79,
-            39
+            0,
+            230,
+            195,
+            195
         ],
         "action": "Click",
         "next": [

@@ -9,7 +9,8 @@
         "template": "Mainpage/mail.png",
         "action": "Click",
         "next": [
-            "ReceiveMail"
+            "ReceiveMail",
+            "Quit"
         ]
     },
     "ReceiveMail": {
