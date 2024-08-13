@@ -9,7 +9,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 7000,
         "next": [
             "vitality_one",
             "dc_back"

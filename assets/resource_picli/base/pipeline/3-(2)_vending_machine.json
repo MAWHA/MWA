@@ -10,7 +10,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 7000,
         "next": [
             "entry_dispath_two",
             "vending_machine",
@@ -40,10 +40,7 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "dispath_company_collect",
-            "entry_dispath_four",
-            "tea",
-            "vitality"
+            "dispath_company_collect"
         ]
     },
     "vending_machine_reward": {

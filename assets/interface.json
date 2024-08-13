@@ -20,7 +20,10 @@
         },
         {
             "name": "器者征集",
-            "entry": "Collect_operators"
+            "entry": "Collect_operators",
+            "option": [
+                "征集几个"
+            ]
         },
         {
             "name": "派遣公司",
@@ -595,6 +598,42 @@
                     "param": {
                         "select_tier": {
                             "next": "blue"
+                        }
+                    }
+                }
+            ]
+        },
+        "征集几个": {
+            "cases": [
+                {
+                    "name": "征集1个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-one"
+                        }
+                    }
+                },
+                {
+                    "name": "征集2个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-two"
+                        }
+                    }
+                },
+                {
+                    "name": "征集3个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-three"
+                        }
+                    }
+                },
+                {
+                    "name": "征集4个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-four"
                         }
                     }
                 }

@@ -9,6 +9,7 @@
         "recognition": "OCR",
         "expected": "器者征集",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Sub_ReceiveOperators",
             "ReceiveCollect"
@@ -18,6 +19,7 @@
         "recognition": "TemplateMatch",
         "template": "Collect/02.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "ReceiveCollect"
         ]
@@ -57,15 +59,45 @@
         "recognition": "TemplateMatch",
         "template": "Collect/05.png",
         "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "outcome",
+            "new-role",
+            "repeat-role",
+            "Skip"
+        ]
+    },
+    "new-role": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
         "post_delay": 3000,
         "next": [
-            "outcome"
+            "quit2",
+            "back"
+        ]
+    },
+    "repeat-role": {
+        "recognition": "OCR",
+        "expected": "重复",
+        "action": "Click",
+        "roi": [
+            0,
+            230,
+            300,
+            210
+        ],
+        "post_delay": 3000,
+        "next": [
+            "quit2",
+            "back"
         ]
     },
     "outcome": {
         "recognition": "OCR",
         "expected": "征集结果",
         "action": "Click",
+        "post_delay": 2000,
         "target": [
             645,
             625,
@@ -73,21 +105,25 @@
             0
         ],
         "next": [
-            "get"
+            "get",
+            "outcome"
         ]
     },
     "get": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Collecting2",
+            "get",
             "back"
         ]
     },
     "quit2": {
         "recognition": "OCR",
         "expected": "当前没有已经完成的征集队列",
+        "post_delay": 2000,
         "next": [
             "back"
         ]
@@ -108,15 +144,26 @@
         "recognition": "OCR",
         "expected": "开始征集",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "jia",
+            "full",
             "no_solicitation",
-            "full"
+            "add-all"
+        ]
+    },
+    "add-all": {
+        "post_delay": 2000,
+        "next": [
+            "add-one",
+            "add-two",
+            "add-three",
+            "add-four"
         ]
     },
     "full": {
         "recognition": "OCR",
         "expected": "队列已满",
+        "post_delay": 2000,
         "next": [
             "Quit"
         ]
@@ -125,11 +172,45 @@
         "recognition": "OCR",
         "expected": "缺少道具",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Quit"
         ]
     },
-    "jia": {
+    "add-one": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "DoNothing",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "add-two": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "add-three": {
         "recognition": "TemplateMatch",
         "template": "Collect/03.png",
         "action": "Click",
@@ -140,10 +221,14 @@
             0
         ],
         "next": [
-            "jia2"
+            "jia4",
+            "no_solicitation",
+            "full"
         ]
     },
-    "jia2": {
+    "add-four": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
         "action": "Click",
         "target": [
             770,
@@ -152,7 +237,9 @@
             0
         ],
         "next": [
-            "jia3"
+            "jia3",
+            "no_solicitation",
+            "full"
         ]
     },
     "jia3": {
@@ -183,6 +270,7 @@
         "recognition": "TemplateMatch",
         "template": "Collect/04.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Quit"
         ]
@@ -191,14 +279,5 @@
         "recognition": "TemplateMatch",
         "template": "Collect/06.png",
         "action": "Click"
-    },
-    "Quit_2": {
-        "recognition": "OCR",
-        "expected": "招集",
-        "action": "DoNothing",
-        "next": [
-            "Quit_2",
-            "Quit"
-        ]
     }
 }

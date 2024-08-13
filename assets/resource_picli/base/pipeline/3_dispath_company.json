@@ -2,7 +2,6 @@
     "dispatch_company_all": {
         "next": [
             "entry_one",
-            "entry_two",
             "dispath_company_collect",
             "fabricate",
             "tea",

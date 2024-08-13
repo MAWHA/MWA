@@ -11,7 +11,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
-        "post_delay": 5000,
+        "post_delay": 7000,
         "next": [
             "tearoom",
             "tea_two",
@@ -125,7 +125,8 @@
             260
         ],
         "next": [
-            "Instrument"
+            "Instrument",
+            "invite"
         ]
     },
     "Instrument": {
