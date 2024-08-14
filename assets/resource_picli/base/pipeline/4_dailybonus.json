@@ -11,6 +11,7 @@
     "shangting": {
         "recognition": "OCR",
         "expected": "商亭",
+        "post_delay": 2000,
         "action": "Click",
         "next": [
             "libao"
@@ -20,6 +21,7 @@
         "recognition": "OCR",
         "expected": "礼包",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "richang"
         ]
@@ -28,22 +30,19 @@
         "recognition": "OCR",
         "expected": "日常",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "donggu"
         ]
     },
     "donggu": {
         "recognition": "OCR",
-        "expected": "每日",
+        "expected": "免费",
         "action": "Click",
-        "target": [
-            365,
-            665,
-            0,
-            0
-        ],
+        "post_delay": 2000,
         "next": [
-            "goumai"
+            "goumai",
+            "Quit"
         ]
     },
     "goumai": {
