@@ -46,6 +46,7 @@
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
+        "post_delay": 3000,
         "next": [
             "all1",
             "weekly1",

@@ -246,7 +246,8 @@
             "topic",
             "tea_click_two",
             "Go_to_Induction",
-            "origin"
+            "origin",
+            "tea_two"
         ]
     },
     "Go_to_Induction": {
@@ -256,20 +257,13 @@
         "post_delay": 3000,
         "target_offset": [
             0,
-            -390,
+            -290,
             0,
             0
-        ],
-        "roi": [
-            220,
-            200,
-            900,
-            400
         ],
         "next": [
             "tea_two",
             "tearoom",
-            "tea",
             "tea_home"
         ]
     },

@@ -1,0 +1,163 @@
+{
+    "combine-all": {
+        "next": [
+            "entry_dispath_seven",
+            "tearoom-combine",
+            "combine-one",
+            "combine-game"
+        ]
+    },
+    "entry_dispath_seven": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "tearoom-combine",
+            "combine-one",
+            "combine-game"
+        ]
+    },
+    "tearoom-combine": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "combine-one",
+            "combine-game"
+        ]
+    },
+    "combine-one": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\28.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            210,
+            110,
+            180,
+            200
+        ],
+        "next": [
+            "combine-game"
+        ]
+    },
+    "combine-game": {
+        "recognition": "OCR",
+        "expected": "开始游戏",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "combine-challenge",
+            "combine-swiping-one"
+        ]
+    },
+    "combine-swiping-one": {
+        "action": "Swipe",
+        "begin": [
+            850,
+            180,
+            0,
+            0
+        ],
+        "end": [
+            850,
+            450,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": [
+            "combine-challenge",
+            "combine-swiping-two"
+        ]
+    },
+    "combine-swiping-two": {
+        "action": "Swipe",
+        "begin": [
+            850,
+            450,
+            0,
+            0
+        ],
+        "end": [
+            570,
+            450,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": [
+            "combine-challenge",
+            "combine-swiping-three"
+        ]
+    },
+    "combine-swiping-three": {
+        "action": "Swipe",
+        "begin": [
+            570,
+            450,
+            0,
+            0
+        ],
+        "end": [
+            570,
+            180,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": [
+            "combine-challenge",
+            "combine-swiping-four"
+        ]
+    },
+    "combine-swiping-four": {
+        "action": "Swipe",
+        "begin": [
+            570,
+            180,
+            0,
+            0
+        ],
+        "end": [
+            850,
+            180,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": [
+            "combine-challenge",
+            "combine-swiping-one"
+        ]
+    },
+    "combine-challenge": {
+        "recognition": "OCR",
+        "expected": "再次挑战",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            0,
+            -350,
+            0,
+            0
+        ],
+        "next": [
+            "combine-home",
+            "combine-challenge"
+        ]
+    },
+    "combine-home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click"
+    }
+}

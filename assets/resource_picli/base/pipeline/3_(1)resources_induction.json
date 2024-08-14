@@ -134,7 +134,7 @@
         "next": [
             "weapons",
             "entry_two",
-            "dc_back"
+            "donshe_back"
         ]
     },
     "weapons": {
@@ -142,8 +142,8 @@
         "expected": "间",
         "action": "Click",
         "target_offset": [
-            70,
-            10,
+            75,
+            15,
             0,
             0
         ],
@@ -157,9 +157,8 @@
         "next": [
             "weapons_click",
             "weapons_two",
-            "entry_two",
-            "dc_back",
-            "vending_home"
+            "donshe_back",
+            "weapons_home"
         ]
     },
     "weapons_two": {
@@ -173,8 +172,15 @@
             110
         ],
         "next": [
-            "entry_two",
-            "vending_home"
+            "weapons_home"
+        ]
+    },
+    "weapons_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "next": [
+            "entry_two"
         ]
     },
     "weapons_click": {
@@ -183,8 +189,17 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "entry_two",
-            "dc_back"
+            "donshe_back",
+            "entry_two"
+        ]
+    },
+    "donshe_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "entry_two"
         ]
     }
 }

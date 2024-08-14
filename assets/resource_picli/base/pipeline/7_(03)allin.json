@@ -6,7 +6,8 @@
             "Speedrun1x",
             "Speedrun2x",
             "Speedrun4x",
-            "Speedrun10x"
+            "Speedrun10x",
+            "allin"
         ]
     },
     "fast": {
@@ -26,6 +27,7 @@
             "Speedrun2x",
             "Speedrun4x",
             "Speedrun10x",
+            "allin",
             "Start1"
         ]
     },
@@ -67,16 +69,126 @@
             "CompleteSpeedrun"
         ]
     },
+    "allin": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/11.png",
+        "action": "Click",
+        "roi": [
+            830,
+            275,
+            125,
+            115
+        ],
+        "next": [
+            "requires_more",
+            "allin-max",
+            "allin"
+        ]
+    },
+    "allin-max": {
+        "recognition": "OCR",
+        "expected": "最大多倍",
+        "action": "DoNothing",
+        "next": [
+            "allin-CompleteSpeedrun"
+        ]
+    },
+    "allin-CompleteSpeedrun": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/12.png",
+        "action": "Click",
+        "next": [
+            "allin-goodwill",
+            "allin-settlement"
+        ]
+    },
+    "allin-goodwill": {
+        "recognition": "OCR",
+        "expected": "好感已满",
+        "roi": [
+            485,
+            280,
+            324,
+            82
+        ],
+        "action": "Click",
+        "target": [
+            770,
+            430,
+            510,
+            290
+        ],
+        "next": [
+            "allin-settlement",
+            "allin-CompleteSpeedrun",
+            "Start1"
+        ]
+    },
+    "allin-settlement": {
+        "recognition": "OCR",
+        "expected": "结算完成",
+        "action": "Click",
+        "pre_wait_freezes": 2000,
+        "target": [
+            1115,
+            635,
+            0,
+            0
+        ],
+        "next": [
+            "allin-fast"
+        ]
+    },
+    "allin-fast": {
+        "recognition": "OCR",
+        "expected": "速通",
+        "action": "Click",
+        "target": [
+            1030,
+            660,
+            0,
+            0
+        ],
+        "pre_delay": 2000,
+        "post_delay": 2000,
+        "next": [
+            "allin",
+            "allin-vitality"
+        ]
+    },
+    "allin-vitality": {
+        "recognition": "OCR",
+        "expected": "活力",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "roi": [
+            180,
+            75,
+            220,
+            130
+        ],
+        "next": [
+            "allin-quit"
+        ]
+    },
+    "allin-quit": {
+        "recognition": "TemplateMatch",
+        "template": "dst/fork.png",
+        "action": "Click",
+        "next": [
+            "home"
+        ]
+    },
     "Sub_AddSpeedrunTime2": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
-        "target": [
-            905,
-            340,
-            0,
-            0
+        "roi": [
+            830,
+            275,
+            125,
+            115
         ],
         "next": [
             "Speedrun2x"
@@ -87,11 +199,11 @@
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
-        "target": [
-            905,
-            340,
-            0,
-            0
+        "roi": [
+            830,
+            275,
+            125,
+            115
         ],
         "next": [
             "Speedrun4x"
@@ -102,11 +214,11 @@
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
-        "target": [
-            905,
-            340,
-            0,
-            0
+        "roi": [
+            830,
+            275,
+            125,
+            115
         ],
         "next": [
             "Speedrun10x"
@@ -154,6 +266,7 @@
     "requires_more": {
         "recognition": "OCR",
         "expected": "需要更多体力",
+        "post_delay": 2000,
         "next": [
             "CompleteSpeedrun"
         ]

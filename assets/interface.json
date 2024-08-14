@@ -37,6 +37,18 @@
             ]
         },
         {
+            "name": "武器制造",
+            "entry": "weapons-fabricate"
+        },
+        {
+            "name": "和合",
+            "entry": "combine-all"
+        },
+        {
+            "name": "领取家具蓝图",
+            "entry": "blueprint-all"
+        },
+        {
             "name": "每日免费礼包",
             "entry": "business_kiosk"
         },
@@ -326,6 +338,14 @@
                     "param": {
                         "fast": {
                             "next": "Speedrun10x"
+                        }
+                    }
+                },
+                {
+                    "name": "全部体力（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "allin"
                         }
                     }
                 }
