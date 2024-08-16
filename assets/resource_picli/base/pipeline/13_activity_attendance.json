@@ -22,7 +22,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "山水自鸣",
+        "expected": "远洋之望",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
@@ -33,6 +33,7 @@
         ],
         "next": [
             "attendance_two",
+            "attendance_three",
             "Quit"
         ]
     },
@@ -55,6 +56,16 @@
             1015,
             200
         ],
+        "next": [
+            "activity_get",
+            "Quit"
+        ]
+    },
+    "attendance_three": {
+        "recognition": "OCR",
+        "expected": "第1天",
+        "action": "Click",
+        "post_delay": 3000,
         "next": [
             "activity_get",
             "Quit"
