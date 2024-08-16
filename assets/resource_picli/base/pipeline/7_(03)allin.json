@@ -21,7 +21,7 @@
             0
         ],
         "pre_delay": 2000,
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "Speedrun1x",
             "Speedrun2x",
@@ -73,6 +73,7 @@
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
+        "post_delay": 2000,
         "roi": [
             830,
             275,
