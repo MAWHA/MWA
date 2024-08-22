@@ -2013,10 +2013,24 @@
         "post_delay": 5000,
         "next": [
             "remind_all",
+            "enemy-action",
+            "automatic"
+        ]
+    },
+    "enemy-action": {
+        "recognition": "OCR",
+        "expected": "敌方",
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "next": [
+            "remind_all",
+            "enemy-action",
             "automatic"
         ]
     },
     "automatic": {
+        "recognition": "OCR",
+        "expected": "自动",
         "action": "Click",
         "target": [
             1235,

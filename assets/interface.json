@@ -104,6 +104,14 @@
         {
             "name": "活动签到",
             "entry": "activity_attendance"
+        },
+        {
+            "name": "海上远旅人（无论是否有通关，均可使用，默认买货而不卖，该港口没货了会跳过买货，直接退出）",
+            "entry": "maritime-all",
+            "option": [
+                "选择港口",
+                "通关几次"
+            ]
         }
     ],
     "option": {
@@ -654,6 +662,54 @@
                     "param": {
                         "add-all": {
                             "next": "add-four"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择港口": {
+            "cases": [
+                {
+                    "name": "香港",
+                    "param": {
+                        "cruises": {
+                            "next": "HongKong-one"
+                        }
+                    }
+                },
+                {
+                    "name": "东京",
+                    "param": {
+                        "cruises": {
+                            "next": "tokyo-one"
+                        }
+                    }
+                },
+                {
+                    "name": "比雷埃夫斯港",
+                    "param": {
+                        "cruises": {
+                            "next": "pirae-effus-one"
+                        }
+                    }
+                }
+            ]
+        },
+        "通关几次": {
+            "cases": [
+                {
+                    "name": "1次",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-one"
+                        }
+                    }
+                },
+                {
+                    "name": "一直循环（不想循环了直接关掉cli【直接点“x”】即可）",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-two"
                         }
                     }
                 }
