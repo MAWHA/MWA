@@ -110,7 +110,9 @@
             "entry": "maritime-all",
             "option": [
                 "选择港口",
-                "通关几次"
+                "通关几次",
+                "是否买货",
+                "是否卖货"
             ]
         }
     ],
@@ -706,10 +708,82 @@
                     }
                 },
                 {
-                    "name": "一直循环（不想循环了直接关掉cli【直接点“x”】即可）",
+                    "name": "一直循环（单港口循环，不想循环了直接关掉cli【直接点“x”】即可）",
                     "param": {
                         "activity-pass-all": {
                             "next": "activity-pass-two"
+                        }
+                    }
+                },
+                {
+                    "name": "香港--东京--(双港口循环，注意，上一港口的选择 香港 或 东京 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-three"
+                        }
+                    }
+                },
+                {
+                    "name": "香港--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 香港 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-four"
+                        }
+                    }
+                },
+                {
+                    "name": "东京--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-five"
+                        }
+                    }
+                },
+                {
+                    "name": "香港--东京--比雷埃夫斯港--(三港口循环，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-six"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否买货": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "activity-bazaar-two": {
+                            "next": "activity-all"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "activity-bazaar-two": {
+                            "next": "activity-quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否卖货": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "activity-handoff": {
+                            "next": "activity-sell"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "activity-handoff": {
+                            "next": "activity-sell"
                         }
                     }
                 }

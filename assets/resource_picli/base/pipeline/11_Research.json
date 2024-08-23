@@ -20,6 +20,16 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
+            "Research-topic",
+            "Research"
+        ]
+    },
+    "Research-topic": {
+        "recognition": "OCR",
+        "expected": "主题",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
             "Research"
         ]
     },

@@ -22,7 +22,67 @@
             "Spells",
             "snowscape",
             "Research",
-            "museum"
+            "museum",
+            "Research-buff-one"
+        ]
+    },
+    "Research-buff-one": {
+        "post_delay": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "front_one",
+            "front_one_2",
+            "front_two",
+            "front_three",
+            "Research-buff-two"
+        ]
+    },
+    "Research-buff-two": {
+        "post_delay": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "Research-buff-three"
+        ]
+    },
+    "Research-buff-three": {
+        "post_delay": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "Research-buff-four"
+        ]
+    },
+    "front-buff-one": {
+        "recognition": "OCR",
+        "expected": "连斩",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "agree"
+        ]
+    },
+    "Research-buff-four": {
+        "post_delay": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "front_nine",
+            "front_ten",
+            "front-buff-one"
         ]
     },
     "Marksmanship": {
@@ -1935,7 +1995,9 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "war_five"
+            "war_five",
+            "advance_one_man",
+            "advance_one_women"
         ]
     },
     "negative": {

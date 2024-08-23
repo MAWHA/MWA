@@ -4,8 +4,6 @@
             "maritime",
             "cruises",
             "formation",
-            "activity-examine-one",
-            "activity-fast",
             "activity-Sail",
             "activity-auot",
             "activity-hurled-one"
@@ -21,6 +19,25 @@
             300,
             200
         ],
+        "post_delay": 2000,
+        "next": [
+            "activity-interest",
+            "cruises"
+        ]
+    },
+    "activity-interest": {
+        "recognition": "OCR",
+        "expected": "今日存息",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "activity-confirm"
+        ]
+    },
+    "activity-confirm": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
         "post_delay": 2000,
         "next": [
             "cruises"
@@ -45,7 +62,7 @@
     },
     "HongKong-one": {
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 3000,
         "target": [
             520,
             395,
@@ -73,7 +90,7 @@
     },
     "tokyo-one": {
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 3000,
         "target": [
             665,
             235,
@@ -101,7 +118,7 @@
     },
     "pirae-effus-one": {
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 3000,
         "target": [
             210,
             210,
@@ -341,7 +358,6 @@
         "next": [
             "activity-unlock",
             "activity-automatic",
-            "activity-bazaar-one",
             "activity-auot"
         ]
     },
@@ -402,17 +418,17 @@
             80
         ],
         "next": [
-            "activity-replenishment",
             "activity-trade"
         ]
     },
     "activity-trade": {
         "recognition": "OCR",
-        "expected": "确定交易",
+        "expected": "确认交易",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 5000,
         "next": [
             "activity-give",
+            "activity-handoff",
             "activity-quit"
         ]
     },
@@ -432,7 +448,9 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "activity-sell"
+            "activity-sell",
+            "activity-quit",
+            "activity-handoff"
         ]
     },
     "activity-sell": {
@@ -447,7 +465,26 @@
             80
         ],
         "next": [
-            "activity-trade",
+            "activity-trade-sell",
+            "activity-quit"
+        ]
+    },
+    "activity-trade-sell": {
+        "recognition": "OCR",
+        "expected": "确认交易",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "activity-give-sell",
+            "activity-quit"
+        ]
+    },
+    "activity-give-sell": {
+        "recognition": "OCR",
+        "expected": "获得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
             "activity-quit"
         ]
     },
@@ -545,6 +582,7 @@
         "next": [
             "activity-hurled-two",
             "activity-hurled-one",
+            "activity-handoff",
             "activity-quit"
         ]
     },
@@ -683,7 +721,7 @@
         "recognition": "OCR",
         "expected": "进入作战",
         "action": "Click",
-        "post_delay": 5000,
+        "post_delay": 9000,
         "roi": [
             950,
             565,
@@ -709,6 +747,18 @@
         "expected": "暂停",
         "action": "Click",
         "post_delay": 1000,
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "roi": [
+            1100,
+            0,
+            150,
+            150
+        ],
         "next": [
             "actvivty-quit"
         ]
@@ -742,7 +792,11 @@
     "activity-pass-all": {
         "next": [
             "activity-pass-two",
-            "activity-pass-one"
+            "activity-pass-one",
+            "activity-pass-three",
+            "activity-pass-four",
+            "activity-pass-five",
+            "activity-pass-six"
         ]
     },
     "activity-pass-one": {
@@ -779,6 +833,182 @@
         "post_delay": 1000,
         "next": [
             "activity-pass-two"
+        ]
+    },
+    "activity-pass-three": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-three-HongKong",
+            "circulate-activity-pass-three-tokoy"
+        ]
+    },
+    "circulate-activity-pass-three-tokoy": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
+        ]
+    },
+    "circulate-activity-pass-three-HongKong": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "post_delay": 3000,
+        "action": "Click",
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "activity-pass-four": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-four-HongKong",
+            "circulate-activity-pass-four-pirae-effus"
+        ]
+    },
+    "circulate-activity-pass-four-pirae-effus": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
+        ]
+    },
+    "circulate-activity-pass-four-HongKong": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "post_delay": 3000,
+        "action": "Click",
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "activity-pass-five": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-five-tokoy",
+            "circulate-activity-pass-five-pirae-effus"
+        ]
+    },
+    "circulate-activity-pass-five-tokoy": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "circulate-activity-pass-five-pirae-effus": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "activity-pass-six": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "circulate-HongKong-one",
+            "circulate-tokyo-one",
+            "circulate-pirae-effus-one"
+        ]
+    },
+    "circulate-HongKong-one": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "post_delay": 3000,
+        "action": "Click",
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "circulate-tokyo-one": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "circulate-pirae-effus-one": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
         ]
     }
 }
