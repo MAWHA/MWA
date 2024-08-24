@@ -114,6 +114,20 @@
                 "是否买货",
                 "是否卖货"
             ]
+        },
+        {
+            "name": "领取蔚蓝日志",
+            "entry": "maritime",
+            "option": [
+                "是否领取日志"
+            ]
+        },
+        {
+            "name": "分解垃圾",
+            "entry": "maritime",
+            "option": [
+                "是否分解垃圾"
+            ]
         }
     ],
     "option": {
@@ -694,6 +708,22 @@
                             "next": "pirae-effus-one"
                         }
                     }
+                },
+                {
+                    "name": "伦敦",
+                    "param": {
+                        "cruises": {
+                            "next": "london-one"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大",
+                    "param": {
+                        "cruises": {
+                            "next": "alexander-one"
+                        }
+                    }
                 }
             ]
         },
@@ -732,7 +762,7 @@
                     }
                 },
                 {
-                    "name": "东京--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "name": "东京--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
                     "param": {
                         "activity-pass-all": {
                             "next": "activity-pass-five"
@@ -740,7 +770,63 @@
                     }
                 },
                 {
-                    "name": "香港--东京--比雷埃夫斯港--(三港口循环，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "name": "伦敦--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 伦敦 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-seven"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦--东京--(双港口循环，注意，上一港口的选择 东京 或 伦敦 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-night"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦--香港--(双港口循环，注意，上一港口的选择 伦敦 或 香港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-nine"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦--亚历山大--(双港口循环，注意，上一港口的选择 伦敦 或 亚历山大 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-ten"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大--比雷埃夫斯港--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-thirteen"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大--东京--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-twelve"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大--香港--(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-eleven"
+                        }
+                    }
+                },
+                {
+                    "name": "香港--东京--比雷埃夫斯港--伦敦--亚历山大--(五港口循环，不想循环了直接关掉cli【直接点“x”】即可)",
                     "param": {
                         "activity-pass-all": {
                             "next": "activity-pass-six"
@@ -783,7 +869,47 @@
                     "name": "否",
                     "param": {
                         "activity-handoff": {
-                            "next": "activity-sell"
+                            "next": "activity-quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否领取日志": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "maritime": {
+                            "next": "activity-azure"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "maritime": {
+                            "next": "Quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否分解垃圾": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "maritime": {
+                            "next": "activity-trajectory"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "maritime": {
+                            "next": "Quit"
                         }
                     }
                 }

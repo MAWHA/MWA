@@ -84,16 +84,16 @@
         ]
     },
     "weapons-fabricate-quit": {
-        "recognition": "TemplateMatch",
-        "template": "Company\\29.png",
+        "recognition": "OCR",
+        "expected": "等待生产",
         "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            1100,
+        "target": [
+            1150,
+            70,
             0,
-            200,
-            200
+            0
         ],
+        "post_delay": 2000,
         "next": [
             "confidential-orders"
         ]
@@ -148,15 +148,14 @@
         ]
     },
     "weapons-fabricate-quit-two": {
-        "recognition": "TemplateMatch",
-        "template": "Company\\29.png",
+        "recognition": "OCR",
+        "expected": "等待生产",
         "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            1100,
+        "target": [
+            1150,
+            70,
             0,
-            200,
-            200
+            0
         ],
         "next": [
             "weapons-fabricate-home"

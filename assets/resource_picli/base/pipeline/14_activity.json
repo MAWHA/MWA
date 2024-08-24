@@ -19,19 +19,34 @@
             300,
             200
         ],
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "activity-interest",
-            "cruises"
+            "cruises",
+            "activity-azure",
+            "activity-trajectory",
+            "Quit"
         ]
     },
     "activity-interest": {
         "recognition": "OCR",
-        "expected": "今日存息",
-        "action": "DoNothing",
+        "expected": "存",
+        "action": "Click",
         "post_delay": 2000,
+        "target_offset": [
+            0,
+            360,
+            0,
+            0
+        ],
+        "roi": [
+            475,
+            100,
+            300,
+            120
+        ],
         "next": [
-            "activity-confirm"
+            "cruises"
         ]
     },
     "activity-confirm": {
@@ -57,7 +72,9 @@
         "next": [
             "HongKong-one",
             "tokyo-one",
-            "pirae-effus-one"
+            "pirae-effus-one",
+            "london-one",
+            "alexander-one"
         ]
     },
     "HongKong-one": {
@@ -139,6 +156,62 @@
             0,
             300,
             100
+        ],
+        "next": [
+            "formation"
+        ]
+    },
+    "london-one": {
+        "action": "Click",
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "london-two",
+            "london-one"
+        ]
+    },
+    "london-two": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "DoNothing",
+        "roi": [
+            420,
+            0,
+            200,
+            150
+        ],
+        "next": [
+            "formation"
+        ]
+    },
+    "alexander-one": {
+        "action": "Click",
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "alexander-two",
+            "alexander-one"
+        ]
+    },
+    "alexander-two": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "DoNothing",
+        "roi": [
+            520,
+            130,
+            250,
+            120
         ],
         "next": [
             "formation"
@@ -791,12 +864,13 @@
     },
     "activity-pass-all": {
         "next": [
-            "activity-pass-two",
             "activity-pass-one",
+            "activity-pass-two",
             "activity-pass-three",
             "activity-pass-four",
             "activity-pass-five",
-            "activity-pass-six"
+            "activity-pass-six",
+            "Quit"
         ]
     },
     "activity-pass-one": {
@@ -963,7 +1037,9 @@
         "next": [
             "circulate-HongKong-one",
             "circulate-tokyo-one",
-            "circulate-pirae-effus-one"
+            "circulate-pirae-effus-one",
+            "circulate-london-one",
+            "circulate-alexander-one"
         ]
     },
     "circulate-HongKong-one": {
@@ -1008,7 +1084,455 @@
             0
         ],
         "next": [
+            "london-one"
+        ]
+    },
+    "circulate-london-one": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-alexander-one": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
             "HongKong-one"
+        ]
+    },
+    "activity-pass-seven": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-seven-london",
+            "circulate-activity-pass-seven-pirae-effus"
+        ]
+    },
+    "circulate-activity-pass-seven-london": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "circulate-activity-pass-seven-pirae-effus": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "london-one"
+        ]
+    },
+    "activity-pass-night": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-night-london",
+            "circulate-activity-pass-night-tokoy"
+        ]
+    },
+    "circulate-activity-pass-night-london": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "circulate-activity-pass-night-tokoy": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "london-one"
+        ]
+    },
+    "activity-pass-nine": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-nine-HongKong",
+            "circulate-activity-pass-nine-london"
+        ]
+    },
+    "circulate-activity-pass-nine-london": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
+        ]
+    },
+    "circulate-activity-pass-nine-HongKong": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "london-one"
+        ]
+    },
+    "activity-pass-ten": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-ten-alexander",
+            "circulate-activity-pass-ten-london"
+        ]
+    },
+    "circulate-activity-pass-ten-london": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-activity-pass-ten-alexander": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
+            "london-one"
+        ]
+    },
+    "activity-pass-eleven": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-eleven-alexander",
+            "circulate-activity-pass-eleven-HongKong"
+        ]
+    },
+    "circulate-activity-pass-eleven-HongKong": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-activity-pass-eleven-alexander": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
+        ]
+    },
+    "activity-pass-twelve": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-twelve-alexander",
+            "circulate-activity-pass-twelve-tokoy"
+        ]
+    },
+    "circulate-activity-pass-twelve-tokoy": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-activity-pass-twelve-alexander": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "activity-pass-thirteen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-thirteen-alexander",
+            "circulate-activity-pass-thirteen-pirae-effus"
+        ]
+    },
+    "circulate-activity-pass-thirteen-pirae-effus": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-activity-pass-thirteen-alexander": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "activity-azure": {
+        "recognition": "OCR",
+        "expected": "蔚蓝",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            70,
+            520,
+            280,
+            200
+        ],
+        "next": [
+            "activity-receive",
+            "activity-quit"
+        ]
+    },
+    "activity-receive": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            290,
+            500,
+            220,
+            70
+        ],
+        "next": [
+            "activity-give"
+        ]
+    },
+    "activity-trajectory": {
+        "recognition": "OCR",
+        "expected": "航迹",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            990,
+            160,
+            250,
+            200
+        ],
+        "next": [
+            "activity-decompose"
+        ]
+    },
+    "activity-decompose": {
+        "recognition": "OCR",
+        "expected": "分解",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            870,
+            540,
+            160,
+            100
+        ],
+        "next": [
+            "decompose-slide",
+            "decompose-insufficient",
+            "activity-decompose"
+        ]
+    },
+    "decompose-insufficient": {
+        "recognition": "OCR",
+        "expected": "道具不足",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "next": [
+            "decompose-quit"
+        ]
+    },
+    "decompose-quit": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\05.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "roi": [
+            1125,
+            0,
+            100,
+            100
+        ],
+        "next": [
+            "Quit"
+        ]
+    },
+    "decompose-slide": {
+        "recognition": "OCR",
+        "expected": "丝",
+        "action": "Swipe",
+        "post_wait_freezes": 2000,
+        "duration": 500,
+        "begin": [
+            400,
+            160,
+            0,
+            0
+        ],
+        "end": [
+            870,
+            160,
+            0,
+            0
+        ],
+        "roi": [
+            525,
+            270,
+            210,
+            105
+        ],
+        "next": [
+            "decompose-click",
+            "decompose-slide"
+        ]
+    },
+    "decompose-click": {
+        "recognition": "OCR",
+        "expected": "获得途径",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            0,
+            80,
+            0,
+            0
+        ],
+        "roi": [
+            720,
+            480,
+            225,
+            90
+        ],
+        "next": [
+            "activity-decompose",
+            "decompose-click"
         ]
     }
 }
