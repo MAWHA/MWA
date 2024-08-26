@@ -29,6 +29,12 @@
         "expected": "主题",
         "action": "Click",
         "post_delay": 2000,
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
         "next": [
             "Research"
         ]

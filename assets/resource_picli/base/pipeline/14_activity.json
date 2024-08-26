@@ -74,7 +74,8 @@
             "tokyo-one",
             "pirae-effus-one",
             "london-one",
-            "alexander-one"
+            "alexander-one",
+            "Callao-one"
         ]
     },
     "HongKong-one": {
@@ -211,6 +212,34 @@
             520,
             130,
             250,
+            120
+        ],
+        "next": [
+            "formation"
+        ]
+    },
+    "Callao-one": {
+        "action": "Click",
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "Callao-two",
+            "Callao-one"
+        ]
+    },
+    "Callao-two": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "DoNothing",
+        "roi": [
+            960,
+            0,
+            220,
             120
         ],
         "next": [
@@ -812,7 +841,8 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "activity-paused"
+            "activity-paused",
+            "activity-blank"
         ]
     },
     "activity-paused": {
@@ -833,7 +863,8 @@
             150
         ],
         "next": [
-            "actvivty-quit"
+            "actvivty-quit",
+            "activity-paused"
         ]
     },
     "actvivty-quit": {
@@ -842,7 +873,8 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "activity-abandon"
+            "activity-abandon",
+            "actvivty-quit"
         ]
     },
     "activity-abandon": {
@@ -859,7 +891,8 @@
         "next": [
             "activity-automatic",
             "activity-hurled-two",
-            "activity-hurled-one"
+            "activity-hurled-one",
+            "activity-abandon"
         ]
     },
     "activity-pass-all": {
@@ -870,6 +903,18 @@
             "activity-pass-four",
             "activity-pass-five",
             "activity-pass-six",
+            "activity-pass-seven",
+            "activity-pass-night",
+            "activity-pass-nine",
+            "activity-pass-ten",
+            "activity-pass-eleven",
+            "activity-pass-twelve",
+            "activity-pass-thirteen",
+            "activity-pass-Fourteen",
+            "activity-pass-Fifteen",
+            "activity-pass-Sixteen",
+            "activity-pass-Seventeen",
+            "activity-pass-Eighteen",
             "Quit"
         ]
     },
@@ -1039,7 +1084,8 @@
             "circulate-tokyo-one",
             "circulate-pirae-effus-one",
             "circulate-london-one",
-            "circulate-alexander-one"
+            "circulate-alexander-one",
+            "circulate-Callao-one"
         ]
     },
     "circulate-HongKong-one": {
@@ -1110,6 +1156,21 @@
         "target": [
             170,
             385,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
+        ]
+    },
+    "circulate-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
             0,
             0
         ],
@@ -1395,6 +1456,206 @@
         ],
         "next": [
             "pirae-effus-one"
+        ]
+    },
+    "activity-pass-Fourteen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-Fourteen-alexander",
+            "circulate-activity-pass-Fourteen-Callao-one"
+        ]
+    },
+    "circulate-activity-pass-Fourteen-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "next": [
+            "alexander-one"
+        ]
+    },
+    "circulate-activity-pass-Fourteen-alexander": {
+        "recognition": "OCR",
+        "expected": "山大",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            170,
+            385,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
+        ]
+    },
+    "activity-pass-Fifteen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-Fifteen-pirae-effus-one",
+            "circulate-activity-pass-Fifteen-Callao-one"
+        ]
+    },
+    "circulate-activity-pass-Fifteen-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "next": [
+            "pirae-effus-one"
+        ]
+    },
+    "circulate-activity-pass-Fifteen-pirae-effus-one": {
+        "recognition": "OCR",
+        "expected": "夫斯",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            210,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
+        ]
+    },
+    "activity-pass-Sixteen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-Sixteen-HongKong",
+            "circulate-activity-pass-Sixteen-Callao-one"
+        ]
+    },
+    "circulate-activity-pass-Sixteen-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "next": [
+            "HongKong-one"
+        ]
+    },
+    "circulate-activity-pass-Sixteen-HongKong": {
+        "recognition": "OCR",
+        "expected": "香港",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            520,
+            395,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
+        ]
+    },
+    "activity-pass-Seventeen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-Seventeen-tokyo",
+            "circulate-activity-pass-Seventeen-Callao-one"
+        ]
+    },
+    "circulate-activity-pass-Seventeen-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "next": [
+            "tokyo-one"
+        ]
+    },
+    "circulate-activity-pass-Seventeen-tokyo": {
+        "recognition": "OCR",
+        "expected": "东京",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            665,
+            235,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
+        ]
+    },
+    "activity-pass-Eighteen": {
+        "recognition": "OCR",
+        "expected": "当前位置",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "circulate-activity-pass-Eighteen-london",
+            "circulate-activity-pass-Eighteen-Callao-one"
+        ]
+    },
+    "circulate-activity-pass-Eighteen-Callao-one": {
+        "recognition": "OCR",
+        "expected": "亚俄",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            1205,
+            480,
+            0,
+            0
+        ],
+        "next": [
+            "london-one"
+        ]
+    },
+    "circulate-activity-pass-Eighteen-london": {
+        "recognition": "OCR",
+        "expected": "伦敦",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            95,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "Callao-one"
         ]
     },
     "activity-azure": {
