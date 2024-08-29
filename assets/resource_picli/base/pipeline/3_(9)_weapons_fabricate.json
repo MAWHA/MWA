@@ -95,7 +95,30 @@
         ],
         "post_delay": 2000,
         "next": [
-            "confidential-orders"
+            "confidential-orders",
+            "weapons-fabricate-quit-Image"
+        ]
+    },
+    "weapons-fabricate-quit-Image": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\29.png",
+        "action": "Click",
+        "target": [
+            1150,
+            70,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "roi": [
+            1050,
+            0,
+            200,
+            190
+        ],
+        "next": [
+            "confidential-orders",
+            "weapons-fabricate-quit-Image"
         ]
     },
     "confidential-orders": {

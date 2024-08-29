@@ -29,9 +29,6 @@
     "Research-buff-one": {
         "post_delay": 3000,
         "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells",
             "front_one",
             "front_one_2",
             "front_two",
@@ -42,9 +39,6 @@
     "Research-buff-two": {
         "post_delay": 3000,
         "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells",
             "front_four",
             "front_four_2",
             "front_four_3",
@@ -55,9 +49,6 @@
     "Research-buff-three": {
         "post_delay": 3000,
         "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells",
             "front_five",
             "front_six",
             "front_seven",
@@ -82,7 +73,8 @@
             "Spells",
             "front_nine",
             "front_ten",
-            "front-buff-one"
+            "front-buff-one",
+            "Research-buff-one"
         ]
     },
     "Marksmanship": {
@@ -97,7 +89,8 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree"
+            "agree",
+            "Research-buff-one"
         ]
     },
     "Blazing_Knife": {
@@ -112,7 +105,8 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree"
+            "agree",
+            "Research-buff-one"
         ]
     },
     "Spells": {
@@ -127,7 +121,8 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree"
+            "agree",
+            "Research-buff-one"
         ]
     },
     "agree": {
