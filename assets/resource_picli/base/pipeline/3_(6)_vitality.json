@@ -42,7 +42,8 @@
         ],
         "post_delay": 5000,
         "next": [
-            "vitality_home"
+            "vitality_home",
+            "vitality_two"
         ]
     },
     "vitality_home": {

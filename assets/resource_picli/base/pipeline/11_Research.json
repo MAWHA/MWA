@@ -5,7 +5,14 @@
             "Research",
             "Research_two",
             "advance_one_man",
-            "advance_one_women"
+            "advance_one_women",
+            "war_one",
+            "keyword",
+            "upgrade_one",
+            "descending_one",
+            "front_one",
+            "war_new_state",
+            "negative"
         ]
     },
     "museum": {
@@ -65,8 +72,8 @@
         ]
     },
     "Research": {
-        "recognition": "TemplateMatch",
-        "template": "Research/02.png",
+        "recognition": "OCR",
+        "expected": "启程",
         "roi": [
             600,
             350,
@@ -80,7 +87,8 @@
             "landscape",
             "journey",
             "advance_one_man",
-            "advance_one_women"
+            "advance_one_women",
+            "Research"
         ]
     },
     "Research_two": {
