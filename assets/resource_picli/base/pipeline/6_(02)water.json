@@ -60,6 +60,7 @@
             0
         ],
         "next": [
+            "max_water",
             "sub_drink",
             "quit_fork",
             "max_water",
@@ -72,6 +73,7 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
+            "max_water",
             "drink_a_2day_water",
             "quit_fork"
         ]
