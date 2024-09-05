@@ -81,7 +81,7 @@
             370
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_wait_freezes": 5000,
         "next": [
             "snowscape",
             "landscape",

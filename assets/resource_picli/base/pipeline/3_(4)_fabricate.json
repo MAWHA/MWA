@@ -502,7 +502,8 @@
         "post_delay": 5000,
         "next": [
             "tea",
-            "vitality"
+            "vitality",
+            "fabricate_home"
         ]
     }
 }

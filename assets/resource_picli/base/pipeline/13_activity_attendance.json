@@ -17,12 +17,13 @@
             90
         ],
         "next": [
-            "attendance"
+            "attendance",
+            "activity"
         ]
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "远洋之望",
+        "expected": "月动霜华",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
