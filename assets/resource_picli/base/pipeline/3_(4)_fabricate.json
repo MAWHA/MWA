@@ -457,6 +457,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/fabricate_max.png",
         "action": "Click",
+        "post_delay": 3000,
         "roi": [
             1040,
             512,
@@ -471,6 +472,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/fabricate_social_book.png",
         "action": "Click",
+        "post_delay": 3000,
         "roi": [
             870,
             618,
@@ -485,6 +487,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/verify_fabricate.png",
         "action": "Click",
+        "post_delay": 3000,
         "roi": [
             678,
             387,

@@ -42,8 +42,27 @@
         ],
         "post_delay": 5000,
         "next": [
+            "vitality_three",
             "vitality_home",
             "vitality_two"
+        ]
+    },
+    "vitality_three": {
+        "recognition": "OCR",
+        "expected": "只能",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "vitality_four"
+        ]
+    },
+    "vitality_four": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\04.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "vitality_home"
         ]
     },
     "vitality_home": {
