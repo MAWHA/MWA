@@ -23,58 +23,27 @@
             "snowscape",
             "Research",
             "museum",
-            "Research-buff-one"
+            "buff-one"
         ]
     },
-    "Research-buff-one": {
-        "post_delay": 3000,
-        "next": [
-            "front_one",
-            "front_one_2",
-            "front_two",
-            "front_three",
-            "Research-buff-two"
-        ]
-    },
-    "Research-buff-two": {
-        "post_delay": 3000,
-        "next": [
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "Research-buff-three"
-        ]
-    },
-    "Research-buff-three": {
-        "post_delay": 3000,
-        "next": [
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "Research-buff-four"
-        ]
-    },
-    "front-buff-one": {
-        "recognition": "OCR",
-        "expected": "连斩",
+    "buff-one": {
         "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "agree"
-        ]
-    },
-    "Research-buff-four": {
+        "target": [
+            360,
+            340,
+            0,
+            0
+        ],
         "post_delay": 3000,
         "next": [
+            "agree",
             "Marksmanship",
             "Blazing_Knife",
             "Spells",
-            "front_nine",
-            "front_ten",
-            "front-buff-one",
-            "Research-buff-one"
+            "snowscape",
+            "Research",
+            "museum",
+            "advance_four"
         ]
     },
     "Marksmanship": {
@@ -89,8 +58,7 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree",
-            "Research-buff-one"
+            "agree"
         ]
     },
     "Blazing_Knife": {
@@ -105,8 +73,7 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree",
-            "Research-buff-one"
+            "agree"
         ]
     },
     "Spells": {
@@ -121,8 +88,7 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "agree",
-            "Research-buff-one"
+            "agree"
         ]
     },
     "agree": {
