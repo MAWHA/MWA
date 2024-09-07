@@ -1,0 +1,33 @@
+name: res_build
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  update:
+    name: Update Map
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+
+      - name: Setup python
+        uses: actions/setup-python@v5.2.0
+        with:
+          python-version: 3.9
+
+      - name: RES ZIP
+        run: |
+          python res_zip.py
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9.1.3
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: ':wrench: 自动构建资源包'
+          add: |
+            'res.zip'
+            'version.txt'
