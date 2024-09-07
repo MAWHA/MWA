@@ -68,6 +68,18 @@ def install_chores():
         working_dir / "LICENSE",
         install_path,
     )
+    shutil.copy2(
+        working_dir / "startmumu.exe",
+        install_path,
+    )
+    shutil.copy2(
+        working_dir / "启动！！.bat",
+        install_path,
+    )
+    shutil.copy2(
+        working_dir / "使用教程.md",
+        install_path,
+    )
 
 
 if __name__ == "__main__":
