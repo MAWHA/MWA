@@ -16,6 +16,7 @@ def add_folder_to_zip(zipf: zipfile.ZipFile, folder_path: str):
             file_path = os.path.join(foldername, filename)
             # 在 ZIP 文件中创建相对路径
             relative_path = file_path.replace(r"assets\resource\base", "")
+            print(relative_path)
             zipf.write(file_path, relative_path)
 
 def get_git_commit_count():
