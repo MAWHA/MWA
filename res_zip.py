@@ -1,9 +1,3 @@
-"""
-Author: Night-stars-1 nujj1042633805@gmail.com
-Date: 2024-09-07 22:31:32
-LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2024-09-08 00:17:54
-"""
 import os
 import subprocess
 import zipfile
@@ -18,7 +12,6 @@ def add_folder_to_zip(zipf: zipfile.ZipFile, folder_path: str):
     :param folder_path: 要添加到 ZIP 文件中的文件夹路径
     """
     for foldername, subfolders, filenames in os.walk(folder_path):
-        print(filenames)
         for filename in filenames:
             file_path = os.path.join(foldername, filename)
             # 在 ZIP 文件中创建相对路径
