@@ -12,6 +12,7 @@ def add_folder_to_zip(zipf: zipfile.ZipFile, folder_path: str):
     :param folder_path: 要添加到 ZIP 文件中的文件夹路径
     """
     for foldername, subfolders, filenames in os.walk(folder_path):
+        print(filenames)
         for filename in filenames:
             file_path = os.path.join(foldername, filename)
             # 在 ZIP 文件中创建相对路径
