@@ -43,6 +43,7 @@ def get_git_commit_count():
 with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
     add_folder_to_zip(zipf, './assets/resource/base/pipeline')
     add_folder_to_zip(zipf, './assets/resource/base/image')
+    zipf.write('./assets/interface.json', 'interface.json')
 
 with open('version.txt', 'w', encoding='utf-8') as f:
     f.write(get_git_commit_count())
