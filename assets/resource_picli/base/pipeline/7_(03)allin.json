@@ -1,0 +1,415 @@
+{
+    "frequency": {
+        "next": [
+            "fast",
+            "Start1",
+            "Speedrun1x",
+            "Speedrun2x",
+            "Speedrun4x",
+            "Speedrun10x",
+            "allin"
+        ]
+    },
+    "fast": {
+        "recognition": "OCR",
+        "expected": "速通",
+        "action": "Click",
+        "target": [
+            1030,
+            660,
+            0,
+            0
+        ],
+        "pre_delay": 2000,
+        "post_delay": 3000,
+        "next": [
+            "Speedrun1x",
+            "Speedrun2x",
+            "Speedrun4x",
+            "Speedrun10x",
+            "allin",
+            "Start1"
+        ]
+    },
+    "Speedrun1x": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/10.png",
+        "action": "Click",
+        "target": [
+            855,
+            420,
+            0,
+            0
+        ],
+        "next": [
+            "CompleteSpeedrun"
+        ]
+    },
+    "Speedrun2x": {
+        "next": [
+            "AddSpeedrunTime2",
+            "requires_more",
+            "Sub_AddSpeedrunTime2",
+            "CompleteSpeedrun"
+        ]
+    },
+    "Speedrun4x": {
+        "next": [
+            "AddSpeedrunTime4",
+            "requires_more",
+            "Sub_AddSpeedrunTime4",
+            "CompleteSpeedrun"
+        ]
+    },
+    "Speedrun10x": {
+        "next": [
+            "AddSpeedrunTime10",
+            "requires_more",
+            "Sub_AddSpeedrunTime10",
+            "CompleteSpeedrun"
+        ]
+    },
+    "allin": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/11.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            830,
+            275,
+            125,
+            115
+        ],
+        "next": [
+            "requires_more",
+            "allin-max",
+            "allin"
+        ]
+    },
+    "allin-max": {
+        "recognition": "OCR",
+        "expected": "最大多倍",
+        "action": "DoNothing",
+        "next": [
+            "allin-CompleteSpeedrun"
+        ]
+    },
+    "allin-CompleteSpeedrun": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/12.png",
+        "action": "Click",
+        "next": [
+            "allin-goodwill",
+            "allin-settlement"
+        ]
+    },
+    "allin-goodwill": {
+        "recognition": "OCR",
+        "expected": "好感已满",
+        "roi": [
+            485,
+            280,
+            324,
+            82
+        ],
+        "action": "Click",
+        "target": [
+            770,
+            430,
+            510,
+            290
+        ],
+        "next": [
+            "allin-settlement",
+            "allin-CompleteSpeedrun",
+            "Start1"
+        ]
+    },
+    "allin-settlement": {
+        "recognition": "OCR",
+        "expected": "结算完成",
+        "action": "Click",
+        "pre_wait_freezes": 2000,
+        "target": [
+            1115,
+            635,
+            0,
+            0
+        ],
+        "next": [
+            "allin-fast"
+        ]
+    },
+    "allin-fast": {
+        "recognition": "OCR",
+        "expected": "速通",
+        "action": "Click",
+        "target": [
+            1030,
+            660,
+            0,
+            0
+        ],
+        "pre_delay": 2000,
+        "post_delay": 2000,
+        "next": [
+            "allin",
+            "allin-vitality"
+        ]
+    },
+    "allin-vitality": {
+        "recognition": "OCR",
+        "expected": "活力",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "roi": [
+            180,
+            75,
+            220,
+            130
+        ],
+        "next": [
+            "allin-quit"
+        ]
+    },
+    "allin-quit": {
+        "recognition": "TemplateMatch",
+        "template": "dst/fork.png",
+        "action": "Click",
+        "next": [
+            "home"
+        ]
+    },
+    "Sub_AddSpeedrunTime2": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/11.png",
+        "action": "Click",
+        "roi": [
+            830,
+            275,
+            125,
+            115
+        ],
+        "next": [
+            "Speedrun2x"
+        ]
+    },
+    "Sub_AddSpeedrunTime4": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/11.png",
+        "action": "Click",
+        "roi": [
+            830,
+            275,
+            125,
+            115
+        ],
+        "next": [
+            "Speedrun4x"
+        ]
+    },
+    "Sub_AddSpeedrunTime10": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/11.png",
+        "action": "Click",
+        "roi": [
+            830,
+            275,
+            125,
+            115
+        ],
+        "next": [
+            "Speedrun10x"
+        ]
+    },
+    "AddSpeedrunTime2": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/13.png",
+        "roi": [
+            744,
+            324,
+            35,
+            34
+        ],
+        "next": [
+            "CompleteSpeedrun"
+        ]
+    },
+    "AddSpeedrunTime4": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/14.png",
+        "roi": [
+            746,
+            323,
+            33,
+            32
+        ],
+        "next": [
+            "CompleteSpeedrun"
+        ]
+    },
+    "AddSpeedrunTime10": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/15.png",
+        "roi": [
+            741,
+            325,
+            42,
+            33
+        ],
+        "next": [
+            "CompleteSpeedrun"
+        ]
+    },
+    "requires_more": {
+        "recognition": "OCR",
+        "expected": "需要更多体力",
+        "post_delay": 2000,
+        "next": [
+            "CompleteSpeedrun"
+        ]
+    },
+    "CompleteSpeedrun": {
+        "recognition": "TemplateMatch",
+        "template": "Speedrun/12.png",
+        "action": "Click",
+        "next": [
+            "goodwill",
+            "settlement"
+        ]
+    },
+    "goodwill": {
+        "recognition": "OCR",
+        "expected": "好感已满",
+        "roi": [
+            485,
+            280,
+            324,
+            82
+        ],
+        "action": "Click",
+        "target": [
+            770,
+            430,
+            510,
+            290
+        ],
+        "next": [
+            "settlement",
+            "CompleteSpeedrun",
+            "Start1"
+        ]
+    },
+    "settlement": {
+        "recognition": "OCR",
+        "expected": "结算完成",
+        "action": "Click",
+        "pre_wait_freezes": 2000,
+        "target": [
+            1115,
+            635,
+            0,
+            0
+        ],
+        "next": [
+            "exit"
+        ]
+    },
+    "exit": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "next": [
+            "home"
+        ]
+    },
+    "home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/10.png",
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "next": [
+            "stop"
+        ]
+    },
+    "stop": {
+        "action": "StopTask"
+    },
+    "Start1": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next": [
+            "goodwill",
+            "Start2"
+        ]
+    },
+    "Start2": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next": [
+            "substitute_shifts",
+            "await",
+            "situation"
+        ]
+    },
+    "substitute_shifts": {
+        "recognition": "OCR",
+        "expected": "代班中",
+        "inverse": true,
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "target": [
+            1236,
+            159,
+            0,
+            0
+        ],
+        "next": [
+            "await"
+        ]
+    },
+    "await": {
+        "recognition": "OCR",
+        "expected": "完美评价",
+        "action": "Click",
+        "post_wait_freezes": 3000,
+        "target": [
+            770,
+            425,
+            0,
+            0
+        ],
+        "next": [
+            "hit",
+            "situation"
+        ]
+    },
+    "hit": {
+        "action": "Click",
+        "target": [
+            695,
+            75,
+            0,
+            0
+        ],
+        "next": [
+            "situation"
+        ]
+    },
+    "situation": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "exit"
+        ]
+    }
+}

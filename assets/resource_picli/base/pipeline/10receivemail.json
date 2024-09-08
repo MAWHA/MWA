@@ -1,0 +1,36 @@
+{
+    "Mail": {
+        "next": [
+            "EnterMail"
+        ]
+    },
+    "EnterMail": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/mail.png",
+        "action": "Click",
+        "next": [
+            "ReceiveMail",
+            "Quit"
+        ]
+    },
+    "ReceiveMail": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "Mail-get",
+            "Quit"
+        ]
+    },
+    "Mail-get": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Quit",
+            "Mail-get"
+        ]
+    }
+}

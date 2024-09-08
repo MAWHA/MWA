@@ -2,12 +2,15 @@
     "museum_Research": {
         "next": [
             "museum",
-            "Research"
+            "Research",
+            "Research_two",
+            "advance_one_man",
+            "advance_one_women"
         ]
     },
     "museum": {
-        "recognition": "TemplateMatch",
-        "template": "Research/01.png",
+        "recognition": "OCR",
+        "expected": "博物",
         "roi": [
             1087,
             283,
@@ -34,7 +37,30 @@
         "next": [
             "snowscape",
             "landscape",
-            "journey"
+            "journey",
+            "advance_one_man",
+            "advance_one_women"
+        ]
+    },
+    "Research_two": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "roi": [
+            600,
+            350,
+            675,
+            370
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "advance_one_man",
+            "advance_one_women",
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "agree",
+            "new_state"
         ]
     }
 }

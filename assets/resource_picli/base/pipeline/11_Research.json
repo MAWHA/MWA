@@ -1,0 +1,115 @@
+{
+    "museum_Research": {
+        "next": [
+            "museum",
+            "Research",
+            "Research_two",
+            "advance_one_man",
+            "advance_one_women",
+            "war_one",
+            "keyword",
+            "upgrade_one",
+            "descending_one",
+            "front_one",
+            "war_new_state",
+            "negative"
+        ]
+    },
+    "museum": {
+        "recognition": "OCR",
+        "expected": "博物",
+        "roi": [
+            1087,
+            283,
+            173,
+            167
+        ],
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "Research-topic",
+            "Research",
+            "Research-week",
+            "museum"
+        ]
+    },
+    "Research-week": {
+        "recognition": "OCR",
+        "expected": "常奖",
+        "action": "Click",
+        "target_offset": [
+            500,
+            -40,
+            0,
+            0
+        ],
+        "roi": [
+            0,
+            75,
+            400,
+            180
+        ],
+        "post_delay": 2000,
+        "next": [
+            "Research-topic",
+            "Research-week"
+        ]
+    },
+    "Research-topic": {
+        "recognition": "OCR",
+        "expected": "主题",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "Research",
+            "Research_two"
+        ]
+    },
+    "Research": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "roi": [
+            600,
+            350,
+            675,
+            370
+        ],
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next": [
+            "snowscape",
+            "landscape",
+            "journey",
+            "advance_one_man",
+            "advance_one_women",
+            "Research"
+        ]
+    },
+    "Research_two": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "roi": [
+            600,
+            350,
+            675,
+            370
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "advance_one_man",
+            "advance_one_women",
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "agree",
+            "new_state"
+        ]
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "vitality": {
+        "next": [
+            "entry_dispath_six",
+            "vitality_one"
+        ]
+    },
+    "entry_dispath_six": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "vitality_one",
+            "dc_back"
+        ]
+    },
+    "vitality_one": {
+        "recognition": "OCR",
+        "expected": "舍",
+        "action": "Click",
+        "roi": [
+            425,
+            435,
+            200,
+            230
+        ],
+        "post_delay": 2000,
+        "next": [
+            "vitality_two"
+        ]
+    },
+    "vitality_two": {
+        "recognition": "TemplateMatch",
+        "template": "Company/22.png",
+        "action": "Click",
+        "target": [
+            255,
+            665,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "vitality_three",
+            "vitality_home",
+            "vitality_two"
+        ]
+    },
+    "vitality_three": {
+        "recognition": "OCR",
+        "expected": "只能",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "vitality_four"
+        ]
+    },
+    "vitality_four": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\04.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "vitality_home"
+        ]
+    },
+    "vitality_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click"
+    }
+}

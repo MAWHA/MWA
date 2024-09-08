@@ -1,0 +1,25 @@
+{
+    "journey": {
+        "recognition": "TemplateMatch",
+        "template": "Research/82.png",
+        "roi": [
+            109,
+            384,
+            80,
+            86
+        ],
+        "action": "Click",
+        "target_offset": [
+            60,
+            150,
+            0,
+            0
+        ],
+        "post_wait_freezes": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells"
+        ]
+    }
+}

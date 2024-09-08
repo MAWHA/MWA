@@ -1,22 +1,23 @@
 {
-    "Mail":{
-        "next":[
+    "Mail": {
+        "next": [
             "EnterMail"
         ]
     },
-    "EnterMail":{
-        "recognition":"TemplateMatch",
-        "template":"Mainpage/mail.png",
-        "action":"Click",
-        "next":[
-            "ReceiveMail"
+    "EnterMail": {
+        "recognition": "TemplateMatch",
+        "template": "Mainpage/mail.png",
+        "action": "Click",
+        "next": [
+            "ReceiveMail",
+            "Quit"
         ]
     },
-    "ReceiveMail":{
-        "recognition":"OCR",
-        "expected":"全部",
-        "action":"Click",
-        "next":[
+    "ReceiveMail": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "next": [
             "Quit"
         ]
     }

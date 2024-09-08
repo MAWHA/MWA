@@ -190,6 +190,19 @@
     "Quit": {
         "recognition": "TemplateMatch",
         "template": "Collect/06.png",
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "Quit",
+            "Quit_2"
+        ]
+    },
+    "Quit_2": {
+        "recognition": "OCR",
+        "expected": "招集",
+        "action": "DoNothing",
+        "next": [
+            "Quit_2",
+            "Quit"
+        ]
     }
 }

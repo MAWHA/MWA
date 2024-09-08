@@ -9,7 +9,7 @@
         {
             "name": "B 服",
             "path": [
-                "{PROJECT_DIR}/resource/base"
+                "{PROJECT_DIR}/resource_picli/base"
             ]
         }
     ],
@@ -20,7 +20,10 @@
         },
         {
             "name": "器者征集",
-            "entry": "Collect_operators"
+            "entry": "Collect_operators",
+            "option": [
+                "征集几个"
+            ]
         },
         {
             "name": "派遣公司",
@@ -28,8 +31,22 @@
             "option": [
                 "领取资源、好感、售卖机",
                 "社教模拟仪",
-                "制造物品"
+                "制造物品",
+                "是否喝茶",
+                "是否领取活力值"
             ]
+        },
+        {
+            "name": "武器制造",
+            "entry": "weapons-fabricate"
+        },
+        {
+            "name": "和合",
+            "entry": "combine-all"
+        },
+        {
+            "name": "领取家具蓝图",
+            "entry": "blueprint-all"
         },
         {
             "name": "每日免费礼包",
@@ -40,7 +57,7 @@
             "entry": "Barter_random"
         },
         {
-            "name": "在主界面喝一瓶2天内过期的水（需要喝水请选择，无需则无视，注意！目前仅支持还剩两天就过期的水）",
+            "name": "在主界面喝完（/上限）2天过期的水（需要喝水请选择，无需则无视，注意！目前仅支持还剩两天就过期的水）",
             "entry": "drink_a_2day_water"
         },
         {
@@ -73,15 +90,42 @@
             "name": "博物研学",
             "entry": "museum_Research",
             "option": [
-                "选择哪个",
-                "初始buff"
+                "选择哪个"
             ]
         },
         {
-            "name":"分解装备",
-            "entry":"dissect_weapon",
-            "option":[
+            "name": "分解装备",
+            "entry": "dissect_weapon",
+            "option": [
                 "分解的装备的最大品质"
+            ]
+        },
+        {
+            "name": "活动签到",
+            "entry": "activity_attendance"
+        },
+        {
+            "name": "海上远旅人（无论是否有通关，均可使用，默认买货而不卖，该港口没货了会跳过买货，直接退出）",
+            "entry": "maritime-all",
+            "option": [
+                "选择港口",
+                "通关几次",
+                "是否买货",
+                "是否卖货"
+            ]
+        },
+        {
+            "name": "领取蔚蓝日志",
+            "entry": "maritime",
+            "option": [
+                "是否领取日志"
+            ]
+        },
+        {
+            "name": "分解垃圾",
+            "entry": "maritime",
+            "option": [
+                "是否分解垃圾"
             ]
         }
     ],
@@ -319,6 +363,14 @@
                             "next": "Speedrun10x"
                         }
                     }
+                },
+                {
+                    "name": "全部体力（速通解锁专用）",
+                    "param": {
+                        "fast": {
+                            "next": "allin"
+                        }
+                    }
                 }
             ]
         },
@@ -327,8 +379,8 @@
                 {
                     "name": "领取奖励",
                     "param": {
-                        "entry_dispath_one": {
-                            "next": "dispath_resources"
+                        "entry_one": {
+                            "next": "entry_dispath_one"
                         }
                     }
                 }
@@ -339,7 +391,7 @@
                 {
                     "name": "初级社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_one"
                         }
                     }
@@ -347,15 +399,15 @@
                 {
                     "name": "中级社会指南",
                     "param": {
-                        "dispath_company_collect": {
-                            "next": "dispatch_social_tow"
+                        "entry_dispath_three": {
+                            "next": "dispatch_social_two"
                         }
                     }
                 },
                 {
                     "name": "高级社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_three"
                         }
                     }
@@ -363,16 +415,16 @@
                 {
                     "name": "进阶社会指南",
                     "param": {
-                        "dispath_company_collect": {
+                        "entry_dispath_three": {
                             "next": "dispatch_social_four"
                         }
                     }
                 },
                 {
-                    "name": "不领取",
+                    "name": "不领取(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
                     "param": {
-                        "dispath_company_collect": {
-                            "next": "dc_back"
+                        "entry_dispath_three": {
+                            "next": []
                         }
                     }
                 }
@@ -383,88 +435,128 @@
                 {
                     "name": "蓝色装备",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_one"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_one"
                         }
                     }
                 },
                 {
                     "name": "铜石墨条（蓝装升级）",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_tow"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_two"
                         }
                     }
                 },
                 {
                     "name": "银石墨条（黄装升级）",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_three"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_three"
                         }
                     }
                 },
                 {
                     "name": "100装备经验",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_four"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_four"
                         }
                     }
                 },
                 {
                     "name": "1型钢材",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_five_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_five"
                         }
                     }
                 },
                 {
                     "name": "资质证明1",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_six_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_six"
                         }
                     }
                 },
                 {
                     "name": "资质证明2",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_seven_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_seven"
                         }
                     }
                 },
                 {
                     "name": "高级制造申请",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_eight_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_eight"
                         }
                     }
                 },
                 {
                     "name": "2型钢材",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_nine_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_nine"
                         }
                     }
                 },
                 {
                     "name": "资质证明3",
                     "param": {
-                        "fabricate_all": {
-                            "next": "fabricate_ten_Swipe"
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_ten"
                         }
                     }
                 },
                 {
-                    "name": "不制造",
+                    "name": "不制造(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
                     "param": {
-                        "fabricate_all": {
-                            "next": "dc_back"
+                        "entry_dispath_four": {
+                            "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "是否喝茶": {
+            "cases": [
+                {
+                    "name": "喝茶",
+                    "param": {
+                        "tea": {
+                            "next": "entry_dispath_five"
+                        }
+                    }
+                },
+                {
+                    "name": "不喝茶(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "param": {
+                        "dispatch_company_all": {
+                            "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "是否领取活力值": {
+            "cases": [
+                {
+                    "name": "领取",
+                    "param": {
+                        "vitality": {
+                            "next": "entry_dispath_six"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取【反正是派遣公司的最后一个任务（暂时），无所谓，这个可以用】",
+                    "param": {
+                        "dispatch_company_all": {
+                            "next": []
                         }
                     }
                 }
@@ -526,29 +618,345 @@
                 }
             ]
         },
-        "分解的装备的最大品质":{
-            "cases":[
+        "分解的装备的最大品质": {
+            "cases": [
                 {
-                    "name":"炽级",
-                    "param":{
-                        "select_tier":{
-                            "next":"red"
+                    "name": "炽级",
+                    "param": {
+                        "select_tier": {
+                            "next": "red"
                         }
                     }
                 },
                 {
-                    "name":"耀级",
-                    "param":{
-                        "select_tier":{
-                            "next":"yellow"
+                    "name": "耀级",
+                    "param": {
+                        "select_tier": {
+                            "next": "yellow"
                         }
                     }
                 },
                 {
-                    "name":"凌级",
-                    "param":{
-                        "select_tier":{
-                            "next":"blue"
+                    "name": "凌级",
+                    "param": {
+                        "select_tier": {
+                            "next": "blue"
+                        }
+                    }
+                }
+            ]
+        },
+        "征集几个": {
+            "cases": [
+                {
+                    "name": "征集1个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-one"
+                        }
+                    }
+                },
+                {
+                    "name": "征集2个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-two"
+                        }
+                    }
+                },
+                {
+                    "name": "征集3个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-three"
+                        }
+                    }
+                },
+                {
+                    "name": "征集4个",
+                    "param": {
+                        "add-all": {
+                            "next": "add-four"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择港口": {
+            "cases": [
+                {
+                    "name": "香港",
+                    "param": {
+                        "cruises": {
+                            "next": "HongKong-one"
+                        }
+                    }
+                },
+                {
+                    "name": "东京",
+                    "param": {
+                        "cruises": {
+                            "next": "tokyo-one"
+                        }
+                    }
+                },
+                {
+                    "name": "比雷埃夫斯港",
+                    "param": {
+                        "cruises": {
+                            "next": "pirae-effus-one"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦",
+                    "param": {
+                        "cruises": {
+                            "next": "london-one"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大",
+                    "param": {
+                        "cruises": {
+                            "next": "alexander-one"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄",
+                    "param": {
+                        "cruises": {
+                            "next": "Callao-one"
+                        }
+                    }
+                }
+            ]
+        },
+        "通关几次": {
+            "cases": [
+                {
+                    "name": "1次",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-one"
+                        }
+                    }
+                },
+                {
+                    "name": "一直循环（单港口循环，不想循环了直接关掉cli【直接点“x”】即可）",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-two"
+                        }
+                    }
+                },
+                {
+                    "name": "香港-东京-(双港口循环，注意，上一港口的选择 香港 或 东京 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-three"
+                        }
+                    }
+                },
+                {
+                    "name": "香港-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 香港 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-four"
+                        }
+                    }
+                },
+                {
+                    "name": "东京-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-five"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 伦敦 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-seven"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦-东京-(双港口循环，注意，上一港口的选择 东京 或 伦敦 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-night"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦-香港-(双港口循环，注意，上一港口的选择 伦敦 或 香港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-nine"
+                        }
+                    }
+                },
+                {
+                    "name": "伦敦-亚历山大-(双港口循环，注意，上一港口的选择 伦敦 或 亚历山大 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-ten"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-thirteen"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大-东京-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-twelve"
+                        }
+                    }
+                },
+                {
+                    "name": "亚历山大-香港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，,不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-eleven"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄-亚历山大",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-Fourteen"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄-比雷埃夫斯港",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-Fifteen"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄-香港",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-Sixteen"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄-东京",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-Seventeen"
+                        }
+                    }
+                },
+                {
+                    "name": "卡亚俄-伦敦",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-Eighteen"
+                        }
+                    }
+                },
+                {
+                    "name": "香港-东京-比雷埃夫斯港-伦敦-亚历山大-卡亚俄-(六港口循环，不想循环了直接关掉cli【直接点“x”】即可)",
+                    "param": {
+                        "activity-pass-all": {
+                            "next": "activity-pass-six"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否买货": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "activity-bazaar-two": {
+                            "next": "activity-all"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "activity-bazaar-two": {
+                            "next": "activity-quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否卖货": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "activity-handoff": {
+                            "next": "activity-sell"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "activity-handoff": {
+                            "next": "activity-quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否领取日志": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "maritime": {
+                            "next": "activity-azure"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "maritime": {
+                            "next": "Quit"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否分解垃圾": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "maritime": {
+                            "next": "activity-trajectory"
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "maritime": {
+                            "next": "Quit"
                         }
                     }
                 }

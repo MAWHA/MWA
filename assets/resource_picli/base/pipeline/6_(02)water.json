@@ -1,0 +1,106 @@
+{
+    "drink": {
+        "next": [
+            "huipo",
+            "water",
+            "max_water",
+            "Swipe_drink",
+            "drink",
+            "drink_a_2day_water"
+        ]
+    },
+    "huipo": {
+        "recognition": "OCR",
+        "expected": "剩余购买次数",
+        "roi": [
+            280,
+            485,
+            218,
+            52
+        ],
+        "action": "Click",
+        "target": [
+            615,
+            75,
+            0,
+            0
+        ],
+        "next": "quit_fork"
+    },
+    "water": {
+        "recognition": "OCR",
+        "expected": "药剂",
+        "roi": [
+            244,
+            132,
+            130,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "sub_2daywater",
+            "quit_fork"
+        ]
+    },
+    "sub_2daywater": {
+        "recognition": "OCR",
+        "expected": "2天",
+        "threshold": 0.85,
+        "roi": [
+            390,
+            120,
+            160,
+            140
+        ],
+        "action": "Click",
+        "target_offset": [
+            -10,
+            35,
+            0,
+            0
+        ],
+        "next": [
+            "max_water",
+            "sub_drink",
+            "quit_fork",
+            "max_water",
+            "click_water"
+        ]
+    },
+    "sub_drink": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "max_water",
+            "drink_a_2day_water",
+            "quit_fork"
+        ]
+    },
+    "quit_fork": {
+        "recognition": "TemplateMatch",
+        "template": "dst/fork.png",
+        "action": "Click"
+    },
+    "max_water": {
+        "recognition": "OCR",
+        "expected": "上限",
+        "action": "Click",
+        "target": [
+            170,
+            400,
+            0,
+            0
+        ]
+    },
+    "click_water": {
+        "action": "Click",
+        "target": [
+            170,
+            400,
+            0,
+            0
+        ]
+    }
+}

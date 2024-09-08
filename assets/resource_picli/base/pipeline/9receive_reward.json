@@ -1,0 +1,141 @@
+{
+    "task1": {
+        "next": [
+            "daily1",
+            "weekly1",
+            "travel1",
+            "mission1"
+        ]
+    },
+    "daily1": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            1149,
+            650,
+            74,
+            40
+        ],
+        "action": "Click",
+        "next": [
+            "all1",
+            "weekly1",
+            "Quit1"
+        ]
+    },
+    "all1": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            0,
+            575,
+            1280,
+            150
+        ],
+        "next": [
+            "material1",
+            "weekly1",
+            "mission1",
+            "challenge",
+            "reward1"
+        ]
+    },
+    "material1": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "all1",
+            "weekly1",
+            "mission1",
+            "reward1",
+            "Quit"
+        ]
+    },
+    "weekly1": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "roi": [
+            80,
+            310,
+            100,
+            98
+        ],
+        "action": "Click",
+        "next": [
+            "all1",
+            "material1",
+            "Quit1"
+        ]
+    },
+    "travel1": {
+        "recognition": "OCR",
+        "expected": "游历",
+        "roi": [
+            773,
+            656,
+            60,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "mission1",
+            "challenge",
+            "reward1",
+            "all1"
+        ]
+    },
+    "mission1": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            0,
+            230,
+            195,
+            195
+        ],
+        "action": "Click",
+        "next": [
+            "all1",
+            "challenge",
+            "reward1",
+            "Quit"
+        ]
+    },
+    "challenge": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "action": "Click",
+        "next": [
+            "all1",
+            "reward1"
+        ]
+    },
+    "reward1": {
+        "recognition": "OCR",
+        "expected": "奖励",
+        "roi": [
+            23,
+            134,
+            97,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "all1",
+            "Quit"
+        ]
+    },
+    "Quit1": {
+        "recognition": "TemplateMatch",
+        "template": "receive_reward\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "travel1"
+        ]
+    }
+}

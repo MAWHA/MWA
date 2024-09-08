@@ -1,0 +1,279 @@
+{
+    "tea": {
+        "next": [
+            "entry_dispath_five",
+            "tearoom",
+            "tea_two",
+            "Instrument"
+        ]
+    },
+    "entry_dispath_five": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "tearoom",
+            "tea_two",
+            "Instrument",
+            "entry_dispath_five"
+        ]
+    },
+    "tearoom": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "tea_two",
+            "Instrument"
+        ]
+    },
+    "tea_two": {
+        "recognition": "OCR",
+        "expected": "茶",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            590,
+            145,
+            150,
+            140
+        ],
+        "next": [
+            "number",
+            "drink_tea"
+        ]
+    },
+    "number": {
+        "recognition": "OCR",
+        "expected": "次数",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "next": [
+            "tea_home"
+        ]
+    },
+    "drink_tea": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\23.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "target": [
+            300,
+            465,
+            0,
+            0
+        ],
+        "roi": [
+            194,
+            0,
+            282,
+            214
+        ],
+        "next": [
+            "company_confirm_one"
+        ]
+    },
+    "company_confirm_one": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            90,
+            520,
+            625,
+            200
+        ],
+        "next": [
+            "lack",
+            "company_confirm_two_await"
+        ]
+    },
+    "lack": {
+        "recognition": "OCR",
+        "expected": "缺少",
+        "action": "DoNothing",
+        "post_delay": 3000,
+        "next": [
+            "tea_home"
+        ]
+    },
+    "company_confirm_two_await": {
+        "action": "DoNothing",
+        "post_delay": 13000,
+        "next": [
+            "company_confirm_two"
+        ]
+    },
+    "company_confirm_two": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            650,
+            230,
+            275,
+            260
+        ],
+        "next": [
+            "Instrument",
+            "invite"
+        ]
+    },
+    "Instrument": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Company\\24.png",
+            "Company\\25.png",
+            "Company\\26.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            -30,
+            100,
+            0,
+            0
+        ],
+        "green_mask": true,
+        "pre_wait_freezes": 100,
+        "next": [
+            "invite",
+            "Instrument"
+        ]
+    },
+    "invite": {
+        "recognition": "OCR",
+        "expected": "邀请",
+        "action": "Click",
+        "roi": [
+            900,
+            500,
+            350,
+            200
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "tea_click_one"
+        ]
+    },
+    "tea_click_one": {
+        "recognition": "OCR",
+        "expected": "品茗",
+        "action": "Click",
+        "target": [
+            1150,
+            220,
+            0,
+            0
+        ],
+        "roi": [
+            5,
+            0,
+            150,
+            100
+        ],
+        "post_delay": 2000,
+        "next": [
+            "topic",
+            "tea_click_one"
+        ]
+    },
+    "topic": {
+        "recognition": "OCR",
+        "expected": "展开的话题",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "roi": [
+            765,
+            35,
+            295,
+            85
+        ],
+        "next": [
+            "tea_click_two"
+        ]
+    },
+    "tea_click_two": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\27.png",
+        "action": "Click",
+        "green_mask": true,
+        "index": -1,
+        "post_delay": 3000,
+        "target_offset": [
+            40,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            865,
+            95,
+            310,
+            355
+        ],
+        "next": [
+            "origin"
+        ]
+    },
+    "origin": {
+        "recognition": "OCR",
+        "expected": "缘",
+        "action": "Click",
+        "post_delay": 3000,
+        "target_offset": [
+            0,
+            -370,
+            0,
+            0
+        ],
+        "roi": [
+            165,
+            610,
+            125,
+            110
+        ],
+        "next": [
+            "topic",
+            "tea_click_two",
+            "Go_to_Induction",
+            "origin",
+            "tea_two"
+        ]
+    },
+    "Go_to_Induction": {
+        "recognition": "OCR",
+        "expected": "感应",
+        "action": "Click",
+        "post_delay": 3000,
+        "target_offset": [
+            0,
+            -290,
+            0,
+            0
+        ],
+        "next": [
+            "tea_two",
+            "tearoom",
+            "tea_home"
+        ]
+    },
+    "tea_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "vitality"
+        ]
+    }
+}

@@ -1,0 +1,205 @@
+{
+    "entry_one": {
+        "next": [
+            "entry_dispath_one",
+            "dispath_resources",
+            "collect_induction",
+            "donshe",
+            "weapons"
+        ]
+    },
+    "entry_dispath_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "dispath_resources",
+            "click_space",
+            "donshe",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "dispath_resources": {
+        "recognition": "TemplateMatch",
+        "template": "Company/c_resources.png",
+        "roi": [
+            1009,
+            533,
+            271,
+            187
+        ],
+        "action": "Click",
+        "post_delay": 2500,
+        "next": [
+            "no_collect_induction",
+            "click_space",
+            "collect_induction",
+            "donshe",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "click_space": {
+        "recognition": "TemplateMatch",
+        "template": "Company/click_space.png",
+        "action": "Click",
+        "roi": [
+            988,
+            107,
+            240,
+            480
+        ],
+        "next": [
+            "collect_induction",
+            "donshe",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "collect_induction": {
+        "recognition": "TemplateMatch",
+        "template": "Company/c_induction.png",
+        "roi": [
+            913,
+            548,
+            184,
+            172
+        ],
+        "action": "Click",
+        "post_delay": 2500,
+        "next": [
+            "no_collect_induction",
+            "collect_induction_click",
+            "donshe",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "no_collect_induction": {
+        "recognition": "OCR",
+        "expected": "暂时没有",
+        "action": "DoNothing",
+        "next": [
+            "donshe",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "collect_induction_click": {
+        "recognition": "TemplateMatch",
+        "template": "Company/c_induction_click.png",
+        "post_delay": 3000,
+        "roi": [
+            408,
+            47,
+            566,
+            168
+        ],
+        "action": "Click",
+        "next": [
+            "collect_induction_click",
+            "donshe",
+            "entry_two"
+        ]
+    },
+    "donshe": {
+        "recognition": "TemplateMatch",
+        "template": "Company/donshe.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            451,
+            477,
+            227,
+            211
+        ],
+        "next": [
+            "donshe_click_space",
+            "weapons",
+            "entry_two"
+        ]
+    },
+    "donshe_click_space": {
+        "recognition": "TemplateMatch",
+        "template": "Company/click_space.png",
+        "action": "Click",
+        "roi": [
+            988,
+            107,
+            240,
+            480
+        ],
+        "next": [
+            "weapons",
+            "entry_two",
+            "donshe_back"
+        ]
+    },
+    "weapons": {
+        "recognition": "OCR",
+        "expected": "间",
+        "action": "Click",
+        "target_offset": [
+            75,
+            15,
+            0,
+            0
+        ],
+        "roi": [
+            275,
+            280,
+            175,
+            200
+        ],
+        "post_delay": 3000,
+        "next": [
+            "weapons_click",
+            "weapons_two",
+            "donshe_back",
+            "weapons_home"
+        ]
+    },
+    "weapons_two": {
+        "recognition": "OCR",
+        "expected": "订购",
+        "action": "DoNothing",
+        "roi": [
+            0,
+            610,
+            1280,
+            110
+        ],
+        "next": [
+            "weapons_home"
+        ]
+    },
+    "weapons_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "next": [
+            "entry_two"
+        ]
+    },
+    "weapons_click": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "donshe_back",
+            "entry_two"
+        ]
+    },
+    "donshe_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "entry_two"
+        ]
+    }
+}

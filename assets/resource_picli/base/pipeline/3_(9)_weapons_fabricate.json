@@ -1,0 +1,219 @@
+{
+    "weapons-fabricate": {
+        "next": [
+            "entry_dispath_nine",
+            "weapons-fabricate-job",
+            "senior-orders"
+        ]
+    },
+    "entry_dispath_nine": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "weapons-fabricate-job",
+            "senior-orders",
+            "entry_dispath_nine"
+        ]
+    },
+    "weapons-fabricate-job": {
+        "recognition": "OCR",
+        "expected": "装备",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            155,
+            160,
+            160
+        ],
+        "next": [
+            "senior-orders",
+            "weapons-fabricate-job"
+        ]
+    },
+    "senior-orders": {
+        "recognition": "OCR",
+        "expected": "高级",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            50,
+            30,
+            0,
+            0
+        ],
+        "next": [
+            "signed-contract",
+            "weapons-fabricate-lack",
+            "senior-orders"
+        ]
+    },
+    "signed-contract": {
+        "recognition": "OCR",
+        "expected": "签订合同",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            835,
+            500,
+            400,
+            210
+        ],
+        "next": [
+            "weapons-fabricate-lack",
+            "weapons-fabricate-determine"
+        ]
+    },
+    "weapons-fabricate-determine": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            655,
+            400,
+            260,
+            150
+        ],
+        "next": [
+            "weapons-fabricate-lack",
+            "weapons-fabricate-quit",
+            "weapons-fabricate-full"
+        ]
+    },
+    "weapons-fabricate-quit": {
+        "recognition": "OCR",
+        "expected": "等待生产",
+        "action": "Click",
+        "target": [
+            1150,
+            70,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "confidential-orders",
+            "weapons-fabricate-quit-Image"
+        ]
+    },
+    "weapons-fabricate-quit-Image": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\29.png",
+        "action": "Click",
+        "target": [
+            1150,
+            70,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "roi": [
+            1050,
+            0,
+            200,
+            190
+        ],
+        "next": [
+            "confidential-orders",
+            "weapons-fabricate-quit-Image"
+        ]
+    },
+    "confidential-orders": {
+        "recognition": "OCR",
+        "expected": "绝密",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            50,
+            30,
+            0,
+            0
+        ],
+        "next": [
+            "signed-contract-two",
+            "weapons-fabricate-lack-two"
+        ]
+    },
+    "signed-contract-two": {
+        "recognition": "OCR",
+        "expected": "签订合同",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            835,
+            500,
+            400,
+            210
+        ],
+        "next": [
+            "weapons-fabricate-lack-two",
+            "weapons-fabricate-determine-three"
+        ]
+    },
+    "weapons-fabricate-determine-three": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            655,
+            400,
+            260,
+            150
+        ],
+        "next": [
+            "weapons-fabricate-lack-two",
+            "weapons-fabricate-quit-two",
+            "weapons-fabricate-full"
+        ]
+    },
+    "weapons-fabricate-quit-two": {
+        "recognition": "OCR",
+        "expected": "等待生产",
+        "action": "Click",
+        "target": [
+            1150,
+            70,
+            0,
+            0
+        ],
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-lack": {
+        "recognition": "OCR",
+        "expected": "缺少所需",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "confidential-orders"
+        ]
+    },
+    "weapons-fabricate-lack-two": {
+        "recognition": "OCR",
+        "expected": "缺少所需",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-full": {
+        "recognition": "OCR",
+        "expected": "已满",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click"
+    }
+}

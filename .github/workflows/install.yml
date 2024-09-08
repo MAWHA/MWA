@@ -10,6 +10,9 @@ on:
       - ".github/workflows/install.yml"
       - "assets/**"
       - "**.py"
+      - "使用教程.md"
+      - "startmumu.exe"
+      - "启动！！.bat"
   pull_request:
     branches:
       - "**"

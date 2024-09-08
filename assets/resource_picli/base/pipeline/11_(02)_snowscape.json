@@ -1,0 +1,2119 @@
+{
+    "snowscape": {
+        "recognition": "TemplateMatch",
+        "template": "Research/82.png",
+        "roi": [
+            109,
+            384,
+            80,
+            86
+        ],
+        "action": "Click",
+        "target_offset": [
+            70,
+            130,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "snowscape",
+            "Research",
+            "museum",
+            "buff-one"
+        ]
+    },
+    "buff-one": {
+        "action": "Click",
+        "target": [
+            360,
+            340,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "agree",
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "snowscape",
+            "Research",
+            "museum",
+            "advance_four"
+        ]
+    },
+    "Marksmanship": {
+        "recognition": "OCR",
+        "expected": "神射",
+        "roi": [
+            210,
+            258,
+            830,
+            110
+        ],
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "agree"
+        ]
+    },
+    "Blazing_Knife": {
+        "recognition": "OCR",
+        "expected": "炽刀",
+        "roi": [
+            210,
+            258,
+            830,
+            110
+        ],
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "agree"
+        ]
+    },
+    "Spells": {
+        "recognition": "OCR",
+        "expected": "术法精通",
+        "roi": [
+            210,
+            258,
+            830,
+            110
+        ],
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "agree"
+        ]
+    },
+    "agree": {
+        "recognition": "TemplateMatch",
+        "template": "Research/83.png",
+        "roi": [
+            508,
+            604,
+            268,
+            79
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "new_state"
+        ]
+    },
+    "new_state": {
+        "recognition": "TemplateMatch",
+        "template": "Research/58.png",
+        "roi": [
+            485,
+            23,
+            312,
+            108
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "advance_one_man",
+            "advance_one_women"
+        ]
+    },
+    "advance_one_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            190,
+            0,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_two"
+        ]
+    },
+    "advance_one_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            190,
+            0,
+            0,
+            0
+        ],
+        "next": [
+            "no_click",
+            "advance_two",
+            "fixed_two"
+        ]
+    },
+    "no_click": {
+        "recognition": "OCR",
+        "expected": "不可以往这里",
+        "action": "Click",
+        "next": [
+            "advance_two_man",
+            "advance_two_women"
+        ]
+    },
+    "advance_two": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
+            "war_one",
+            "cultural_relic",
+            "terminal",
+            "without_one",
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women",
+            "advance_three"
+        ]
+    },
+    "advance_three": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
+            "war_one",
+            "cultural_relic",
+            "terminal",
+            "without_one",
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women"
+        ]
+    },
+    "advance_four": {
+        "next": [
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
+            "war_one",
+            "cultural_relic",
+            "terminal",
+            "without_one",
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women",
+            "war_five",
+            "upgrade_one",
+            "descending_one",
+            "advance_two",
+            "advance_three"
+        ]
+    },
+    "abandon_one": {
+        "recognition": "TemplateMatch",
+        "template": "Research/115.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "abandon_two"
+        ]
+    },
+    "abandon_two": {
+        "recognition": "TemplateMatch",
+        "template": "Research/116.png",
+        "action": "Click",
+        "target": [
+            760,
+            430,
+            0,
+            0
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "descending_four",
+            "upgrade_four"
+        ]
+    },
+    "without_one": {
+        "recognition": "TemplateMatch",
+        "template": "Research/110.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "without_two"
+        ]
+    },
+    "without_two": {
+        "recognition": "TemplateMatch",
+        "template": "Research/111.png",
+        "action": "Click",
+        "target": [
+            770,
+            430,
+            0,
+            0
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "without_three"
+        ]
+    },
+    "without_three": {
+        "recognition": "TemplateMatch",
+        "template": "Research/110.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "descending_four",
+            "upgrade_four"
+        ]
+    },
+    "cultural_relic": {
+        "recognition": "OCR",
+        "expected": "获得文物",
+        "post_delay": 5000,
+        "roi": [
+            347,
+            0,
+            610,
+            314
+        ],
+        "next": [
+            "stwoage"
+        ]
+    },
+    "stwoage": {
+        "recognition": "OCR",
+        "expected": "收纳",
+        "action": "Click",
+        "roi": [
+            733,
+            402,
+            547,
+            318
+        ],
+        "post_delay": 2000,
+        "next": [
+            "terminal"
+        ]
+    },
+    "terminal": {
+        "recognition": "TemplateMatch",
+        "template": "Research/80.png",
+        "action": "Click",
+        "target": [
+            1200,
+            590,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "quit_research",
+            "home"
+        ]
+    },
+    "quit_research": {
+        "recognition": "OCR",
+        "expected": "先行版",
+        "action": "Click",
+        "target": [
+            240,
+            40,
+            0,
+            0
+        ]
+    },
+    "mist": {
+        "recognition": "TemplateMatch",
+        "template": "Research/11.png",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "mist_2",
+            "predestination",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "advance_four"
+        ]
+    },
+    "mist_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/12.png",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "predestination",
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose",
+            "advance_four"
+        ]
+    },
+    "predestination": {
+        "recognition": "TemplateMatch",
+        "template": "Research/86.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            465,
+            261,
+            434,
+            85
+        ],
+        "next": [
+            "keep",
+            "articles"
+        ]
+    },
+    "perfect": {
+        "recognition": "TemplateMatch",
+        "template": "Research/65.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            465,
+            261,
+            434,
+            85
+        ],
+        "next": [
+            "keep",
+            "articles"
+        ]
+    },
+    "keep": {
+        "recognition": "TemplateMatch",
+        "template": "Research/14.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "keyword",
+            "upgrade_one",
+            "descending_one",
+            "articles",
+            "advance_seven_man",
+            "advance_seven_women"
+        ]
+    },
+    "keyword": {
+        "recognition": "TemplateMatch",
+        "template": "Research/15.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "upgrade_one",
+            "upgrade_two",
+            "descending_one",
+            "descending_two",
+            "articles",
+            "advance_seven_man",
+            "advance_seven_women"
+        ]
+    },
+    "upgrade_one": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            600,
+            310,
+            0,
+            0
+        ],
+        "next": [
+            "choose"
+        ]
+    },
+    "choose": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise",
+            "advance_two_women",
+            "advance_two_man",
+            "upgrade_two",
+            "advance_four"
+        ]
+    },
+    "revise": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_two",
+            "descending_two"
+        ]
+    },
+    "upgrade_two": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            650,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_2"
+        ]
+    },
+    "choose_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise_2",
+            "upgrade_three",
+            "advance_two_man",
+            "advance_two_women",
+            "advance_four"
+        ]
+    },
+    "revise_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_three",
+            "descending_three"
+        ]
+    },
+    "upgrade_three": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            550,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_3"
+        ]
+    },
+    "choose_3": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise_3",
+            "upgrade_four",
+            "advance_two_man",
+            "advance_two_women",
+            "advance_four"
+        ]
+    },
+    "revise_3": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_four",
+            "descending_four"
+        ]
+    },
+    "upgrade_four": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            260,
+            315,
+            0,
+            0
+        ],
+        "next": [
+            "choose_4"
+        ]
+    },
+    "choose_4": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise_4",
+            "upgrade_five",
+            "advance_two_man",
+            "advance_two_women",
+            "advance_four"
+        ]
+    },
+    "revise_4": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_five",
+            "descending_five"
+        ]
+    },
+    "upgrade_five": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            320,
+            390,
+            0,
+            0
+        ],
+        "next": [
+            "choose_5"
+        ]
+    },
+    "choose_5": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise_5",
+            "advance_two_man",
+            "advance_two_women",
+            "upgrade_six",
+            "advance_four"
+        ]
+    },
+    "revise_5": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_six",
+            "descending_six"
+        ]
+    },
+    "upgrade_six": {
+        "recognition": "TemplateMatch",
+        "template": "Research/16.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            470,
+            83,
+            363,
+            142
+        ],
+        "target": [
+            215,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_6"
+        ]
+    },
+    "choose_6": {
+        "recognition": "TemplateMatch",
+        "template": "Research/17.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            866,
+            530,
+            206,
+            81
+        ],
+        "next": [
+            "revise_6",
+            "upgrade_one",
+            "advance_two_man",
+            "advance_two_women",
+            "advance_four"
+        ]
+    },
+    "revise_6": {
+        "recognition": "TemplateMatch",
+        "template": "Research/105.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 2000,
+        "next": [
+            "upgrade_one",
+            "descending_one",
+            "advance_two_man",
+            "advance_two_women"
+        ]
+    },
+    "descending_one": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            600,
+            310,
+            0,
+            0
+        ],
+        "next": [
+            "choose"
+        ]
+    },
+    "descending_two": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            650,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_2"
+        ]
+    },
+    "descending_three": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            550,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_3"
+        ]
+    },
+    "descending_four": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            260,
+            315,
+            0,
+            0
+        ],
+        "next": [
+            "choose_4"
+        ]
+    },
+    "descending_five": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            320,
+            390,
+            0,
+            0
+        ],
+        "next": [
+            "choose_5"
+        ]
+    },
+    "descending_six": {
+        "recognition": "OCR",
+        "expected": "降阶",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "target": [
+            215,
+            405,
+            0,
+            0
+        ],
+        "next": [
+            "choose_6"
+        ]
+    },
+    "advance_two_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            260,
+            -15,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_three"
+        ]
+    },
+    "advance_two_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            260,
+            -15,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_three"
+        ]
+    },
+    "advance_three_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            100,
+            -130,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_four"
+        ]
+    },
+    "advance_three_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            100,
+            -130,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_four"
+        ]
+    },
+    "advance_four_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            310,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_five"
+        ]
+    },
+    "advance_four_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            310,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_five"
+        ]
+    },
+    "advance_five_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            -40,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_six"
+        ]
+    },
+    "advance_five_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            -40,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_six"
+        ]
+    },
+    "advance_six_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            15,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_seven"
+        ]
+    },
+    "advance_six_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            15,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_seven"
+        ]
+    },
+    "advance_seven_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            320,
+            20,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_eight"
+        ]
+    },
+    "advance_seven_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            320,
+            20,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_eight"
+        ]
+    },
+    "advance_eight_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            280,
+            0,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_nine"
+        ]
+    },
+    "advance_eight_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            280,
+            0,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_nine"
+        ]
+    },
+    "advance_nine_women": {
+        "recognition": "TemplateMatch",
+        "template": "Research/85.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            200,
+            -30,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_one"
+        ]
+    },
+    "advance_nine_man": {
+        "recognition": "TemplateMatch",
+        "template": "Research/84.png",
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            200,
+            -30,
+            0,
+            0
+        ],
+        "next": [
+            "advance_two",
+            "fixed_one"
+        ]
+    },
+    "fixed_one": {
+        "next": [
+            "advance_one_man",
+            "advance_one_women",
+            "advance_four"
+        ]
+    },
+    "fixed_two": {
+        "next": [
+            "advance_two_man",
+            "advance_two_women",
+            "advance_four"
+        ]
+    },
+    "fixed_three": {
+        "next": [
+            "advance_three_man",
+            "advance_three_women",
+            "advance_four"
+        ]
+    },
+    "fixed_four": {
+        "next": [
+            "advance_four_man",
+            "advance_four_women",
+            "advance_four"
+        ]
+    },
+    "fixed_five": {
+        "next": [
+            "advance_five_man",
+            "advance_five_women",
+            "advance_four"
+        ]
+    },
+    "fixed_six": {
+        "next": [
+            "advance_six_man",
+            "advance_six_women",
+            "advance_four"
+        ]
+    },
+    "fixed_seven": {
+        "next": [
+            "advance_seven_man",
+            "advance_seven_women",
+            "advance_four"
+        ]
+    },
+    "fixed_eight": {
+        "next": [
+            "advance_eight_man",
+            "advance_eight_women",
+            "advance_four"
+        ]
+    },
+    "fixed_nine": {
+        "next": [
+            "advance_nine_man",
+            "advance_nine_women",
+            "advance_four"
+        ]
+    },
+    "Snow": {
+        "recognition": "OCR",
+        "expected": "风雪之途",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "snow_2",
+            "predestination",
+            "advance_four"
+        ]
+    },
+    "snow_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/22.png",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "predestination",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "mountain_snow": {
+        "recognition": "TemplateMatch",
+        "template": "Research/42.png",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "mountain_snow_2",
+            "advance_four"
+        ]
+    },
+    "mountain_snow_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/43.png",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "predestination",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "patrol_the_mountains": {
+        "recognition": "OCR",
+        "expected": "巡雪山",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "patrol_the_mountains_2",
+            "advance_four"
+        ]
+    },
+    "patrol_the_mountains_2": {
+        "recognition": "OCR",
+        "expected": "到路途中去",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "predestination",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "cold_snow": {
+        "recognition": "OCR",
+        "expected": "再遇寒雪",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "cold_snow_2",
+            "advance_four"
+        ]
+    },
+    "cold_snow_2": {
+        "recognition": "OCR",
+        "expected": "顺势聊起山水画的事情",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "predestination",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "sunrise": {
+        "recognition": "TemplateMatch",
+        "template": "Research/62.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "sunrise_2",
+            "advance_four"
+        ]
+    },
+    "sunrise_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/64.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "underfoot": {
+        "recognition": "TemplateMatch",
+        "template": "Research/88.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "underfoot_2",
+            "advance_four"
+        ]
+    },
+    "underfoot_2": {
+        "recognition": "OCR",
+        "expected": "拿起来仔细观察",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "planning": {
+        "recognition": "OCR",
+        "expected": "线路规划",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "planning_2",
+            "advance_four"
+        ]
+    },
+    "planning_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/97.png",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "Miscellaneous": {
+        "recognition": "TemplateMatch",
+        "template": "Research/120.png",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "next": [
+            "Miscellaneous_2",
+            "advance_four"
+        ]
+    },
+    "Miscellaneous_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/94.png",
+        "action": "Click",
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "ranger": {
+        "recognition": "OCR",
+        "expected": "护林小屋",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "ranger_2",
+            "advance_four"
+        ]
+    },
+    "ranger_2": {
+        "recognition": "OCR",
+        "expected": "询问护林员",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "mysterious": {
+        "recognition": "OCR",
+        "expected": "神秘快递",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "mysterious_2",
+            "advance_four"
+        ]
+    },
+    "mysterious_2": {
+        "recognition": "OCR",
+        "expected": "拆开",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "articles",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "articles": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "upgrade_one",
+            "choose",
+            "advance_four"
+        ]
+    },
+    "painting": {
+        "recognition": "OCR",
+        "expected": "画性",
+        "action": "Click",
+        "roi": [
+            529,
+            65,
+            426,
+            104
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "painting_2",
+            "advance_four"
+        ]
+    },
+    "painting_2": {
+        "recognition": "OCR",
+        "expected": "我正好有带",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "perfect",
+            "keep",
+            "keyword",
+            "upgrade_one",
+            "choose"
+        ]
+    },
+    "war_one": {
+        "recognition": "TemplateMatch",
+        "template": "Research/30.png",
+        "action": "DoNothing",
+        "post_wait_freezes": 7000,
+        "next": [
+            "war_two",
+            "war_three",
+            "war_four",
+            "war_five",
+            "negative",
+            "war_new_state",
+            "advance_four"
+        ]
+    },
+    "war_two": {
+        "recognition": "OCR",
+        "expected": "中",
+        "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "negative"
+        ]
+    },
+    "war_three": {
+        "recognition": "OCR",
+        "expected": "良",
+        "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "war_new_state"
+        ]
+    },
+    "war_four": {
+        "recognition": "OCR",
+        "expected": "优",
+        "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
+        "post_delay": 2000,
+        "next": [
+            "front_one",
+            "front_one_2",
+            "front_two",
+            "front_three",
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_one": {
+        "recognition": "OCR",
+        "expected": "怒焰",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_one_2",
+            "front_two",
+            "front_three",
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_one_2": {
+        "recognition": "OCR",
+        "expected": "快速启动",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_two",
+            "front_three",
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_two": {
+        "recognition": "OCR",
+        "expected": "会心一击",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_three",
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_three": {
+        "recognition": "OCR",
+        "expected": "自愈",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_four",
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_four": {
+        "recognition": "OCR",
+        "expected": "奔袭",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_four_2",
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_four_2": {
+        "recognition": "OCR",
+        "expected": "立盾为护",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_four_3",
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_four_3": {
+        "recognition": "OCR",
+        "expected": "对群弱点",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_four_4",
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_four_4": {
+        "recognition": "OCR",
+        "expected": "熟练技巧",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_five",
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_five": {
+        "recognition": "OCR",
+        "expected": "骁勇",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_six",
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_six": {
+        "recognition": "OCR",
+        "expected": "曜斩",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_seven",
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_seven": {
+        "recognition": "OCR",
+        "expected": "远程精通",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_eight",
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_eight": {
+        "recognition": "OCR",
+        "expected": "一击即走",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_eight_2",
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_eight_2": {
+        "recognition": "OCR",
+        "expected": "移动战术",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "front_nine",
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_nine": {
+        "recognition": "OCR",
+        "expected": "同仇敌忾",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "front_ten",
+            "agree_2",
+            "war_new_state"
+        ]
+    },
+    "front_ten": {
+        "recognition": "OCR",
+        "expected": "远行",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "agree_2",
+            "war_new_state",
+            "front_one"
+        ]
+    },
+    "agree_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research/83.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "war_new_state",
+            "war_five"
+        ]
+    },
+    "war_new_state": {
+        "recognition": "TemplateMatch",
+        "template": "Research/58.png",
+        "roi": [
+            485,
+            23,
+            312,
+            108
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "war_five",
+            "advance_one_man",
+            "advance_one_women"
+        ]
+    },
+    "negative": {
+        "recognition": "TemplateMatch",
+        "template": "Research/95.png",
+        "action": "Click",
+        "roi": [
+            355,
+            2,
+            670,
+            186
+        ],
+        "post_delay": 5000,
+        "next": [
+            "war_five"
+        ]
+    },
+    "war_five": {
+        "recognition": "TemplateMatch",
+        "template": "Research/33.png",
+        "action": "Click",
+        "roi": [
+            649,
+            514,
+            631,
+            206
+        ],
+        "post_wait_freezes": 7000,
+        "next": [
+            "war_six"
+        ]
+    },
+    "war_six": {
+        "recognition": "TemplateMatch",
+        "template": "Research/34.png",
+        "action": "Click",
+        "roi": [
+            649,
+            514,
+            631,
+            206
+        ],
+        "post_delay": 7000,
+        "next": [
+            "remind_one",
+            "remind_all",
+            "automatic"
+        ]
+    },
+    "remind_one": {
+        "recognition": "TemplateMatch",
+        "template": "Research/77.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "remind_two",
+            "remind_three",
+            "remind_all"
+        ]
+    },
+    "remind_two": {
+        "recognition": "TemplateMatch",
+        "template": "Research/77.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "remind_three",
+            "remind_all"
+        ]
+    },
+    "remind_three": {
+        "recognition": "TemplateMatch",
+        "template": "Research/77.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "remind_all",
+            "enemy-action",
+            "automatic"
+        ]
+    },
+    "enemy-action": {
+        "recognition": "OCR",
+        "expected": "敌方",
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "next": [
+            "remind_all",
+            "enemy-action",
+            "automatic"
+        ]
+    },
+    "automatic": {
+        "recognition": "OCR",
+        "expected": "自动",
+        "action": "Click",
+        "target": [
+            1235,
+            160,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "remind_all"
+        ]
+    },
+    "remind_all": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": "代班",
+        "post_delay": 30000,
+        "timeout": 150000,
+        "timeout_next": [
+            "fail",
+            "war_seven"
+        ],
+        "next": [
+            "fail",
+            "war_seven"
+        ]
+    },
+    "war_seven": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "roi": [
+            845,
+            600,
+            280,
+            120
+        ],
+        "post_delay": 5000,
+        "next": [
+            "upgrade_three",
+            "descending_three",
+            "advance_seven_man",
+            "advance_seven_women",
+            "fail",
+            "war_seven"
+        ]
+    },
+    "fail": {
+        "recognition": "OCR",
+        "expected": "完美评价",
+        "action": "Click",
+        "target": [
+            760,
+            430,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "war_seven"
+        ]
+    }
+}

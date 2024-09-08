@@ -1,0 +1,194 @@
+{
+    "dispath_company_collect": {
+        "next": [
+            "entry_dispath_three",
+            "dispatch_social_one",
+            "dispatch_social_two",
+            "dispatch_social_three",
+            "dispatch_social_four",
+            "dc_back"
+        ]
+    },
+    "entry_dispath_three": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "dispatch_social_one",
+            "dispatch_social_two",
+            "dispatch_social_three",
+            "dispatch_social_four",
+            "dc_back"
+        ]
+    },
+    "dispatch_social_one": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_guidence.png",
+        "post_delay": 2000,
+        "action": "Click",
+        "roi": [
+            9,
+            366,
+            249,
+            196
+        ],
+        "next": [
+            "Beginner_Social_Guide"
+        ]
+    },
+    "dispatch_social_two": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_guidence.png",
+        "post_delay": 2000,
+        "action": "Click",
+        "roi": [
+            9,
+            366,
+            249,
+            196
+        ],
+        "next": [
+            "Intermediate_Social_Guide"
+        ]
+    },
+    "dispatch_social_three": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_guidence.png",
+        "post_delay": 2000,
+        "action": "Click",
+        "roi": [
+            9,
+            366,
+            249,
+            196
+        ],
+        "next": [
+            "Advanced_Social_Guide"
+        ]
+    },
+    "dispatch_social_four": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_guidence.png",
+        "post_delay": 2000,
+        "action": "Click",
+        "roi": [
+            9,
+            366,
+            249,
+            196
+        ],
+        "next": [
+            "Advanced_Sociology"
+        ]
+    },
+    "Beginner_Social_Guide": {
+        "recognition": "TemplateMatch",
+        "template": "Company/beginner_social_guide.png",
+        "action": "Click",
+        "roi": [
+            7,
+            146,
+            420,
+            134
+        ],
+        "next": [
+            "fabricate_max"
+        ]
+    },
+    "Intermediate_Social_Guide": {
+        "recognition": "TemplateMatch",
+        "template": "Company/Intermediate_Social_Guide.png",
+        "action": "Click",
+        "roi": [
+            6,
+            277,
+            419,
+            124
+        ],
+        "next": [
+            "fabricate_max"
+        ]
+    },
+    "Advanced_Social_Guide": {
+        "recognition": "TemplateMatch",
+        "template": "Company/Advanced_Social_Guide.png",
+        "action": "Click",
+        "roi": [
+            4,
+            393,
+            428,
+            132
+        ],
+        "next": [
+            "fabricate_max"
+        ]
+    },
+    "Advanced_Sociology": {
+        "recognition": "TemplateMatch",
+        "template": "Company/Advanced_Sociology.png",
+        "action": "Click",
+        "roi": [
+            8,
+            524,
+            422,
+            131
+        ],
+        "next": [
+            "fabricate_max"
+        ]
+    },
+    "fabricate_max": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_max.png",
+        "action": "Click",
+        "roi": [
+            1040,
+            512,
+            80,
+            71
+        ],
+        "next": [
+            "fabricate_social_book"
+        ]
+    },
+    "fabricate_social_book": {
+        "recognition": "TemplateMatch",
+        "template": "Company/fabricate_social_book.png",
+        "action": "Click",
+        "roi": [
+            870,
+            618,
+            301,
+            73
+        ],
+        "next": [
+            "verify_fabricate"
+        ]
+    },
+    "verify_fabricate": {
+        "recognition": "TemplateMatch",
+        "template": "Company/verify_fabricate.png",
+        "action": "Click",
+        "roi": [
+            678,
+            387,
+            188,
+            76
+        ],
+        "next": [
+            "dispath_home"
+        ]
+    },
+    "dispath_home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "entry_dispath_four",
+            "tea",
+            "vitality"
+        ]
+    }
+}

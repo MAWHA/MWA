@@ -1,0 +1,283 @@
+{
+    "Collect_operators": {
+        "next": [
+            "Collecting",
+            "Sub_ReceiveOperators"
+        ]
+    },
+    "Collecting": {
+        "recognition": "OCR",
+        "expected": "器者征集",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Sub_ReceiveOperators",
+            "ReceiveCollect"
+        ]
+    },
+    "Sub_ReceiveOperators": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/02.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ReceiveCollect"
+        ]
+    },
+    "ReceiveCollect": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "next": [
+            "changan",
+            "quit2"
+        ]
+    },
+    "changan": {
+        "recognition": "OCR",
+        "expected": "长按",
+        "action": "Swipe",
+        "begin": [
+            645,
+            635,
+            0,
+            0
+        ],
+        "end": [
+            645,
+            635,
+            0,
+            0
+        ],
+        "duration": 3000,
+        "post_delay": 3000,
+        "next": [
+            "Skip"
+        ]
+    },
+    "Skip": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/05.png",
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "outcome",
+            "new-role",
+            "repeat-role",
+            "Skip"
+        ]
+    },
+    "new-role": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "quit2",
+            "back"
+        ]
+    },
+    "repeat-role": {
+        "recognition": "OCR",
+        "expected": "重复",
+        "action": "Click",
+        "roi": [
+            0,
+            230,
+            300,
+            210
+        ],
+        "post_delay": 3000,
+        "next": [
+            "quit2",
+            "back"
+        ]
+    },
+    "outcome": {
+        "recognition": "OCR",
+        "expected": "征集结果",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            645,
+            625,
+            0,
+            0
+        ],
+        "next": [
+            "get",
+            "outcome"
+        ]
+    },
+    "get": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Collecting2",
+            "get",
+            "back"
+        ]
+    },
+    "quit2": {
+        "recognition": "OCR",
+        "expected": "当前没有已经完成的征集队列",
+        "post_delay": 2000,
+        "next": [
+            "back"
+        ]
+    },
+    "back": {
+        "action": "Click",
+        "target": [
+            330,
+            360,
+            0,
+            0
+        ],
+        "next": [
+            "Collecting2"
+        ]
+    },
+    "Collecting2": {
+        "recognition": "OCR",
+        "expected": "开始征集",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "full",
+            "no_solicitation",
+            "add-all"
+        ]
+    },
+    "add-all": {
+        "post_delay": 2000,
+        "next": [
+            "add-one",
+            "add-two",
+            "add-three",
+            "add-four"
+        ]
+    },
+    "full": {
+        "recognition": "OCR",
+        "expected": "队列已满",
+        "post_delay": 2000,
+        "next": [
+            "Quit"
+        ]
+    },
+    "no_solicitation": {
+        "recognition": "OCR",
+        "expected": "缺少道具",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Quit"
+        ]
+    },
+    "add-one": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "DoNothing",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "add-two": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "add-three": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia4",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "add-four": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/03.png",
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia3",
+            "no_solicitation",
+            "full"
+        ]
+    },
+    "jia3": {
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "jia4"
+        ]
+    },
+    "jia4": {
+        "action": "Click",
+        "target": [
+            770,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "gou"
+        ]
+    },
+    "gou": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/04.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Quit"
+        ]
+    },
+    "Quit": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click"
+    }
+}

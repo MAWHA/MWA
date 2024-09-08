@@ -26,8 +26,8 @@
         ]
     },
     "Marksmanship": {
-        "recognition": "TemplateMatch",
-        "template": "Research/04.png",
+        "recognition": "OCR",
+        "expected": "神射",
         "roi": [
             210,
             258,
@@ -41,8 +41,8 @@
         ]
     },
     "Blazing_Knife": {
-        "recognition": "TemplateMatch",
-        "template": "Research/05.png",
+        "recognition": "OCR",
+        "expected": "炽刀",
         "roi": [
             210,
             258,
@@ -56,8 +56,8 @@
         ]
     },
     "Spells": {
-        "recognition": "TemplateMatch",
-        "template": "Research/06.png",
+        "recognition": "OCR",
+        "expected": "术法精通",
         "roi": [
             210,
             258,
@@ -80,7 +80,7 @@
             79
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 4000,
         "next": [
             "new_state"
         ]
@@ -104,6 +104,7 @@
     "advance_one_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -121,6 +122,7 @@
     "advance_one_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -131,38 +133,101 @@
             0
         ],
         "next": [
+            "no_click",
             "advance_two",
             "fixed_two"
         ]
     },
-    "advance_two": {
-        "recognition": "TemplateMatch",
-        "template": "Research/09.png",
+    "no_click": {
+        "recognition": "OCR",
+        "expected": "不可以往这里",
         "action": "Click",
-        "post_delay": 2000,
         "next": [
-            "event_select",
+            "advance_two_man",
+            "advance_two_women"
+        ]
+    },
+    "advance_two": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
             "war_one",
             "cultural_relic",
             "terminal",
             "without_one",
-            "abandon_one"
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women",
+            "advance_three"
         ]
     },
-    "event_select": {
-        "recognition": "Custom",
-        "post_delay": 1000,
-        "custom_recognition": "event_select",
-        "custom_recognition_param": {
-            "name": "选择遇到的事件"
-        },
+    "advance_three": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "predestination",
-            "perfect",
-            "keep",
-            "keyword",
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
+            "war_one",
+            "cultural_relic",
+            "terminal",
+            "without_one",
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women"
+        ]
+    },
+    "advance_four": {
+        "next": [
+            "mist",
+            "Snow",
+            "mountain_snow",
+            "patrol_the_mountains",
+            "cold_snow",
+            "sunrise",
+            "underfoot",
+            "planning",
+            "ranger",
+            "mysterious",
+            "painting",
+            "Miscellaneous",
+            "war_one",
+            "cultural_relic",
+            "terminal",
+            "without_one",
+            "abandon_one",
+            "advance_one_man",
+            "advance_one_women",
+            "war_five",
             "upgrade_one",
-            "choose"
+            "descending_one",
+            "advance_two",
+            "advance_three"
         ]
     },
     "abandon_one": {
@@ -184,15 +249,6 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "abandon_three"
-        ]
-    },
-    "abandon_three": {
-        "recognition": "TemplateMatch",
-        "template": "Research/115.png",
-        "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
             "descending_four",
@@ -305,7 +361,8 @@
             "predestination",
             "keep",
             "keyword",
-            "upgrade_one"
+            "upgrade_one",
+            "advance_four"
         ]
     },
     "mist_2": {
@@ -325,7 +382,8 @@
             "keep",
             "keyword",
             "upgrade_one",
-            "choose"
+            "choose",
+            "advance_four"
         ]
     },
     "predestination": {
@@ -369,7 +427,9 @@
             "keyword",
             "upgrade_one",
             "descending_one",
-            "articles"
+            "articles",
+            "advance_seven_man",
+            "advance_seven_women"
         ]
     },
     "keyword": {
@@ -382,15 +442,9 @@
             "upgrade_two",
             "descending_one",
             "descending_two",
-            "upgrade_three",
-            "upgrade_four",
-            "upgrade_five",
-            "upgrade_six",
-            "descending_three",
-            "descending_four",
-            "descending_five",
-            "descending_six",
-            "articles"
+            "articles",
+            "advance_seven_man",
+            "advance_seven_women"
         ]
     },
     "upgrade_one": {
@@ -429,7 +483,8 @@
             "revise",
             "advance_two_women",
             "advance_two_man",
-            "upgrade_two"
+            "upgrade_two",
+            "advance_four"
         ]
     },
     "revise": {
@@ -478,7 +533,8 @@
             "revise_2",
             "upgrade_three",
             "advance_two_man",
-            "advance_two_women"
+            "advance_two_women",
+            "advance_four"
         ]
     },
     "revise_2": {
@@ -527,7 +583,8 @@
             "revise_3",
             "upgrade_four",
             "advance_two_man",
-            "advance_two_women"
+            "advance_two_women",
+            "advance_four"
         ]
     },
     "revise_3": {
@@ -576,7 +633,8 @@
             "revise_4",
             "upgrade_five",
             "advance_two_man",
-            "advance_two_women"
+            "advance_two_women",
+            "advance_four"
         ]
     },
     "revise_4": {
@@ -625,7 +683,8 @@
             "revise_5",
             "advance_two_man",
             "advance_two_women",
-            "upgrade_six"
+            "upgrade_six",
+            "advance_four"
         ]
     },
     "revise_5": {
@@ -674,7 +733,8 @@
             "revise_6",
             "upgrade_one",
             "advance_two_man",
-            "advance_two_women"
+            "advance_two_women",
+            "advance_four"
         ]
     },
     "revise_6": {
@@ -782,10 +842,10 @@
     "advance_two_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             260,
             -15,
@@ -800,6 +860,7 @@
     "advance_two_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -817,10 +878,10 @@
     "advance_three_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             100,
             -130,
@@ -835,6 +896,7 @@
     "advance_three_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -852,10 +914,10 @@
     "advance_four_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             310,
             100,
@@ -870,6 +932,7 @@
     "advance_four_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -887,10 +950,10 @@
     "advance_five_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             240,
             -40,
@@ -905,6 +968,7 @@
     "advance_five_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -922,13 +986,13 @@
     "advance_six_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             240,
-            20,
+            15,
             0,
             0
         ],
@@ -940,12 +1004,13 @@
     "advance_six_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
         "target_offset": [
             240,
-            20,
+            15,
             0,
             0
         ],
@@ -957,10 +1022,10 @@
     "advance_seven_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             320,
             20,
@@ -975,6 +1040,7 @@
     "advance_seven_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -992,10 +1058,10 @@
     "advance_eight_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             280,
             0,
@@ -1010,6 +1076,7 @@
     "advance_eight_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -1027,10 +1094,10 @@
     "advance_nine_women": {
         "recognition": "TemplateMatch",
         "template": "Research/85.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
-        "threshold": 0.6,
         "target_offset": [
             200,
             -30,
@@ -1045,6 +1112,7 @@
     "advance_nine_man": {
         "recognition": "TemplateMatch",
         "template": "Research/84.png",
+        "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
@@ -1062,60 +1130,69 @@
     "fixed_one": {
         "next": [
             "advance_one_man",
-            "advance_one_women"
+            "advance_one_women",
+            "advance_four"
         ]
     },
     "fixed_two": {
         "next": [
             "advance_two_man",
-            "advance_two_women"
+            "advance_two_women",
+            "advance_four"
         ]
     },
     "fixed_three": {
         "next": [
             "advance_three_man",
-            "advance_three_women"
+            "advance_three_women",
+            "advance_four"
         ]
     },
     "fixed_four": {
         "next": [
             "advance_four_man",
-            "advance_four_women"
+            "advance_four_women",
+            "advance_four"
         ]
     },
     "fixed_five": {
         "next": [
             "advance_five_man",
-            "advance_five_women"
+            "advance_five_women",
+            "advance_four"
         ]
     },
     "fixed_six": {
         "next": [
             "advance_six_man",
-            "advance_six_women"
+            "advance_six_women",
+            "advance_four"
         ]
     },
     "fixed_seven": {
         "next": [
             "advance_seven_man",
-            "advance_seven_women"
+            "advance_seven_women",
+            "advance_four"
         ]
     },
     "fixed_eight": {
         "next": [
             "advance_eight_man",
-            "advance_eight_women"
+            "advance_eight_women",
+            "advance_four"
         ]
     },
     "fixed_nine": {
         "next": [
             "advance_nine_man",
-            "advance_nine_women"
+            "advance_nine_women",
+            "advance_four"
         ]
     },
     "Snow": {
-        "recognition": "TemplateMatch",
-        "template": "Research/21.png",
+        "recognition": "OCR",
+        "expected": "风雪之途",
         "action": "Click",
         "roi": [
             529,
@@ -1126,7 +1203,8 @@
         "post_wait_freezes": 2000,
         "next": [
             "snow_2",
-            "predestination"
+            "predestination",
+            "advance_four"
         ]
     },
     "snow_2": {
@@ -1160,7 +1238,8 @@
         ],
         "post_wait_freezes": 2000,
         "next": [
-            "mountain_snow_2"
+            "mountain_snow_2",
+            "advance_four"
         ]
     },
     "mountain_snow_2": {
@@ -1194,7 +1273,8 @@
             104
         ],
         "next": [
-            "patrol_the_mountains_2"
+            "patrol_the_mountains_2",
+            "advance_four"
         ]
     },
     "patrol_the_mountains_2": {
@@ -1228,7 +1308,8 @@
             104
         ],
         "next": [
-            "cold_snow_2"
+            "cold_snow_2",
+            "advance_four"
         ]
     },
     "cold_snow_2": {
@@ -1262,7 +1343,8 @@
             104
         ],
         "next": [
-            "sunrise_2"
+            "sunrise_2",
+            "advance_four"
         ]
     },
     "sunrise_2": {
@@ -1296,7 +1378,8 @@
             104
         ],
         "next": [
-            "underfoot_2"
+            "underfoot_2",
+            "advance_four"
         ]
     },
     "underfoot_2": {
@@ -1324,7 +1407,8 @@
             104
         ],
         "next": [
-            "planning_2"
+            "planning_2",
+            "advance_four"
         ]
     },
     "planning_2": {
@@ -1358,7 +1442,8 @@
             104
         ],
         "next": [
-            "Miscellaneous_2"
+            "Miscellaneous_2",
+            "advance_four"
         ]
     },
     "Miscellaneous_2": {
@@ -1392,7 +1477,8 @@
         ],
         "post_wait_freezes": 2000,
         "next": [
-            "ranger_2"
+            "ranger_2",
+            "advance_four"
         ]
     },
     "ranger_2": {
@@ -1426,7 +1512,8 @@
         ],
         "post_wait_freezes": 2000,
         "next": [
-            "mysterious_2"
+            "mysterious_2",
+            "advance_four"
         ]
     },
     "mysterious_2": {
@@ -1456,7 +1543,8 @@
         "post_delay": 1500,
         "next": [
             "upgrade_one",
-            "choose"
+            "choose",
+            "advance_four"
         ]
     },
     "painting": {
@@ -1471,7 +1559,8 @@
         ],
         "post_wait_freezes": 2000,
         "next": [
-            "painting_2"
+            "painting_2",
+            "advance_four"
         ]
     },
     "painting_2": {
@@ -1501,13 +1590,23 @@
         "next": [
             "war_two",
             "war_three",
-            "war_four"
+            "war_four",
+            "war_five",
+            "negative",
+            "war_new_state",
+            "advance_four"
         ]
     },
     "war_two": {
         "recognition": "OCR",
         "expected": "中",
         "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
         "post_wait_freezes": 2000,
         "next": [
             "negative"
@@ -1517,6 +1616,12 @@
         "recognition": "OCR",
         "expected": "良",
         "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
         "post_wait_freezes": 2000,
         "next": [
             "war_new_state"
@@ -1526,6 +1631,12 @@
         "recognition": "OCR",
         "expected": "优",
         "action": "Click",
+        "roi": [
+            500,
+            235,
+            270,
+            280
+        ],
         "post_delay": 2000,
         "next": [
             "front_one",
@@ -1822,7 +1933,7 @@
             108
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 5000,
         "next": [
             "war_five"
         ]
@@ -1837,7 +1948,7 @@
             670,
             186
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 5000,
         "next": [
             "war_five"
         ]
@@ -1867,10 +1978,11 @@
             631,
             206
         ],
-        "post_delay": 3000,
+        "post_delay": 7000,
         "next": [
             "remind_one",
-            "remind_all"
+            "remind_all",
+            "automatic"
         ]
     },
     "remind_one": {
@@ -1898,6 +2010,20 @@
         "recognition": "TemplateMatch",
         "template": "Research/77.png",
         "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "remind_all",
+            "automatic"
+        ]
+    },
+    "automatic": {
+        "action": "Click",
+        "target": [
+            1235,
+            160,
+            0,
+            0
+        ],
         "post_delay": 3000,
         "next": [
             "remind_all"
@@ -1907,8 +2033,8 @@
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": "代班",
-        "post_wait_freezes": 5000,
-        "timeout": 100000,
+        "post_delay": 30000,
+        "timeout": 150000,
         "timeout_next": [
             "fail",
             "war_seven"
@@ -1928,10 +2054,12 @@
             280,
             120
         ],
-        "post_wait_freezes": 3000,
+        "post_delay": 5000,
         "next": [
             "upgrade_three",
             "descending_three",
+            "advance_seven_man",
+            "advance_seven_women",
             "fail",
             "war_seven"
         ]
@@ -1946,7 +2074,7 @@
             0,
             0
         ],
-        "post_wait_freezes": 3000,
+        "post_delay": 5000,
         "next": [
             "war_seven"
         ]

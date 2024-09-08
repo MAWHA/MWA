@@ -15,7 +15,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 
 (项目中的图片、图标、截图等皆为网上素材及正版游戏的内容，绝无内鬼透露的游戏相关内容，如有侵权，请联系~)
-> M5A交流群：985099968
+> M5A交流群：![qq-group](https://img.shields.io/badge/QQ-985099968-blue)
 
 持续更新中~
 
@@ -53,7 +53,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 ## 目前支持：
 - 1.启动物华弥新
 - 2.公招
-- 3.派遣公司（目前仅支持收取好感、资源、制造东西的）
+- 3.派遣公司（目前仅支持收取好感、资源、活力值、制造东西、喝茶等）
 - 4.领取每日免费礼包
 - 5.易物所（冬谷币买东西）
 - 6.喝一瓶2天过期的水
@@ -67,7 +67,7 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 - 3.~~增加~~  完善博物研学
 - 4.增加新人里的实战训练推关
 - 5.增加区域派遣
-- 6.增加活动的领取
+- 6.~~增加活动的签到~~（已完成）
 - 7.整个ui
 - ......
 
@@ -75,19 +75,25 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
+由Zymelaii大佬为MWA提供ui [MWA ui](https://github.com/MAWHA/maa-whmx)
+
 感谢以下开发者对本项目作出的贡献:
 
 <a href="https://github.com/MAWHA/MWA/graphs/contributors">
-  <img src="https://github.com/MAWHA/MWA&max=1000" />
+  <img src="https://contrib.rocks/image?repo=MAWHA/MWA&max=1000" />
 </a>
 
 ## 声明
 
 - 本软件开源、免费，仅供学习交流使用。若您遇到商家使用本软件进行代练并收费，可能由于设备或时间等原因，产生的任何问题及后果与本软件无关。
 - 项目中的图片、图标、截图等皆为网上素材及正版游戏的内容，绝无内鬼透露的游戏相关内容，如有侵权，请联系~)
-> M5A交流群：985099968
+> M5A交流群：![qq-group](https://img.shields.io/badge/QQ-985099968-blue)
 
 ## 广告
 
 如果觉得软件对你有帮助，帮忙点个 Star 吧！~（网页最上方右上角的小星星），这就是对我们最大的支持了！
+
+也帮忙给[MWA ui](https://github.com/MAWHA/maa-whmx)点个 Star 吧~
+
+[![star-history](https://api.star-history.com/svg?repos=MAWHA/MWA&type=Date)](https://star-history.com/#MAWHA/MWA&Date)
 
