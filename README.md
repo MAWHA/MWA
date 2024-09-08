@@ -75,7 +75,9 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-由Zymelaii大佬为MWA提供ui [MWA ui](https://github.com/MAWHA/maa-whmx)
+由 Zymelaii 大佬为 MWA 提供UI [MWA UI-1](https://github.com/MAWHA/maa-whmx)
+
+由 Night-stars-1 大佬为 MWA 提供 UI 2号[MWA UI-2](https://github.com/Night-stars-1/mma-gui)
 
 感谢以下开发者对本项目作出的贡献:
 
