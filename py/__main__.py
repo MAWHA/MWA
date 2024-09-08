@@ -1,3 +1,9 @@
+"""
+Author: Night-stars-1 nujj1042633805@gmail.com
+Date: 2024-07-18 23:52:39
+LastEditors: Night-stars-1 nujj1042633805@gmail.com
+LastEditTime: 2024-09-08 15:52:35
+"""
 '''
 Author: Night-stars-1 nujj1042633805@gmail.com
 Date: 2024-07-18 23:52:39
@@ -54,7 +60,7 @@ async def main():
 
     maa_inst.register_recognizer("event_select", event_select)
 
-    await maa_inst.run_task("war_one")
+    await maa_inst.run_task("MyCustomRecTask")
 
 
 class EventSelect(CustomRecognizer):
@@ -67,6 +73,7 @@ class EventSelect(CustomRecognizer):
             {"OCR": {"recognition": "OCR", "expected": "识别事件名称", "roi": [593, 113, 516, 46]}},
         )
         pos_data = json.loads(pos_data)
+        print(pos_data)
         if len(pos_data["all"]) < 1:
             print("事件标题获取失败")
             return False, (0, 0, 100, 100), "事件标题获取失败"
@@ -81,8 +88,8 @@ class EventSelect(CustomRecognizer):
                 {"OCR": {"recognition": "OCR", "expected": option, "roi": [598, 383, 478, 217]}},
             )
             print(f"识别结果: {status}, 坐标: {option_rect}")
-            context.click(int(option_rect[0] + option_rect[2] / 2), int(option_rect[1] + option_rect[3] / 2))
-            return status, (0, 0, 100, 100), "事件选择"
+            # context.click(int(option_rect[0] + option_rect[2] / 2), int(option_rect[1] + option_rect[3] / 2))
+            return False, (0, 0, 100, 100), "事件选择"
         else:
             print("事件标题获取失败")
             return False, (0, 0, 100, 100), "事件标题获取失败"

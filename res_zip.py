@@ -1,3 +1,9 @@
+"""
+Author: Night-stars-1 nujj1042633805@gmail.com
+Date: 2024-09-07 22:31:32
+LastEditors: Night-stars-1 nujj1042633805@gmail.com
+LastEditTime: 2024-09-08 16:15:25
+"""
 import os
 import subprocess
 import zipfile
@@ -43,6 +49,7 @@ def get_git_commit_count():
 with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
     add_folder_to_zip(zipf, './assets/resource/base/pipeline')
     add_folder_to_zip(zipf, './assets/resource/base/image')
+    add_folder_to_zip(zipf, './assets/resource/data')
     zipf.write('./assets/interface.json', 'interface.json')
 
 with open('version.txt', 'w', encoding='utf-8') as f:
