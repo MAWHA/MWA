@@ -2,7 +2,7 @@
 Author: Night-stars-1 nujj1042633805@gmail.com
 Date: 2024-09-07 22:31:32
 LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2024-09-08 16:15:25
+LastEditTime: 2024-09-08 16:16:33
 """
 import os
 import subprocess
@@ -22,7 +22,7 @@ def add_folder_to_zip(zipf: zipfile.ZipFile, folder_path: str):
         for filename in filenames:
             file_path = os.path.join(foldername, filename)
             # 在 ZIP 文件中创建相对路径
-            relative_path = file_path.replace(r"/assets/resource/base", "")
+            relative_path = file_path.replace(r"/assets/resource_picli/base", "")
             zipf.write(file_path, relative_path)
 
 def get_git_commit_count():
@@ -47,9 +47,9 @@ def get_git_commit_count():
 
 # 创建压缩包并添加文件
 with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
-    add_folder_to_zip(zipf, './assets/resource/base/pipeline')
-    add_folder_to_zip(zipf, './assets/resource/base/image')
-    add_folder_to_zip(zipf, './assets/resource/data')
+    add_folder_to_zip(zipf, './assets/resource_picli/base/pipeline')
+    add_folder_to_zip(zipf, './assets/resource_picli/base/image')
+    add_folder_to_zip(zipf, './assets/resource_picli/data')
     zipf.write('./assets/interface.json', 'interface.json')
 
 with open('version.txt', 'w', encoding='utf-8') as f:

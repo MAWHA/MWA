@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'assets/resource/**'
+      - 'assets/resource_picli/**'
       - 'assets/interface.json'
   workflow_dispatch:
 
