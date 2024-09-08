@@ -95,7 +95,9 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 如果觉得软件对你有帮助，帮忙点个 Star 吧！~（网页最上方右上角的小星星），这就是对我们最大的支持了！
 
-也帮忙给[MWA ui](https://github.com/MAWHA/maa-whmx)点个 Star 吧~
+也帮忙给[MWA UI-1](https://github.com/MAWHA/maa-whmx)点个 Star 吧~
+
+也帮忙给[MWA UI-2](https://github.com/Night-stars-1/mma-gui)点个 Star 吧~
 
 [![star-history](https://api.star-history.com/svg?repos=MAWHA/MWA&type=Date)](https://star-history.com/#MAWHA/MWA&Date)
 
