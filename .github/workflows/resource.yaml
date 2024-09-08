@@ -3,6 +3,9 @@ name: res_build
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'assets/resource_picli/**'
+      - 'assets/interface.json'
   workflow_dispatch:
 
 jobs:
