@@ -2,28 +2,22 @@
 Author: Night-stars-1 nujj1042633805@gmail.com
 Date: 2024-07-18 23:52:39
 LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2024-09-08 15:52:35
+LastEditTime: 2024-09-11 13:04:56
 """
-'''
-Author: Night-stars-1 nujj1042633805@gmail.com
-Date: 2024-07-18 23:52:39
-LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2024-07-27 11:18:11
-'''
+import asyncio
 import json
 import time
 from typing import Tuple
 
-# python -m pip install maafw
-from maa.define import RectType
-from maa.resource import Resource
 from maa.controller import AdbController
-from maa.instance import Instance
-from maa.toolkit import Toolkit
-
 from maa.custom_recognizer import CustomRecognizer
 
-import asyncio
+# python -m pip install maafw
+from maa.define import RectType
+from maa.instance import Instance
+from maa.resource import Resource
+from maa.toolkit import Toolkit
+
 
 def read_json() -> dict:
     with open("./assets/resource/data/event.json", "r", encoding="utf-8") as f:

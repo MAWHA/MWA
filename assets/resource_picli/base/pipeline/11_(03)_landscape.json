@@ -1,25 +1,44 @@
 {
-    "landscape": {
-        "recognition": "TemplateMatch",
-        "template": "Research/82.png",
-        "roi": [
-            109,
-            384,
-            80,
-            86
-        ],
-        "action": "Click",
-        "target_offset": [
-            60,
-            150,
-            0,
-            0
-        ],
-        "post_wait_freezes": 3000,
-        "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells"
-        ]
-    }
+  "landscape": {
+      "recognition": "TemplateMatch",
+      "template": "Research/r1.png",
+      "roi": [494, 386, 90, 84],
+      "action": "Click",
+      "target_offset": [
+          60,
+          150,
+          0,
+          0
+      ],
+      "post_wait_freezes": 3000,
+      "next": [
+          "Marksmanship",
+          "Blazing_Knife",
+          "Spells",
+          "landscape",
+          "Research",
+          "museum",
+          "landscape-buff-one"
+      ]
+  },
+  "landscape-buff-one": {
+      "action": "Click",
+      "target": [
+          360,
+          340,
+          0,
+          0
+      ],
+      "post_delay": 3000,
+      "next": [
+          "agree",
+          "Marksmanship",
+          "Blazing_Knife",
+          "Spells",
+          "landscape",
+          "Research",
+          "museum",
+          "advance_four"
+      ]
+  }
 }
