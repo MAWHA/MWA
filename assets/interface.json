@@ -43,7 +43,9 @@
         {
             "name": "和合",
             "entry": "combine-all",
-            "option": ["和合版本"]
+            "option": [
+                "和合版本"
+            ]
         },
         {
             "name": "领取家具蓝图",
