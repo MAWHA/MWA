@@ -42,7 +42,10 @@
         },
         {
             "name": "和合",
-            "entry": "combine-all"
+            "entry": "combine-all",
+            "option": [
+                "和合版本"
+            ]
         },
         {
             "name": "领取家具蓝图",
@@ -557,6 +560,34 @@
                     "param": {
                         "dispatch_company_all": {
                             "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "和合版本":{
+            "cases":[
+                {
+                    "name":"和合·椅",
+                    "param":{
+                        "combine-choose":{
+                            "next":"combine-chair"
+                        }
+                    }
+                },
+                {
+                    "name":"和合·朝代",
+                    "param":{
+                        "combine-choose":{
+                            "next":"combine-dynasty"
+                        }
+                    }
+                },
+                {
+                    "name":"和合·船",
+                    "param":{
+                        "combine-choose":{
+                            "next":"combine-ship"
                         }
                     }
                 }
