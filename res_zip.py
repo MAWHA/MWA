@@ -18,11 +18,10 @@ def add_folder_to_zip(zipf: zipfile.ZipFile, folder_path: str):
     :param folder_path: 要添加到 ZIP 文件中的文件夹路径
     """
     for foldername, subfolders, filenames in os.walk(folder_path):
-        print(filenames)
         for filename in filenames:
             file_path = os.path.join(foldername, filename)
             # 在 ZIP 文件中创建相对路径
-            relative_path = file_path.replace(r"/assets/resource_picli/base", "")
+            relative_path = file_path.replace(r"/assets/resource_picli/base", "").replace(r"/assets/resource_picli/data", "")
             zipf.write(file_path, relative_path)
 
 def get_git_commit_count():
