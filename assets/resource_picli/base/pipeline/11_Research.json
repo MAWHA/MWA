@@ -126,7 +126,8 @@
         ],
         "next": [
             "mountain_Research",
-            "mountain_Research_2"
+            "mountain_Research_2",
+            "enter_theme_1"
         ]
     },
     "mountain_Research": {
@@ -182,7 +183,8 @@
             150
         ],
         "next": [
-            "gold_research"
+            "gold_research",
+            "enter_theme_2"
         ]
     }
 }

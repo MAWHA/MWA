@@ -12,24 +12,11 @@
         ],
         "next": [
             "choose_boss",
-            "continue_research"
+            "sub_choose_boss"
         ]
     },
-    "continue_research": {
-        "pre_wait_freezes": 500,
-        "recognition": "OCR",
-        "expected": "继续",
-        "action": "Click",
-        "roi": [
-            830,
-            570,
-            450,
-            150
-        ],
-        "next": [
-            "choose_boss",
-            "continue_research"
-        ]
+    "sub_choose_boss": {
+        "is_sub": true
     },
     "choose_boss": {
         "pre_wait_freezes": 500,
@@ -43,7 +30,8 @@
         ],
         "action": "Click",
         "next": [
-            "choose_role"
+            "choose_role",
+            "choose_boss"
         ]
     },
     "choose_role": {
