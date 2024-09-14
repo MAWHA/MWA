@@ -93,7 +93,8 @@
             "name": "博物研学",
             "entry": "museum_Research",
             "option": [
-                "选择哪个"
+                "选择研学主题",
+                "选择地图(仅老研学)"
             ]
         },
         {
@@ -565,40 +566,60 @@
                 }
             ]
         },
-        "和合版本":{
-            "cases":[
+        "和合版本": {
+            "cases": [
                 {
-                    "name":"和合·椅",
-                    "param":{
-                        "combine-choose":{
-                            "next":"combine-chair"
+                    "name": "和合·椅",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-chair"
                         }
                     }
                 },
                 {
-                    "name":"和合·朝代",
-                    "param":{
-                        "combine-choose":{
-                            "next":"combine-dynasty"
+                    "name": "和合·朝代",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-dynasty"
                         }
                     }
                 },
                 {
-                    "name":"和合·船",
-                    "param":{
-                        "combine-choose":{
-                            "next":"combine-ship"
+                    "name": "和合·船",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-ship"
                         }
                     }
                 }
             ]
         },
-        "选择哪个": {
+        "选择研学主题": {
+            "cases": [
+                {
+                    "name": "山水纪行",
+                    "param": {
+                        "choose_theme": {
+                            "next": "mountain-river"
+                        }
+                    }
+                },
+                {
+                    "name": "金银纪行",
+                    "param": {
+                        "choose_theme": {
+                            "next": "gold-silver"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择地图(仅老研学)": {
             "cases": [
                 {
                     "name": "雪景寒林图",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "snowscape"
                         }
                     }
@@ -606,7 +627,7 @@
                 {
                     "name": "千里江山图 （暂无）",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "landscape"
                         }
                     }
@@ -614,36 +635,8 @@
                 {
                     "name": "溪山旅行图 （暂无）",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "journey"
-                        }
-                    }
-                }
-            ]
-        },
-        "初始buff": {
-            "cases": [
-                {
-                    "name": "神射",
-                    "param": {
-                        "snowscape": {
-                            "next": "Marksmanship"
-                        }
-                    }
-                },
-                {
-                    "name": "炽刀",
-                    "param": {
-                        "snowscape": {
-                            "next": "Blazing_Knife"
-                        }
-                    }
-                },
-                {
-                    "name": "术法精通",
-                    "param": {
-                        "snowscape": {
-                            "next": "Spells"
                         }
                     }
                 }
