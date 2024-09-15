@@ -78,7 +78,8 @@
             214
         ],
         "next": [
-            "company_confirm_one"
+            "company_confirm_one",
+            "drink_tea"
         ]
     },
     "company_confirm_one": {
@@ -144,7 +145,6 @@
             0
         ],
         "green_mask": true,
-        "pre_wait_freezes": 100,
         "next": [
             "invite",
             "Instrument"
@@ -162,7 +162,8 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "tea_click_one"
+            "tea_click_one",
+            "invite"
         ]
     },
     "tea_click_one": {
