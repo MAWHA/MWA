@@ -1,0 +1,300 @@
+{
+    "gold_research": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/begin_research.png",
+        "action": "Click",
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "choose_boss",
+            "sub_choose_boss"
+        ]
+    },
+    "sub_choose_boss": {
+        "is_sub": true
+    },
+    "choose_boss": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "骨刻",
+        "roi": [
+            165,
+            493,
+            974,
+            41
+        ],
+        "action": "Click",
+        "next": [
+            "choose_role",
+            "choose_boss"
+        ]
+    },
+    "choose_role": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/choose_role.png",
+        "action": "Click",
+        "next": [
+            "change_filter"
+        ]
+    },
+    "change_filter": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose_tag"
+        ]
+    },
+    "choose_tag": {
+        "recognition": "OCR",
+        "expected": "轻锐",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_tag"
+        ]
+    },
+    "ensure_tag": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "find_shangyang",
+            "swipe_page"
+        ]
+    },
+    "swipe_page": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            780,
+            362,
+            0,
+            0
+        ],
+        "end": [
+            475,
+            362,
+            0,
+            0
+        ],
+        "duration": 1000,
+        "post_delay": 500
+    },
+    "find_shangyang": {
+        "recognition": "OCR",
+        "expected": "商鞅方升",
+        "action": "Click",
+        "next": [
+            "change_tag"
+        ]
+    },
+    "change_tag": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose_tag_2"
+        ]
+    },
+    "choose_tag_2": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_tag_1"
+        ]
+    },
+    "ensure_tag_1": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "choose_role_1"
+        ]
+    },
+    "choose_role_1": {
+        "action": "Click",
+        "target": [
+            554,
+            511,
+            1,
+            1
+        ],
+        "next": "choose_role_2"
+    },
+    "choose_role_2": {
+        "action": "Click",
+        "target": [
+            693,
+            191,
+            1,
+            1
+        ],
+        "next": "choose_role_3"
+    },
+    "choose_role_3": {
+        "action": "Click",
+        "target": [
+            699,
+            516,
+            1,
+            1
+        ],
+        "next": "ensure_1"
+    },
+    "ensure_1": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "roi": [
+            1167,
+            672,
+            54,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "choose_strategy"
+        ]
+    },
+    "choose_strategy": {
+        "recognition": "OCR",
+        "expected": "奇策类型",
+        "action": "Click",
+        "next": [
+            "start_research"
+        ]
+    },
+    "start_research": {
+        "recognition": "OCR",
+        "expected": "进入研学",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "loading_wait",
+            "action_1"
+        ]
+    },
+    "loading_wait": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Research2/start_point.png",
+        "inverse": true
+    },
+    "action_1": {
+        "pre_wait_freezes": 1000,
+        "recognition": "TemplateMatch",
+        "template": "Research2/rest.png",
+        "index": 0,
+        "post_delay": 1000,
+        "action": "Click",
+        "next": [
+            "ensure_2",
+            "action_2"
+        ]
+    },
+    "action_2": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/rest.png",
+        "index": 2,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "ensure_2",
+            "action_3"
+        ]
+    },
+    "action_3": {
+        "next": "quit_research_2"
+    },
+    "ensure_2": {
+        "pre_wait_freezes": 500,
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "休息",
+        "roi": [
+            991,
+            493,
+            114,
+            46
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_3"
+        ]
+    },
+    "ensure_3": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            839,
+            619,
+            116,
+            50
+        ],
+        "action": "Click"
+    },
+    "quit_research_2": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/quit.png",
+        "action": "Click",
+        "next": [
+            "ensure_quit"
+        ]
+    },
+    "ensure_quit": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "action": "Click",
+        "next": [
+            "finish_research"
+        ]
+    },
+    "finish_research": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "结束",
+        "roi": [
+            1021,
+            565,
+            246,
+            88
+        ],
+        "action": "Click",
+        "next": [
+            "gold_research",
+            "finish_research"
+        ]
+    }
+}
