@@ -35,6 +35,7 @@
         ]
     },
     "choose_role": {
+        "pre_wait_freezes": 500,
         "recognition": "TemplateMatch",
         "template": "Research2/choose_role.png",
         "action": "Click",
