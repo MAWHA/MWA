@@ -40,6 +40,7 @@
     },
     "museum": {
         "pre_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "博物",
         "roi": [
@@ -50,8 +51,8 @@
         ],
         "action": "Click",
         "next": [
-            "choose_theme",
             "Research-week",
+            "choose_theme",
             "museum"
         ]
     },
@@ -71,7 +72,6 @@
             400,
             180
         ],
-        "post_delay": 2000,
         "next": [
             "choose_theme",
             "Research-week"
@@ -79,8 +79,8 @@
     },
     "choose_theme": {
         "next": [
-            "gold-silver",
-            "mountain-river"
+            "mountain-river",
+            "gold-silver"
         ]
     },
     "mountain-river": {
@@ -114,7 +114,7 @@
         ]
     },
     "enter_theme_1": {
-        "pre_wait_freezes": 500,
+        "post_wait_freezes": 500,
         "recognition": "OCR",
         "expected": "主题",
         "action": "Click",
@@ -172,7 +172,7 @@
         ]
     },
     "enter_theme_2": {
-        "pre_wait_freezes": 500,
+        "post_wait_freezes": 500,
         "recognition": "OCR",
         "expected": "主题",
         "action": "Click",
