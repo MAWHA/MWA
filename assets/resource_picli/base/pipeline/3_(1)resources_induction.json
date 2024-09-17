@@ -5,7 +5,9 @@
             "dispath_resources",
             "collect_induction",
             "donshe",
-            "weapons"
+            "weapons",
+            "entry_back",
+            "entry_convened"
         ]
     },
     "entry_dispath_one": {

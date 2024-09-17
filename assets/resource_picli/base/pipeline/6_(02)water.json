@@ -44,7 +44,11 @@
     },
     "sub_2daywater": {
         "recognition": "OCR",
-        "expected": "2天",
+        "expected": [
+            "2天",
+            "1天",
+            "时"
+        ],
         "threshold": 0.85,
         "roi": [
             390,

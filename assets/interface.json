@@ -42,7 +42,10 @@
         },
         {
             "name": "和合",
-            "entry": "combine-all"
+            "entry": "combine-all",
+            "option": [
+                "和合版本"
+            ]
         },
         {
             "name": "领取家具蓝图",
@@ -57,7 +60,7 @@
             "entry": "Barter_random"
         },
         {
-            "name": "在主界面喝完（/上限）2天过期的水（需要喝水请选择，无需则无视，注意！目前仅支持还剩两天就过期的水）",
+            "name": "在主界面喝完（/上限）支持剩余1天，一天以内的水一并喝了）",
             "entry": "drink_a_2day_water"
         },
         {
@@ -90,7 +93,8 @@
             "name": "博物研学",
             "entry": "museum_Research",
             "option": [
-                "选择哪个"
+                "选择研学主题",
+                "选择地图(仅老研学)"
             ]
         },
         {
@@ -103,30 +107,6 @@
         {
             "name": "活动签到",
             "entry": "activity_attendance"
-        },
-        {
-            "name": "海上远旅人（无论是否有通关，均可使用，默认买货而不卖，该港口没货了会跳过买货，直接退出）",
-            "entry": "maritime-all",
-            "option": [
-                "选择港口",
-                "通关几次",
-                "是否买货",
-                "是否卖货"
-            ]
-        },
-        {
-            "name": "领取蔚蓝日志",
-            "entry": "maritime",
-            "option": [
-                "是否领取日志"
-            ]
-        },
-        {
-            "name": "分解垃圾",
-            "entry": "maritime",
-            "option": [
-                "是否分解垃圾"
-            ]
         }
     ],
     "option": {
@@ -383,6 +363,17 @@
                             "next": "entry_dispath_one"
                         }
                     }
+                },
+                {
+                    "name": "不领取",
+                    "param": {
+                        "entry_one": {
+                            "next": [
+                                "entry_back",
+                                "entry_convened"
+                            ]
+                        }
+                    }
                 }
             ]
         },
@@ -421,10 +412,13 @@
                     }
                 },
                 {
-                    "name": "不领取(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不领取",
                     "param": {
                         "entry_dispath_three": {
-                            "next": []
+                            "next": [
+                                "dispath_back",
+                                "dispath_convened"
+                            ]
                         }
                     }
                 }
@@ -513,10 +507,13 @@
                     }
                 },
                 {
-                    "name": "不制造(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不制造",
                     "param": {
                         "entry_dispath_four": {
-                            "next": []
+                            "next": [
+                                "fabricate_back",
+                                "fabricate_convened"
+                            ]
                         }
                     }
                 }
@@ -533,10 +530,13 @@
                     }
                 },
                 {
-                    "name": "不喝茶(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不喝茶",
                     "param": {
-                        "dispatch_company_all": {
-                            "next": []
+                        "tea": {
+                            "next": [
+                                "tea_back",
+                                "tea_convened"
+                            ]
                         }
                     }
                 }
@@ -553,21 +553,72 @@
                     }
                 },
                 {
-                    "name": "不领取【反正是派遣公司的最后一个任务（暂时），无所谓，这个可以用】",
+                    "name": "不领取",
                     "param": {
-                        "dispatch_company_all": {
-                            "next": []
+                        "vitality": {
+                            "next": [
+                                "vitality_back",
+                                "vitality-convened"
+                            ]
                         }
                     }
                 }
             ]
         },
-        "选择哪个": {
+        "和合版本": {
+            "cases": [
+                {
+                    "name": "和合·椅",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-chair"
+                        }
+                    }
+                },
+                {
+                    "name": "和合·朝代",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-dynasty"
+                        }
+                    }
+                },
+                {
+                    "name": "和合·船",
+                    "param": {
+                        "combine-choose": {
+                            "next": "combine-ship"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择研学主题": {
+            "cases": [
+                {
+                    "name": "山水纪行",
+                    "param": {
+                        "choose_theme": {
+                            "next": "mountain-river"
+                        }
+                    }
+                },
+                {
+                    "name": "金银纪行",
+                    "param": {
+                        "choose_theme": {
+                            "next": "gold-silver"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择地图(仅老研学)": {
             "cases": [
                 {
                     "name": "雪景寒林图",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "snowscape"
                         }
                     }
@@ -575,7 +626,7 @@
                 {
                     "name": "千里江山图 （暂无）",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "landscape"
                         }
                     }
@@ -583,36 +634,8 @@
                 {
                     "name": "溪山旅行图 （暂无）",
                     "param": {
-                        "Research": {
+                        "mountain_Research": {
                             "next": "journey"
-                        }
-                    }
-                }
-            ]
-        },
-        "初始buff": {
-            "cases": [
-                {
-                    "name": "神射",
-                    "param": {
-                        "snowscape": {
-                            "next": "Marksmanship"
-                        }
-                    }
-                },
-                {
-                    "name": "炽刀",
-                    "param": {
-                        "snowscape": {
-                            "next": "Blazing_Knife"
-                        }
-                    }
-                },
-                {
-                    "name": "术法精通",
-                    "param": {
-                        "snowscape": {
-                            "next": "Spells"
                         }
                     }
                 }
@@ -677,286 +700,6 @@
                     "param": {
                         "add-all": {
                             "next": "add-four"
-                        }
-                    }
-                }
-            ]
-        },
-        "选择港口": {
-            "cases": [
-                {
-                    "name": "香港",
-                    "param": {
-                        "cruises": {
-                            "next": "HongKong-one"
-                        }
-                    }
-                },
-                {
-                    "name": "东京",
-                    "param": {
-                        "cruises": {
-                            "next": "tokyo-one"
-                        }
-                    }
-                },
-                {
-                    "name": "比雷埃夫斯港",
-                    "param": {
-                        "cruises": {
-                            "next": "pirae-effus-one"
-                        }
-                    }
-                },
-                {
-                    "name": "伦敦",
-                    "param": {
-                        "cruises": {
-                            "next": "london-one"
-                        }
-                    }
-                },
-                {
-                    "name": "亚历山大",
-                    "param": {
-                        "cruises": {
-                            "next": "alexander-one"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄",
-                    "param": {
-                        "cruises": {
-                            "next": "Callao-one"
-                        }
-                    }
-                }
-            ]
-        },
-        "通关几次": {
-            "cases": [
-                {
-                    "name": "1次",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-one"
-                        }
-                    }
-                },
-                {
-                    "name": "一直循环（单港口循环，不想循环了直接关掉cli【直接点“x”】即可）",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-two"
-                        }
-                    }
-                },
-                {
-                    "name": "香港-东京-(双港口循环，注意，上一港口的选择 香港 或 东京 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-three"
-                        }
-                    }
-                },
-                {
-                    "name": "香港-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 香港 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-four"
-                        }
-                    }
-                },
-                {
-                    "name": "东京-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-five"
-                        }
-                    }
-                },
-                {
-                    "name": "伦敦-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 伦敦 或 比雷埃夫斯港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-seven"
-                        }
-                    }
-                },
-                {
-                    "name": "伦敦-东京-(双港口循环，注意，上一港口的选择 东京 或 伦敦 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-night"
-                        }
-                    }
-                },
-                {
-                    "name": "伦敦-香港-(双港口循环，注意，上一港口的选择 伦敦 或 香港 才能用这个，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-nine"
-                        }
-                    }
-                },
-                {
-                    "name": "伦敦-亚历山大-(双港口循环，注意，上一港口的选择 伦敦 或 亚历山大 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-ten"
-                        }
-                    }
-                },
-                {
-                    "name": "亚历山大-比雷埃夫斯港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-thirteen"
-                        }
-                    }
-                },
-                {
-                    "name": "亚历山大-东京-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个,不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-twelve"
-                        }
-                    }
-                },
-                {
-                    "name": "亚历山大-香港-(双港口循环，注意，上一港口的选择 东京 或 比雷埃夫斯港 才能用这个，,不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-eleven"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄-亚历山大",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-Fourteen"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄-比雷埃夫斯港",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-Fifteen"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄-香港",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-Sixteen"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄-东京",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-Seventeen"
-                        }
-                    }
-                },
-                {
-                    "name": "卡亚俄-伦敦",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-Eighteen"
-                        }
-                    }
-                },
-                {
-                    "name": "香港-东京-比雷埃夫斯港-伦敦-亚历山大-卡亚俄-(六港口循环，不想循环了直接关掉cli【直接点“x”】即可)",
-                    "param": {
-                        "activity-pass-all": {
-                            "next": "activity-pass-six"
-                        }
-                    }
-                }
-            ]
-        },
-        "是否买货": {
-            "cases": [
-                {
-                    "name": "是",
-                    "param": {
-                        "activity-bazaar-two": {
-                            "next": "activity-all"
-                        }
-                    }
-                },
-                {
-                    "name": "否",
-                    "param": {
-                        "activity-bazaar-two": {
-                            "next": "activity-quit"
-                        }
-                    }
-                }
-            ]
-        },
-        "是否卖货": {
-            "cases": [
-                {
-                    "name": "是",
-                    "param": {
-                        "activity-handoff": {
-                            "next": "activity-sell"
-                        }
-                    }
-                },
-                {
-                    "name": "否",
-                    "param": {
-                        "activity-handoff": {
-                            "next": "activity-quit"
-                        }
-                    }
-                }
-            ]
-        },
-        "是否领取日志": {
-            "cases": [
-                {
-                    "name": "是",
-                    "param": {
-                        "maritime": {
-                            "next": "activity-azure"
-                        }
-                    }
-                },
-                {
-                    "name": "否",
-                    "param": {
-                        "maritime": {
-                            "next": "Quit"
-                        }
-                    }
-                }
-            ]
-        },
-        "是否分解垃圾": {
-            "cases": [
-                {
-                    "name": "是",
-                    "param": {
-                        "maritime": {
-                            "next": "activity-trajectory"
-                        }
-                    }
-                },
-                {
-                    "name": "否",
-                    "param": {
-                        "maritime": {
-                            "next": "Quit"
                         }
                     }
                 }

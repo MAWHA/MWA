@@ -2,20 +2,45 @@
     "museum_Research": {
         "next": [
             "museum",
-            "Research",
-            "Research_two",
-            "advance_one_man",
-            "advance_one_women",
-            "war_one",
-            "keyword",
-            "upgrade_one",
-            "descending_one",
-            "front_one",
-            "war_new_state",
-            "negative"
+            "research_home",
+            "research_return"
+        ]
+    },
+    "research_return": {
+        "recognition": "TemplateMatch",
+        "template": "Research/115.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            264,
+            100
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "research_home",
+            "research_return",
+            "museum"
+        ]
+    },
+    "research_home": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_back_home.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            300,
+            100
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "museum"
         ]
     },
     "museum": {
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "博物",
         "roi": [
@@ -25,11 +50,9 @@
             167
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
         "next": [
-            "Research-topic",
-            "Research",
             "Research-week",
+            "choose_theme",
             "museum"
         ]
     },
@@ -49,17 +72,52 @@
             400,
             180
         ],
-        "post_delay": 2000,
         "next": [
-            "Research-topic",
+            "choose_theme",
             "Research-week"
         ]
     },
-    "Research-topic": {
+    "choose_theme": {
+        "next": [
+            "mountain-river",
+            "gold-silver"
+        ]
+    },
+    "mountain-river": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research/mountain_research.png",
+        "roi": [
+            13,
+            98,
+            249,
+            123
+        ],
+        "action": "Click",
+        "next": [
+            "enter_theme_1"
+        ]
+    },
+    "gold-silver": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/golden_research.png",
+        "roi": [
+            12,
+            253,
+            253,
+            128
+        ],
+        "action": "Click",
+        "next": [
+            "enter_theme_2"
+        ]
+    },
+    "enter_theme_1": {
+        "post_wait_freezes": 500,
         "recognition": "OCR",
         "expected": "主题",
         "action": "Click",
-        "post_delay": 2000,
         "roi": [
             830,
             570,
@@ -67,11 +125,12 @@
             150
         ],
         "next": [
-            "Research",
-            "Research_two"
+            "mountain_Research",
+            "mountain_Research_2",
+            "enter_theme_1"
         ]
     },
-    "Research": {
+    "mountain_Research": {
         "recognition": "OCR",
         "expected": "启程",
         "roi": [
@@ -88,10 +147,10 @@
             "journey",
             "advance_one_man",
             "advance_one_women",
-            "Research"
+            "mountain_Research"
         ]
     },
-    "Research_two": {
+    "mountain_Research_2": {
         "recognition": "OCR",
         "expected": "继续",
         "action": "Click",
@@ -110,6 +169,22 @@
             "Spells",
             "agree",
             "new_state"
+        ]
+    },
+    "enter_theme_2": {
+        "post_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "主题",
+        "action": "Click",
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "gold_research",
+            "enter_theme_2"
         ]
     }
 }

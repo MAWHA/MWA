@@ -2,23 +2,38 @@
   "journey": {
     "recognition": "TemplateMatch",
     "template": "Research/r2.png",
-    "roi": [878, 385, 92, 90],
+    "roi": [
+      878,
+      385,
+      92,
+      90
+    ],
     "action": "Click",
-    "target_offset": [60, 150, 0, 0],
+    "target_offset": [
+      60,
+      150,
+      0,
+      0
+    ],
     "post_wait_freezes": 3000,
     "next": [
       "Marksmanship",
       "Blazing_Knife",
       "Spells",
       "journey",
-      "Research",
+      "mountain_Research",
       "museum",
       "journey-buff-one"
     ]
   },
   "journey-buff-one": {
     "action": "Click",
-    "target": [360, 340, 0, 0],
+    "target": [
+      360,
+      340,
+      0,
+      0
+    ],
     "post_delay": 3000,
     "next": [
       "agree",
@@ -26,7 +41,7 @@
       "Blazing_Knife",
       "Spells",
       "journey",
-      "Research",
+      "mountain_Research",
       "museum",
       "advance_four"
     ]
