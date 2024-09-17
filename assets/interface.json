@@ -363,6 +363,17 @@
                             "next": "entry_dispath_one"
                         }
                     }
+                },
+                {
+                    "name": "不领取",
+                    "param": {
+                        "entry_one": {
+                            "next": [
+                                "entry_back",
+                                "entry_convened"
+                            ]
+                        }
+                    }
                 }
             ]
         },
@@ -401,10 +412,13 @@
                     }
                 },
                 {
-                    "name": "不领取(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不领取",
                     "param": {
                         "entry_dispath_three": {
-                            "next": []
+                            "next": [
+                                "dispath_back",
+                                "dispath_convened"
+                            ]
                         }
                     }
                 }
@@ -493,10 +507,13 @@
                     }
                 },
                 {
-                    "name": "不制造(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不制造",
                     "param": {
                         "entry_dispath_four": {
-                            "next": []
+                            "next": [
+                                "fabricate_back",
+                                "fabricate_convened"
+                            ]
                         }
                     }
                 }
@@ -513,10 +530,13 @@
                     }
                 },
                 {
-                    "name": "不喝茶(暂不推荐使用，会导致下面选项任务失效，甚至可能最终导致下面所有任务失败)",
+                    "name": "不喝茶",
                     "param": {
-                        "dispatch_company_all": {
-                            "next": []
+                        "tea": {
+                            "next": [
+                                "tea_back",
+                                "tea_convened"
+                            ]
                         }
                     }
                 }
@@ -533,10 +553,13 @@
                     }
                 },
                 {
-                    "name": "不领取【反正是派遣公司的最后一个任务（暂时），无所谓，这个可以用】",
+                    "name": "不领取",
                     "param": {
-                        "dispatch_company_all": {
-                            "next": []
+                        "vitality": {
+                            "next": [
+                                "vitality_back",
+                                "vitality-convened"
+                            ]
                         }
                     }
                 }
