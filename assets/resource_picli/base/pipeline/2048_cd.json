@@ -1,80 +1,98 @@
 {
-  "2048_cd_1": {
+  "2048_hh_1": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_1.png",
+    "template": "2048_hh/2048_hh_1.png",
     "threshold": 0.60
   },
-  "2048_cd_3": {
+  "2048_hh_2": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_3.png",
+    "template": "2048_hh/2048_hh_2.png",
     "threshold": 0.60
   },
-  "2048_cd_4": {
+  "2048_hh_3": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_4.png",
+    "template": "2048_hh/2048_hh_3.png",
     "threshold": 0.60
   },
-  "2048_cd_5": {
+  "2048_hh_4": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_5.png",
+    "template": "2048_hh/2048_hh_4.png",
     "threshold": 0.60
   },
-  "2048_cd_6": {
+  "2048_hh_5": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_6.png",
+    "template": "2048_hh/2048_hh_5.png",
     "threshold": 0.60
   },
-  "2048_cd_7": {
+  "2048_hh_6": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_7.png",
+    "template": "2048_hh/2048_hh_6.png",
     "threshold": 0.60
   },
-  "2048_cd_8": {
+  "2048_hh_7": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_8.png",
+    "template": "2048_hh/2048_hh_7.png",
     "threshold": 0.60
   },
-  "2048_cd_9": {
+  "2048_hh_8": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_9.png",
+    "template": "2048_hh/2048_hh_8.png",
     "threshold": 0.60
   },
-  "2048_cd_10": {
+  "2048_hh_9": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_10.png",
+    "template": "2048_hh/2048_hh_9.png",
     "threshold": 0.60
   },
-  "2048_cd_11": {
+  "2048_hh_10": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_11.png",
+    "template": "2048_hh/2048_hh_10.png",
     "threshold": 0.60
   },
-  "2048_cd_12": {
+  "2048_hh_11": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_12.png",
+    "template": "2048_hh/2048_hh_11.png",
     "threshold": 0.60
   },
-  "2048_cd_13": {
+  "2048_hh_12": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_13.png",
+    "template": "2048_hh/2048_hh_12.png",
     "threshold": 0.60
   },
-  "2048_cd_16": {
+  "2048_hh_13": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
-    "template": "2048_cd/2048_cd_16.png",
+    "template": "2048_hh/2048_hh_13.png",
+    "threshold": 0.60
+  },
+  "2048_hh_14": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_hh/2048_hh_14.png",
+    "threshold": 0.60
+  },
+  "2048_hh_15": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_hh/2048_hh_15.png",
+    "threshold": 0.60
+  },
+  "2048_hh_16": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_hh/2048_hh_16.png",
     "threshold": 0.60
   }
 }
