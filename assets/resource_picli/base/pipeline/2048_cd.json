@@ -5,6 +5,12 @@
     "template": "2048_cd/2048_cd_1.png",
     "threshold": 0.60
   },
+  "2048_cd_2": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_2.png",
+    "threshold": 0.60
+  },
   "2048_cd_3": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
