@@ -45,25 +45,25 @@
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
     "template": "2048_hh/2048_hh_8.png",
-    "threshold": 0.60
+    "threshold": 0.95
   },
   "2048_hh_9": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
     "template": "2048_hh/2048_hh_9.png",
-    "threshold": 0.60
+    "threshold": 0.95
   },
   "2048_hh_10": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
     "template": "2048_hh/2048_hh_10.png",
-    "threshold": 0.60
+    "threshold": 0.95
   },
   "2048_hh_11": {
     "recognition": "TemplateMatch",
     "roi": [347, 100, 588, 579],
     "template": "2048_hh/2048_hh_11.png",
-    "threshold": 0.60
+    "threshold": 0.95
   },
   "2048_hh_12": {
     "recognition": "TemplateMatch",
