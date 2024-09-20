@@ -16,7 +16,6 @@
         ]
     },
     "Sub_StartWuhua": {
-        "is_sub": true,
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
         "post_delay": 5000,
