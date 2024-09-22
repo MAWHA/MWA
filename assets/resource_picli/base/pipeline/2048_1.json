@@ -1,0 +1,68 @@
+{
+  "2048_1_2": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/2.png",
+    "threshold": 0.95
+  },
+  "2048_1_4": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/4.png",
+    "threshold": 0.95
+  },
+  "2048_1_8": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/8.png",
+    "threshold": 0.95
+  },
+  "2048_1_16": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/16.png",
+    "threshold": 0.95
+  },
+  "2048_1_32": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/32.png",
+    "threshold": 0.95
+  },
+  "2048_1_64": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/64.png",
+    "threshold": 0.95
+  },
+  "2048_1_128": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/128.png",
+    "threshold": 0.95
+  },
+  "2048_1_256": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/256.png",
+    "threshold": 0.95
+  },
+  "2048_1_512": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/512.png",
+    "threshold": 0.95
+  },
+  "2048_1_1024": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/1024.png",
+    "threshold": 0.95
+  },
+  "2048_1_2048": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048/2048.png",
+    "threshold": 0.95
+  }
+}
