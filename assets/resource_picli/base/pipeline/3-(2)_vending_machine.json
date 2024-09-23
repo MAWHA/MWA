@@ -93,5 +93,27 @@
         "next": [
             "vending_home"
         ]
+    },
+    "entry_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "next": [
+            "dispath_company_collect"
+        ]
+    },
+    "entry_convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ],
+        "post_delay": 3000,
+        "next": [
+            "dispath_company_collect"
+        ]
     }
 }

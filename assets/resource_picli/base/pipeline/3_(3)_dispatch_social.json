@@ -6,7 +6,8 @@
             "dispatch_social_two",
             "dispatch_social_three",
             "dispatch_social_four",
-            "dc_back"
+            "dispath_back",
+            "dispath_convened"
         ]
     },
     "entry_dispath_three": {
@@ -186,9 +187,30 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "entry_dispath_four",
-            "tea",
-            "vitality"
+            "entry_dispath_four"
+        ]
+    },
+    "dispath_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "entry_dispath_four"
+        ]
+    },
+    "dispath_convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ],
+        "post_delay": 3000,
+        "next": [
+            "entry_dispath_four"
         ]
     }
 }

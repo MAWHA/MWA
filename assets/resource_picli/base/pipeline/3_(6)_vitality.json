@@ -2,7 +2,9 @@
     "vitality": {
         "next": [
             "entry_dispath_six",
-            "vitality_one"
+            "vitality_one",
+            "vitality_back",
+            "vitality-convened"
         ]
     },
     "entry_dispath_six": {
@@ -69,5 +71,21 @@
         "recognition": "TemplateMatch",
         "template": "Startup\\10.png",
         "action": "Click"
+    },
+    "vitality_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click"
+    },
+    "vitality-convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ],
+        "post_delay": 1000
     }
 }

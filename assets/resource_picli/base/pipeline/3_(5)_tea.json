@@ -4,7 +4,9 @@
             "entry_dispath_five",
             "tearoom",
             "tea_two",
-            "Instrument"
+            "Instrument",
+            "tea_back",
+            "tea_convened"
         ]
     },
     "entry_dispath_five": {
@@ -273,6 +275,29 @@
         "template": "Startup\\10.png",
         "action": "Click",
         "post_delay": 5000,
+        "next": [
+            "vitality"
+        ]
+    },
+    "tea_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "vitality"
+        ]
+    },
+    "tea_convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ],
+        "post_delay": 3000,
         "next": [
             "vitality"
         ]

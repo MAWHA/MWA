@@ -22,7 +22,8 @@
             "fabricate_all_nine",
             "fabricate_all_ten",
             "entry_dispath_four",
-            "dc_back"
+            "fabricate_back",
+            "fabricate_convened"
         ]
     },
     "fabricate_all_one": {
@@ -504,9 +505,30 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "tea",
-            "vitality",
-            "fabricate_home"
+            "tea"
+        ]
+    },
+    "fabricate_back": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "tea"
+        ]
+    },
+    "fabricate_convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ],
+        "post_delay": 3000,
+        "next": [
+            "tea"
         ]
     }
 }

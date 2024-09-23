@@ -1,0 +1,98 @@
+{
+  "2048_cd_1": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_1.png",
+    "threshold": 0.95
+  },
+  "2048_cd_2": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_2.png",
+    "threshold": 0.95
+  },
+  "2048_cd_3": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_3.png",
+    "threshold": 0.95
+  },
+  "2048_cd_4": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_4.png",
+    "threshold": 0.95
+  },
+  "2048_cd_5": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_5.png",
+    "threshold": 0.95
+  },
+  "2048_cd_6": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_6.png",
+    "threshold": 0.95
+  },
+  "2048_cd_7": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_7.png",
+    "threshold": 0.95
+  },
+  "2048_cd_8": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_8.png",
+    "threshold": 0.95
+  },
+  "2048_cd_9": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_9.png",
+    "threshold": 0.95
+  },
+  "2048_cd_10": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_10.png",
+    "threshold": 0.95
+  },
+  "2048_cd_11": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_11.png",
+    "threshold": 0.95
+  },
+  "2048_cd_12": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_12.png",
+    "threshold": 0.95
+  },
+  "2048_cd_13": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_13.png",
+    "threshold": 0.60
+  },
+  "2048_cd_14": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_14.png",
+    "threshold": 0.60
+  },
+  "2048_cd_15": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_15.png",
+    "threshold": 0.60
+  },
+  "2048_cd_16": {
+    "recognition": "TemplateMatch",
+    "roi": [347, 100, 588, 579],
+    "template": "2048_cd/2048_cd_16.png",
+    "threshold": 0.60
+  }
+}
