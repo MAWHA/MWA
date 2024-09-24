@@ -493,7 +493,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -543,7 +543,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -593,7 +593,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -643,7 +643,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -693,7 +693,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -712,7 +712,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/105.png",
         "action": "DoNothing",
-        "post_wait_freezes": 2000,
+        "post_wait_freezes": 3000,
         "next": [
             "upgrade_six",
             "descending_six"
@@ -743,7 +743,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,

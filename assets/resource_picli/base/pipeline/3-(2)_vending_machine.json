@@ -18,8 +18,8 @@
         ]
     },
     "vending_machine": {
-        "recognition": "TemplateMatch",
-        "template": "Company/office.png",
+        "recognition": "OCR",
+        "expected": "办公",
         "action": "Click",
         "post_delay": 3000,
         "roi": [
