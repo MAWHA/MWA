@@ -436,7 +436,7 @@
         "post_wait_freezes": 500,
         "next": [
             "fight",
-            "quit_research_2"
+            "finish_research"
         ]
     },
     "ensure_2": {
