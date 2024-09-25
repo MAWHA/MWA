@@ -1,88 +1,20 @@
 {
-    "StartUp": {
+    "Start": {
         "next": [
-            "Sub_StartWuhua",
-            "Sub_CloseAnnouncement",
-            "Sub_StartGame",
-            "Sub_AccumulatedSignIn",
-            "Sub_AccumulatedSignInExit",
-            "convened",
-            "Sub_StartUp"
+            "StartWuhua",
+            "update",
+            "CloseAnnouncement"
         ]
     },
-    "Sub_StartUp": {
-        "next": [
-            "StartUp"
-        ]
-    },
-    "Sub_StartWuhua": {
+    "StartWuhua": {
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
-        "post_delay": 5000,
+        "post_wait_freezes": 10000,
         "timeout": 20000,
-        "timeout_next": [
-            "advice",
-            "misinterpretation",
-            "examine",
+        "next": [
             "update",
-            "Sub_CloseAnnouncement",
+            "CloseAnnouncement",
             "convened"
-        ],
-        "next": [
-            "advice",
-            "misinterpretation",
-            "examine",
-            "update",
-            "Sub_CloseAnnouncement",
-            "convened"
-        ]
-    },
-    "misinterpretation": {
-        "recognition": "OCR",
-        "expected": "曲解",
-        "action": "DoNothing",
-        "post_delay": 5000,
-        "timeout": 20000,
-        "timeout_next": [
-            "update",
-            "Sub_CloseAnnouncement"
-        ],
-        "next": [
-            "examine",
-            "update",
-            "Sub_CloseAnnouncement"
-        ]
-    },
-    "advice": {
-        "recognition": "OCR",
-        "expected": "健康游戏忠告",
-        "action": "DoNothing",
-        "post_delay": 5000,
-        "timeout": 20000,
-        "timeout_next": [
-            "update",
-            "Sub_CloseAnnouncement"
-        ],
-        "next": [
-            "misinterpretation",
-            "examine",
-            "update",
-            "Sub_CloseAnnouncement"
-        ]
-    },
-    "examine": {
-        "recognition": "OCR",
-        "expected": "正在检查更新",
-        "action": "DoNothing",
-        "post_delay": 5000,
-        "timeout": 20000,
-        "timeout_next": [
-            "update",
-            "Sub_CloseAnnouncement"
-        ],
-        "next": [
-            "update",
-            "Sub_CloseAnnouncement"
         ]
     },
     "update": {
@@ -99,7 +31,7 @@
         "timeout": 20000,
         "timeout_next": [
             "update",
-            "Sub_CloseAnnouncement"
+            "CloseAnnouncement"
         ],
         "target": [
             765,
@@ -108,10 +40,10 @@
             0
         ],
         "next": [
-            "Sub_CloseAnnouncement"
+            "CloseAnnouncement"
         ]
     },
-    "Sub_CloseAnnouncement": {
+    "CloseAnnouncement": {
         "recognition": "TemplateMatch",
         "template": "Startup/12.png",
         "roi": [
@@ -121,70 +53,82 @@
             157
         ],
         "action": "Click",
-        "timeout": 20000,
-        "timeout_next": [
-            "Sub_CloseAnnouncement",
-            "Sub_StartGame"
-        ],
+        "post_delay": 5000,
         "next": [
-            "Sub_StartGame"
+            "StartGame",
+            "CloseAnnouncement"
         ]
     },
-    "Sub_StartGame": {
+    "StartGame": {
         "recognition": "OCR",
-        "expected": "抵制不良游戏",
+        "expected": "提示",
         "action": "Click",
-        "next": [
-            "Sub_AccumulatedSignIn"
-        ]
-    },
-    "Sub_AccumulatedSignIn": {
-        "action": "Click",
-        "post_delay": 10000,
-        "timeout": 20000,
-        "timeout_next": [
-            "Sub_AccumulatedSignIn",
-            "Sub_GetResource",
-            "Sub_AccumulatedSignInExit",
-            "convened"
+        "post_delay": 7000,
+        "target": [
+            1060,
+            80,
+            0,
+            0
+        ],
+        "roi": [
+            1170,
+            580,
+            100,
+            135
         ],
         "next": [
-            "Sub_GetResource",
-            "Sub_AccumulatedSignInExit",
+            "AccumulatedSignIn",
+            "AccumulatedSignInExit",
+            "GetResource",
             "convened"
         ]
     },
     "convened": {
         "recognition": "TemplateMatch",
         "template": "Startup/11.png",
+        "action": "DoNothing",
         "roi": [
             906,
             340,
             170,
             205
         ],
+        "post_delay": 2000
+    },
+    "AccumulatedSignIn": {
+        "action": "Click",
+        "target": [
+            800,
+            350,
+            0,
+            0
+        ],
         "post_delay": 3000,
         "next": [
-            "stop"
+            "GetResource",
+            "AccumulatedSignInExit",
+            "convened",
+            "AccumulatedSignIn"
         ]
     },
-    "Sub_AccumulatedSignInExit": {
+    "AccumulatedSignInExit": {
         "recognition": "TemplateMatch",
         "template": "Startup/AccumulatedSignInExit.png",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "Sub_GetResource",
-            "Sub_AccumulatedSignInExit",
-            "stop"
+            "GetResource",
+            "AccumulatedSignInExit",
+            "convened"
         ]
     },
-    "Sub_GetResource": {
+    "GetResource": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
         "next": [
-            "Sub_AccumulatedSignInExit"
+            "AccumulatedSignInExit",
+            "convened"
         ]
     }
 }

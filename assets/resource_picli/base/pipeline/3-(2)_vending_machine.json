@@ -3,7 +3,9 @@
         "next": [
             "vending_machine",
             "vending_machine_reward",
-            "entry_dispath_two"
+            "entry_dispath_two",
+            "vending_home",
+            "entry_back"
         ]
     },
     "entry_dispath_two": {
@@ -31,7 +33,7 @@
         "next": [
             "vending_machine_reward",
             "vending_home",
-            "dc_back"
+            "entry_back"
         ]
     },
     "vending_home": {
@@ -61,7 +63,8 @@
             34
         ],
         "next": [
-            "coin_flip"
+            "coin_flip",
+            "vending_machine_reward"
         ]
     },
     "coin_flip": {
@@ -76,7 +79,8 @@
             232
         ],
         "next": [
-            "coin_flip_click_space"
+            "coin_flip_click_space",
+            "coin_flip"
         ]
     },
     "coin_flip_click_space": {
@@ -91,6 +95,7 @@
             480
         ],
         "next": [
+            "coin_flip_click_space",
             "vending_home"
         ]
     },

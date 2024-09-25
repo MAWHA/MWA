@@ -14,7 +14,7 @@
         "post_delay": 7000,
         "next": [
             "vitality_one",
-            "dc_back"
+            "vitality_back"
         ]
     },
     "vitality_one": {
