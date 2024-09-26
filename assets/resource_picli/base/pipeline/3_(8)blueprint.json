@@ -43,8 +43,7 @@
             160
         ],
         "next": [
-            "blueprint-Receive",
-            "blueprint-one"
+            "blueprint-Receive"
         ]
     },
     "blueprint-Receive": {
