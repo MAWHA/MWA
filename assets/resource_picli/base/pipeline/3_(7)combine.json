@@ -50,34 +50,34 @@
             "combine-choose"
         ]
     },
-    "combine-choose":{
-        "next":[
+    "combine-choose": {
+        "next": [
             "combine-chair",
             "combine-dynasty",
             "combine-ship"
         ]
     },
-    "combine-chair":{
-        "recognition":"OCR",
-        "expected":"椅",
-        "action":"Click",
-        "next":[
+    "combine-chair": {
+        "recognition": "OCR",
+        "expected": "椅",
+        "action": "Click",
+        "next": [
             "combine-game"
         ]
     },
-    "combine-dynasty":{
-        "recognition":"OCR",
-        "expected":"朝代",
-        "action":"Click",
-        "next":[
+    "combine-dynasty": {
+        "recognition": "OCR",
+        "expected": "朝代",
+        "action": "Click",
+        "next": [
             "combine-game"
         ]
     },
-    "combine-ship":{
-        "recognition":"OCR",
-        "expected":"船",
-        "action":"Click",
-        "next":[
+    "combine-ship": {
+        "recognition": "OCR",
+        "expected": "船",
+        "action": "Click",
+        "next": [
             "combine-game"
         ]
     },
@@ -181,11 +181,11 @@
             "combine-challenge"
         ]
     },
-    "combine-return":{
-        "recognition":"TemplateMatch",
-        "template":"Company/return.png",
-        "action":"Click",
-        "next":[
+    "combine-return": {
+        "recognition": "TemplateMatch",
+        "template": "Company/return.png",
+        "action": "Click",
+        "next": [
             "combine-home"
         ]
     },

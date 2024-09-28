@@ -43,7 +43,8 @@
             160
         ],
         "next": [
-            "blueprint-Receive"
+            "blueprint-Receive",
+            "combine-home"
         ]
     },
     "blueprint-Receive": {

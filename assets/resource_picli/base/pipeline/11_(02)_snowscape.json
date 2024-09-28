@@ -286,8 +286,8 @@
         ]
     },
     "without_two": {
-        "recognition": "TemplateMatch",
-        "template": "Research/111.png",
+        "recognition": "OCR",
+        "expected": "中途退出",
         "action": "Click",
         "target": [
             770,
@@ -297,7 +297,9 @@
         ],
         "post_wait_freezes": 2000,
         "next": [
-            "without_three"
+            "without_three",
+            "descending_four",
+            "upgrade_four"
         ]
     },
     "without_three": {
