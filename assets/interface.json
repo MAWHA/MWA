@@ -16,7 +16,7 @@
     "task": [
         {
             "name": "启动",
-            "entry": "StartUp"
+            "entry": "Start"
         },
         {
             "name": "器者征集",
