@@ -257,7 +257,8 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "abandon_two"
+            "abandon_two",
+            "abandon_one"
         ]
     },
     "abandon_two": {
@@ -270,10 +271,11 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
             "descending_four",
-            "upgrade_four"
+            "upgrade_four",
+            "abandon_two"
         ]
     },
     "without_one": {
@@ -295,11 +297,12 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
             "without_three",
             "descending_four",
-            "upgrade_four"
+            "upgrade_four",
+            "without_one"
         ]
     },
     "without_three": {
@@ -309,7 +312,8 @@
         "post_delay": 2000,
         "next": [
             "descending_four",
-            "upgrade_four"
+            "upgrade_four",
+            "without_three"
         ]
     },
     "cultural_relic": {
