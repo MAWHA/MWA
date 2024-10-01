@@ -5,7 +5,6 @@
             "water",
             "max_water",
             "Swipe_drink",
-            "drink",
             "drink_a_2day_water"
         ]
     },
@@ -67,7 +66,6 @@
             "max_water",
             "sub_drink",
             "quit_fork",
-            "max_water",
             "click_water"
         ]
     },

@@ -484,10 +484,6 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "post_delay": 97000,
-        "timeout": 20000,
-        "on_error": [
-            "activity-bazaar-two"
-        ],
         "next": [
             "activity-bazaar-two"
         ]

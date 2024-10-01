@@ -2075,16 +2075,16 @@
     "remind_all": {
         "recognition": "OCR",
         "action": "DoNothing",
-        "expected": "代班",
+        "expected": [
+            "代班",
+            "敌方"
+        ],
         "post_delay": 30000,
         "timeout": 150000,
-        "on_error": [
-            "fail",
-            "war_seven"
-        ],
         "next": [
             "fail",
-            "war_seven"
+            "war_seven",
+            "remind_all"
         ]
     },
     "war_seven": {
