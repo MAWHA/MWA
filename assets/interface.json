@@ -67,8 +67,8 @@
             "name": "演训",
             "entry": "kaishi",
             "option": [
-                "选择关卡",
-                "打哪个",
+                "选择关卡-演训",
+                "打哪个-演训",
                 "打几次"
             ]
         },
@@ -76,8 +76,8 @@
             "name": "资源",
             "entry": "resource_all",
             "option": [
-                "选择关卡",
-                "打哪个",
+                "选择关卡-资源",
+                "打哪个-资源",
                 "打几次"
             ]
         },
@@ -107,110 +107,118 @@
         {
             "name": "活动签到",
             "entry": "activity_attendance"
+        },
+        {
+            "name": "给好友点赞（目前默认就前4个）",
+            "entry": "visit"
         }
     ],
     "option": {
-        "选择关卡": {
+        "选择关卡-演训": {
             "cases": [
                 {
-                    "name": "冬谷币（演训用）",
-                    "param": {
+                    "name": "冬谷币",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Cash"
                         }
                     }
                 },
                 {
-                    "name": "教材（演训用）",
-                    "param": {
+                    "name": "教材",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Experience"
                         }
                     }
                 },
                 {
-                    "name": "装备（演训用）",
-                    "param": {
+                    "name": "装备",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Weapon"
                         }
                     }
                 },
                 {
-                    "name": "宿卫（演训用）",
-                    "param": {
+                    "name": "宿卫",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Defender"
                         }
                     }
                 },
                 {
-                    "name": "构术（演训用）",
-                    "param": {
+                    "name": "构术",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Caster"
                         }
                     }
                 },
                 {
-                    "name": "远击（演训用）",
-                    "param": {
+                    "name": "远击",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Ranger"
                         }
                     }
                 },
                 {
-                    "name": "轻锐（演训用）",
-                    "param": {
+                    "name": "轻锐",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "LightMelee"
                         }
                     }
                 },
                 {
-                    "name": "战略（演训用）",
-                    "param": {
+                    "name": "战略",
+                    "pipeline_override": {
                         "StartTraining": {
                             "next": "Tactical"
                         }
                     }
-                },
+                }
+            ]
+        },
+        "选择关卡-资源": {
+            "cases": [
                 {
-                    "name": "第一章（资源用）",
-                    "param": {
+                    "name": "第一章",
+                    "pipeline_override": {
                         "resource_all": {
                             "next": "resource_one"
                         }
                     }
                 },
                 {
-                    "name": "第二章（资源用）",
-                    "param": {
+                    "name": "第二章",
+                    "pipeline_override": {
                         "resource_all": {
                             "next": "resource_two"
                         }
                     }
                 },
                 {
-                    "name": "第三章（资源用）",
-                    "param": {
+                    "name": "第三章",
+                    "pipeline_override": {
                         "resource_all": {
                             "next": "resource_three"
                         }
                     }
                 },
                 {
-                    "name": "第四章（资源用）",
-                    "param": {
+                    "name": "第四章",
+                    "pipeline_override": {
                         "resource_all": {
                             "next": "resource_four"
                         }
                     }
                 },
                 {
-                    "name": "第五章（资源用）",
-                    "param": {
+                    "name": "第五章",
+                    "pipeline_override": {
                         "resource_all": {
                             "next": "resource_five"
                         }
@@ -218,11 +226,11 @@
                 }
             ]
         },
-        "打哪个": {
+        "打哪个-演训": {
             "cases": [
                 {
                     "name": "第一关（子）（演训用）",
-                    "param": {
+                    "pipeline_override": {
                         "xuanze": {
                             "next": "SelectStage01"
                         }
@@ -230,7 +238,7 @@
                 },
                 {
                     "name": "第二关（丑）（演训用）",
-                    "param": {
+                    "pipeline_override": {
                         "xuanze": {
                             "next": "SelectStage02"
                         }
@@ -238,7 +246,7 @@
                 },
                 {
                     "name": "第三关（寅）（演训用）",
-                    "param": {
+                    "pipeline_override": {
                         "xuanze": {
                             "next": "SelectStage03"
                         }
@@ -246,7 +254,7 @@
                 },
                 {
                     "name": "第四关（卯）（演训用）",
-                    "param": {
+                    "pipeline_override": {
                         "xuanze": {
                             "next": "SelectStage04"
                         }
@@ -254,15 +262,19 @@
                 },
                 {
                     "name": "第五关（辰）（演训用）",
-                    "param": {
+                    "pipeline_override": {
                         "xuanze": {
                             "next": "SelectStage05"
                         }
                     }
-                },
+                }
+            ]
+        },
+        "打哪个-资源": {
+            "cases": [
                 {
                     "name": "第一关（壹）（资源用）",
-                    "param": {
+                    "pipeline_override": {
                         "resource": {
                             "next": "ancient_both_sea_cantonese_often1"
                         }
@@ -270,7 +282,7 @@
                 },
                 {
                     "name": "第二关（贰）（资源用）",
-                    "param": {
+                    "pipeline_override": {
                         "resource": {
                             "next": "ancient_both_sea_cantonese_often2"
                         }
@@ -278,7 +290,7 @@
                 },
                 {
                     "name": "第三关（叁）（资源用）",
-                    "param": {
+                    "pipeline_override": {
                         "resource": {
                             "next": "ancient_both_sea_cantonese_often3"
                         }
@@ -286,7 +298,7 @@
                 },
                 {
                     "name": "第四关（肆）（资源用）",
-                    "param": {
+                    "pipeline_override": {
                         "resource": {
                             "next": "ancient_both_sea_cantonese_often4"
                         }
@@ -294,7 +306,7 @@
                 },
                 {
                     "name": "第五关（伍）（资源用）",
-                    "param": {
+                    "pipeline_override": {
                         "resource": {
                             "next": "ancient_both_sea_cantonese_often5"
                         }
@@ -306,7 +318,7 @@
             "cases": [
                 {
                     "name": "打一次（速通没解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "Start1"
                         }
@@ -314,7 +326,7 @@
                 },
                 {
                     "name": "打一次（速通解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "Speedrun1x"
                         }
@@ -322,7 +334,7 @@
                 },
                 {
                     "name": "打两次（速通解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "Speedrun2x"
                         }
@@ -330,7 +342,7 @@
                 },
                 {
                     "name": "打四次（速通解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "Speedrun4x"
                         }
@@ -338,7 +350,7 @@
                 },
                 {
                     "name": "打十次（速通解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "Speedrun10x"
                         }
@@ -346,7 +358,7 @@
                 },
                 {
                     "name": "全部体力（速通解锁专用）",
-                    "param": {
+                    "pipeline_override": {
                         "fast": {
                             "next": "allin"
                         }
@@ -358,7 +370,7 @@
             "cases": [
                 {
                     "name": "领取奖励",
-                    "param": {
+                    "pipeline_override": {
                         "entry_one": {
                             "next": "entry_dispath_one"
                         }
@@ -366,7 +378,7 @@
                 },
                 {
                     "name": "不领取",
-                    "param": {
+                    "pipeline_override": {
                         "entry_one": {
                             "next": [
                                 "entry_back",
@@ -381,7 +393,7 @@
             "cases": [
                 {
                     "name": "初级社会指南",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_three": {
                             "next": "dispatch_social_one"
                         }
@@ -389,7 +401,7 @@
                 },
                 {
                     "name": "中级社会指南",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_three": {
                             "next": "dispatch_social_two"
                         }
@@ -397,7 +409,7 @@
                 },
                 {
                     "name": "高级社会指南",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_three": {
                             "next": "dispatch_social_three"
                         }
@@ -405,7 +417,7 @@
                 },
                 {
                     "name": "进阶社会指南",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_three": {
                             "next": "dispatch_social_four"
                         }
@@ -413,7 +425,7 @@
                 },
                 {
                     "name": "不领取",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_three": {
                             "next": [
                                 "dispath_back",
@@ -428,7 +440,7 @@
             "cases": [
                 {
                     "name": "蓝色装备",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_one"
                         }
@@ -436,7 +448,7 @@
                 },
                 {
                     "name": "铜石墨条（蓝装升级）",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_two"
                         }
@@ -444,7 +456,7 @@
                 },
                 {
                     "name": "银石墨条（黄装升级）",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_three"
                         }
@@ -452,7 +464,7 @@
                 },
                 {
                     "name": "100装备经验",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_four"
                         }
@@ -460,7 +472,7 @@
                 },
                 {
                     "name": "1型钢材",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_five"
                         }
@@ -468,7 +480,7 @@
                 },
                 {
                     "name": "资质证明1",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_six"
                         }
@@ -476,7 +488,7 @@
                 },
                 {
                     "name": "资质证明2",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_seven"
                         }
@@ -484,7 +496,7 @@
                 },
                 {
                     "name": "高级制造申请",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_eight"
                         }
@@ -492,7 +504,7 @@
                 },
                 {
                     "name": "2型钢材",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_nine"
                         }
@@ -500,7 +512,7 @@
                 },
                 {
                     "name": "资质证明3",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": "fabricate_all_ten"
                         }
@@ -508,7 +520,7 @@
                 },
                 {
                     "name": "不制造",
-                    "param": {
+                    "pipeline_override": {
                         "entry_dispath_four": {
                             "next": [
                                 "fabricate_back",
@@ -523,7 +535,7 @@
             "cases": [
                 {
                     "name": "喝茶",
-                    "param": {
+                    "pipeline_override": {
                         "tea": {
                             "next": "entry_dispath_five"
                         }
@@ -531,7 +543,7 @@
                 },
                 {
                     "name": "不喝茶",
-                    "param": {
+                    "pipeline_override": {
                         "tea": {
                             "next": [
                                 "tea_back",
@@ -546,7 +558,7 @@
             "cases": [
                 {
                     "name": "领取",
-                    "param": {
+                    "pipeline_override": {
                         "vitality": {
                             "next": "entry_dispath_six"
                         }
@@ -554,7 +566,7 @@
                 },
                 {
                     "name": "不领取",
-                    "param": {
+                    "pipeline_override": {
                         "vitality": {
                             "next": [
                                 "vitality_back",
@@ -569,7 +581,7 @@
             "cases": [
                 {
                     "name": "和合·椅",
-                    "param": {
+                    "pipeline_override": {
                         "combine-choose": {
                             "next": "combine-chair"
                         }
@@ -577,7 +589,7 @@
                 },
                 {
                     "name": "和合·朝代",
-                    "param": {
+                    "pipeline_override": {
                         "combine-choose": {
                             "next": "combine-dynasty"
                         }
@@ -585,7 +597,7 @@
                 },
                 {
                     "name": "和合·船",
-                    "param": {
+                    "pipeline_override": {
                         "combine-choose": {
                             "next": "combine-ship"
                         }
@@ -597,7 +609,7 @@
             "cases": [
                 {
                     "name": "山水纪行",
-                    "param": {
+                    "pipeline_override": {
                         "choose_theme": {
                             "next": "mountain-river"
                         }
@@ -605,7 +617,7 @@
                 },
                 {
                     "name": "金银纪行",
-                    "param": {
+                    "pipeline_override": {
                         "choose_theme": {
                             "next": "gold-silver"
                         }
@@ -617,7 +629,7 @@
             "cases": [
                 {
                     "name": "雪景寒林图",
-                    "param": {
+                    "pipeline_override": {
                         "mountain_Research": {
                             "next": "snowscape"
                         }
@@ -625,7 +637,7 @@
                 },
                 {
                     "name": "千里江山图 （暂无）",
-                    "param": {
+                    "pipeline_override": {
                         "mountain_Research": {
                             "next": "landscape"
                         }
@@ -633,7 +645,7 @@
                 },
                 {
                     "name": "溪山旅行图 （暂无）",
-                    "param": {
+                    "pipeline_override": {
                         "mountain_Research": {
                             "next": "journey"
                         }
@@ -645,7 +657,7 @@
             "cases": [
                 {
                     "name": "炽级",
-                    "param": {
+                    "pipeline_override": {
                         "select_tier": {
                             "next": "red"
                         }
@@ -653,7 +665,7 @@
                 },
                 {
                     "name": "耀级",
-                    "param": {
+                    "pipeline_override": {
                         "select_tier": {
                             "next": "yellow"
                         }
@@ -661,7 +673,7 @@
                 },
                 {
                     "name": "凌级",
-                    "param": {
+                    "pipeline_override": {
                         "select_tier": {
                             "next": "blue"
                         }
@@ -673,7 +685,7 @@
             "cases": [
                 {
                     "name": "征集1个",
-                    "param": {
+                    "pipeline_override": {
                         "add-all": {
                             "next": "add-one"
                         }
@@ -681,7 +693,7 @@
                 },
                 {
                     "name": "征集2个",
-                    "param": {
+                    "pipeline_override": {
                         "add-all": {
                             "next": "add-two"
                         }
@@ -689,7 +701,7 @@
                 },
                 {
                     "name": "征集3个",
-                    "param": {
+                    "pipeline_override": {
                         "add-all": {
                             "next": "add-three"
                         }
@@ -697,7 +709,7 @@
                 },
                 {
                     "name": "征集4个",
-                    "param": {
+                    "pipeline_override": {
                         "add-all": {
                             "next": "add-four"
                         }

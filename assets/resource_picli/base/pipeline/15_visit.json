@@ -1,0 +1,408 @@
+{
+    "visit": {
+        "next": [
+            "visit-contact",
+            "visit-friends-all-one",
+            "visit-friends-one",
+            "visit-quit-one"
+        ]
+    },
+    "visit-contact": {
+        "recognition": "OCR",
+        "expected": "联系人",
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            150,
+            600,
+            110,
+            115
+        ],
+        "next": [
+            "visit-friends-all-one"
+        ]
+    },
+    "visit-friends-all-one": {
+        "recognition": "OCR",
+        "expected": "好友",
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            30,
+            185,
+            260,
+            200
+        ],
+        "next": [
+            "visit-friends-one"
+        ]
+    },
+    "visit-friends-one": {
+        "action": "Click",
+        "post_delay": 750,
+        "target": [
+            105,
+            365,
+            0,
+            0
+        ],
+        "next": [
+            "visit-one",
+            "visit-friends-one"
+        ]
+    },
+    "visit-one": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "action": "Click",
+        "post_delay": 7000,
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "roi": [
+            280,
+            460,
+            75,
+            60
+        ],
+        "next": [
+            "visit-Thumbs-up-one"
+        ]
+    },
+    "visit-Thumbs-up-one": {
+        "recognition": "TemplateMatch",
+        "template": "visit\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            260,
+            610,
+            110,
+            110
+        ],
+        "next": [
+            "visit-get-one",
+            "visit-on-get-one"
+        ]
+    },
+    "visit-get-one": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "visit-get-one",
+            "visit-quit-one"
+        ]
+    },
+    "visit-on-get-one": {
+        "recognition": "OCR",
+        "expected": "本周",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "visit-quit-one"
+        ]
+    },
+    "visit-quit-one": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "visit-friends-all-two"
+        ]
+    },
+    "visit-friends-all-two": {
+        "recognition": "OCR",
+        "expected": "好友",
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            30,
+            185,
+            260,
+            200
+        ],
+        "next": [
+            "visit-friends-two"
+        ]
+    },
+    "visit-friends-two": {
+        "action": "Click",
+        "post_delay": 750,
+        "target": [
+            105,
+            450,
+            0,
+            0
+        ],
+        "next": [
+            "visit-two",
+            "visit-quit",
+            "visit-friends-two"
+        ]
+    },
+    "visit-two": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "action": "Click",
+        "post_delay": 7000,
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "roi": [
+            280,
+            500,
+            80,
+            80
+        ],
+        "next": [
+            "visit-Thumbs-up-two"
+        ]
+    },
+    "visit-Thumbs-up-two": {
+        "recognition": "TemplateMatch",
+        "template": "visit\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            260,
+            610,
+            110,
+            110
+        ],
+        "next": [
+            "visit-get-two",
+            "visit-on-get-two"
+        ]
+    },
+    "visit-get-two": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "visit-get-two",
+            "visit-quit-two"
+        ]
+    },
+    "visit-on-get-two": {
+        "recognition": "OCR",
+        "expected": "本周",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "visit-quit-two"
+        ]
+    },
+    "visit-quit-two": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "visit-friends-all-three"
+        ]
+    },
+    "visit-friends-all-three": {
+        "recognition": "OCR",
+        "expected": "好友",
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            30,
+            185,
+            260,
+            200
+        ],
+        "next": [
+            "visit-friends-three"
+        ]
+    },
+    "visit-friends-three": {
+        "action": "Click",
+        "post_delay": 750,
+        "target": [
+            105,
+            535,
+            0,
+            0
+        ],
+        "next": [
+            "visit-three",
+            "visit-quit",
+            "visit-friends-three"
+        ]
+    },
+    "visit-three": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "action": "Click",
+        "post_delay": 7000,
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "roi": [
+            280,
+            600,
+            75,
+            60
+        ],
+        "next": [
+            "visit-Thumbs-up-three"
+        ]
+    },
+    "visit-Thumbs-up-three": {
+        "recognition": "TemplateMatch",
+        "template": "visit\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            260,
+            610,
+            110,
+            110
+        ],
+        "next": [
+            "visit-get-three",
+            "visit-on-get-three"
+        ]
+    },
+    "visit-get-three": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "visit-get-three",
+            "visit-quit-three"
+        ]
+    },
+    "visit-on-get-three": {
+        "recognition": "OCR",
+        "expected": "本周",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "visit-quit-three"
+        ]
+    },
+    "visit-quit-three": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "visit-friends-all-four"
+        ]
+    },
+    "visit-friends-all-four": {
+        "recognition": "OCR",
+        "expected": "好友",
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            30,
+            185,
+            260,
+            200
+        ],
+        "next": [
+            "visit-friends-four"
+        ]
+    },
+    "visit-friends-four": {
+        "action": "Click",
+        "post_delay": 750,
+        "target": [
+            105,
+            620,
+            0,
+            0
+        ],
+        "next": [
+            "visit-four",
+            "visit-friends-four"
+        ]
+    },
+    "visit-four": {
+        "action": "Click",
+        "post_delay": 7000,
+        "target": [
+            318,
+            708,
+            0,
+            0
+        ],
+        "roi": [
+            280,
+            460,
+            75,
+            60
+        ],
+        "next": [
+            "visit-Thumbs-up-four",
+            "visit-quit"
+        ]
+    },
+    "visit-Thumbs-up-four": {
+        "recognition": "TemplateMatch",
+        "template": "visit\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            260,
+            610,
+            110,
+            110
+        ],
+        "next": [
+            "visit-get-four",
+            "visit-on-get-four"
+        ]
+    },
+    "visit-get-four": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "visit-get-four",
+            "visit-quit-four"
+        ]
+    },
+    "visit-on-get-four": {
+        "recognition": "OCR",
+        "expected": "本周",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "visit-quit-four"
+        ]
+    },
+    "visit-quit-four": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "visit-quit"
+        ]
+    },
+    "visit-quit": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 2000
+    }
+}

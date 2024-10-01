@@ -4,5 +4,10 @@
         "type": "Adb"
     },
     "resource": "B 服",
-    "task": []
+    "task": [
+        {
+            "name": "启动",
+            "option": []
+        }
+    ]
 }

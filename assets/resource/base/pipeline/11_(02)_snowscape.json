@@ -2035,7 +2035,7 @@
         "expected": "代班",
         "post_delay": 30000,
         "timeout": 150000,
-        "timeout_next": [
+        "on_error": [
             "fail",
             "war_seven"
         ],

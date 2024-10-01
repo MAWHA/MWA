@@ -29,7 +29,7 @@
         "action": "Click",
         "post_delay": 10000,
         "timeout": 20000,
-        "timeout_next": [
+        "on_error": [
             "update",
             "CloseAnnouncement"
         ],
