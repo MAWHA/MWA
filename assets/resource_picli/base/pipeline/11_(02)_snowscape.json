@@ -420,7 +420,7 @@
         "post_delay": 2000,
         "roi": [
             465,
-            261,
+            230,
             434,
             85
         ],
@@ -436,7 +436,7 @@
         "post_delay": 2000,
         "roi": [
             465,
-            261,
+            230,
             434,
             85
         ],
@@ -446,8 +446,8 @@
         ]
     },
     "keep": {
-        "recognition": "TemplateMatch",
-        "template": "Research/14.png",
+        "recognition": "OCR",
+        "expected": "继续",
         "action": "Click",
         "post_delay": 2000,
         "next": [
@@ -1448,7 +1448,7 @@
             561,
             279
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 4000,
         "next": [
             "perfect",
             "keep",
