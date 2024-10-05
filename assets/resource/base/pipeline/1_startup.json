@@ -10,6 +10,7 @@
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
         "post_wait_freezes": 10000,
+        "timeout": 20000,
         "next": [
             "update",
             "CloseAnnouncement",
@@ -60,14 +61,20 @@
     },
     "StartGame": {
         "recognition": "OCR",
-        "expected": "点击",
+        "expected": "提示",
         "action": "Click",
         "post_delay": 7000,
+        "target": [
+            1060,
+            80,
+            0,
+            0
+        ],
         "roi": [
-            190,
-            600,
-            130,
-            70
+            1170,
+            580,
+            100,
+            135
         ],
         "next": [
             "AccumulatedSignIn",

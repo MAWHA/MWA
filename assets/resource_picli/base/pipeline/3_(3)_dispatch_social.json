@@ -2,10 +2,6 @@
     "dispath_company_collect": {
         "next": [
             "entry_dispath_three",
-            "dispatch_social_one",
-            "dispatch_social_two",
-            "dispatch_social_three",
-            "dispatch_social_four",
             "dispath_back",
             "dispath_convened"
         ]
@@ -20,7 +16,7 @@
             "dispatch_social_two",
             "dispatch_social_three",
             "dispatch_social_four",
-            "dc_back"
+            "dispath_back"
         ]
     },
     "dispatch_social_one": {
@@ -35,7 +31,8 @@
             196
         ],
         "next": [
-            "Beginner_Social_Guide"
+            "Beginner_Social_Guide",
+            "dispatch_social_one"
         ]
     },
     "dispatch_social_two": {
@@ -50,7 +47,8 @@
             196
         ],
         "next": [
-            "Intermediate_Social_Guide"
+            "Intermediate_Social_Guide",
+            "dispatch_social_two"
         ]
     },
     "dispatch_social_three": {
@@ -65,7 +63,8 @@
             196
         ],
         "next": [
-            "Advanced_Social_Guide"
+            "Advanced_Social_Guide",
+            "dispatch_social_three"
         ]
     },
     "dispatch_social_four": {
@@ -80,7 +79,8 @@
             196
         ],
         "next": [
-            "Advanced_Sociology"
+            "Advanced_Sociology",
+            "dispatch_social_four"
         ]
     },
     "Beginner_Social_Guide": {
@@ -94,7 +94,8 @@
             134
         ],
         "next": [
-            "fabricate_max"
+            "fabricate_max",
+            "Beginner_Social_Guide"
         ]
     },
     "Intermediate_Social_Guide": {
@@ -108,7 +109,8 @@
             124
         ],
         "next": [
-            "fabricate_max"
+            "fabricate_max",
+            "Intermediate_Social_Guide"
         ]
     },
     "Advanced_Social_Guide": {
@@ -122,7 +124,8 @@
             132
         ],
         "next": [
-            "fabricate_max"
+            "fabricate_max",
+            "Advanced_Social_Guide"
         ]
     },
     "Advanced_Sociology": {
@@ -136,7 +139,8 @@
             131
         ],
         "next": [
-            "fabricate_max"
+            "fabricate_max",
+            "Advanced_Sociology"
         ]
     },
     "fabricate_max": {
@@ -150,7 +154,8 @@
             71
         ],
         "next": [
-            "fabricate_social_book"
+            "fabricate_social_book",
+            "fabricate_max"
         ]
     },
     "fabricate_social_book": {
@@ -164,7 +169,8 @@
             73
         ],
         "next": [
-            "verify_fabricate"
+            "verify_fabricate",
+            "fabricate_social_book"
         ]
     },
     "verify_fabricate": {
@@ -178,7 +184,8 @@
             76
         ],
         "next": [
-            "dispath_home"
+            "dispath_home",
+            "verify_fabricate"
         ]
     },
     "dispath_home": {

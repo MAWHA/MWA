@@ -257,7 +257,8 @@
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "abandon_two"
+            "abandon_two",
+            "abandon_one"
         ]
     },
     "abandon_two": {
@@ -270,10 +271,11 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
             "descending_four",
-            "upgrade_four"
+            "upgrade_four",
+            "abandon_two"
         ]
     },
     "without_one": {
@@ -286,8 +288,8 @@
         ]
     },
     "without_two": {
-        "recognition": "TemplateMatch",
-        "template": "Research/111.png",
+        "recognition": "OCR",
+        "expected": "中途退出",
         "action": "Click",
         "target": [
             770,
@@ -295,9 +297,12 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
-            "without_three"
+            "without_three",
+            "descending_four",
+            "upgrade_four",
+            "without_one"
         ]
     },
     "without_three": {
@@ -307,7 +312,8 @@
         "post_delay": 2000,
         "next": [
             "descending_four",
-            "upgrade_four"
+            "upgrade_four",
+            "without_three"
         ]
     },
     "cultural_relic": {
@@ -414,7 +420,7 @@
         "post_delay": 2000,
         "roi": [
             465,
-            261,
+            230,
             434,
             85
         ],
@@ -430,7 +436,7 @@
         "post_delay": 2000,
         "roi": [
             465,
-            261,
+            230,
             434,
             85
         ],
@@ -440,8 +446,8 @@
         ]
     },
     "keep": {
-        "recognition": "TemplateMatch",
-        "template": "Research/14.png",
+        "recognition": "OCR",
+        "expected": "继续",
         "action": "Click",
         "post_delay": 2000,
         "next": [
@@ -493,7 +499,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -543,7 +549,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -593,7 +599,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -643,7 +649,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -693,7 +699,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -712,7 +718,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/105.png",
         "action": "DoNothing",
-        "post_wait_freezes": 2000,
+        "post_wait_freezes": 3000,
         "next": [
             "upgrade_six",
             "descending_six"
@@ -743,7 +749,7 @@
         "recognition": "TemplateMatch",
         "template": "Research/17.png",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 3000,
         "roi": [
             866,
             530,
@@ -1442,7 +1448,7 @@
             561,
             279
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 4000,
         "next": [
             "perfect",
             "keep",
@@ -2069,16 +2075,16 @@
     "remind_all": {
         "recognition": "OCR",
         "action": "DoNothing",
-        "expected": "代班",
+        "expected": [
+            "代班",
+            "敌方"
+        ],
         "post_delay": 30000,
         "timeout": 150000,
-        "timeout_next": [
-            "fail",
-            "war_seven"
-        ],
         "next": [
             "fail",
-            "war_seven"
+            "war_seven",
+            "remind_all"
         ]
     },
     "war_seven": {

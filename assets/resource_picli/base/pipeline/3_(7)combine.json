@@ -50,34 +50,169 @@
             "combine-choose"
         ]
     },
-    "combine-choose":{
-        "next":[
+    "combine-choose": {
+        "next": [
+            "combine-chair-entry",
+            "combine-dynasty-entry",
+            "combine-ship-entry"
+        ]
+    },
+    "combine-chair-entry": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "combine-chair-tearoom",
+            "combine-chair-combine",
             "combine-chair",
+            "combine-chair-entry"
+        ]
+    },
+    "combine-chair-tearoom": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "combine-chair-combine",
+            "combine-chair",
+            "combine-chair-tearoom"
+        ]
+    },
+    "combine-chair-combine": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\28.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            210,
+            110,
+            180,
+            200
+        ],
+        "next": [
+            "combine-chair",
+            "combine-chair-combine"
+        ]
+    },
+    "combine-chair": {
+        "recognition": "OCR",
+        "expected": "椅",
+        "action": "Click",
+        "next": [
+            "combine-game"
+        ]
+    },
+    "combine-dynasty-entry": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "combine-dynasty-tearoom",
+            "combine-dynasty-combine",
             "combine-dynasty",
-            "combine-ship"
+            "combine-dynasty-entry"
         ]
     },
-    "combine-chair":{
-        "recognition":"OCR",
-        "expected":"椅",
-        "action":"Click",
-        "next":[
+    "combine-dynasty-tearoom": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "combine-dynasty-combine",
+            "combine-dynasty",
+            "combine-dynasty-tearoom"
+        ]
+    },
+    "combine-dynasty-combine": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\28.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            210,
+            110,
+            180,
+            200
+        ],
+        "next": [
+            "combine-dynasty",
+            "combine-dynasty-combine"
+        ]
+    },
+    "combine-dynasty": {
+        "recognition": "OCR",
+        "expected": "朝代",
+        "action": "Click",
+        "next": [
             "combine-game"
         ]
     },
-    "combine-dynasty":{
-        "recognition":"OCR",
-        "expected":"朝代",
-        "action":"Click",
-        "next":[
-            "combine-game"
+    "combine-ship-entry": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "combine-ship-tearoom",
+            "combine-ship-combine",
+            "combine-ship",
+            "combine-ship-entry"
         ]
     },
-    "combine-ship":{
-        "recognition":"OCR",
-        "expected":"船",
-        "action":"Click",
-        "next":[
+    "combine-ship-tearoom": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "combine-ship-combine",
+            "combine-ship",
+            "combine-ship-tearoom"
+        ]
+    },
+    "combine-ship-combine": {
+        "recognition": "TemplateMatch",
+        "template": "Company\\28.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            210,
+            110,
+            180,
+            200
+        ],
+        "next": [
+            "combine-ship",
+            "combine-ship-combine"
+        ]
+    },
+    "combine-ship": {
+        "recognition": "OCR",
+        "expected": "船",
+        "action": "Click",
+        "next": [
             "combine-game"
         ]
     },
@@ -181,11 +316,11 @@
             "combine-challenge"
         ]
     },
-    "combine-return":{
-        "recognition":"TemplateMatch",
-        "template":"Company/return.png",
-        "action":"Click",
-        "next":[
+    "combine-return": {
+        "recognition": "TemplateMatch",
+        "template": "Company/return.png",
+        "action": "Click",
+        "next": [
             "combine-home"
         ]
     },
