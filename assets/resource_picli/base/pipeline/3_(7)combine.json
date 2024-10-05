@@ -54,7 +54,10 @@
         "next": [
             "combine-chair-entry",
             "combine-dynasty-entry",
-            "combine-ship-entry"
+            "combine-ship-entry",
+            "combine-chair",
+            "combine-dynasty",
+            "combine-ship"
         ]
     },
     "combine-chair-entry": {
