@@ -44,7 +44,7 @@
         ],
         "next": [
             "blueprint-Receive",
-            "blueprint-one"
+            "combine-home"
         ]
     },
     "blueprint-Receive": {
@@ -53,8 +53,8 @@
         "post_delay": 2000,
         "action": "Click",
         "target": [
-            1210,
-            815,
+            1200,
+            185,
             0,
             0
         ],

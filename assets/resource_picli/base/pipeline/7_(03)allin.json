@@ -181,7 +181,6 @@
         ]
     },
     "Sub_AddSpeedrunTime2": {
-        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
@@ -196,7 +195,6 @@
         ]
     },
     "Sub_AddSpeedrunTime4": {
-        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
@@ -211,7 +209,6 @@
         ]
     },
     "Sub_AddSpeedrunTime10": {
-        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Speedrun/11.png",
         "action": "Click",
@@ -356,24 +353,44 @@
         "post_wait_freezes": 5000,
         "next": [
             "substitute_shifts",
+            "allin-enemy-action",
             "await",
-            "situation"
+            "situation",
+            "allin-automatic"
         ]
     },
     "substitute_shifts": {
         "recognition": "OCR",
         "expected": "代班中",
-        "inverse": true,
-        "action": "Click",
+        "action": "DoNothing",
         "post_wait_freezes": 5000,
+        "next": [
+            "await"
+        ]
+    },
+    "allin-enemy-action": {
+        "recognition": "OCR",
+        "expected": "敌方",
+        "action": "DoNothing",
+        "post_wait_freezes": 5000,
+        "next": [
+            "await"
+        ]
+    },
+    "allin-automatic": {
+        "recognition": "OCR",
+        "expected": "自动",
+        "action": "Click",
         "target": [
-            1236,
-            159,
+            1235,
+            160,
             0,
             0
         ],
+        "post_wait_freezes": 5000,
         "next": [
-            "await"
+            "substitute_shifts",
+            "allin-enemy-action"
         ]
     },
     "await": {

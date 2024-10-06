@@ -3,9 +3,6 @@
         "next": [
             "entry_dispath_one",
             "dispath_resources",
-            "collect_induction",
-            "donshe",
-            "weapons",
             "entry_back",
             "entry_convened"
         ]
@@ -37,10 +34,7 @@
         "next": [
             "no_collect_induction",
             "click_space",
-            "collect_induction",
-            "donshe",
-            "weapons",
-            "entry_two"
+            "dispath_resources"
         ]
     },
     "click_space": {
@@ -55,10 +49,7 @@
         ],
         "next": [
             "click_space",
-            "collect_induction",
-            "donshe",
-            "weapons",
-            "entry_two"
+            "collect_induction"
         ]
     },
     "collect_induction": {
@@ -75,9 +66,7 @@
         "next": [
             "no_collect_induction",
             "collect_induction_click",
-            "donshe",
-            "weapons",
-            "entry_two"
+            "collect_induction"
         ]
     },
     "no_collect_induction": {
@@ -87,7 +76,7 @@
         "next": [
             "donshe",
             "weapons",
-            "entry_two"
+            "no_collect_induction"
         ]
     },
     "collect_induction_click": {
@@ -104,7 +93,7 @@
         "next": [
             "collect_induction_click",
             "donshe",
-            "entry_two"
+            "weapons"
         ]
     },
     "donshe": {
@@ -121,7 +110,7 @@
         "next": [
             "donshe_click_space",
             "weapons",
-            "entry_two"
+            "donshe"
         ]
     },
     "donshe_click_space": {

@@ -38,7 +38,8 @@
             137
         ],
         "next": [
-            "fabricate_one"
+            "fabricate_one",
+            "fabricate_all_one"
         ]
     },
     "fabricate_one": {
@@ -61,7 +62,8 @@
             137
         ],
         "next": [
-            "fabricate_two"
+            "fabricate_two",
+            "fabricate_all_two"
         ]
     },
     "fabricate_two": {
@@ -84,7 +86,8 @@
             137
         ],
         "next": [
-            "fabricate_three"
+            "fabricate_three",
+            "fabricate_all_three"
         ]
     },
     "fabricate_three": {
@@ -107,7 +110,8 @@
             137
         ],
         "next": [
-            "fabricate_four"
+            "fabricate_four",
+            "fabricate_all_four"
         ]
     },
     "fabricate_four": {
@@ -149,7 +153,8 @@
             0
         ],
         "next": [
-            "fabricate_five"
+            "fabricate_five",
+            "fabricate_all_five"
         ]
     },
     "fabricate_five": {
@@ -197,7 +202,8 @@
             0
         ],
         "next": [
-            "fabricate_six"
+            "fabricate_six",
+            "fabricate_all_six"
         ]
     },
     "fabricate_six": {
@@ -245,7 +251,8 @@
             0
         ],
         "next": [
-            "fabricate_seven"
+            "fabricate_seven",
+            "fabricate_all_seven"
         ]
     },
     "fabricate_seven": {
@@ -311,7 +318,8 @@
             0
         ],
         "next": [
-            "fabricate_eight"
+            "fabricate_eight",
+            "fabricate_all_eight"
         ]
     },
     "fabricate_eight": {
@@ -371,7 +379,8 @@
             0
         ],
         "next": [
-            "fabricate_nine"
+            "fabricate_nine",
+            "fabricate_all_nine"
         ]
     },
     "fabricate_nine": {
@@ -437,7 +446,8 @@
             0
         ],
         "next": [
-            "fabricate_ten"
+            "fabricate_ten",
+            "fabricate_all_ten"
         ]
     },
     "fabricate_ten": {

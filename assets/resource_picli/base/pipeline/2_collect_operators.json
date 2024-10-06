@@ -2,7 +2,7 @@
     "Collect_operators": {
         "next": [
             "Collecting",
-            "Sub_ReceiveOperators"
+            "ReceiveOperators"
         ]
     },
     "Collecting": {
@@ -11,17 +11,18 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "Sub_ReceiveOperators",
+            "ReceiveOperators",
             "ReceiveCollect"
         ]
     },
-    "Sub_ReceiveOperators": {
+    "ReceiveOperators": {
         "recognition": "TemplateMatch",
         "template": "Collect/02.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "ReceiveCollect"
+            "ReceiveCollect",
+            "ReceiveOperators"
         ]
     },
     "ReceiveCollect": {

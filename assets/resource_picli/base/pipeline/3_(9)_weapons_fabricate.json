@@ -63,14 +63,15 @@
         ],
         "next": [
             "weapons-fabricate-lack",
-            "weapons-fabricate-determine"
+            "weapons-fabricate-determine",
+            "signed-contract"
         ]
     },
     "weapons-fabricate-determine": {
         "recognition": "OCR",
         "expected": "确定",
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 1500,
         "roi": [
             655,
             400,
@@ -95,8 +96,8 @@
         ],
         "post_delay": 2000,
         "next": [
-            "confidential-orders",
-            "weapons-fabricate-quit-Image"
+            "weapons-fabricate-quit-Image",
+            "confidential-orders"
         ]
     },
     "weapons-fabricate-quit-Image": {
@@ -134,7 +135,9 @@
         ],
         "next": [
             "signed-contract-two",
-            "weapons-fabricate-lack-two"
+            "weapons-fabricate-lack-two",
+            "weapons-fabricate-quit-Image",
+            "confidential-orders"
         ]
     },
     "signed-contract-two": {
@@ -150,7 +153,8 @@
         ],
         "next": [
             "weapons-fabricate-lack-two",
-            "weapons-fabricate-determine-three"
+            "weapons-fabricate-determine-three",
+            "signed-contract-two"
         ]
     },
     "weapons-fabricate-determine-three": {
