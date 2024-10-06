@@ -188,7 +188,7 @@
     },
     "choose_strategy": {
         "recognition": "OCR",
-        "expected": "奇策类型",
+        "expected": "辅助效果",
         "action": "Click",
         "next": [
             "start_research"
@@ -420,7 +420,7 @@
         "template": "Research2/rest.png",
         "green_mask": true,
         "order_by": "Vertical",
-        "index": 0,
+        "index": 1,
         "post_wait_freezes": 500,
         "action": "Click",
         "next": [
