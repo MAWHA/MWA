@@ -12,7 +12,8 @@
         ],
         "next": [
             "choose_boss",
-            "sub_choose_boss"
+            "sub_choose_boss",
+            "action_1"
         ]
     },
     "sub_choose_boss": {
@@ -750,6 +751,21 @@
         "next": [
             "finish_research",
             "empty"
+        ]
+    },
+    "jixu-research": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "action_1"
         ]
     }
 }

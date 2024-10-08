@@ -3,7 +3,26 @@
         "next": [
             "museum",
             "research_home",
-            "research_return"
+            "research_return",
+            "research_quit"
+        ]
+    },
+    "research_quit": {
+        "recognition": "TemplateMatch",
+        "template": "Research\\123.png",
+        "action": "Click",
+        "roi": [
+            1200,
+            25,
+            60,
+            70
+        ],
+        "post_delay": 5000,
+        "next": [
+            "research_home",
+            "research_return",
+            "research_quit",
+            "museum"
         ]
     },
     "research_return": {
@@ -184,6 +203,7 @@
         ],
         "next": [
             "gold_research",
+            "jixu-research",
             "enter_theme_2"
         ]
     }

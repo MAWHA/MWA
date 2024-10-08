@@ -177,6 +177,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/verify_fabricate.png",
         "action": "Click",
+        "post_delay": 2000,
         "roi": [
             678,
             387,
