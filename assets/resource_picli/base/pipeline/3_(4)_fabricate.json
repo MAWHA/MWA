@@ -46,6 +46,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/11.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "fabricate_max_2"
         ]
@@ -70,6 +71,7 @@
         "recognition": "OCR",
         "expected": "饰铜",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "fabricate_max_2"
         ]
@@ -94,6 +96,7 @@
         "recognition": "OCR",
         "expected": "银",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "fabricate_max_2"
         ]
@@ -118,6 +121,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/14.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "fabricate_max_2"
         ]
@@ -161,6 +165,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/15.png",
         "action": "Click",
+        "post_delay": 2000,
         "target_offset": [
             200,
             0,
@@ -210,6 +215,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/16.png",
         "action": "Click",
+        "post_delay": 2000,
         "target_offset": [
             200,
             0,
@@ -259,6 +265,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/17.png",
         "action": "Click",
+        "post_delay": 2000,
         "target_offset": [
             200,
             0,
@@ -326,6 +333,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/18.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "fabricate_max_2"
         ]
@@ -387,6 +395,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/19.png",
         "action": "Click",
+        "post_delay": 2000,
         "target_offset": [
             200,
             0,
@@ -454,6 +463,7 @@
         "recognition": "TemplateMatch",
         "template": "Company/20.png",
         "action": "Click",
+        "post_delay": 2000,
         "target_offset": [
             200,
             0,
