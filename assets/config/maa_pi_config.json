@@ -4,5 +4,10 @@
         "type": "Adb"
     },
     "resource": "B 服",
-    "task": []
+    "task": [],
+    "adb": {
+        "adb_path": "D:/leidian/LDPlayer9/adb.exe",
+        "address": "emulator-5554",
+        "config": {}
+    }
 }

@@ -94,7 +94,8 @@
             "entry": "museum_Research",
             "option": [
                 "选择研学主题",
-                "选择地图(仅老研学)"
+                "选择地图(仅老研学)",
+                "是否自行选择角色和buff"
             ]
         },
         {
@@ -648,6 +649,41 @@
                     "pipeline_override": {
                         "mountain_Research": {
                             "next": "journey"
+                        }
+                    }
+                },
+                {
+                    "name": "打新研学选择",
+                    "pipeline_override": {
+                        "mountain_Research": {
+                            "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "是否自行选择角色和buff": {
+            "cases": [
+                {
+                    "name": "自行选择(选择完成，进入博学地图后才能开始运行)",
+                    "pipeline_override": {
+                        "gold_research": {
+                            "next": [
+                                "action_1",
+                                "jixu-research"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不自行选择",
+                    "pipeline_override": {
+                        "gold_research": {
+                            "next": [
+                                "choose_boss",
+                                "sub_choose_boss",
+                                "action_1"
+                            ]
                         }
                     }
                 }

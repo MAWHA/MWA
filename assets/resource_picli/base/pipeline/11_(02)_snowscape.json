@@ -419,10 +419,10 @@
         "action": "Click",
         "post_delay": 2000,
         "roi": [
-            465,
-            230,
-            434,
-            85
+            400,
+            190,
+            620,
+            316
         ],
         "next": [
             "keep",
@@ -435,10 +435,10 @@
         "action": "Click",
         "post_delay": 2000,
         "roi": [
-            465,
-            230,
-            434,
-            85
+            400,
+            190,
+            620,
+            316
         ],
         "next": [
             "keep",
@@ -450,11 +450,18 @@
         "expected": "继续",
         "action": "Click",
         "post_delay": 2000,
+        "roi": [
+            590,
+            370,
+            135,
+            100
+        ],
         "next": [
             "keyword",
             "upgrade_one",
             "descending_one",
             "articles",
+            "keep",
             "advance_seven_man",
             "advance_seven_women"
         ]
@@ -1545,7 +1552,7 @@
     },
     "mysterious_2": {
         "recognition": "OCR",
-        "expected": "拆开",
+        "expected": "打开",
         "action": "Click",
         "post_wait_freezes": 2000,
         "roi": [
