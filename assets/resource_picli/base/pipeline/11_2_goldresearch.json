@@ -418,7 +418,10 @@
     },
     "action_11": {
         "recognition": "TemplateMatch",
-        "template": "Research2/rest.png",
+        "template": [
+            "Research2\\rest.png",
+            "Research2\\rest2.png"
+        ],
         "green_mask": true,
         "order_by": "Vertical",
         "index": 1,
