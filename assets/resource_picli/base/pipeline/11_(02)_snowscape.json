@@ -426,7 +426,8 @@
         ],
         "next": [
             "keep",
-            "articles"
+            "articles",
+            "advance_four"
         ]
     },
     "perfect": {
@@ -442,7 +443,8 @@
         ],
         "next": [
             "keep",
-            "articles"
+            "articles",
+            "advance_four"
         ]
     },
     "keep": {
