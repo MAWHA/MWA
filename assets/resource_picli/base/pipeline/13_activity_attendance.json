@@ -3,6 +3,10 @@
         "next": [
             "activity",
             "attendance"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "activity": {
@@ -42,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "协韵行歌",
+        "expected": "旅程将启",
         "action": "Click",
         "post_delay": 2000,
         "roi": [

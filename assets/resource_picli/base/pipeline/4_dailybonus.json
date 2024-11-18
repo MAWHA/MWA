@@ -6,6 +6,10 @@
             "richang",
             "donggu",
             "Quit"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "shangting": {

@@ -4,6 +4,10 @@
             "entry_dispath_three",
             "dispath_back",
             "dispath_convened"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_three": {
@@ -17,6 +21,10 @@
             "dispatch_social_three",
             "dispatch_social_four",
             "dispath_back"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "dispatch_social_one": {

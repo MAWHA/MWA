@@ -5,6 +5,10 @@
             "visit-friends-all-one",
             "visit-friends-one",
             "visit-quit-one"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "visit-contact": {

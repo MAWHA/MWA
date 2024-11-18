@@ -5,6 +5,10 @@
             "research_home",
             "research_return",
             "research_quit"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "research_quit": {
@@ -23,6 +27,10 @@
             "research_return",
             "research_quit",
             "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "research_return": {
@@ -40,6 +48,10 @@
             "research_home",
             "research_return",
             "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "research_home": {
@@ -55,6 +67,10 @@
         "post_delay": 1000,
         "next": [
             "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "museum": {
@@ -73,6 +89,10 @@
             "Research-week",
             "choose_theme",
             "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Research-week": {

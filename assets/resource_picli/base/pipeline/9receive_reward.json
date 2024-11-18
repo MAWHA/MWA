@@ -5,6 +5,10 @@
             "weekly1",
             "travel1",
             "mission1"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "daily1": {
@@ -142,6 +146,10 @@
         "post_delay": 5000,
         "next": [
             "travel1"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     }
 }

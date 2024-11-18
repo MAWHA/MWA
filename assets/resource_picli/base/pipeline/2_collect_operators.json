@@ -8,7 +8,9 @@
             "Exception-handling-convened",
             "Exception-handling-quit",
             "Exception-handling-home",
-            "Exception-handling-Network reconnection"
+            "Exception-handling-Network reconnection",
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Collecting": {

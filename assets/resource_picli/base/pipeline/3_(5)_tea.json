@@ -7,6 +7,10 @@
             "Instrument",
             "tea_back",
             "tea_convened"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_five": {
@@ -21,6 +25,10 @@
             "entry_dispath_five",
             "tea_back",
             "tea_convened"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "tearoom": {

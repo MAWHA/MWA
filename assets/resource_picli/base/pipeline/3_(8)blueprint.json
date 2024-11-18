@@ -4,6 +4,10 @@
             "entry_dispath_eight",
             "blueprint-tearoom",
             "blueprint-one"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_eight": {
@@ -14,6 +18,10 @@
         "next": [
             "blueprint-tearoom",
             "blueprint-one"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "blueprint-tearoom": {

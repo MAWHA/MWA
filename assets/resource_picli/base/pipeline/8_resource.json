@@ -6,6 +6,10 @@
             "resource_three",
             "resource_four",
             "resource_five"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "resource_one": {
@@ -14,6 +18,10 @@
             "come_ancient",
             "big_map_one",
             "ancient"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "execute_one": {
@@ -25,6 +33,10 @@
             "come_ancient",
             "big_map_one",
             "ancient"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "come_ancient": {
@@ -132,6 +144,10 @@
             "Biandu",
             "big_map_two",
             "both"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "execute_two": {
@@ -143,6 +159,10 @@
             "Biandu",
             "big_map_two",
             "both"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Biandu": {
@@ -215,6 +235,10 @@
             "deut_sea",
             "big_map_three",
             "sea"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "execute_three": {
@@ -226,6 +250,10 @@
             "deut_sea",
             "big_map_three",
             "sea"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "deut_sea": {
@@ -318,6 +346,10 @@
             "cantonese_prefecture",
             "big_map_four",
             "cantonese"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "execute_four": {
@@ -329,6 +361,10 @@
             "cantonese_prefecture",
             "big_map_four",
             "cantonese"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "cantonese_prefecture": {
@@ -400,6 +436,10 @@
             "often_quiet",
             "big_map_five",
             "often"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "execute_five": {
@@ -411,6 +451,10 @@
             "often_quiet",
             "big_map_five",
             "often"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "often_quiet": {
