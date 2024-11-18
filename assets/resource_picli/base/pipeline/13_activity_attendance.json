@@ -11,12 +11,12 @@
     },
     "activity": {
         "recognition": "OCR",
-        "expected": "活动",
+        "expected": "动",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
             0,
-            290,
+            311,
             130,
             190
         ],

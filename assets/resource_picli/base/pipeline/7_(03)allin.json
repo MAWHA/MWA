@@ -418,7 +418,8 @@
             0
         ],
         "next": [
-            "situation"
+            "situation",
+            "hit"
         ]
     },
     "situation": {
@@ -426,7 +427,8 @@
         "expected": "确定",
         "action": "Click",
         "next": [
-            "exit"
+            "exit",
+            "situation"
         ]
     }
 }
