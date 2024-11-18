@@ -1,0 +1,94 @@
+{
+    "Exception-handling-convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "roi": [
+            906,
+            340,
+            170,
+            205
+        ]
+    },
+    "Exception-handling-Network reconnection": {
+        "recognition": "OCR",
+        "expected": "正在重新载入",
+        "post_delay": 5000,
+        "roi": [
+            100,
+            629,
+            1081,
+            91
+        ]
+    },
+    "Exception-handling-quit": {
+        "recognition": "TemplateMatch",
+        "template": "Collect\\06.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            500,
+            300
+        ]
+    },
+    "Exception-handling-home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            500,
+            300
+        ]
+    },
+    "Exception-handling-remind": {
+        "recognition": "OCR",
+        "expected": "今日登录不再提示",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1160,
+            130,
+            0,
+            0
+        ],
+        "roi": [
+            115,
+            590,
+            277,
+            100
+        ]
+    },
+    "Exception-handling-nurturance-one": {
+        "recognition": "OCR",
+        "expected": "养成特惠",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1160,
+            130,
+            0,
+            0
+        ],
+        "next": [
+            "Exception-handling-nurturance-two"
+        ]
+    },
+    "Exception-handling-nurturance-two": {
+        "recognition": "OCR",
+        "expected": "养成特惠",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1190,
+            120,
+            0,
+            0
+        ]
+    }
+}
