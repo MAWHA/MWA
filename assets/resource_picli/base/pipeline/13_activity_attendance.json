@@ -87,7 +87,7 @@
     },
     "attendance_three": {
         "recognition": "OCR",
-        "expected": "第1天",
+        "expected": "天",
         "action": "Click",
         "post_delay": 3000,
         "next": [
