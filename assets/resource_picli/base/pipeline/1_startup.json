@@ -27,6 +27,10 @@
             "Exception-handling-nurturance-one"
         ]
     },
+    "StopApp": {
+        "action": "StopApp",
+        "package": "com.cipaishe.wuhua.bilibili"
+    },
     "start-healthy": {
         "recognition": "OCR",
         "expected": "健康",

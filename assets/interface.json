@@ -112,6 +112,10 @@
         {
             "name": "给好友点赞（目前默认就前4个）",
             "entry": "visit"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "StopApp"
         }
     ],
     "option": {
