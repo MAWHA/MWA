@@ -46,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "旅程将启",
+        "expected": "人间千古",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
