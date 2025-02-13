@@ -46,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "人间千古",
+        "expected": "良宵百载",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
