@@ -1,5 +1,6 @@
 {
     "Collect": {
+        "post_delay": 5000,
         "next": [
             "Collecting-operators",
             "Collect-ReceiveOperators"
@@ -24,7 +25,12 @@
             "Collecting-operators"
         ],
         "interrupt": [
-            "Exception-handling-Network reconnection"
+            "Exception-handling-convened",
+            "Exception-handling-quit",
+            "Exception-handling-home",
+            "Exception-handling-Network reconnection",
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Collect-ReceiveOperators": {

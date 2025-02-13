@@ -20,7 +20,7 @@
         },
         {
             "name": "器者征集",
-            "entry": "Collect_operators",
+            "entry": "Collect",
             "option": [
                 "征集几个"
             ]
@@ -726,32 +726,32 @@
                 {
                     "name": "征集1个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-one"
+                        "Collect-add-all": {
+                            "next": "Collect-add-one"
                         }
                     }
                 },
                 {
                     "name": "征集2个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-two"
+                        "Collect-add-all": {
+                            "next": "Collect-add-two"
                         }
                     }
                 },
                 {
                     "name": "征集3个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-three"
+                        "Collect-add-all": {
+                            "next": "Collect-add-three"
                         }
                     }
                 },
                 {
                     "name": "征集4个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-four"
+                        "Collect-add-all": {
+                            "next": "Collect-add-four"
                         }
                     }
                 }

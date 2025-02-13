@@ -1,14 +1,37 @@
 {
-    "controller": {
-        "name": "安卓端",
-        "type": "Adb"
-    },
-    "gpu": -2,
     "resource": "B 服",
-    "task": [],
+    "controller": {
+        "name": "安卓端"
+    },
+    "task": [
+        {
+            "name": "启动",
+            "option": [],
+            "__vscExpand": false
+        },
+        {
+            "name": "器者征集",
+            "option": [
+                {
+                    "name": "征集几个",
+                    "value": "征集4个"
+                }
+            ],
+            "__vscExpand": false
+        }
+    ],
     "adb": {
         "adb_path": "D:/leidian/LDPlayer9/adb.exe",
         "address": "emulator-5554",
-        "config": {}
+        "config": {
+            "extras": {
+                "ld": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "D:/leidian/LDPlayer9",
+                    "pid": 1760
+                }
+            }
+        }
     }
 }
