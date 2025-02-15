@@ -1,1795 +1,1176 @@
 {
-    "maritime-all": {
-        "next": [
-            "maritime",
-            "cruises",
-            "formation",
-            "activity-Sail",
-            "activity-auot",
-            "activity-hurled-one"
-        ]
-    },
-    "maritime": {
-        "recognition": "OCR",
-        "expected": "海上",
-        "action": "Click",
-        "roi": [
-            0,
-            60,
-            300,
-            200
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-interest",
-            "cruises",
-            "activity-azure",
-            "activity-trajectory",
-            "Quit"
-        ]
-    },
-    "activity-interest": {
-        "recognition": "OCR",
-        "expected": "存",
-        "action": "Click",
-        "post_delay": 2000,
-        "target_offset": [
-            0,
-            360,
-            0,
-            0
-        ],
-        "roi": [
-            475,
-            100,
-            300,
-            120
-        ],
-        "next": [
-            "cruises"
-        ]
-    },
-    "activity-confirm": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "cruises"
-        ]
-    },
-    "cruises": {
-        "recognition": "OCR",
-        "expected": "巡海之旅",
-        "action": "Click",
-        "roi": [
-            900,
-            450,
-            370,
-            250
-        ],
-        "post_delay": 2000,
-        "next": [
-            "HongKong-one",
-            "tokyo-one",
-            "pirae-effus-one",
-            "london-one",
-            "alexander-one",
-            "Callao-one"
-        ]
-    },
-    "HongKong-one": {
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-two",
-            "HongKong-one"
-        ]
-    },
-    "HongKong-two": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "action": "DoNothing",
-        "roi": [
-            800,
-            75,
-            310,
-            160
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "tokyo-one": {
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-two",
-            "tokyo-one"
-        ]
-    },
-    "tokyo-two": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "DoNothing",
-        "roi": [
-            960,
-            15,
-            170,
-            100
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "pirae-effus-one": {
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-two",
-            "pirae-effus-one"
-        ]
-    },
-    "pirae-effus-two": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "DoNothing",
-        "roi": [
-            520,
-            0,
-            300,
-            100
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "london-one": {
-        "action": "Click",
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "post_delay": 2000,
-        "next": [
-            "london-two",
-            "london-one"
-        ]
-    },
-    "london-two": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "DoNothing",
-        "roi": [
-            420,
-            0,
-            200,
-            150
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "alexander-one": {
-        "action": "Click",
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "alexander-two",
-            "alexander-one"
-        ]
-    },
-    "alexander-two": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "DoNothing",
-        "roi": [
-            520,
-            130,
-            250,
-            120
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "Callao-one": {
-        "action": "Click",
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "Callao-two",
-            "Callao-one"
-        ]
-    },
-    "Callao-two": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "DoNothing",
-        "roi": [
-            960,
-            0,
-            220,
-            120
-        ],
-        "next": [
-            "formation"
-        ]
-    },
-    "formation": {
-        "recognition": "OCR",
-        "expected": "编队集合",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            900,
-            450,
-            370,
-            250
-        ],
-        "next": [
-            "activity-examine-one",
-            "activity-Sail",
-            "activity-fast"
-        ]
-    },
-    "activity-examine-one": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\02.png",
-        "index": -1,
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            13,
-            189,
-            873,
-            332
-        ],
-        "next": [
-            "activity-fast"
-        ]
-    },
-    "activity-fast": {
-        "recognition": "OCR",
-        "expected": "快速编队",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            275,
-            550,
-            370,
-            160
-        ],
-        "next": [
-            "activity-click-one"
-        ]
-    },
-    "activity-click-one": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            0,
-            -500,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-two"
-        ]
-    },
-    "activity-click-two": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            0,
-            -80,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-three"
-        ]
-    },
-    "activity-click-three": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            165,
-            -500,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-four"
-        ]
-    },
-    "activity-click-four": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            165,
-            -80,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-five"
-        ]
-    },
-    "activity-click-five": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            320,
-            -500,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-six"
-        ]
-    },
-    "activity-click-six": {
-        "recognition": "OCR",
-        "expected": "上阵",
-        "action": "Click",
-        "target_offset": [
-            320,
-            -80,
-            0,
-            0
-        ],
-        "next": [
-            "activity-click-seven"
-        ]
-    },
-    "activity-click-seven": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\03.png",
-        "action": "Click",
-        "post_delay": 1000,
-        "roi": [
-            1050,
-            600,
-            230,
-            130
-        ],
-        "next": [
-            "activity-examine-two",
-            "activity-Sail"
-        ]
-    },
-    "activity-examine-two": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\02.png",
-        "index": -1,
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            13,
-            189,
-            873,
-            332
-        ],
-        "next": [
-            "activity-click-eight"
-        ]
-    },
-    "activity-click-eight": {
-        "recognition": "OCR",
-        "expected": "器者",
-        "action": "Click",
-        "target": [
-            545,
-            200,
-            0,
-            0
-        ],
-        "roi": [
-            135,
-            415,
-            190,
-            105
-        ],
-        "next": [
-            "activity-click-seven"
-        ]
-    },
-    "activity-Sail": {
-        "recognition": "OCR",
-        "expected": "立即出航",
-        "action": "Click",
-        "post_delay": 9000,
-        "roi": [
-            970,
-            600,
-            260,
-            100
-        ],
-        "next": [
-            "activity-auot",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-auot": {
-        "recognition": "OCR",
-        "expected": "自动",
-        "action": "Click",
-        "post_delay": 1000,
-        "roi": [
-            975,
-            0,
-            130,
-            110
-        ],
-        "next": [
-            "activity-unlock",
-            "activity-automatic",
-            "activity-auot"
-        ]
-    },
-    "activity-automatic": {
-        "recognition": "OCR",
-        "expected": "自动航行",
-        "action": "DoNothing",
-        "post_delay": 2000,
-        "roi": [
-            510,
-            0,
-            250,
-            110
-        ],
-        "next": [
-            "activity-against-one",
-            "activity-bazaar-two",
-            "activity-automatic"
-        ]
-    },
-    "activity-bazaar-one": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 97000,
-        "next": [
-            "activity-bazaar-two"
-        ]
-    },
-    "activity-bazaar-two": {
-        "recognition": "OCR",
-        "expected": "我要购",
-        "action": "DoNothing",
-        "post_delay": 2000,
-        "roi": [
-            640,
-            0,
-            310,
-            150
-        ],
-        "next": [
-            "activity-all",
-            "activity-quit"
-        ]
-    },
     "activity-all": {
-        "recognition": "OCR",
-        "expected": "购入",
-        "action": "Click",
-        "post_delay": 1000,
-        "roi": [
-            700,
-            400,
-            200,
-            80
-        ],
         "next": [
-            "activity-trade"
+            "activity-hundred",
+            "activity-hundred-home",
+            "activity-hundred-quit"
         ]
     },
-    "activity-trade": {
-        "recognition": "OCR",
-        "expected": "确认交易",
-        "action": "Click",
-        "post_delay": 5000,
-        "next": [
-            "activity-give",
-            "activity-handoff",
-            "activity-quit"
-        ]
-    },
-    "activity-replenishment": {
-        "recognition": "OCR",
-        "expected": "请等待下次",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "activity-quit",
-            "activity-handoff"
-        ]
-    },
-    "activity-handoff": {
-        "recognition": "OCR",
-        "expected": "买卖切换",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "activity-sell",
-            "activity-quit",
-            "activity-handoff"
-        ]
-    },
-    "activity-sell": {
-        "recognition": "OCR",
-        "expected": "卖出",
-        "action": "Click",
-        "post_delay": 1000,
-        "roi": [
-            700,
-            400,
-            200,
-            80
-        ],
-        "next": [
-            "activity-trade-sell",
-            "activity-quit"
-        ]
-    },
-    "activity-trade-sell": {
-        "recognition": "OCR",
-        "expected": "确认交易",
-        "action": "Click",
-        "post_delay": 3000,
-        "next": [
-            "activity-give-sell",
-            "activity-quit"
-        ]
-    },
-    "activity-give-sell": {
-        "recognition": "OCR",
-        "expected": "获得",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-quit"
-        ]
-    },
-    "activity-unlock": {
-        "recognition": "OCR",
-        "expected": "解锁",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "activity-hurled-one"
-        ]
-    },
-    "activity-hurled-one": {
-        "recognition": "OCR",
-        "expected": "投",
-        "action": "Click",
-        "post_delay": 6000,
-        "roi": [
-            1050,
-            600,
-            200,
-            100
-        ],
-        "next": [
-            "activity-give",
-            "activity-add",
-            "activity-recover",
-            "activity-villains",
-            "activity-lose",
-            "activity-decrease",
-            "activity-advance",
-            "activity-receding",
-            "activity-treasure-chests",
-            "activity-against-one",
-            "activity-skip",
-            "activity-bazaar-two",
-            "activity-check",
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-hurled-two": {
-        "recognition": "OCR",
-        "expected": "1",
-        "action": "Click",
-        "target_offset": [
-            0,
-            50,
-            0,
-            0
-        ],
-        "post_delay": 6000,
-        "roi": [
-            905,
-            550,
-            50,
-            50
-        ],
-        "next": [
-            "activity-hurled-one",
-            "activity-against-one",
-            "activity-check"
-        ]
-    },
-    "activity-skip": {
+    "activity-hundred-home": {
         "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "roi": [
-            1180,
-            0,
-            90,
-            80
-        ],
-        "next": [
-            "activity-bazaar-two"
-        ]
-    },
-    "activity-treasure-chests": {
-        "recognition": "OCR",
-        "expected": "宝箱",
+        "template": "Startup\\10.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-give",
-            "activity-hurled-two",
-            "activity-hurled-one"
+            "activity-hundred"
         ]
     },
-    "activity-give": {
-        "recognition": "OCR",
-        "expected": "获得",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one",
-            "activity-handoff",
-            "activity-quit"
-        ]
-    },
-    "activity-add": {
-        "recognition": "OCR",
-        "expected": "增加",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-recover": {
-        "recognition": "OCR",
-        "expected": "回复",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-decrease": {
-        "recognition": "OCR",
-        "expected": "减少",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-lose": {
-        "recognition": "OCR",
-        "expected": "失去",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-receding": {
-        "recognition": "OCR",
-        "expected": "后退",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-advance": {
-        "recognition": "OCR",
-        "expected": "前进",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-villains": {
-        "recognition": "OCR",
-        "expected": "恶徒",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-hurled-two",
-            "activity-hurled-one"
-        ]
-    },
-    "activity-against-one": {
-        "recognition": "OCR",
-        "expected": "迎战",
-        "action": "Click",
-        "target_offset": [
-            335,
-            285,
-            0,
-            0
-        ],
-        "roi": [
-            325,
-            0,
-            220,
-            80
-        ],
-        "next": [
-            "activity-against-two"
-        ]
-    },
-    "activity-against-two": {
-        "recognition": "OCR",
-        "expected": "迎战",
-        "action": "Click",
-        "target_offset": [
-            185,
-            295,
-            0,
-            0
-        ],
-        "roi": [
-            325,
-            0,
-            220,
-            80
-        ],
-        "next": [
-            "activity-against-three"
-        ]
-    },
-    "activity-against-three": {
-        "recognition": "OCR",
-        "expected": "迎战",
-        "action": "Click",
-        "post_delay": 2000,
-        "target_offset": [
-            45,
-            290,
-            0,
-            0
-        ],
-        "roi": [
-            325,
-            0,
-            220,
-            80
-        ],
-        "next": [
-            "activity-war"
-        ]
-    },
-    "activity-war": {
-        "recognition": "OCR",
-        "expected": "进入作战",
-        "action": "Click",
-        "post_delay": 9000,
-        "roi": [
-            950,
-            565,
-            330,
-            160
-        ],
-        "next": [
-            "activity-blank",
-            "activity-paused"
-        ]
-    },
-    "activity-blank": {
-        "recognition": "OCR",
-        "expected": "点击空白",
-        "action": "Click",
-        "post_delay": 5000,
-        "next": [
-            "activity-paused",
-            "activity-blank"
-        ]
-    },
-    "activity-paused": {
-        "recognition": "OCR",
-        "expected": "暂停",
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            0,
-            -30,
-            0,
-            0
-        ],
-        "roi": [
-            1100,
-            0,
-            150,
-            150
-        ],
-        "next": [
-            "actvivty-quit",
-            "activity-paused"
-        ]
-    },
-    "actvivty-quit": {
-        "recognition": "OCR",
-        "expected": "退出",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "activity-abandon",
-            "actvivty-quit"
-        ]
-    },
-    "activity-abandon": {
-        "recognition": "OCR",
-        "expected": "是否放弃",
-        "action": "Click",
-        "post_delay": 7000,
-        "target_offset": [
-            160,
-            115,
-            0,
-            0
-        ],
-        "next": [
-            "activity-automatic",
-            "activity-hurled-two",
-            "activity-hurled-one",
-            "activity-abandon"
-        ]
-    },
-    "activity-pass-all": {
-        "next": [
-            "activity-pass-one",
-            "activity-pass-two",
-            "activity-pass-three",
-            "activity-pass-four",
-            "activity-pass-five",
-            "activity-pass-six",
-            "activity-pass-seven",
-            "activity-pass-night",
-            "activity-pass-nine",
-            "activity-pass-ten",
-            "activity-pass-eleven",
-            "activity-pass-twelve",
-            "activity-pass-thirteen",
-            "activity-pass-Fourteen",
-            "activity-pass-Fifteen",
-            "activity-pass-Sixteen",
-            "activity-pass-Seventeen",
-            "activity-pass-Eighteen",
-            "Quit"
-        ]
-    },
-    "activity-pass-one": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "DoNothing",
-        "post_delay": 1000,
-        "next": [
-            "Quit"
-        ]
-    },
-    "activity-pass-two": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "formation"
-        ]
-    },
-    "activity-quit": {
+    "activity-hundred-quit": {
         "recognition": "TemplateMatch",
-        "template": "Collect\\06.png",
+        "template": "receive_reward\\01.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-pass-all"
+            "activity-hundred",
+            "activity-hundred-home"
         ]
     },
-    "activity-check": {
+    "activity-hundred": {
         "recognition": "OCR",
-        "expected": "巡海之旅",
-        "action": "DoNothing",
-        "post_delay": 1000,
-        "next": [
-            "activity-pass-two"
-        ]
-    },
-    "activity-pass-three": {
-        "recognition": "OCR",
-        "expected": "当前位置",
+        "expected": "良宵百载",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
-            "circulate-activity-pass-three-HongKong",
-            "circulate-activity-pass-three-tokoy"
-        ]
-    },
-    "circulate-activity-pass-three-tokoy": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
+            "activity-lantern",
+            "activity-taste",
+            "activity-journey",
+            "activity-hundred"
         ],
-        "next": [
-            "HongKong-one"
+        "interrupt": [
+            "activity-quit",
+            "activity-home"
         ]
     },
-    "circulate-activity-pass-three-HongKong": {
+    "activity-lantern": {
         "recognition": "OCR",
-        "expected": "香港",
-        "post_delay": 3000,
+        "expected": "观灯",
         "action": "Click",
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
+        "post_delay": 2000,
         "next": [
-            "tokyo-one"
+            "activity-resplendent",
+            "activity-Bright-night",
+            "activity-lantern"
         ]
     },
-    "activity-pass-four": {
+    "activity-taste": {
         "recognition": "OCR",
-        "expected": "当前位置",
+        "expected": "赏味",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
-            "circulate-activity-pass-four-HongKong",
-            "circulate-activity-pass-four-pirae-effus"
+            "activity-taste-one",
+            "activity-taste-two",
+            "activity-taste-three",
+            "activity-taste-four",
+            "activity-taste-five",
+            "activity-taste-six",
+            "activity-taste-seven"
         ]
     },
-    "circulate-activity-pass-four-pirae-effus": {
+    "activity-journey": {
         "recognition": "OCR",
-        "expected": "夫斯",
+        "expected": "短途游历",
         "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-one"
-        ]
-    },
-    "circulate-activity-pass-four-HongKong": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "post_delay": 3000,
-        "action": "Click",
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "activity-pass-five": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-five-tokoy",
-            "circulate-activity-pass-five-pirae-effus"
-        ]
-    },
-    "circulate-activity-pass-five-tokoy": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "circulate-activity-pass-five-pirae-effus": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-one"
-        ]
-    },
-    "activity-pass-six": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 3000,
-        "next": [
-            "circulate-HongKong-one",
-            "circulate-tokyo-one",
-            "circulate-pirae-effus-one",
-            "circulate-london-one",
-            "circulate-alexander-one",
-            "circulate-Callao-one"
-        ]
-    },
-    "circulate-HongKong-one": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "post_delay": 3000,
-        "action": "Click",
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-one"
-        ]
-    },
-    "circulate-tokyo-one": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "circulate-pirae-effus-one": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "circulate-london-one": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-alexander-one": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "circulate-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-one"
-        ]
-    },
-    "activity-pass-seven": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-seven-london",
-            "circulate-activity-pass-seven-pirae-effus"
-        ]
-    },
-    "circulate-activity-pass-seven-london": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "circulate-activity-pass-seven-pirae-effus": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "activity-pass-night": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-night-london",
-            "circulate-activity-pass-night-tokoy"
-        ]
-    },
-    "circulate-activity-pass-night-london": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-one"
-        ]
-    },
-    "circulate-activity-pass-night-tokoy": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "activity-pass-nine": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-nine-HongKong",
-            "circulate-activity-pass-nine-london"
-        ]
-    },
-    "circulate-activity-pass-nine-london": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-one"
-        ]
-    },
-    "circulate-activity-pass-nine-HongKong": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "activity-pass-ten": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-ten-alexander",
-            "circulate-activity-pass-ten-london"
-        ]
-    },
-    "circulate-activity-pass-ten-london": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-activity-pass-ten-alexander": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "activity-pass-eleven": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-eleven-alexander",
-            "circulate-activity-pass-eleven-HongKong"
-        ]
-    },
-    "circulate-activity-pass-eleven-HongKong": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-activity-pass-eleven-alexander": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-one"
-        ]
-    },
-    "activity-pass-twelve": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-twelve-alexander",
-            "circulate-activity-pass-twelve-tokoy"
-        ]
-    },
-    "circulate-activity-pass-twelve-tokoy": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-activity-pass-twelve-alexander": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-one"
-        ]
-    },
-    "activity-pass-thirteen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-thirteen-alexander",
-            "circulate-activity-pass-thirteen-pirae-effus"
-        ]
-    },
-    "circulate-activity-pass-thirteen-pirae-effus": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-activity-pass-thirteen-alexander": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "activity-pass-Fourteen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-Fourteen-alexander",
-            "circulate-activity-pass-Fourteen-Callao-one"
-        ]
-    },
-    "circulate-activity-pass-Fourteen-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "alexander-one"
-        ]
-    },
-    "circulate-activity-pass-Fourteen-alexander": {
-        "recognition": "OCR",
-        "expected": "山大",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            170,
-            385,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "activity-pass-Fifteen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-Fifteen-pirae-effus-one",
-            "circulate-activity-pass-Fifteen-Callao-one"
-        ]
-    },
-    "circulate-activity-pass-Fifteen-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "pirae-effus-one"
-        ]
-    },
-    "circulate-activity-pass-Fifteen-pirae-effus-one": {
-        "recognition": "OCR",
-        "expected": "夫斯",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            210,
-            210,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "activity-pass-Sixteen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-Sixteen-HongKong",
-            "circulate-activity-pass-Sixteen-Callao-one"
-        ]
-    },
-    "circulate-activity-pass-Sixteen-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "HongKong-one"
-        ]
-    },
-    "circulate-activity-pass-Sixteen-HongKong": {
-        "recognition": "OCR",
-        "expected": "香港",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            520,
-            395,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "activity-pass-Seventeen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-Seventeen-tokyo",
-            "circulate-activity-pass-Seventeen-Callao-one"
-        ]
-    },
-    "circulate-activity-pass-Seventeen-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "tokyo-one"
-        ]
-    },
-    "circulate-activity-pass-Seventeen-tokyo": {
-        "recognition": "OCR",
-        "expected": "东京",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            665,
-            235,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "activity-pass-Eighteen": {
-        "recognition": "OCR",
-        "expected": "当前位置",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "circulate-activity-pass-Eighteen-london",
-            "circulate-activity-pass-Eighteen-Callao-one"
-        ]
-    },
-    "circulate-activity-pass-Eighteen-Callao-one": {
-        "recognition": "OCR",
-        "expected": "亚俄",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            1205,
-            480,
-            0,
-            0
-        ],
-        "next": [
-            "london-one"
-        ]
-    },
-    "circulate-activity-pass-Eighteen-london": {
-        "recognition": "OCR",
-        "expected": "伦敦",
-        "action": "Click",
-        "post_delay": 3000,
-        "target": [
-            95,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "Callao-one"
-        ]
-    },
-    "activity-azure": {
-        "recognition": "OCR",
-        "expected": "蔚蓝",
-        "action": "Click",
-        "post_delay": 3000,
+        "post_delay": 2000,
         "roi": [
-            70,
-            520,
-            280,
-            200
+            0,
+            244,
+            219,
+            163
         ],
+        "next": [
+            "activity-task"
+        ]
+    },
+    "activity-task": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-weekly"
+        ]
+    },
+    "activity-weekly": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "action": "Click",
+        "post_delay": 2000,
         "next": [
             "activity-receive",
-            "activity-quit"
+            "activity-accomplishment",
+            "activity-journey-quit"
         ]
     },
     "activity-receive": {
         "recognition": "OCR",
-        "expected": "全部",
+        "expected": [
+            "一键",
+            "领取"
+        ],
         "action": "Click",
         "post_delay": 2000,
         "roi": [
-            290,
-            500,
-            220,
-            70
+            345,
+            496,
+            935,
+            224
         ],
         "next": [
-            "activity-give"
+            "activity-give",
+            "activity-receive",
+            "activity-journey-quit"
         ]
     },
-    "activity-trajectory": {
-        "recognition": "OCR",
-        "expected": "航迹",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            990,
-            160,
-            250,
-            200
-        ],
-        "next": [
-            "activity-decompose"
-        ]
-    },
-    "activity-decompose": {
-        "recognition": "OCR",
-        "expected": "分解",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            870,
-            540,
-            160,
-            100
-        ],
-        "next": [
-            "decompose-slide",
-            "decompose-insufficient",
-            "activity-decompose"
-        ]
-    },
-    "decompose-insufficient": {
-        "recognition": "OCR",
-        "expected": "道具不足",
-        "action": "DoNothing",
-        "post_delay": 1000,
-        "next": [
-            "decompose-quit"
-        ]
-    },
-    "decompose-quit": {
+    "activity-journey-quit": {
         "recognition": "TemplateMatch",
-        "template": "activity\\05.png",
+        "template": "receive_reward\\01.png",
         "action": "Click",
-        "post_delay": 1000,
-        "roi": [
-            1125,
-            0,
-            100,
-            100
-        ],
+        "post_delay": 2000,
         "next": [
-            "Quit"
+            "activity-receive",
+            "activity-give",
+            "activity-quit",
+            "activity-home"
         ]
     },
-    "decompose-slide": {
+    "activity-give": {
         "recognition": "OCR",
-        "expected": "丝",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-accomplishment",
+            "activity-give",
+            "activity-quit"
+        ]
+    },
+    "activity-accomplishment": {
+        "recognition": "OCR",
+        "expected": "成就",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-receive",
+            "activity-journey-quit"
+        ]
+    },
+    "activity-taste-one": {
+        "recognition": "OCR",
+        "expected": "琼瑶",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            140,
+            315,
+            92,
+            39
+        ],
+        "next": [
+            "activity-skip-one",
+            "activity-taste-one"
+        ]
+    },
+    "activity-taste-two": {
+        "recognition": "OCR",
+        "expected": "呈新",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            302,
+            551,
+            93,
+            37
+        ],
+        "next": [
+            "activity-skip-two",
+            "activity-taste-two"
+        ]
+    },
+    "activity-taste-three": {
+        "recognition": "OCR",
+        "expected": "熙熙",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            573,
+            443,
+            90,
+            39
+        ],
+        "next": [
+            "activity-skip-three",
+            "activity-taste-three"
+        ]
+    },
+    "activity-taste-four": {
+        "recognition": "OCR",
+        "expected": "鱼龙",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            426,
+            240,
+            97,
+            36
+        ],
+        "next": [
+            "activity-skip-four",
+            "activity-taste-four"
+        ]
+    },
+    "activity-taste-five": {
+        "recognition": "OCR",
+        "expected": "九宾",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            773,
+            239,
+            89,
+            39
+        ],
+        "next": [
+            "activity-skip-five",
+            "activity-taste-five"
+        ]
+    },
+    "activity-taste-six": {
+        "recognition": "OCR",
+        "expected": "万年",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            894,
+            496,
+            86,
+            38
+        ],
+        "next": [
+            "activity-skip-six",
+            "activity-taste-six"
+        ]
+    },
+    "activity-taste-seven": {
+        "recognition": "OCR",
+        "expected": "且",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1076,
+            297,
+            86,
+            38
+        ],
+        "next": [
+            "activity-skip-seven",
+            "activity-taste-seven"
+        ]
+    },
+    "activity-skip-one": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-one",
+            "activity-taste-two",
+            "activity-skip-one"
+        ]
+    },
+    "activity-skip-two": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-two",
+            "activity-taste-three",
+            "activity-skip-two"
+        ]
+    },
+    "activity-skip-three": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-three",
+            "activity-taste-four",
+            "activity-skip-three"
+        ]
+    },
+    "activity-skip-four": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-four",
+            "activity-taste-five",
+            "activity-skip-four"
+        ]
+    },
+    "activity-skip-five": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-five",
+            "activity-taste-six",
+            "activity-skip-five"
+        ]
+    },
+    "activity-skip-six": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-six",
+            "activity-taste-seven",
+            "activity-skip-six"
+        ]
+    },
+    "activity-skip-seven": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            1103,
+            0,
+            177,
+            165
+        ],
+        "next": [
+            "activity-taste-give-seven",
+            "activity-quit",
+            "activity-skip-seven"
+        ]
+    },
+    "activity-taste-give-one": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-two",
+            "activity-taste-give-one"
+        ]
+    },
+    "activity-taste-give-two": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-three",
+            "activity-taste-give-two"
+        ]
+    },
+    "activity-taste-give-three": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-four",
+            "activity-taste-give-three"
+        ]
+    },
+    "activity-taste-give-four": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-five",
+            "activity-taste-give-four"
+        ]
+    },
+    "activity-taste-give-five": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-six",
+            "activity-taste-give-five"
+        ]
+    },
+    "activity-taste-give-six": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-taste-seven",
+            "activity-taste-give-six"
+        ]
+    },
+    "activity-taste-give-seven": {
+        "recognition": "OCR",
+        "expected": [
+            "获",
+            "得",
+            "物",
+            "资"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            964,
+            115,
+            245,
+            487
+        ],
+        "next": [
+            "activity-quit",
+            "activity-taste-give-seven"
+        ]
+    },
+    "activity-quit": {
+        "recognition": "TemplateMatch",
+        "template": "receive_reward\\01.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-home",
+            "activity-quit",
+            "start-convened"
+        ]
+    },
+    "activity-home": {
+        "recognition": "TemplateMatch",
+        "template": "Startup\\10.png",
+        "action": "Click",
+        "post_delay": 2000
+    },
+    "activity-resplendent": {
+        "recognition": "OCR",
+        "expected": [
+            "璀璨"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-fire-one",
+            "activity-fire-two",
+            "activity-fire-three",
+            "activity-fire-four-swipe",
+            "activity-fire-five-swipe",
+            "activity-fire-six-swipe",
+            "activity-resplendent"
+        ]
+    },
+    "activity-Bright-night": {
+        "recognition": "OCR",
+        "expected": [
+            "华灯夜"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-combustion-one",
+            "activity-Bright-night"
+        ]
+    },
+    "activity-fire-one": {
+        "recognition": "OCR",
+        "expected": "一",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-fire-two": {
+        "recognition": "OCR",
+        "expected": "二",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-fire-three": {
+        "recognition": "OCR",
+        "expected": "三",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-fire-four-swipe": {
+        "recognition": "OCR",
+        "expected": "取火",
         "action": "Swipe",
-        "post_wait_freezes": 2000,
-        "duration": 500,
         "begin": [
-            400,
-            160,
+            650,
+            275,
             0,
             0
         ],
         "end": [
-            870,
-            160,
+            315,
+            275,
             0,
             0
         ],
-        "roi": [
-            525,
-            270,
-            210,
-            105
-        ],
+        "post_delay": 3000,
         "next": [
-            "decompose-click",
-            "decompose-slide"
+            "activity-fire-four"
         ]
     },
-    "decompose-click": {
+    "activity-fire-five-swipe": {
         "recognition": "OCR",
-        "expected": "获得途径",
+        "expected": "取火",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-fire-five"
+        ]
+    },
+    "activity-fire-six-swipe": {
+        "recognition": "OCR",
+        "expected": "取火",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-fire-six"
+        ]
+    },
+    "activity-fire-four": {
+        "recognition": "OCR",
+        "expected": "四",
         "action": "Click",
         "post_delay": 2000,
-        "target_offset": [
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-fire-five": {
+        "recognition": "OCR",
+        "expected": "五",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-fire-six": {
+        "recognition": "OCR",
+        "expected": "六",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-one": {
+        "recognition": "OCR",
+        "expected": "一",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-tactics",
+            "activity-start",
+            "activity-combustion-one"
+        ]
+    },
+    "activity-combustion-two": {
+        "recognition": "OCR",
+        "expected": "二",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-three": {
+        "recognition": "OCR",
+        "expected": "三",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-four-swipe": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
             0,
-            80,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-four"
+        ]
+    },
+    "activity-combustion-four": {
+        "recognition": "OCR",
+        "expected": "四",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-five-swipe": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-five"
+        ]
+    },
+    "activity-combustion-five": {
+        "recognition": "OCR",
+        "expected": "五",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-six-swipe": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-six"
+        ]
+    },
+    "activity-combustion-six": {
+        "recognition": "OCR",
+        "expected": "六",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-seven-swipe-one": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-seven-swipe-two"
+        ]
+    },
+    "activity-combustion-seven-swipe-two": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-seven"
+        ]
+    },
+    "activity-combustion-seven": {
+        "recognition": "OCR",
+        "expected": "七",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-eight-swipe-one": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-eight-swipe-two"
+        ]
+    },
+    "activity-combustion-eight-swipe-two": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-eight"
+        ]
+    },
+    "activity-combustion-eight": {
+        "recognition": "OCR",
+        "expected": "八",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-combustion-nine-swipe-one": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-nine-swipe-two"
+        ]
+    },
+    "activity-combustion-nine-swipe-two": {
+        "recognition": "OCR",
+        "expected": "燃灯",
+        "action": "Swipe",
+        "begin": [
+            650,
+            275,
+            0,
+            0
+        ],
+        "end": [
+            315,
+            275,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "activity-combustion-nine"
+        ]
+    },
+    "activity-combustion-nine": {
+        "recognition": "OCR",
+        "expected": "九",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast"
+        ]
+    },
+    "activity-start": {
+        "recognition": "OCR",
+        "expected": [
+            "开始",
+            "继续"
+        ],
+        "action": "Click",
+        "post_delay": 3000,
+        "roi": [
+            963,
+            418,
+            314,
+            221
+        ],
+        "next": [
+            "activity-tactics",
+            "activity-start"
+        ]
+    },
+    "activity-tactics": {
+        "recognition": "OCR",
+        "expected": "策略",
+        "action": "Click",
+        "target": [
+            360,
+            315,
             0,
             0
         ],
         "roi": [
-            720,
-            480,
-            225,
-            90
+            21,
+            0,
+            266,
+            153
+        ],
+        "post_delay": 2000,
+        "next": [
+            "activity-fight",
+            "activity-tactics"
+        ]
+    },
+    "activity-fight": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "post_delay": 7000,
+        "roi": [
+            722,
+            455,
+            558,
+            265
         ],
         "next": [
-            "activity-decompose",
-            "decompose-click"
+            "activity-fight",
+            "activity-substitute-shifts",
+            "activity-automatic",
+            "activity-end"
+        ]
+    },
+    "activity-substitute-shifts": {
+        "recognition": "OCR",
+        "expected": [
+            "代班中",
+            "敌方",
+            "留意"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            453,
+            0,
+            368,
+            246
+        ],
+        "next": [
+            "activity-end",
+            "activity-fail",
+            "activity-substitute-shifts"
+        ]
+    },
+    "activity-automatic": {
+        "recognition": "OCR",
+        "expected": "自动",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-substitute-shifts",
+            "activity-end",
+            "activity-fail",
+            "activity-fight",
+            "activity-automatic"
+        ]
+    },
+    "activity-end": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 7000,
+        "roi": [
+            564,
+            429,
+            716,
+            291
+        ],
+        "next": [
+            "activity-continue",
+            "activity-end"
+        ]
+    },
+    "activity-fail": {
+        "recognition": "OCR",
+        "expected": [
+            "未能",
+            "达到",
+            "完美",
+            "评价",
+            "结算"
+        ],
+        "roi": [
+            406,
+            248,
+            459,
+            227
+        ],
+        "action": "Click",
+        "target": [
+            775,
+            435,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "activity-end",
+            "activity-end-fail",
+            "activity-fail"
+        ]
+    },
+    "activity-end-fail": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 7000,
+        "roi": [
+            564,
+            429,
+            716,
+            291
+        ],
+        "next": [
+            "activity-abandon",
+            "activity-end-fail",
+            "activity-start"
+        ]
+    },
+    "activity-abandon": {
+        "recognition": "OCR",
+        "expected": [
+            "放弃",
+            "挑战"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            992,
+            542,
+            288,
+            178
+        ],
+        "next": [
+            "activity-end-fail",
+            "activity-start"
+        ]
+    },
+    "activity-continue": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "activity-fight",
+            "activity-tactics"
+        ]
+    },
+    "activity-fire": {
+        "recognition": "OCR",
+        "expected": "取火",
+        "post_delay": 3000,
+        "next": [
+            "activity-quit",
+            "activity-home",
+            "start-convened"
         ]
     }
 }

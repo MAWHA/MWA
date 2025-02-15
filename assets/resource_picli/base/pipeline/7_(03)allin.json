@@ -353,28 +353,25 @@
         "post_wait_freezes": 5000,
         "next": [
             "substitute_shifts",
-            "allin-enemy-action",
-            "await",
+            "rating",
+            "rating-fail",
             "situation",
             "allin-automatic"
         ]
     },
     "substitute_shifts": {
         "recognition": "OCR",
-        "expected": "代班中",
+        "expected": [
+            "敌方",
+            "代班中"
+        ],
         "action": "DoNothing",
-        "post_wait_freezes": 5000,
+        "post_delay": 5000,
         "next": [
-            "await"
-        ]
-    },
-    "allin-enemy-action": {
-        "recognition": "OCR",
-        "expected": "敌方",
-        "action": "DoNothing",
-        "post_wait_freezes": 5000,
-        "next": [
-            "await"
+            "rating",
+            "substitute_shifts",
+            "situation",
+            "rating-fail"
         ]
     },
     "allin-automatic": {
@@ -387,17 +384,44 @@
             0,
             0
         ],
-        "post_wait_freezes": 5000,
+        "post_delay": 5000,
         "next": [
-            "substitute_shifts",
-            "allin-enemy-action"
+            "substitute_shifts"
         ]
     },
-    "await": {
+    "rating-fail": {
         "recognition": "OCR",
-        "expected": "完美评价",
+        "expected": [
+            "未能",
+            "达到",
+            "完美",
+            "评价",
+            "结算"
+        ],
+        "roi": [
+            406,
+            248,
+            459,
+            227
+        ],
         "action": "Click",
-        "post_wait_freezes": 3000,
+        "target": [
+            775,
+            435,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "situation",
+            "rating-fail"
+        ]
+    },
+    "rating": {
+        "recognition": "OCR",
+        "expected": "评级",
+        "action": "Click",
+        "post_delay": 3000,
         "target": [
             770,
             425,
@@ -405,21 +429,8 @@
             0
         ],
         "next": [
-            "hit",
-            "situation"
-        ]
-    },
-    "hit": {
-        "action": "Click",
-        "target": [
-            695,
-            75,
-            0,
-            0
-        ],
-        "next": [
             "situation",
-            "hit"
+            "rating"
         ]
     },
     "situation": {
