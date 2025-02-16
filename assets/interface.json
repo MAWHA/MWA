@@ -905,7 +905,7 @@
                     "name": "第四关",
                     "pipeline_override": {
                         "activity-lantern": {
-                            "next": "activity-fire-four"
+                            "next": "activity-fire-four-swipe"
                         }
                     }
                 },
@@ -913,7 +913,7 @@
                     "name": "第五关",
                     "pipeline_override": {
                         "activity-lantern": {
-                            "next": "activity-fire-five"
+                            "next": "activity-fire-five-swipe"
                         }
                     }
                 },
@@ -921,7 +921,7 @@
                     "name": "第六关",
                     "pipeline_override": {
                         "activity-lantern": {
-                            "next": "activity-fire-six"
+                            "next": "activity-fire-six-swipe"
                         }
                     }
                 },
