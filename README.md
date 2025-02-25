@@ -50,15 +50,15 @@ MWA的意思是Maafw架构的一款物华弥新游戏小助手
 
 请参阅：
 
-[开始开发](https://github.com/MAWHA/.github/blob/main/exploitation.md)
+可选 [开始开发](https://github.com/MAWHA/.github/blob/main/exploitation.md)
 
 [快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
 
 [流水线协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
 
-[集成文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/2.1-%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3.md)
+可选 [集成文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/2.1-%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3.md)
 
-[b站视频](https://www.bilibili.com/video/BV1yr421E7MW/)
+可选 [b站视频](https://www.bilibili.com/video/BV1yr421E7MW/)
 
 
 ## 目前支持：
