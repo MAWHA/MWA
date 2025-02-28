@@ -5,6 +5,10 @@
             "vitality_one",
             "vitality_back",
             "vitality-convened"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_six": {
@@ -15,6 +19,10 @@
         "next": [
             "vitality_one",
             "vitality_back"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "vitality_one": {

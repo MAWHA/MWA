@@ -1,40 +1,65 @@
 {
-    "Collect_operators": {
+    "Collect": {
+        "post_delay": 5000,
         "next": [
-            "Collecting",
-            "ReceiveOperators"
+            "Collecting-operators",
+            "Collect-ReceiveOperators"
+        ],
+        "interrupt": [
+            "Exception-handling-convened",
+            "Exception-handling-quit",
+            "Exception-handling-home",
+            "Exception-handling-Network reconnection",
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
-    "Collecting": {
+    "Collecting-operators": {
         "recognition": "OCR",
         "expected": "器者征集",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "ReceiveOperators",
-            "ReceiveCollect"
+            "Collect-ReceiveOperators",
+            "Collect-ReceiveCollect",
+            "Collecting-operators"
+        ],
+        "interrupt": [
+            "Exception-handling-convened",
+            "Exception-handling-quit",
+            "Exception-handling-home",
+            "Exception-handling-Network reconnection",
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
-    "ReceiveOperators": {
+    "Collect-ReceiveOperators": {
         "recognition": "TemplateMatch",
         "template": "Collect/02.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "ReceiveCollect",
-            "ReceiveOperators"
+            "Collect-ReceiveCollect",
+            "Collect-ReceiveOperators"
+        ],
+        "interrupt": [
+            "Exception-handling-Network reconnection"
         ]
     },
-    "ReceiveCollect": {
+    "Collect-ReceiveCollect": {
         "recognition": "OCR",
         "expected": "全部",
         "action": "Click",
+        "post_delay": 1000,
         "next": [
-            "changan",
-            "quit2"
+            "Collect-changan",
+            "Collect-quit2"
+        ],
+        "interrupt": [
+            "Exception-handling-Network reconnection"
         ]
     },
-    "changan": {
+    "Collect-changan": {
         "recognition": "OCR",
         "expected": "长按",
         "action": "Swipe",
@@ -53,32 +78,33 @@
         "duration": 3000,
         "post_delay": 3000,
         "next": [
-            "Skip"
+            "Collect-Skip"
         ]
     },
-    "Skip": {
+    "Collect-Skip": {
         "recognition": "TemplateMatch",
         "template": "Collect/05.png",
         "action": "Click",
         "post_delay": 4000,
         "next": [
-            "outcome",
-            "new-role",
-            "repeat-role",
-            "Skip"
+            "Collect-outcome",
+            "Collect-new-role",
+            "Collect-repeat-role",
+            "Collect-Skip"
         ]
     },
-    "new-role": {
+    "Collect-new-role": {
         "recognition": "OCR",
         "expected": "全部",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "quit2",
-            "back"
+            "Collect-quit2",
+            "Collect-new-role",
+            "Collect-back"
         ]
     },
-    "repeat-role": {
+    "Collect-repeat-role": {
         "recognition": "OCR",
         "expected": "重复",
         "action": "Click",
@@ -90,11 +116,12 @@
         ],
         "post_delay": 3000,
         "next": [
-            "quit2",
-            "back"
+            "Collect-quit2",
+            "Collect-repeat-role",
+            "Collect-back"
         ]
     },
-    "outcome": {
+    "Collect-outcome": {
         "recognition": "OCR",
         "expected": "征集结果",
         "action": "Click",
@@ -106,30 +133,30 @@
             0
         ],
         "next": [
-            "get",
-            "outcome"
+            "Collect-get",
+            "Collect-outcome"
         ]
     },
-    "get": {
+    "Collect-get": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "Collecting2",
-            "get",
-            "back"
+            "Collect-Collecting2",
+            "Collect-get",
+            "Collect-back"
         ]
     },
-    "quit2": {
+    "Collect-quit2": {
         "recognition": "OCR",
         "expected": "当前没有已经完成的征集队列",
         "post_delay": 2000,
         "next": [
-            "back"
+            "Collect-back"
         ]
     },
-    "back": {
+    "Collect-back": {
         "action": "Click",
         "target": [
             330,
@@ -138,30 +165,34 @@
             0
         ],
         "next": [
-            "Collecting2"
+            "Collect-Collecting2"
         ]
     },
-    "Collecting2": {
+    "Collect-Collecting2": {
         "recognition": "OCR",
         "expected": "开始征集",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "full",
-            "no_solicitation",
-            "add-all"
+            "Collect-full",
+            "Collect-no_solicitation",
+            "Collect-add-all"
         ]
     },
-    "add-all": {
+    "Collect-add-all": {
         "post_delay": 2000,
         "next": [
-            "add-one",
-            "add-two",
-            "add-three",
-            "add-four"
+            "Collect-add-one",
+            "Collect-add-two",
+            "Collect-add-three",
+            "Collect-add-four"
+        ],
+        "interrupt": [
+            "Exception-handling-Network reconnection",
+            "Collect-Collecting2"
         ]
     },
-    "full": {
+    "Collect-full": {
         "recognition": "OCR",
         "expected": "队列已满",
         "post_delay": 2000,
@@ -169,7 +200,7 @@
             "Quit"
         ]
     },
-    "no_solicitation": {
+    "Collect-no_solicitation": {
         "recognition": "OCR",
         "expected": "缺少道具",
         "action": "Click",
@@ -178,7 +209,7 @@
             "Quit"
         ]
     },
-    "add-one": {
+    "Collect-add-one": {
         "recognition": "TemplateMatch",
         "template": "Collect/03.png",
         "action": "DoNothing",
@@ -189,12 +220,12 @@
             0
         ],
         "next": [
-            "gou",
-            "no_solicitation",
-            "full"
+            "Collect-gou",
+            "Collect-no_solicitation",
+            "Collect-full"
         ]
     },
-    "add-two": {
+    "Collect-add-two": {
         "recognition": "TemplateMatch",
         "template": "Collect/03.png",
         "action": "Click",
@@ -206,12 +237,12 @@
             0
         ],
         "next": [
-            "gou",
-            "no_solicitation",
-            "full"
+            "Collect-gou",
+            "Collect-no_solicitation",
+            "Collect-full"
         ]
     },
-    "add-three": {
+    "Collect-add-three": {
         "recognition": "TemplateMatch",
         "template": "Collect/03.png",
         "action": "Click",
@@ -222,12 +253,12 @@
             0
         ],
         "next": [
-            "jia4",
-            "no_solicitation",
-            "full"
+            "Collect-jia4",
+            "Collect-no_solicitation",
+            "Collect-full"
         ]
     },
-    "add-four": {
+    "Collect-add-four": {
         "recognition": "TemplateMatch",
         "template": "Collect/03.png",
         "action": "Click",
@@ -238,12 +269,12 @@
             0
         ],
         "next": [
-            "jia3",
-            "no_solicitation",
-            "full"
+            "Collect-jia3",
+            "Collect-no_solicitation",
+            "Collect-full"
         ]
     },
-    "jia3": {
+    "Collect-jia3": {
         "action": "Click",
         "target": [
             770,
@@ -252,10 +283,10 @@
             0
         ],
         "next": [
-            "jia4"
+            "Collect-jia4"
         ]
     },
-    "jia4": {
+    "Collect-jia4": {
         "action": "Click",
         "target": [
             770,
@@ -264,10 +295,10 @@
             0
         ],
         "next": [
-            "gou"
+            "Collect-gou"
         ]
     },
-    "gou": {
+    "Collect-gou": {
         "recognition": "TemplateMatch",
         "template": "Collect/04.png",
         "action": "Click",

@@ -2,6 +2,10 @@
     "Mail": {
         "next": [
             "EnterMail"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "EnterMail": {
@@ -11,6 +15,10 @@
         "next": [
             "ReceiveMail",
             "Quit"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "ReceiveMail": {

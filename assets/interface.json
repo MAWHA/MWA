@@ -20,7 +20,7 @@
         },
         {
             "name": "器者征集",
-            "entry": "Collect_operators",
+            "entry": "Collect",
             "option": [
                 "征集几个"
             ]
@@ -69,7 +69,7 @@
             "option": [
                 "选择关卡-演训",
                 "打哪个-演训",
-                "打几次"
+                "选择战斗次数"
             ]
         },
         {
@@ -78,7 +78,7 @@
             "option": [
                 "选择关卡-资源",
                 "打哪个-资源",
-                "打几次"
+                "选择战斗次数"
             ]
         },
         {
@@ -95,7 +95,7 @@
             "option": [
                 "选择研学主题",
                 "选择地图(仅老研学)",
-                "是否自行选择角色和buff"
+                "是否手动选择角色和buff"
             ]
         },
         {
@@ -112,6 +112,20 @@
         {
             "name": "给好友点赞（目前默认就前4个）",
             "entry": "visit"
+        },
+        {
+            "name": "良宵百载",
+            "entry": "activity-all",
+            "option": [
+                "选择进程（短途旅游、观灯、赏味）",
+                "选择关卡-活动",
+                "选择战斗次数",
+                "选择是否放弃(战斗失败时的选择)"
+            ]
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "StopApp"
         }
     ],
     "option": {
@@ -315,7 +329,7 @@
                 }
             ]
         },
-        "打几次": {
+        "选择战斗次数": {
             "cases": [
                 {
                     "name": "打一次（速通没解锁专用）",
@@ -362,6 +376,26 @@
                     "pipeline_override": {
                         "fast": {
                             "next": "allin"
+                        }
+                    }
+                },
+                {
+                    "name": "非战斗选项选择这个(活动“良宵百载”专用！！！）",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "华灯夜选择这个(活动“良宵百载”专用！！！）",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": []
                         }
                     }
                 }
@@ -662,10 +696,10 @@
                 }
             ]
         },
-        "是否自行选择角色和buff": {
+        "是否手动选择角色和buff": {
             "cases": [
                 {
-                    "name": "自行选择(选择完成，进入博学地图后才能开始运行)",
+                    "name": "手动选择角色(选择完成，进入博学地图后才能开始运行)",
                     "pipeline_override": {
                         "gold_research": {
                             "next": [
@@ -676,7 +710,7 @@
                     }
                 },
                 {
-                    "name": "不自行选择",
+                    "name": "不手动选择，由MWA选择",
                     "pipeline_override": {
                         "gold_research": {
                             "next": [
@@ -722,32 +756,195 @@
                 {
                     "name": "征集1个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-one"
+                        "Collect-add-all": {
+                            "next": "Collect-add-one"
                         }
                     }
                 },
                 {
                     "name": "征集2个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-two"
+                        "Collect-add-all": {
+                            "next": "Collect-add-two"
                         }
                     }
                 },
                 {
                     "name": "征集3个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-three"
+                        "Collect-add-all": {
+                            "next": "Collect-add-three"
                         }
                     }
                 },
                 {
                     "name": "征集4个",
                     "pipeline_override": {
-                        "add-all": {
-                            "next": "add-four"
+                        "Collect-add-all": {
+                            "next": "Collect-add-four"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择进程（短途旅游、观灯、赏味）": {
+            "cases": [
+                {
+                    "name": "短途旅游",
+                    "pipeline_override": {
+                        "activity-hundred": {
+                            "next": "activity-journey"
+                        }
+                    }
+                },
+                {
+                    "name": "璀璨",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-resplendent"
+                        }
+                    }
+                },
+                {
+                    "name": "华灯夜",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-Bright-night"
+                        }
+                    }
+                },
+                {
+                    "name": "赏味",
+                    "pipeline_override": {
+                        "activity-hundred": {
+                            "next": "activity-taste"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择是否放弃(战斗失败时的选择)": {
+            "cases": [
+                {
+                    "name": "放弃",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end-fail",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "继续",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "打璀璨选择这个",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "非战斗选项选择这个",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "选择关卡-活动": {
+            "cases": [
+                {
+                    "name": "第一关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-one"
+                        }
+                    }
+                },
+                {
+                    "name": "第二关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-two"
+                        }
+                    }
+                },
+                {
+                    "name": "第三关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-three"
+                        }
+                    }
+                },
+                {
+                    "name": "第四关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-four-swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "第五关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-five-swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "第六关",
+                    "pipeline_override": {
+                        "activity-lantern": {
+                            "next": "activity-fire-six-swipe"
+                        }
+                    }
+                },
+                {
+                    "name": "非战斗选项选择这个",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-end",
+                                "activity-fire",
+                                "start-convened"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "华灯夜选这个",
+                    "pipeline_override": {
+                        "activity-fail": {
+                            "next": [
+                                "activity-combustion-one",
+                                "activity-Bright-night"
+                            ]
                         }
                     }
                 }

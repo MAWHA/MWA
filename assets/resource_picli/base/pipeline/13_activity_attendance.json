@@ -3,16 +3,20 @@
         "next": [
             "activity",
             "attendance"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "activity": {
         "recognition": "OCR",
-        "expected": "活动",
+        "expected": "动",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
             0,
-            290,
+            311,
             130,
             190
         ],
@@ -42,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "协韵行歌",
+        "expected": "良宵百载",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
@@ -83,7 +87,7 @@
     },
     "attendance_three": {
         "recognition": "OCR",
-        "expected": "第1天",
+        "expected": "天",
         "action": "Click",
         "post_delay": 3000,
         "next": [

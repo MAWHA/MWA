@@ -1,13 +1,45 @@
 {
-    "controller": {
-        "name": "安卓端",
-        "type": "Adb"
-    },
     "resource": "B 服",
-    "task": [],
+    "controller": {
+        "name": "安卓端"
+    },
+    "task": [
+        {
+            "name": "启动",
+            "option": [],
+            "__vscExpand": false
+        },
+        {
+            "name": "派遣公司",
+            "option": [
+                {
+                    "name": "社教模拟仪",
+                    "value": "进阶社会指南"
+                },
+                {
+                    "name": "制造物品",
+                    "value": "银石墨条（黄装升级）"
+                },
+                {
+                    "name": "是否喝茶",
+                    "value": "喝茶"
+                }
+            ],
+            "__vscExpand": true
+        }
+    ],
     "adb": {
         "adb_path": "D:/leidian/LDPlayer9/adb.exe",
         "address": "emulator-5554",
-        "config": {}
+        "config": {
+            "extras": {
+                "ld": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "D:/leidian/LDPlayer9",
+                    "pid": 1760
+                }
+            }
+        }
     }
 }

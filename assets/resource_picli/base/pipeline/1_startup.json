@@ -1,59 +1,120 @@
 {
     "Start": {
+        "post_delay": 5000,
         "next": [
-            "StartWuhua",
-            "update",
-            "CloseAnnouncement"
+            "start-announcement",
+            "start-convened",
+            "start-accessing",
+            "start-serve",
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one",
+            "startup"
         ]
     },
-    "StartWuhua": {
+    "startup": {
         "action": "StartApp",
         "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
         "post_wait_freezes": 10000,
         "timeout": 120000,
         "next": [
-            "update",
-            "CloseAnnouncement",
-            "convened"
+            "start-healthy",
+            "start-serve",
+            "start-update",
+            "start-announcement"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
-    "update": {
+    "StopApp": {
+        "action": "StopApp",
+        "package": "com.cipaishe.wuhua.bilibili"
+    },
+    "start-healthy": {
         "recognition": "OCR",
-        "expected": "终端数据更新",
-        "roi": [
-            403,
-            249,
-            474,
-            111
-        ],
+        "expected": "健康",
         "action": "Click",
-        "post_delay": 10000,
-        "timeout": 120000,
-        "timeout_next": [
-            "update-detect"
+        "post_delay": 3000,
+        "roi": [
+            405,
+            230,
+            510,
+            260
         ],
+        "next": [
+            "start-serve",
+            "start-healthy",
+            "start-announcement"
+        ]
+    },
+    "start-serve": {
+        "recognition": "OCR",
+        "expected": [
+            "服务",
+            "同步",
+            "更新",
+            "解压",
+            "检测",
+            "资源",
+            "配置"
+        ],
+        "action": "DoNothing",
+        "post_delay": 3000,
+        "timeout": 120000,
+        "roi": [
+            195,
+            595,
+            260,
+            125
+        ],
+        "next": [
+            "start-update",
+            "start-serve",
+            "start-announcement"
+        ]
+    },
+    "start-update": {
+        "recognition": "OCR",
+        "expected": "更新",
+        "action": "Click",
+        "post_delay": 3000,
+        "timeout": 120000,
         "target": [
             765,
             430,
             0,
             0
         ],
+        "roi": [
+            403,
+            249,
+            474,
+            111
+        ],
         "next": [
-            "CloseAnnouncement"
+            "start-serve",
+            "start-update",
+            "start-announcement"
         ]
     },
-    "update-detect": {
+    "start-announcement": {
         "recognition": "OCR",
-        "expected": "更新",
+        "expected": "公告",
         "action": "DoNothing",
-        "post_delay": 10000,
-        "timeout": 120000,
+        "post_delay": 1000,
+        "roi": [
+            360,
+            50,
+            545,
+            105
+        ],
         "next": [
-            "CloseAnnouncement",
-            "update"
+            "start-CloseAnnouncement",
+            "start-announcement"
         ]
     },
-    "CloseAnnouncement": {
+    "start-CloseAnnouncement": {
         "recognition": "TemplateMatch",
         "template": "Startup/12.png",
         "roi": [
@@ -63,82 +124,140 @@
             157
         ],
         "action": "Click",
-        "post_delay": 5000,
+        "post_delay": 2000,
         "next": [
-            "StartGame",
-            "CloseAnnouncement"
+            "start-accessing",
+            "start-CloseAnnouncement"
         ]
     },
-    "StartGame": {
+    "start-accessing": {
         "recognition": "OCR",
-        "expected": "提示",
+        "expected": "抵制不良",
         "action": "Click",
-        "post_delay": 7000,
-        "target": [
-            1060,
-            80,
+        "target_offset": [
+            0,
+            -40,
             0,
             0
         ],
         "roi": [
-            1170,
-            580,
-            100,
-            135
+            198,
+            618,
+            125,
+            62
         ],
+        "post_wait_freezes": 7000,
         "next": [
-            "AccumulatedSignIn",
-            "AccumulatedSignInExit",
-            "GetResource",
-            "convened"
+            "start-handling-remind",
+            "start-up-new",
+            "start-attendance",
+            "start-accessing",
+            "start-GetResource",
+            "start-convened"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
-    "convened": {
-        "recognition": "TemplateMatch",
-        "template": "Startup/11.png",
-        "action": "DoNothing",
-        "roi": [
-            906,
-            340,
-            170,
-            205
-        ],
-        "post_delay": 2000
-    },
-    "AccumulatedSignIn": {
+    "start-handling-remind": {
+        "recognition": "OCR",
+        "expected": "今日登录不再提示",
         "action": "Click",
+        "post_delay": 2000,
         "target": [
-            800,
-            350,
+            1160,
+            130,
             0,
             0
         ],
-        "post_delay": 3000,
+        "roi": [
+            115,
+            590,
+            277,
+            100
+        ],
         "next": [
-            "GetResource",
-            "AccumulatedSignInExit",
-            "convened",
-            "AccumulatedSignIn"
+            "start-up-new",
+            "start-handling-remind",
+            "start-GetResource",
+            "start-AccumulatedSignInExit",
+            "start-attendance"
         ]
     },
-    "AccumulatedSignInExit": {
+    "start-up-new": {
+        "recognition": "OCR",
+        "expected": [
+            "衣装上新",
+            "周边上新"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": [
+            1160,
+            130,
+            0,
+            0
+        ],
+        "roi": [
+            316,
+            390,
+            711,
+            296
+        ],
+        "next": [
+            "start-handling-remind",
+            "start-up-new",
+            "start-GetResource",
+            "start-AccumulatedSignInExit",
+            "start-attendance"
+        ]
+    },
+    "start-attendance": {
+        "recognition": "OCR",
+        "expected": "签到",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "start-GetResource",
+            "start-AccumulatedSignInExit",
+            "start-attendance"
+        ]
+    },
+    "start-AccumulatedSignInExit": {
         "recognition": "TemplateMatch",
         "template": "Startup/AccumulatedSignInExit.png",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "GetResource",
-            "AccumulatedSignInExit",
-            "convened"
+            "start-AccumulatedSignInExit",
+            "start-convened",
+            "start-attendance",
+            "start-GetResource"
         ]
     },
-    "GetResource": {
+    "start-GetResource": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "AccumulatedSignInExit",
-            "convened"
+            "start-AccumulatedSignInExit",
+            "start-convened",
+            "start-attendance",
+            "start-GetResource"
+        ]
+    },
+    "start-convened": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/11.png",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "roi": [
+            906,
+            340,
+            170,
+            205
         ]
     }
 }

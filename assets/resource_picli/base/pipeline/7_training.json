@@ -3,6 +3,10 @@
         "next": [
             "EnterTraining",
             "StartTraining"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "EnterTraining": {
@@ -12,6 +16,10 @@
         "post_delay": 3000,
         "next": [
             "StartTraining"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "StartTraining": {
@@ -34,6 +42,10 @@
             "Ranger",
             "LightMelee",
             "Tactical"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Cash": {
