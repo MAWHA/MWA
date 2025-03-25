@@ -1,7 +1,7 @@
 {
     "activity-all": {
         "next": [
-            "activity-hundred",
+            "activity-fine",
             "activity-hundred-home",
             "activity-hundred-quit"
         ]
@@ -12,7 +12,7 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-hundred"
+            "activity-fine"
         ]
     },
     "activity-hundred-quit": {
@@ -21,20 +21,23 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-hundred",
+            "activity-fine",
             "activity-hundred-home"
         ]
     },
-    "activity-hundred": {
+    "activity-fine": {
         "recognition": "OCR",
-        "expected": "良宵百载",
+        "expected": [
+            "工巧",
+            "新途"
+        ],
         "action": "Click",
         "post_delay": 2000,
         "next": [
             "activity-lantern",
             "activity-taste",
             "activity-journey",
-            "activity-hundred"
+            "activity-fine"
         ],
         "interrupt": [
             "activity-quit",
@@ -43,18 +46,27 @@
     },
     "activity-lantern": {
         "recognition": "OCR",
-        "expected": "观灯",
+        "expected": "展会",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-resplendent",
+            "activity-exhibition-one",
             "activity-Bright-night",
             "activity-lantern"
         ]
     },
+    "activity-exhibition-one": {
+        "recognition": "OCR",
+        "expected": "前期",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-fight"
+        ]
+    },
     "activity-taste": {
         "recognition": "OCR",
-        "expected": "赏味",
+        "expected": "筹备",
         "action": "Click",
         "post_delay": 2000,
         "next": [
@@ -1155,12 +1167,59 @@
     },
     "activity-continue": {
         "recognition": "OCR",
-        "expected": "继续",
+        "expected": [
+            "优",
+            "良",
+            "中"
+        ],
         "action": "Click",
+        "post_delay": 3000,
+        "index": -1,
+        "target_offset": [
+            0,
+            130,
+            0,
+            0
+        ],
+        "roi": [
+            1084,
+            86,
+            134,
+            579
+        ],
+        "next": [
+            "activity-fight",
+            "activity-report",
+            "activity-continue",
+            "activity-fine-swap"
+        ]
+    },
+    "activity-report": {
+        "recognition": "TemplateMatch",
+        "template": "Shop\\01.png",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": []
+    },
+    "activity-fine-swap": {
+        "action": "Swipe",
+        "begin": [
+            885,
+            420,
+            0,
+            0
+        ],
+        "end": [
+            885,
+            270,
+            0,
+            0
+        ],
         "post_delay": 3000,
         "next": [
             "activity-fight",
-            "activity-tactics"
+            "activity-continue",
+            "activity-fine-swap"
         ]
     },
     "activity-fire": {
