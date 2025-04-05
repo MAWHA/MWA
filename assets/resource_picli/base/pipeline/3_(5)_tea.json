@@ -52,25 +52,15 @@
             140
         ],
         "next": [
-            "number",
             "drink_tea",
             "tea_two"
         ]
     },
-    "number": {
-        "recognition": "OCR",
-        "expected": "次数",
-        "action": "DoNothing",
-        "post_delay": 1000,
-        "next": [
-            "tea_home"
-        ]
-    },
     "drink_tea": {
         "recognition": "TemplateMatch",
-        "template": "Company\\23.png",
+        "template": "Company\\tea_load.png",
         "action": "Click",
-        "post_delay": 3000,
+        "post_delay": 1000,
         "target": [
             300,
             465,
@@ -78,14 +68,23 @@
             0
         ],
         "roi": [
-            194,
-            0,
-            282,
-            214
+            1144,
+            342,
+            127,
+            242
         ],
         "next": [
-            "company_confirm_one",
+            "max_tea",
             "drink_tea"
+        ]
+    },
+    "max_tea": {
+        "recognition": "OCR",
+        "expected": "最大",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "company_confirm_one"
         ]
     },
     "company_confirm_one": {
