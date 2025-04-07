@@ -1,0 +1,13 @@
+{
+    "testtask": {
+        "recognition": "OCR",
+        "expected": ".*",
+        "roi": [
+            376,
+            494,
+            81,
+            112
+        ],
+        "action": "Click"
+    }
+}
