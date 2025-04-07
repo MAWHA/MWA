@@ -14,6 +14,10 @@
             "max_water",
             "Swipe_drink",
             "drink"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "Swipe_drink": {

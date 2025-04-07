@@ -3,6 +3,10 @@
         "next": [
             "activity",
             "attendance"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "activity": {
@@ -12,9 +16,9 @@
         "post_delay": 2000,
         "roi": [
             0,
-            290,
-            130,
-            190
+            327,
+            188,
+            178
         ],
         "next": [
             "attendance",
@@ -42,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "协韵行歌",
+        "expected": "栖光游灵",
         "action": "Click",
         "post_delay": 2000,
         "roi": [
@@ -83,11 +87,29 @@
     },
     "attendance_three": {
         "recognition": "OCR",
-        "expected": "第1天",
+        "expected": "天",
         "action": "Click",
         "post_delay": 3000,
         "next": [
             "activity_get",
+            "activity_attendance_two",
+            "Quit"
+        ]
+    },
+    "activity_attendance_two": {
+        "recognition": "OCR",
+        "expected": "工巧新途",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            255,
+            717
+        ],
+        "next": [
+            "attendance_two",
+            "activity_attendance_two",
             "Quit"
         ]
     },
@@ -102,6 +124,7 @@
             570
         ],
         "next": [
+            "activity_attendance_two",
             "Quit"
         ]
     }

@@ -6,6 +6,10 @@
             "combine-one",
             "combine-choose",
             "combine-game"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_seven": {
@@ -17,6 +21,10 @@
             "tearoom-combine",
             "combine-one",
             "combine-game"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "tearoom-combine": {

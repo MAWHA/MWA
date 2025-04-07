@@ -6,6 +6,10 @@
             "richang",
             "donggu",
             "Quit"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "shangting": {
@@ -30,7 +34,7 @@
     },
     "richang": {
         "recognition": "OCR",
-        "expected": "日常",
+        "expected": "循时",
         "action": "Click",
         "post_delay": 2000,
         "next": [
@@ -45,6 +49,7 @@
         "post_delay": 2000,
         "next": [
             "goumai",
+            "donggu",
             "Quit"
         ]
     },
@@ -54,7 +59,8 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "obtain1"
+            "obtain1",
+            "donggu"
         ]
     },
     "obtain1": {

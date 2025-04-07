@@ -6,6 +6,10 @@
             "entry_dispath_two",
             "vending_home",
             "entry_back"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
         ]
     },
     "entry_dispath_two": {
