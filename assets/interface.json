@@ -98,6 +98,14 @@
                 "是否手动选择角色和buff"
             ]
         },
+             {
+            "name": "研究学习",
+            "entry": "Research and learning",
+            "option": [
+                "选择研究学习主题",
+                "选择研究学习路线"
+            ]
+        },
         {
             "name": "分解装备",
             "entry": "dissect_weapon",
@@ -717,6 +725,34 @@
                                 "choose_boss",
                                 "sub_choose_boss",
                                 "action_1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+            "选择研究学习主题": {
+            "cases": [
+                {
+                    "name": "金银",
+                    "pipeline_override": {
+                        "Theme-selection": {
+                            "next": [
+                                "gold and silver Theme selection"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "选择研究学习路线": {
+            "cases": [
+                {
+                    "name": "重复金1得500分4报",
+                    "pipeline_override": {
+                        "choose-boss": {
+                            "next": [
+                                "repeat Bonecarve gold and silver first Level"
                             ]
                         }
                     }
