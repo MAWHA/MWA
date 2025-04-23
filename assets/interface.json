@@ -15,6 +15,14 @@
     ],
     "task": [
         {
+            "name": "研究学习",
+            "entry": "Research and learning",
+            "option": [
+                "选择研究学习主题",
+                "选择研究学习路线"
+            ]
+        },
+        {
             "name": "启动",
             "entry": "Start"
         },
@@ -96,14 +104,6 @@
                 "选择研学主题",
                 "选择地图(仅老研学)",
                 "是否手动选择角色和buff"
-            ]
-        },
-             {
-            "name": "研究学习",
-            "entry": "Research and learning",
-            "option": [
-                "选择研究学习主题",
-                "选择研究学习路线"
             ]
         },
         {
@@ -731,34 +731,6 @@
                 }
             ]
         },
-            "选择研究学习主题": {
-            "cases": [
-                {
-                    "name": "金银",
-                    "pipeline_override": {
-                        "Theme-selection": {
-                            "next": [
-                                "gold and silver Theme selection"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择研究学习路线": {
-            "cases": [
-                {
-                    "name": "重复金1得500分4报",
-                    "pipeline_override": {
-                        "choose-boss": {
-                            "next": [
-                                "repeat Bonecarve gold and silver first Level"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
         "分解的装备的最大品质": {
             "cases": [
                 {
@@ -818,6 +790,34 @@
                     "pipeline_override": {
                         "Collect-add-all": {
                             "next": "Collect-add-four"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择研究学习主题": {
+            "cases": [
+                {
+                    "name": "金银",
+                    "pipeline_override": {
+                        "Theme-selection": {
+                            "next": [
+                                "gold and silver Theme selection"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "选择研究学习路线": {
+            "cases": [
+                {
+                    "name": "重复金1得500分4报（不能在研学界面开启）",
+                    "pipeline_override": {
+                        "choose-boss": {
+                            "next": [
+                                "repeat Bonecarve gold and silver first Level"
+                            ]
                         }
                     }
                 }

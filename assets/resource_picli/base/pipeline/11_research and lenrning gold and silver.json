@@ -1,0 +1,268 @@
+{
+    "set-out-Theme-select gold and silver": {
+        "recognition": "OCR",
+        "expected": [
+            "研学启程"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "choose-boss"
+        ]
+    },
+    "choose-boss": {
+        "next": [
+            "Bonecarve",
+            "nightmare",
+            "firechild",
+            "repeat Bonecarve gold and silver first Level"
+        ]
+    },
+    "Bonecarve": {
+        "recognition": "OCR",
+        "expected": [
+            "骨刻"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    },
+    "nightmare": {
+        "recognition": "OCR",
+        "expected": [
+            "猼訑"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    },
+    "firechild": {
+        "recognition": "OCR",
+        "expected": [
+            "火婴"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    },
+    "choose-role": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/choose_role.png",
+        "action": "Click",
+        "next": [
+            "change-tag-Assassin"
+        ]
+    },
+    "change-tag-Assassin": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose-tag-Assassin"
+        ]
+    },
+    "choose-tag-Assassin": {
+        "recognition": "OCR",
+        "expected": "轻锐",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure-tag"
+        ]
+    },
+    "ensure-tag": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "find-shangyang"
+        ],
+        "interrupt": [
+            "swipe-page"
+        ]
+    },
+    "swipe-page": {
+        "action": "Swipe",
+        "begin": [
+            780,
+            362,
+            0,
+            0
+        ],
+        "end": [
+            475,
+            362,
+            0,
+            0
+        ],
+        "duration": 1000,
+        "post_delay": 500
+    },
+    "find-shangyang": {
+        "recognition": "OCR",
+        "expected": "商鞅方升",
+        "action": "Click",
+        "next": [
+            "change_tag"
+        ]
+    },
+    "change-tag": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose-tag-2"
+        ]
+    },
+    "choose-tag-2": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure-tag-1"
+        ]
+    },
+    "ensure-tag-1": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "choose-role-1"
+        ]
+    },
+    "choose-role-1": {
+        "action": "Click",
+        "target": [
+            554,
+            511,
+            1,
+            1
+        ],
+        "next": "choose-role-2"
+    },
+    "choose-role-2": {
+        "action": "Click",
+        "target": [
+            693,
+            191,
+            1,
+            1
+        ],
+        "next": "choose-role-3"
+    },
+    "choose-role-3": {
+        "action": "Click",
+        "target": [
+            699,
+            516,
+            1,
+            1
+        ],
+        "next": "ensure-1"
+    },
+    "ensure-1": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "roi": [
+            1167,
+            672,
+            54,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "choose-strategy"
+        ]
+    },
+    "choose-strategy": {
+        "recognition": "OCR",
+        "expected": "辅助效果",
+        "action": "Click",
+        "next": [
+            "start-research"
+        ]
+    },
+    "start-research": {
+        "recognition": "OCR",
+        "expected": "进入研学",
+        "action": "Click",
+        "post_delay": 20000,
+        "next": [
+            "action-1"
+        ]
+    },
+    "action-1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Research2/rest2.png"
+        ],
+        "green_mask": true,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "rest"
+        ]
+    },
+    "rest": {
+        "recognition": "OCR",
+        "expected": "休息",
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "sure"
+        ]
+    },
+    "sure": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "post_wait_freezes": 500,
+        "action": "Click"
+    },
+    "action-2": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning gold and silver/fight-1.png",
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "swipe_map_3"
+        ]
+    },
+    "action-6": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/fight_2.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 0,
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "swipe_map_2"
+        ]
+    },
+    "repeat gold and silver first Level": {}
+}
