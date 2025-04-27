@@ -1,66 +1,149 @@
 {
-    "museum_Research": {
+    "naturalist-studies-title": {
+        "rate_limit": 2000,
         "next": [
-            "museum",
-            "Research",
-            "Research_two",
-            "advance_one_man",
-            "advance_one_women"
+            "naturalist-studies",
+            "naturalist-studies-reward",
+            "naturalist-studies-topic",
+            "naturalist-studies-accessing",
+            "naturalist-studies-landscape",
+            "naturalist-studies-leave",
+            "naturalist-studies-continuous",
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-frigid-state"
         ]
     },
-    "museum": {
+    "naturalist-studies": {
         "recognition": "OCR",
-        "expected": "博物",
-        "roi": [
-            1087,
-            283,
-            173,
-            167
+        "expected": [
+            "博物",
+            "研学"
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
-            "Research"
+            "naturalist-studies-reward",
+            "naturalist-studies-topic",
+            "naturalist-studies"
         ]
     },
-    "Research": {
-        "recognition": "TemplateMatch",
-        "template": "Research/02.png",
-        "roi": [
-            600,
-            350,
-            675,
-            370
-        ],
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "next": [
-            "snowscape",
-            "landscape",
-            "journey",
-            "advance_one_man",
-            "advance_one_women"
-        ]
-    },
-    "Research_two": {
+    "naturalist-studies-reward": {
         "recognition": "OCR",
-        "expected": "继续",
-        "action": "Click",
-        "roi": [
-            600,
-            350,
-            675,
-            370
+        "expected": [
+            "奖励",
+            "周常"
         ],
-        "post_wait_freezes": 2000,
+        "action": "Click",
+        "target_offset": [
+            130,
+            80,
+            0,
+            0
+        ],
+        "roi": [
+            0,
+            54,
+            415,
+            246
+        ],
+        "post_delay": 2000,
         "next": [
-            "advance_one_man",
-            "advance_one_women",
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells",
-            "agree",
-            "new_state"
+            "naturalist-studies-topic",
+            "naturalist-studies-reward"
+        ]
+    },
+    "naturalist-studies-topic": {
+        "recognition": "OCR",
+        "expected": [
+            "主题",
+            "选择"
+        ],
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-landscape",
+            "naturalist-studies-metallic",
+            "naturalist-studies-leave",
+            "naturalist-studies-topic"
+        ]
+    },
+    "naturalist-studies-landscape": {
+        "recognition": "OCR",
+        "expected": [
+            "山水",
+            "画境"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-accessing",
+            "naturalist-studies-landscape"
+        ]
+    },
+    "naturalist-studies-metallic": {
+        "recognition": "OCR",
+        "expected": [
+            "金银",
+            "纪行"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-accessing",
+            "naturalist-studies-landscape"
+        ]
+    },
+    "naturalist-studies-accessing": {
+        "recognition": "OCR",
+        "expected": [
+            "进入",
+            "继续"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-leave",
+            "naturalist-studies-accessing"
+        ]
+    },
+    "naturalist-studies-leave": {
+        "recognition": "OCR",
+        "expected": [
+            "研学",
+            "启程"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            725,
+            460,
+            555,
+            260
+        ],
+        "next": [
+            "naturalist-studies-frigid",
+            "naturalist-studies-continuous",
+            "naturalist-studies-frigid-state",
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-leave"
+        ]
+    },
+    "naturalist-studies-continuous": {
+        "recognition": "OCR",
+        "expected": [
+            "继续"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-state",
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-frigid",
+            "naturalist-studies-continuous"
         ]
     }
 }

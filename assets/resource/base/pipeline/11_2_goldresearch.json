@@ -1,0 +1,774 @@
+{
+    "gold_research": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/begin_research.png",
+        "action": "Click",
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "choose_boss",
+            "sub_choose_boss",
+            "action_1"
+        ]
+    },
+    "sub_choose_boss": {
+        "is_sub": true
+    },
+    "choose_boss": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "骨刻",
+        "roi": [
+            165,
+            493,
+            974,
+            41
+        ],
+        "action": "Click",
+        "next": [
+            "choose_role",
+            "choose_boss"
+        ]
+    },
+    "choose_role": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/choose_role.png",
+        "action": "Click",
+        "next": [
+            "change_filter"
+        ]
+    },
+    "change_filter": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose_tag"
+        ]
+    },
+    "choose_tag": {
+        "recognition": "OCR",
+        "expected": "轻锐",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_tag"
+        ]
+    },
+    "ensure_tag": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "find_shangyang",
+            "swipe_page"
+        ]
+    },
+    "swipe_page": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            780,
+            362,
+            0,
+            0
+        ],
+        "end": [
+            475,
+            362,
+            0,
+            0
+        ],
+        "duration": 1000,
+        "post_delay": 500
+    },
+    "find_shangyang": {
+        "recognition": "OCR",
+        "expected": "商鞅方升",
+        "action": "Click",
+        "next": [
+            "change_tag"
+        ]
+    },
+    "change_tag": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/filter.png",
+        "roi": [
+            1197,
+            10,
+            61,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "choose_tag_2"
+        ]
+    },
+    "choose_tag_2": {
+        "recognition": "OCR",
+        "expected": "全部",
+        "roi": [
+            469,
+            207,
+            501,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_tag_1"
+        ]
+    },
+    "ensure_tag_1": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "choose_role_1"
+        ]
+    },
+    "choose_role_1": {
+        "action": "Click",
+        "target": [
+            554,
+            511,
+            1,
+            1
+        ],
+        "next": "choose_role_2"
+    },
+    "choose_role_2": {
+        "action": "Click",
+        "target": [
+            693,
+            191,
+            1,
+            1
+        ],
+        "next": "choose_role_3"
+    },
+    "choose_role_3": {
+        "action": "Click",
+        "target": [
+            699,
+            516,
+            1,
+            1
+        ],
+        "next": "ensure_1"
+    },
+    "ensure_1": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "roi": [
+            1167,
+            672,
+            54,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "choose_strategy"
+        ]
+    },
+    "choose_strategy": {
+        "recognition": "OCR",
+        "expected": "辅助效果",
+        "action": "Click",
+        "next": [
+            "start_research"
+        ]
+    },
+    "start_research": {
+        "recognition": "OCR",
+        "expected": "进入研学",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "loading_wait",
+            "action_1"
+        ]
+    },
+    "loading_wait": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Research2/start_point.png",
+        "inverse": true
+    },
+    "action_1": {
+        "pre_wait_freezes": 1000,
+        "recognition": "TemplateMatch",
+        "template": "Research2/rest.png",
+        "green_mask": true,
+        "index": 0,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "ensure_2",
+            "action_2"
+        ]
+    },
+    "action_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/rest.png",
+        "green_mask": true,
+        "index": 2,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "ensure_2",
+            "action_3"
+        ]
+    },
+    "action_3": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/fight.png",
+        "index": 1,
+        "green_mask": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "swipe_map"
+        ]
+    },
+    "swipe_map": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research/115.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            264,
+            100
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "enter_research"
+        ]
+    },
+    "enter_research": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/continue.png",
+        "roi": [
+            891,
+            611,
+            377,
+            100
+        ],
+        "action": "Click",
+        "next": [
+            "action_4"
+        ]
+    },
+    "action_4": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/rest.png",
+        "green_mask": true,
+        "index": 0,
+        "roi": [
+            166,
+            2,
+            917,
+            717
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "ensure_2",
+            "action_5"
+        ]
+    },
+    "action_5": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\fight.png",
+        "index": 2,
+        "green_mask": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "action_6"
+        ]
+    },
+    "action_6": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\fight_2.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 0,
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "swipe_map_2"
+        ]
+    },
+    "swipe_map_2": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research/115.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            264,
+            100
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "enter_research_2"
+        ]
+    },
+    "enter_research_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\continue.png",
+        "roi": [
+            891,
+            611,
+            377,
+            100
+        ],
+        "action": "Click",
+        "next": [
+            "action_7"
+        ]
+    },
+    "action_7": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\add_people.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 0,
+        "post_wait_freezes": 500,
+        "next": [
+            "import_1",
+            "action_8"
+        ]
+    },
+    "action_8": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\fight.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 1,
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "action_9"
+        ]
+    },
+    "action_9": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\fight_2.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 1,
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "swipe_map_3"
+        ]
+    },
+    "swipe_map_3": {
+        "action": "Swipe",
+        "begin": [
+            934,
+            153,
+            1,
+            1
+        ],
+        "end": [
+            540,
+            150,
+            1,
+            1
+        ],
+        "next": [
+            "action_10"
+        ]
+    },
+    "action_10": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\add_people.png",
+        "green_mask": true,
+        "action": "Click",
+        "index": 0,
+        "post_wait_freezes": 500,
+        "next": [
+            "import_1",
+            "action_11"
+        ]
+    },
+    "action_11": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Research2\\rest.png",
+            "Research2\\rest2.png"
+        ],
+        "green_mask": true,
+        "order_by": "Vertical",
+        "index": 1,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "ensure_2",
+            "action_12"
+        ]
+    },
+    "action_12": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\boss.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight",
+            "finish_research"
+        ]
+    },
+    "ensure_2": {
+        "pre_wait_freezes": 700,
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "休息",
+        "roi": [
+            991,
+            493,
+            114,
+            46
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_3",
+            "ensure_2"
+        ]
+    },
+    "ensure_3": {
+        "pre_wait_freezes": 300,
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            839,
+            619,
+            116,
+            50
+        ],
+        "action": "Click"
+    },
+    "fight": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "战斗",
+        "roi": [
+            858,
+            474,
+            389,
+            80
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight_begin"
+        ]
+    },
+    "fight_begin": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "roi": [
+            1030,
+            617,
+            200,
+            74
+        ],
+        "action": "Click",
+        "next": [
+            "not_full",
+            "auto",
+            "fight_begin2",
+            "time_sleep_1"
+        ]
+    },
+    "not_full": {
+        "pre_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2\\ensure_2.png",
+        "roi": [
+            686,
+            396,
+            169,
+            62
+        ],
+        "action": "Click",
+        "next": [
+            "auto",
+            "fight_begin2",
+            "time_sleep"
+        ]
+    },
+    "auto": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\auto.png",
+        "roi": [
+            1196,
+            123,
+            78,
+            67
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "fight_begin2"
+        ]
+    },
+    "fight_begin2": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\begin_fight.png",
+        "roi": [
+            1012,
+            621,
+            268,
+            99
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_4",
+            "time_sleep"
+        ]
+    },
+    "ensure_4": {
+        "pre_delay": 1000,
+        "recognition": "OCR",
+        "expected": "确定",
+        "roi": [
+            913,
+            626,
+            125,
+            53
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "choose_buff",
+            "quit_research_2"
+        ]
+    },
+    "empty": {},
+    "time_sleep": {
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "time_sleep_1": {
+        "is_sub": true,
+        "post_delay": 500
+    },
+    "choose_buff": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\buff.png",
+        "pre_wait_freezes": 300,
+        "next": [
+            "regular_buff",
+            "random_buff"
+        ]
+    },
+    "regular_buff": {
+        "recognition": "OCR",
+        "expected": "破军",
+        "roi": [
+            210,
+            327,
+            860,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "ensure_5"
+        ]
+    },
+    "ensure_5": {
+        "pre_delay": 500,
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            768,
+            610,
+            253,
+            62
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "choose_buff",
+            "new_buff",
+            "empty"
+        ]
+    },
+    "new_buff": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/new_buff.png",
+        "roi": [
+            449,
+            7,
+            366,
+            83
+        ],
+        "next": [
+            "ensure_6"
+        ]
+    },
+    "ensure_6": {
+        "pre_delay": 500,
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            768,
+            610,
+            253,
+            62
+        ],
+        "action": "Click",
+        "next": [
+            "empty"
+        ]
+    },
+    "random_buff": {
+        "action": "Click",
+        "target": [
+            335,
+            370,
+            1,
+            1
+        ],
+        "next": [
+            "ensure_5"
+        ]
+    },
+    "import_1": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "导入",
+        "roi": [
+            993,
+            489,
+            108,
+            54
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300,
+        "next": [
+            "immport_2"
+        ]
+    },
+    "immport_2": {
+        "recognition": "TemplateMatch",
+        "template": "Research2\\import.png",
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "choose_first"
+        ]
+    },
+    "choose_first": {
+        "action": "Click",
+        "target": [
+            550,
+            190,
+            1,
+            1
+        ],
+        "next": [
+            "ensure_7"
+        ]
+    },
+    "ensure_7": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "roi": [
+            1167,
+            672,
+            54,
+            36
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "ensure_8"
+        ]
+    },
+    "ensure_8": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            971,
+            537,
+            122,
+            56
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "quit_research_2": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/quit.png",
+        "action": "Click",
+        "next": [
+            "ensure_quit"
+        ]
+    },
+    "ensure_quit": {
+        "recognition": "TemplateMatch",
+        "template": "Research2/ensure_1.png",
+        "action": "Click",
+        "next": [
+            "finish_research"
+        ]
+    },
+    "finish_research": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "结束",
+        "roi": [
+            1021,
+            565,
+            246,
+            88
+        ],
+        "action": "Click",
+        "next": [
+            "finish_research",
+            "empty"
+        ]
+    },
+    "jixu-research": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "action_1"
+        ]
+    }
+}

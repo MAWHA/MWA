@@ -39,9 +39,7 @@
             0,
             0
         ],
-        "next": [
-            "CloseAnnouncement"
-        ]
+        "next": []
     },
     "CloseAnnouncement": {
         "recognition": "TemplateMatch",

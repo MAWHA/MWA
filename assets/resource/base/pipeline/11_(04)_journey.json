@@ -1,25 +1,30 @@
 {
-    "journey": {
-        "recognition": "TemplateMatch",
-        "template": "Research/82.png",
-        "roi": [
-            109,
-            384,
-            80,
-            86
-        ],
-        "action": "Click",
-        "target_offset": [
-            60,
-            150,
-            0,
-            0
-        ],
-        "post_wait_freezes": 3000,
-        "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells"
-        ]
-    }
+  "journey": {
+    "recognition": "TemplateMatch",
+    "template": "Research/r2.png",
+    "roi": [
+      878,
+      385,
+      92,
+      90
+    ],
+    "action": "Click",
+    "target_offset": [
+      60,
+      150,
+      0,
+      0
+    ],
+    "post_wait_freezes": 3000
+  },
+  "journey-buff-one": {
+    "action": "Click",
+    "target": [
+      360,
+      340,
+      0,
+      0
+    ],
+    "post_delay": 3000
+  }
 }

@@ -1,109 +1,101 @@
 {
-    "snowscape": {
+    "naturalist-studies-frigid": {
         "recognition": "TemplateMatch",
-        "template": "Research/82.png",
+        "template": "naturalist-studies\\01.png",
+        "action": "Click",
+        "target_offset": [
+            70,
+            130,
+            0,
+            0
+        ],
         "roi": [
             109,
             384,
             80,
             86
         ],
+        "post_delay": 5000,
+        "next": [
+            "naturalist-studies-frigid-state",
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-frigid"
+        ]
+    },
+    "naturalist-studies-frigid-state": {
+        "recognition": "OCR",
+        "expected": [
+            "初始",
+            "战斗",
+            "状态"
+        ],
         "action": "Click",
-        "target_offset": [
-            70,
-            140,
+        "target": [
+            640,
+            260,
             0,
             0
         ],
-        "post_delay": 3000,
+        "roi": [
+            414,
+            0,
+            456,
+            191
+        ],
+        "post_delay": 5000,
         "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells",
-            "snowscape",
-            "Research",
-            "museum"
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-frigid-state"
         ]
     },
-    "Marksmanship": {
+    "naturalist-studies-frigid-confirm": {
         "recognition": "OCR",
-        "expected": "神射",
-        "roi": [
-            210,
-            258,
-            830,
-            110
-        ],
+        "expected": "确认",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "roi": [
+            400,
+            481,
+            526,
+            239
+        ],
+        "post_delay": 5000,
         "next": [
-            "agree"
+            "naturalist-studies-frigid-obtain",
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-forward-one"
         ]
     },
-    "Blazing_Knife": {
+    "naturalist-studies-frigid-obtain": {
         "recognition": "OCR",
-        "expected": "炽刀",
-        "roi": [
-            210,
-            258,
-            830,
-            110
+        "expected": [
+            "获得",
+            "新的",
+            "战斗",
+            "状态"
         ],
         "action": "Click",
-        "post_wait_freezes": 2000,
-        "next": [
-            "agree"
-        ]
-    },
-    "Spells": {
-        "recognition": "OCR",
-        "expected": "术法精通",
         "roi": [
-            210,
-            258,
-            830,
-            110
+            400,
+            481,
+            526,
+            239
         ],
-        "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 5000,
         "next": [
-            "agree"
+            "naturalist-studies-frigid-forward-one",
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-obtain"
         ]
     },
-    "agree": {
+    "naturalist-studies-frigid-forward-one": {
         "recognition": "TemplateMatch",
-        "template": "Research/83.png",
-        "roi": [
-            508,
-            604,
-            268,
-            79
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
         ],
-        "action": "Click",
-        "post_delay": 4000,
-        "next": [
-            "new_state"
-        ]
-    },
-    "new_state": {
-        "recognition": "TemplateMatch",
-        "template": "Research/58.png",
-        "roi": [
-            485,
-            23,
-            312,
-            108
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "advance_one_man",
-            "advance_one_women"
-        ]
-    },
-    "advance_one_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
         "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
@@ -115,133 +107,654 @@
             0
         ],
         "next": [
-            "advance_two",
-            "fixed_two"
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-two"
         ]
     },
-    "advance_one_man": {
+    "naturalist-studies-frigid-forward-two": {
         "recognition": "TemplateMatch",
-        "template": "Research/84.png",
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
+        ],
         "threshold": 0.6,
         "green_mask": true,
         "post_delay": 3000,
         "action": "Click",
         "target_offset": [
-            190,
-            0,
+            260,
+            -15,
             0,
             0
         ],
         "next": [
-            "no_click",
-            "advance_two",
-            "fixed_two"
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-three"
         ]
     },
-    "no_click": {
+    "naturalist-studies-frigid-forward-three": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
+        ],
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            100,
+            -130,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-four"
+        ]
+    },
+    "naturalist-studies-frigid-forward-four": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
+        ],
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            310,
+            100,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-five"
+        ]
+    },
+    "naturalist-studies-frigid-forward-five": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
+        ],
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            -40,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-six"
+        ]
+    },
+    "naturalist-studies-frigid-forward-six": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "naturalist-studies\\02.png",
+            "naturalist-studies\\03.png"
+        ],
+        "threshold": 0.6,
+        "green_mask": true,
+        "post_delay": 3000,
+        "action": "Click",
+        "target_offset": [
+            240,
+            15,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-head-for",
+            "naturalist-studies-frigid-forward-one"
+        ]
+    },
+    "naturalist-studies-frigid-head-for": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "rate_limit": 2000,
+        "post_delay": 5000,
+        "next": [
+            "naturalist-studies-frigid-ranger",
+            "naturalist-studies-frigid-mysterious",
+            "naturalist-studies-frigid-Route-planning",
+            "naturalist-studies-frigid-sunrise",
+            "naturalist-studies-frigid-careful",
+            "naturalist-studies-frigid-mist",
+            "naturalist-studies-frigid-wind",
+            "naturalist-studies-frigid-mountain",
+            "naturalist-studies-frigid-patrol",
+            "naturalist-studies-frigid-meet",
+            "naturalist-studies-frigid-Pictoriality",
+            "naturalist-studies-frigid-Miscellaneous",
+            "naturalist-studies-frigid-abandon_one",
+            "naturalist-studies-frigid-without_one"
+        ]
+    },
+    "naturalist-studies-frigid-Miscellaneous": {
+        "recognition": "OCR",
+        "expected": [
+            "询问",
+            "千里江山图"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-Miscellaneous"
+        ]
+    },
+    "naturalist-studies-frigid-ranger": {
+        "recognition": "OCR",
+        "expected": [
+            "询问护林员",
+            "护林员",
+            "询问"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-ranger"
+        ]
+    },
+    "naturalist-studies-frigid-Pictoriality": {
+        "recognition": "OCR",
+        "expected": [
+            "正好",
+            "我带了",
+            "画箱"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-Pictoriality"
+        ]
+    },
+    "naturalist-studies-frigid-mysterious": {
+        "recognition": "OCR",
+        "expected": [
+            "打开",
+            "当场"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-mysterious"
+        ]
+    },
+    "naturalist-studies-frigid-Route-planning": {
+        "recognition": "OCR",
+        "expected": [
+            "请她帮忙指一个方向",
+            "帮忙",
+            "方向"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-Route-planning"
+        ]
+    },
+    "naturalist-studies-frigid-sunrise": {
+        "recognition": "OCR",
+        "expected": [
+            "来到",
+            "民宿",
+            "屋顶"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-sunrise"
+        ]
+    },
+    "naturalist-studies-frigid-careful": {
+        "recognition": "OCR",
+        "expected": [
+            "拿起来",
+            "仔细",
+            "观察"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-perfect",
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-careful"
+        ]
+    },
+    "naturalist-studies-frigid-mist": {
+        "recognition": "OCR",
+        "expected": [
+            "主动",
+            "跟上",
+            "器者"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-mist"
+        ]
+    },
+    "naturalist-studies-frigid-wind": {
+        "recognition": "OCR",
+        "expected": [
+            "雪景寒林",
+            "喝茶"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-wind"
+        ]
+    },
+    "naturalist-studies-frigid-mountain": {
+        "recognition": "OCR",
+        "expected": [
+            "前往",
+            "常去的",
+            "茶馆"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-mountain"
+        ]
+    },
+    "naturalist-studies-frigid-patrol": {
+        "recognition": "OCR",
+        "expected": [
+            "到路途",
+            "中央去"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-patrol"
+        ]
+    },
+    "naturalist-studies-frigid-meet": {
+        "recognition": "OCR",
+        "expected": [
+            "顺势",
+            "聊起",
+            "山水画"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-meet"
+        ]
+    },
+    "naturalist-studies-frigid-perfect": {
+        "recognition": "OCR",
+        "expected": [
+            "完美的",
+            "抉择",
+            "旅途本无对错",
+            "别的选择"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            594,
+            351,
+            561,
+            279
+        ],
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-perfect"
+        ]
+    },
+    "naturalist-studies-frigid-continue": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            557,
+            331,
+            191,
+            179
+        ],
+        "next": [
+            "naturalist-studies-frigid-keyword",
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-reward-end"
+        ]
+    },
+    "naturalist-studies-frigid-keyword": {
+        "recognition": "OCR",
+        "expected": [
+            "关键词",
+            "获得",
+            "物资"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            410,
+            0,
+            409,
+            210
+        ],
+        "next": [
+            "naturalist-studies-frigid-up-or-downgrade",
+            "naturalist-studies-frigid-keyword"
+        ]
+    },
+    "naturalist-studies-frigid-up-or-downgrade": {
+        "recognition": "OCR",
+        "expected": [
+            "优",
+            "良",
+            "中"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            738,
+            401,
+            402,
+            261
+        ],
+        "next": [
+            "naturalist-studies-frigid-choose",
+            "naturalist-studies-frigid-forward-two",
+            "naturalist-studies-frigid-up-or-downgrade"
+        ]
+    },
+    "naturalist-studies-frigid-choose": {
+        "recognition": "OCR",
+        "expected": "选择",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "naturalist-studies-frigid-forward-two",
+            "naturalist-studies-frigid-choose"
+        ]
+    },
+    "naturalist-studies-frigid-no-click": {
         "recognition": "OCR",
         "expected": "不可以往这里",
         "action": "Click",
         "next": [
-            "advance_two_man",
-            "advance_two_women"
+            "naturalist-studies-frigid-forward-three"
         ]
     },
-    "advance_two": {
+    "naturalist-studies-frigid-assess": {
         "recognition": "OCR",
-        "expected": "前往",
+        "expected": [
+            "战前",
+            "评定"
+        ],
         "action": "Click",
         "post_delay": 5000,
         "next": [
-            "mist",
-            "Snow",
-            "mountain_snow",
-            "patrol_the_mountains",
-            "cold_snow",
-            "sunrise",
-            "underfoot",
-            "planning",
-            "ranger",
-            "mysterious",
-            "painting",
-            "Miscellaneous",
-            "war_one",
-            "cultural_relic",
-            "terminal",
-            "without_one",
-            "abandon_one",
-            "advance_one_man",
-            "advance_one_women",
-            "advance_three"
+            "naturalist-studies-frigid-assess-outcome-one",
+            "naturalist-studies-frigid-assess"
         ]
     },
-    "advance_three": {
+    "naturalist-studies-frigid-assess-outcome-one": {
         "recognition": "OCR",
-        "expected": "前往",
+        "expected": [
+            "选择",
+            "两个",
+            "负向",
+            "一个",
+            "正向",
+            "获得",
+            "新的",
+            "战斗",
+            "状态"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "target": [
+            100,
+            335,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-war-prepare",
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-assess-outcome-two",
+            "naturalist-studies-frigid-assess-outcome-one"
+        ]
+    },
+    "naturalist-studies-frigid-assess-outcome-two": {
+        "recognition": "OCR",
+        "expected": [
+            "选择",
+            "两个",
+            "正向",
+            "获得",
+            "新的",
+            "战斗",
+            "状态"
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "target": [
+            365,
+            335,
+            0,
+            0
+        ],
+        "next": [
+            "naturalist-studies-frigid-war-prepare",
+            "naturalist-studies-frigid-confirm",
+            "naturalist-studies-frigid-assess-outcome-two",
+            "naturalist-studies-frigid-assess-outcome-one"
+        ]
+    },
+    "naturalist-studies-frigid-war-prepare": {
+        "recognition": "OCR",
+        "expected": [
+            "开始"
+        ],
+        "action": "Click",
+        "post_delay": 9000,
+        "next": [
+            "naturalist-studies-frigid-war-prepare",
+            "naturalist-studies-frigid-substitute-shifts",
+            "naturalist-studies-frigid-automatic"
+        ]
+    },
+    "naturalist-studies-frigid-substitute-shifts": {
+        "recognition": "OCR",
+        "expected": [
+            "代班中",
+            "敌方",
+            "留意",
+            "单位"
+        ],
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "roi": [
+            453,
+            0,
+            368,
+            246
+        ],
+        "next": [
+            "naturalist-studies-frigid-substitute-shifts",
+            "naturalist-studies-frigid-war-end",
+            "naturalist-studies-frigid-fail",
+            "naturalist-studies-frigid-war-prepare",
+            "naturalist-studies-frigid-automatic"
+        ]
+    },
+    "naturalist-studies-frigid-automatic": {
+        "recognition": "OCR",
+        "expected": "自动",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "mist",
-            "Snow",
-            "mountain_snow",
-            "patrol_the_mountains",
-            "cold_snow",
-            "sunrise",
-            "underfoot",
-            "planning",
-            "ranger",
-            "mysterious",
-            "painting",
-            "Miscellaneous",
-            "war_one",
-            "cultural_relic",
-            "terminal",
-            "without_one",
-            "abandon_one",
-            "advance_one_man",
-            "advance_one_women"
+            "naturalist-studies-frigid-substitute-shifts",
+            "naturalist-studies-frigid-war-end",
+            "naturalist-studies-frigid-fail",
+            "naturalist-studies-frigid-war-prepare",
+            "naturalist-studies-frigid-automatic"
         ]
     },
-    "advance_four": {
-        "next": [
-            "mist",
-            "Snow",
-            "mountain_snow",
-            "patrol_the_mountains",
-            "cold_snow",
-            "sunrise",
-            "underfoot",
-            "planning",
-            "ranger",
-            "mysterious",
-            "painting",
-            "Miscellaneous",
-            "war_one",
-            "cultural_relic",
-            "terminal",
-            "without_one",
-            "abandon_one",
-            "advance_one_man",
-            "advance_one_women",
-            "war_five",
-            "upgrade_one",
-            "descending_one",
-            "advance_two",
-            "advance_three"
-        ]
-    },
-    "abandon_one": {
-        "recognition": "TemplateMatch",
-        "template": "Research/115.png",
+    "naturalist-studies-frigid-war-end": {
+        "recognition": "OCR",
+        "expected": "确定",
         "action": "Click",
-        "post_wait_freezes": 2000,
+        "post_delay": 7000,
+        "roi": [
+            564,
+            429,
+            716,
+            291
+        ],
         "next": [
-            "abandon_two"
+            "naturalist-studies-frigid-up-or-downgrade",
+            "naturalist-studies-frigid-war-end"
         ]
     },
-    "abandon_two": {
+    "naturalist-studies-frigid-fail": {
+        "recognition": "OCR",
+        "expected": [
+            "未能",
+            "达到",
+            "完美",
+            "评价",
+            "结算"
+        ],
+        "roi": [
+            406,
+            248,
+            459,
+            227
+        ],
+        "action": "Click",
+        "target": [
+            775,
+            435,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-war-end",
+            "naturalist-studies-frigid-up-or-downgrade"
+        ]
+    },
+    "naturalist-studies-frigid-abandon_one": {
         "recognition": "TemplateMatch",
-        "template": "Research/116.png",
+        "template": "naturalist-studies\\04.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-abandon_two",
+            "naturalist-studies-frigid-abandon_one"
+        ]
+    },
+    "naturalist-studies-frigid-abandon_two": {
+        "recognition": "OCR",
+        "expected": [
+            "放弃",
+            "是否",
+            "本次",
+            "事件",
+            "退出",
+            "中途",
+            "失败"
+        ],
         "action": "Click",
         "target": [
             760,
@@ -249,24 +762,83 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
-            "descending_four",
-            "upgrade_four"
+            "naturalist-studies-frigid-up-or-downgrade",
+            "naturalist-studies-frigid-abandon_two"
         ]
     },
-    "without_one": {
+    "naturalist-studies-frigid-complete": {
+        "recognition": "OCR",
+        "expected": [
+            "完成",
+            "研学"
+        ],
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-continue",
+            "naturalist-studies-frigid-complete"
+        ]
+    },
+    "naturalist-studies-reward-end": {
+        "recognition": "OCR",
+        "expected": [
+            "奖励",
+            "周常"
+        ],
+        "action": "Click",
+        "target_offset": [
+            230,
+            80,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-quit",
+            "naturalist-studies-frigid-home"
+        ]
+    },
+    "naturalist-studies-frigid-quit": {
         "recognition": "TemplateMatch",
-        "template": "Research/110.png",
+        "template": "naturalist-studies\\04.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "without_two"
+            "naturalist-studies-frigid-home",
+            "naturalist-studies-frigid-quit"
         ]
     },
-    "without_two": {
+    "naturalist-studies-frigid-home": {
         "recognition": "TemplateMatch",
-        "template": "Research/111.png",
+        "template": "naturalist-studies\\05.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-home",
+            "naturalist-studies-frigid-quit"
+        ]
+    },
+    "naturalist-studies-frigid-without_one": {
+        "recognition": "TemplateMatch",
+        "template": "naturalist-studies\\06.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "naturalist-studies-frigid-without_two",
+            "naturalist-studies-frigid-without_one",
+            "naturalist-studies-frigid-up-or-downgrade"
+        ]
+    },
+    "naturalist-studies-frigid-without_two": {
+        "recognition": "OCR",
+        "expected": [
+            "中途退出",
+            "退出",
+            "中途",
+            "失败"
+        ],
         "action": "Click",
         "target": [
             770,
@@ -274,1809 +846,24 @@
             0,
             0
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
-            "without_three"
+            "naturalist-studies-frigid-without_three",
+            "naturalist-studies-frigid-without_two",
+            "naturalist-studies-frigid-without_one",
+            "naturalist-studies-frigid-up-or-downgrade"
         ]
     },
-    "without_three": {
+    "naturalist-studies-frigid-without_three": {
         "recognition": "TemplateMatch",
-        "template": "Research/110.png",
+        "template": "naturalist-studies\\06.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "descending_four",
-            "upgrade_four"
-        ]
-    },
-    "cultural_relic": {
-        "recognition": "OCR",
-        "expected": "获得文物",
-        "post_delay": 5000,
-        "roi": [
-            347,
-            0,
-            610,
-            314
-        ],
-        "next": [
-            "stwoage"
-        ]
-    },
-    "stwoage": {
-        "recognition": "OCR",
-        "expected": "收纳",
-        "action": "Click",
-        "roi": [
-            733,
-            402,
-            547,
-            318
-        ],
-        "post_delay": 2000,
-        "next": [
-            "terminal"
-        ]
-    },
-    "terminal": {
-        "recognition": "TemplateMatch",
-        "template": "Research/80.png",
-        "action": "Click",
-        "target": [
-            1200,
-            590,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "quit_research",
-            "home"
-        ]
-    },
-    "quit_research": {
-        "recognition": "OCR",
-        "expected": "先行版",
-        "action": "Click",
-        "target": [
-            240,
-            40,
-            0,
-            0
-        ]
-    },
-    "mist": {
-        "recognition": "TemplateMatch",
-        "template": "Research/11.png",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "mist_2",
-            "predestination",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "advance_four"
-        ]
-    },
-    "mist_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/12.png",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "predestination",
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose",
-            "advance_four"
-        ]
-    },
-    "predestination": {
-        "recognition": "TemplateMatch",
-        "template": "Research/86.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            465,
-            261,
-            434,
-            85
-        ],
-        "next": [
-            "keep",
-            "articles"
-        ]
-    },
-    "perfect": {
-        "recognition": "TemplateMatch",
-        "template": "Research/65.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            465,
-            261,
-            434,
-            85
-        ],
-        "next": [
-            "keep",
-            "articles"
-        ]
-    },
-    "keep": {
-        "recognition": "TemplateMatch",
-        "template": "Research/14.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "keyword",
-            "upgrade_one",
-            "descending_one",
-            "articles",
-            "advance_seven_man",
-            "advance_seven_women"
-        ]
-    },
-    "keyword": {
-        "recognition": "TemplateMatch",
-        "template": "Research/15.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "upgrade_one",
-            "upgrade_two",
-            "descending_one",
-            "descending_two",
-            "articles",
-            "advance_seven_man",
-            "advance_seven_women"
-        ]
-    },
-    "upgrade_one": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            600,
-            310,
-            0,
-            0
-        ],
-        "next": [
-            "choose"
-        ]
-    },
-    "choose": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 1000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise",
-            "advance_two_women",
-            "advance_two_man",
-            "upgrade_two",
-            "advance_four"
-        ]
-    },
-    "revise": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_two",
-            "descending_two"
-        ]
-    },
-    "upgrade_two": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            650,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_2"
-        ]
-    },
-    "choose_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 1000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise_2",
-            "upgrade_three",
-            "advance_two_man",
-            "advance_two_women",
-            "advance_four"
-        ]
-    },
-    "revise_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_three",
-            "descending_three"
-        ]
-    },
-    "upgrade_three": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            550,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_3"
-        ]
-    },
-    "choose_3": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise_3",
-            "upgrade_four",
-            "advance_two_man",
-            "advance_two_women",
-            "advance_four"
-        ]
-    },
-    "revise_3": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_four",
-            "descending_four"
-        ]
-    },
-    "upgrade_four": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            260,
-            315,
-            0,
-            0
-        ],
-        "next": [
-            "choose_4"
-        ]
-    },
-    "choose_4": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise_4",
-            "upgrade_five",
-            "advance_two_man",
-            "advance_two_women",
-            "advance_four"
-        ]
-    },
-    "revise_4": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_five",
-            "descending_five"
-        ]
-    },
-    "upgrade_five": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            320,
-            390,
-            0,
-            0
-        ],
-        "next": [
-            "choose_5"
-        ]
-    },
-    "choose_5": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise_5",
-            "advance_two_man",
-            "advance_two_women",
-            "upgrade_six",
-            "advance_four"
-        ]
-    },
-    "revise_5": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_six",
-            "descending_six"
-        ]
-    },
-    "upgrade_six": {
-        "recognition": "TemplateMatch",
-        "template": "Research/16.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            470,
-            83,
-            363,
-            142
-        ],
-        "target": [
-            215,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_6"
-        ]
-    },
-    "choose_6": {
-        "recognition": "TemplateMatch",
-        "template": "Research/17.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            866,
-            530,
-            206,
-            81
-        ],
-        "next": [
-            "revise_6",
-            "upgrade_one",
-            "advance_two_man",
-            "advance_two_women",
-            "advance_four"
-        ]
-    },
-    "revise_6": {
-        "recognition": "TemplateMatch",
-        "template": "Research/105.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 2000,
-        "next": [
-            "upgrade_one",
-            "descending_one",
-            "advance_two_man",
-            "advance_two_women"
-        ]
-    },
-    "descending_one": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            600,
-            310,
-            0,
-            0
-        ],
-        "next": [
-            "choose"
-        ]
-    },
-    "descending_two": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            650,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_2"
-        ]
-    },
-    "descending_three": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            550,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_3"
-        ]
-    },
-    "descending_four": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            260,
-            315,
-            0,
-            0
-        ],
-        "next": [
-            "choose_4"
-        ]
-    },
-    "descending_five": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            320,
-            390,
-            0,
-            0
-        ],
-        "next": [
-            "choose_5"
-        ]
-    },
-    "descending_six": {
-        "recognition": "OCR",
-        "expected": "降阶",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "target": [
-            215,
-            405,
-            0,
-            0
-        ],
-        "next": [
-            "choose_6"
-        ]
-    },
-    "advance_two_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            260,
-            -15,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_three"
-        ]
-    },
-    "advance_two_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            260,
-            -15,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_three"
-        ]
-    },
-    "advance_three_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            100,
-            -130,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_four"
-        ]
-    },
-    "advance_three_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            100,
-            -130,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_four"
-        ]
-    },
-    "advance_four_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            310,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_five"
-        ]
-    },
-    "advance_four_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            310,
-            100,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_five"
-        ]
-    },
-    "advance_five_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            240,
-            -40,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_six"
-        ]
-    },
-    "advance_five_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            240,
-            -40,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_six"
-        ]
-    },
-    "advance_six_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            240,
-            15,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_seven"
-        ]
-    },
-    "advance_six_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            240,
-            15,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_seven"
-        ]
-    },
-    "advance_seven_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            320,
-            20,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_eight"
-        ]
-    },
-    "advance_seven_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            320,
-            20,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_eight"
-        ]
-    },
-    "advance_eight_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            280,
-            0,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_nine"
-        ]
-    },
-    "advance_eight_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            280,
-            0,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_nine"
-        ]
-    },
-    "advance_nine_women": {
-        "recognition": "TemplateMatch",
-        "template": "Research/85.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            200,
-            -30,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_one"
-        ]
-    },
-    "advance_nine_man": {
-        "recognition": "TemplateMatch",
-        "template": "Research/84.png",
-        "threshold": 0.6,
-        "green_mask": true,
-        "post_delay": 3000,
-        "action": "Click",
-        "target_offset": [
-            200,
-            -30,
-            0,
-            0
-        ],
-        "next": [
-            "advance_two",
-            "fixed_one"
-        ]
-    },
-    "fixed_one": {
-        "next": [
-            "advance_one_man",
-            "advance_one_women",
-            "advance_four"
-        ]
-    },
-    "fixed_two": {
-        "next": [
-            "advance_two_man",
-            "advance_two_women",
-            "advance_four"
-        ]
-    },
-    "fixed_three": {
-        "next": [
-            "advance_three_man",
-            "advance_three_women",
-            "advance_four"
-        ]
-    },
-    "fixed_four": {
-        "next": [
-            "advance_four_man",
-            "advance_four_women",
-            "advance_four"
-        ]
-    },
-    "fixed_five": {
-        "next": [
-            "advance_five_man",
-            "advance_five_women",
-            "advance_four"
-        ]
-    },
-    "fixed_six": {
-        "next": [
-            "advance_six_man",
-            "advance_six_women",
-            "advance_four"
-        ]
-    },
-    "fixed_seven": {
-        "next": [
-            "advance_seven_man",
-            "advance_seven_women",
-            "advance_four"
-        ]
-    },
-    "fixed_eight": {
-        "next": [
-            "advance_eight_man",
-            "advance_eight_women",
-            "advance_four"
-        ]
-    },
-    "fixed_nine": {
-        "next": [
-            "advance_nine_man",
-            "advance_nine_women",
-            "advance_four"
-        ]
-    },
-    "Snow": {
-        "recognition": "OCR",
-        "expected": "风雪之途",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "snow_2",
-            "predestination",
-            "advance_four"
-        ]
-    },
-    "snow_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/22.png",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "predestination",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "mountain_snow": {
-        "recognition": "TemplateMatch",
-        "template": "Research/42.png",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "mountain_snow_2",
-            "advance_four"
-        ]
-    },
-    "mountain_snow_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/43.png",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "predestination",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "patrol_the_mountains": {
-        "recognition": "OCR",
-        "expected": "巡雪山",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "patrol_the_mountains_2",
-            "advance_four"
-        ]
-    },
-    "patrol_the_mountains_2": {
-        "recognition": "OCR",
-        "expected": "到路途中去",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "predestination",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "cold_snow": {
-        "recognition": "OCR",
-        "expected": "再遇寒雪",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "cold_snow_2",
-            "advance_four"
-        ]
-    },
-    "cold_snow_2": {
-        "recognition": "OCR",
-        "expected": "顺势聊起山水画的事情",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "next": [
-            "predestination",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "sunrise": {
-        "recognition": "TemplateMatch",
-        "template": "Research/62.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "sunrise_2",
-            "advance_four"
-        ]
-    },
-    "sunrise_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/64.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "underfoot": {
-        "recognition": "TemplateMatch",
-        "template": "Research/88.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "underfoot_2",
-            "advance_four"
-        ]
-    },
-    "underfoot_2": {
-        "recognition": "OCR",
-        "expected": "拿起来仔细观察",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "planning": {
-        "recognition": "OCR",
-        "expected": "线路规划",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "planning_2",
-            "advance_four"
-        ]
-    },
-    "planning_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/97.png",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "Miscellaneous": {
-        "recognition": "TemplateMatch",
-        "template": "Research/120.png",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "next": [
-            "Miscellaneous_2",
-            "advance_four"
-        ]
-    },
-    "Miscellaneous_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/94.png",
-        "action": "Click",
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "ranger": {
-        "recognition": "OCR",
-        "expected": "护林小屋",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "ranger_2",
-            "advance_four"
-        ]
-    },
-    "ranger_2": {
-        "recognition": "OCR",
-        "expected": "询问护林员",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "mysterious": {
-        "recognition": "OCR",
-        "expected": "神秘快递",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "mysterious_2",
-            "advance_four"
-        ]
-    },
-    "mysterious_2": {
-        "recognition": "OCR",
-        "expected": "拆开",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "articles",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "articles": {
-        "recognition": "OCR",
-        "expected": "获得物资",
-        "action": "Click",
-        "post_delay": 1500,
-        "next": [
-            "upgrade_one",
-            "choose",
-            "advance_four"
-        ]
-    },
-    "painting": {
-        "recognition": "OCR",
-        "expected": "画性",
-        "action": "Click",
-        "roi": [
-            529,
-            65,
-            426,
-            104
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "painting_2",
-            "advance_four"
-        ]
-    },
-    "painting_2": {
-        "recognition": "OCR",
-        "expected": "我正好有带",
-        "action": "Click",
-        "post_wait_freezes": 2000,
-        "roi": [
-            594,
-            351,
-            561,
-            279
-        ],
-        "next": [
-            "perfect",
-            "keep",
-            "keyword",
-            "upgrade_one",
-            "choose"
-        ]
-    },
-    "war_one": {
-        "recognition": "TemplateMatch",
-        "template": "Research/30.png",
-        "action": "DoNothing",
-        "post_wait_freezes": 7000,
-        "next": [
-            "war_two",
-            "war_three",
-            "war_four",
-            "war_five",
-            "negative",
-            "war_new_state",
-            "advance_four"
-        ]
-    },
-    "war_two": {
-        "recognition": "OCR",
-        "expected": "中",
-        "action": "Click",
-        "roi": [
-            500,
-            235,
-            270,
-            280
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "negative"
-        ]
-    },
-    "war_three": {
-        "recognition": "OCR",
-        "expected": "良",
-        "action": "Click",
-        "roi": [
-            500,
-            235,
-            270,
-            280
-        ],
-        "post_wait_freezes": 2000,
-        "next": [
-            "war_new_state"
-        ]
-    },
-    "war_four": {
-        "recognition": "OCR",
-        "expected": "优",
-        "action": "Click",
-        "roi": [
-            500,
-            235,
-            270,
-            280
-        ],
-        "post_delay": 2000,
-        "next": [
-            "front_one",
-            "front_one_2",
-            "front_two",
-            "front_three",
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_one": {
-        "recognition": "OCR",
-        "expected": "怒焰",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_one_2",
-            "front_two",
-            "front_three",
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_one_2": {
-        "recognition": "OCR",
-        "expected": "快速启动",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_two",
-            "front_three",
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_two": {
-        "recognition": "OCR",
-        "expected": "会心一击",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_three",
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_three": {
-        "recognition": "OCR",
-        "expected": "自愈",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_four",
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_four": {
-        "recognition": "OCR",
-        "expected": "奔袭",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_four_2",
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_four_2": {
-        "recognition": "OCR",
-        "expected": "立盾为护",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_four_3",
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_four_3": {
-        "recognition": "OCR",
-        "expected": "对群弱点",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_four_4",
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_four_4": {
-        "recognition": "OCR",
-        "expected": "熟练技巧",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_five",
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_five": {
-        "recognition": "OCR",
-        "expected": "骁勇",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_six",
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_six": {
-        "recognition": "OCR",
-        "expected": "曜斩",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_seven",
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_seven": {
-        "recognition": "OCR",
-        "expected": "远程精通",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_eight",
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_eight": {
-        "recognition": "OCR",
-        "expected": "一击即走",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_eight_2",
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_eight_2": {
-        "recognition": "OCR",
-        "expected": "移动战术",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "front_nine",
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_nine": {
-        "recognition": "OCR",
-        "expected": "同仇敌忾",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "front_ten",
-            "agree_2",
-            "war_new_state"
-        ]
-    },
-    "front_ten": {
-        "recognition": "OCR",
-        "expected": "远行",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "agree_2",
-            "war_new_state",
-            "front_one"
-        ]
-    },
-    "agree_2": {
-        "recognition": "TemplateMatch",
-        "template": "Research/83.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "war_new_state",
-            "war_five"
-        ]
-    },
-    "war_new_state": {
-        "recognition": "TemplateMatch",
-        "template": "Research/58.png",
-        "roi": [
-            485,
-            23,
-            312,
-            108
-        ],
-        "action": "Click",
-        "post_delay": 5000,
-        "next": [
-            "war_five"
-        ]
-    },
-    "negative": {
-        "recognition": "TemplateMatch",
-        "template": "Research/95.png",
-        "action": "Click",
-        "roi": [
-            355,
-            2,
-            670,
-            186
-        ],
-        "post_delay": 5000,
-        "next": [
-            "war_five"
-        ]
-    },
-    "war_five": {
-        "recognition": "TemplateMatch",
-        "template": "Research/33.png",
-        "action": "Click",
-        "roi": [
-            649,
-            514,
-            631,
-            206
-        ],
-        "post_wait_freezes": 7000,
-        "next": [
-            "war_six"
-        ]
-    },
-    "war_six": {
-        "recognition": "TemplateMatch",
-        "template": "Research/34.png",
-        "action": "Click",
-        "roi": [
-            649,
-            514,
-            631,
-            206
-        ],
-        "post_delay": 7000,
-        "next": [
-            "remind_one",
-            "remind_all",
-            "automatic"
-        ]
-    },
-    "remind_one": {
-        "recognition": "TemplateMatch",
-        "template": "Research/77.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "next": [
-            "remind_two",
-            "remind_three",
-            "remind_all"
-        ]
-    },
-    "remind_two": {
-        "recognition": "TemplateMatch",
-        "template": "Research/77.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "next": [
-            "remind_three",
-            "remind_all"
-        ]
-    },
-    "remind_three": {
-        "recognition": "TemplateMatch",
-        "template": "Research/77.png",
-        "action": "Click",
-        "post_delay": 5000,
-        "next": [
-            "remind_all",
-            "automatic"
-        ]
-    },
-    "automatic": {
-        "action": "Click",
-        "target": [
-            1235,
-            160,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "remind_all"
-        ]
-    },
-    "remind_all": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": "代班",
-        "post_delay": 30000,
-        "timeout": 150000,
-        "timeout_next": [
-            "fail",
-            "war_seven"
-        ],
-        "next": [
-            "fail",
-            "war_seven"
-        ]
-    },
-    "war_seven": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
-        "roi": [
-            845,
-            600,
-            280,
-            120
-        ],
-        "post_delay": 5000,
-        "next": [
-            "upgrade_three",
-            "descending_three",
-            "advance_seven_man",
-            "advance_seven_women",
-            "fail",
-            "war_seven"
-        ]
-    },
-    "fail": {
-        "recognition": "OCR",
-        "expected": "完美评价",
-        "action": "Click",
-        "target": [
-            760,
-            430,
-            0,
-            0
-        ],
-        "post_delay": 5000,
-        "next": [
-            "war_seven"
+            "naturalist-studies-frigid-up-or-downgrade",
+            "naturalist-studies-frigid-without_two",
+            "naturalist-studies-frigid-without_one",
+            "naturalist-studies-frigid-without_three"
         ]
     }
 }

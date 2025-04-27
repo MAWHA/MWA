@@ -46,7 +46,7 @@
     },
     "attendance": {
         "recognition": "OCR",
-        "expected": "栖光游灵",
+        "expected": "旅程将启",
         "action": "Click",
         "post_delay": 2000,
         "roi": [

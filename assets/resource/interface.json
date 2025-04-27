@@ -91,19 +91,11 @@
         },
         {
             "name": "博物研学",
-            "entry": "museum_Research",
+            "entry": "naturalist-studies-title",
             "option": [
                 "选择研学主题",
                 "选择地图(仅老研学)",
                 "是否手动选择角色和buff"
-            ]
-        },
-             {
-            "name": "研究学习",
-            "entry": "Research and learning",
-            "option": [
-                "选择研究学习主题",
-                "选择研究学习路线"
             ]
         },
         {
@@ -642,16 +634,16 @@
                 {
                     "name": "山水纪行",
                     "pipeline_override": {
-                        "choose_theme": {
-                            "next": "mountain-river"
+                        "naturalist-studies-topic": {
+                            "next": "naturalist-studies-landscape"
                         }
                     }
                 },
                 {
                     "name": "金银纪行",
                     "pipeline_override": {
-                        "choose_theme": {
-                            "next": "gold-silver"
+                        "naturalist-studies-topic": {
+                            "next": "naturalist-studies-metallic"
                         }
                     }
                 }
@@ -662,8 +654,15 @@
                 {
                     "name": "雪景寒林图",
                     "pipeline_override": {
-                        "mountain_Research": {
-                            "next": "snowscape"
+                        "naturalist-studies-leave": {
+                            "next": [
+                                "naturalist-studies-frigid",
+                                "naturalist-studies-continuous",
+                                "naturalist-studies-frigid-state",
+                                "naturalist-studies-frigid-obtain",
+                                "naturalist-studies-frigid-forward-one",
+                                "naturalist-studies-leave"
+                            ]
                         }
                     }
                 },
@@ -714,34 +713,6 @@
                                 "choose_boss",
                                 "sub_choose_boss",
                                 "action_1"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-            "选择研究学习主题": {
-            "cases": [
-                {
-                    "name": "金银",
-                    "pipeline_override": {
-                        "Theme-selection": {
-                            "next": [
-                                "gold and silver Theme selection"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择研究学习路线": {
-            "cases": [
-                {
-                    "name": "重复金1得500分4报",
-                    "pipeline_override": {
-                        "choose-boss": {
-                            "next": [
-                                "repeat Bonecarve gold and silver first Level"
                             ]
                         }
                     }

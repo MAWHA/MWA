@@ -1,12 +1,12 @@
 {
     "landscape": {
         "recognition": "TemplateMatch",
-        "template": "Research/82.png",
+        "template": "Research/r1.png",
         "roi": [
-            109,
-            384,
-            80,
-            86
+            494,
+            386,
+            90,
+            84
         ],
         "action": "Click",
         "target_offset": [
@@ -17,9 +17,17 @@
         ],
         "post_wait_freezes": 3000,
         "next": [
-            "Marksmanship",
-            "Blazing_Knife",
-            "Spells"
+            "landscape-buff-one"
         ]
+    },
+    "landscape-buff-one": {
+        "action": "Click",
+        "target": [
+            360,
+            340,
+            0,
+            0
+        ],
+        "post_delay": 3000
     }
 }
