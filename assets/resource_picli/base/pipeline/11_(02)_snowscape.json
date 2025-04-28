@@ -1601,7 +1601,7 @@
     },
     "painting_2": {
         "recognition": "OCR",
-        "expected": "我正好有带",
+        "expected": "正好，我带了画箱！",
         "action": "Click",
         "post_wait_freezes": 2000,
         "roi": [

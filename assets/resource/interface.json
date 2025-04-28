@@ -1,0 +1,888 @@
+{
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        }
+    ],
+    "resource": [
+        {
+            "name": "B 服",
+            "path": [
+                "{PROJECT_DIR}/resource_picli/base"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动",
+            "entry": "Start"
+        },
+        {
+            "name": "器者征集",
+            "entry": "Collect",
+            "option": [
+                "征集几个"
+            ]
+        },
+        {
+            "name": "派遣公司",
+            "entry": "dispatch_company_all",
+            "option": [
+                "领取资源、好感、售卖机",
+                "社教模拟仪",
+                "制造物品",
+                "是否喝茶",
+                "是否领取活力值"
+            ]
+        },
+        {
+            "name": "武器制造",
+            "entry": "weapons-fabricate"
+        },
+        {
+            "name": "和合",
+            "entry": "combine-all",
+            "option": [
+                "和合版本"
+            ]
+        },
+        {
+            "name": "领取家具蓝图",
+            "entry": "blueprint-all"
+        },
+        {
+            "name": "每日免费礼包",
+            "entry": "business_kiosk"
+        },
+        {
+            "name": "易物所",
+            "entry": "Barter_random"
+        },
+        {
+            "name": "在主界面喝完（/上限）支持剩余1天，一天以内的水一并喝了）",
+            "entry": "drink_a_2day_water"
+        },
+        {
+            "name": "演训",
+            "entry": "kaishi",
+            "option": [
+                "选择关卡-演训",
+                "打哪个-演训",
+                "选择战斗次数"
+            ]
+        },
+        {
+            "name": "资源",
+            "entry": "resource_all",
+            "option": [
+                "选择关卡-资源",
+                "打哪个-资源",
+                "选择战斗次数"
+            ]
+        },
+        {
+            "name": "领取日常(包括游历)",
+            "entry": "task1"
+        },
+        {
+            "name": "邮箱",
+            "entry": "Mail"
+        },
+        {
+            "name": "博物研学",
+            "entry": "naturalist-studies-title",
+            "option": [
+                "选择研学主题",
+                "选择地图(仅老研学)",
+                "是否手动选择角色和buff"
+            ]
+        },
+        {
+            "name": "分解装备",
+            "entry": "dissect_weapon",
+            "option": [
+                "分解的装备的最大品质"
+            ]
+        },
+        {
+            "name": "活动签到",
+            "entry": "activity_attendance"
+        },
+        {
+            "name": "给好友点赞（目前默认就前4个）",
+            "entry": "visit"
+        },
+        {
+            "name": "若故人来",
+            "entry": "activity-old",
+            "option": [
+                "选择关卡-活动（朔漠）",
+                "选择战斗次数"
+            ]
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "StopApp"
+        }
+    ],
+    "option": {
+        "选择关卡-演训": {
+            "cases": [
+                {
+                    "name": "冬谷币",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Cash"
+                        }
+                    }
+                },
+                {
+                    "name": "教材",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Experience"
+                        }
+                    }
+                },
+                {
+                    "name": "装备",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Weapon"
+                        }
+                    }
+                },
+                {
+                    "name": "宿卫",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Defender"
+                        }
+                    }
+                },
+                {
+                    "name": "构术",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Caster"
+                        }
+                    }
+                },
+                {
+                    "name": "远击",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Ranger"
+                        }
+                    }
+                },
+                {
+                    "name": "轻锐",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "LightMelee"
+                        }
+                    }
+                },
+                {
+                    "name": "战略",
+                    "pipeline_override": {
+                        "StartTraining": {
+                            "next": "Tactical"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择关卡-资源": {
+            "cases": [
+                {
+                    "name": "第一章",
+                    "pipeline_override": {
+                        "resource_all": {
+                            "next": "resource_one"
+                        }
+                    }
+                },
+                {
+                    "name": "第二章",
+                    "pipeline_override": {
+                        "resource_all": {
+                            "next": "resource_two"
+                        }
+                    }
+                },
+                {
+                    "name": "第三章",
+                    "pipeline_override": {
+                        "resource_all": {
+                            "next": "resource_three"
+                        }
+                    }
+                },
+                {
+                    "name": "第四章",
+                    "pipeline_override": {
+                        "resource_all": {
+                            "next": "resource_four"
+                        }
+                    }
+                },
+                {
+                    "name": "第五章",
+                    "pipeline_override": {
+                        "resource_all": {
+                            "next": "resource_five"
+                        }
+                    }
+                }
+            ]
+        },
+        "打哪个-演训": {
+            "cases": [
+                {
+                    "name": "第一关（子）（演训用）",
+                    "pipeline_override": {
+                        "xuanze": {
+                            "next": "SelectStage01"
+                        }
+                    }
+                },
+                {
+                    "name": "第二关（丑）（演训用）",
+                    "pipeline_override": {
+                        "xuanze": {
+                            "next": "SelectStage02"
+                        }
+                    }
+                },
+                {
+                    "name": "第三关（寅）（演训用）",
+                    "pipeline_override": {
+                        "xuanze": {
+                            "next": "SelectStage03"
+                        }
+                    }
+                },
+                {
+                    "name": "第四关（卯）（演训用）",
+                    "pipeline_override": {
+                        "xuanze": {
+                            "next": "SelectStage04"
+                        }
+                    }
+                },
+                {
+                    "name": "第五关（辰）（演训用）",
+                    "pipeline_override": {
+                        "xuanze": {
+                            "next": "SelectStage05"
+                        }
+                    }
+                }
+            ]
+        },
+        "打哪个-资源": {
+            "cases": [
+                {
+                    "name": "第一关（壹）（资源用）",
+                    "pipeline_override": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often1"
+                        }
+                    }
+                },
+                {
+                    "name": "第二关（贰）（资源用）",
+                    "pipeline_override": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often2"
+                        }
+                    }
+                },
+                {
+                    "name": "第三关（叁）（资源用）",
+                    "pipeline_override": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often3"
+                        }
+                    }
+                },
+                {
+                    "name": "第四关（肆）（资源用）",
+                    "pipeline_override": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often4"
+                        }
+                    }
+                },
+                {
+                    "name": "第五关（伍）（资源用）",
+                    "pipeline_override": {
+                        "resource": {
+                            "next": "ancient_both_sea_cantonese_often5"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择战斗次数": {
+            "cases": [
+                {
+                    "name": "打一次（速通没解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "Start1"
+                        }
+                    }
+                },
+                {
+                    "name": "打一次（速通解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "Speedrun1x"
+                        }
+                    }
+                },
+                {
+                    "name": "打两次（速通解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "Speedrun2x"
+                        }
+                    }
+                },
+                {
+                    "name": "打四次（速通解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "Speedrun4x"
+                        }
+                    }
+                },
+                {
+                    "name": "打十次（速通解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "Speedrun10x"
+                        }
+                    }
+                },
+                {
+                    "name": "全部体力（速通解锁专用）",
+                    "pipeline_override": {
+                        "fast": {
+                            "next": "allin"
+                        }
+                    }
+                },
+                {
+                    "name": "速通不能用的关卡选择此(活动专用)",
+                    "pipeline_override": {
+                        "activity-zhandou": {
+                            "next": [
+                                "activity-Begin",
+                                "activity-Skip"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "领取资源、好感、售卖机": {
+            "cases": [
+                {
+                    "name": "领取奖励",
+                    "pipeline_override": {
+                        "entry_one": {
+                            "next": "entry_dispath_one"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取",
+                    "pipeline_override": {
+                        "entry_one": {
+                            "next": [
+                                "entry_back",
+                                "entry_convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "社教模拟仪": {
+            "cases": [
+                {
+                    "name": "初级社会指南",
+                    "pipeline_override": {
+                        "entry_dispath_three": {
+                            "next": "dispatch_social_one"
+                        }
+                    }
+                },
+                {
+                    "name": "中级社会指南",
+                    "pipeline_override": {
+                        "entry_dispath_three": {
+                            "next": "dispatch_social_two"
+                        }
+                    }
+                },
+                {
+                    "name": "高级社会指南",
+                    "pipeline_override": {
+                        "entry_dispath_three": {
+                            "next": "dispatch_social_three"
+                        }
+                    }
+                },
+                {
+                    "name": "进阶社会指南",
+                    "pipeline_override": {
+                        "entry_dispath_three": {
+                            "next": "dispatch_social_four"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取",
+                    "pipeline_override": {
+                        "entry_dispath_three": {
+                            "next": [
+                                "dispath_back",
+                                "dispath_convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "制造物品": {
+            "cases": [
+                {
+                    "name": "蓝色装备",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_one"
+                        }
+                    }
+                },
+                {
+                    "name": "铜石墨条（蓝装升级）",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_two"
+                        }
+                    }
+                },
+                {
+                    "name": "银石墨条（黄装升级）",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_three"
+                        }
+                    }
+                },
+                {
+                    "name": "100装备经验",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_four"
+                        }
+                    }
+                },
+                {
+                    "name": "1型钢材",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_five"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明1",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_six"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明2",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_seven"
+                        }
+                    }
+                },
+                {
+                    "name": "高级制造申请",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_eight"
+                        }
+                    }
+                },
+                {
+                    "name": "2型钢材",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_nine"
+                        }
+                    }
+                },
+                {
+                    "name": "资质证明3",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": "fabricate_all_ten"
+                        }
+                    }
+                },
+                {
+                    "name": "不制造",
+                    "pipeline_override": {
+                        "entry_dispath_four": {
+                            "next": [
+                                "fabricate_back",
+                                "fabricate_convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否喝茶": {
+            "cases": [
+                {
+                    "name": "喝茶",
+                    "pipeline_override": {
+                        "tea": {
+                            "next": "entry_dispath_five"
+                        }
+                    }
+                },
+                {
+                    "name": "不喝茶",
+                    "pipeline_override": {
+                        "tea": {
+                            "next": [
+                                "tea_back",
+                                "tea_convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否领取活力值": {
+            "cases": [
+                {
+                    "name": "领取",
+                    "pipeline_override": {
+                        "vitality": {
+                            "next": "entry_dispath_six"
+                        }
+                    }
+                },
+                {
+                    "name": "不领取",
+                    "pipeline_override": {
+                        "vitality": {
+                            "next": [
+                                "vitality_back",
+                                "vitality-convened"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "和合版本": {
+            "cases": [
+                {
+                    "name": "和合·椅",
+                    "pipeline_override": {
+                        "combine-choose": {
+                            "next": "combine-chair"
+                        }
+                    }
+                },
+                {
+                    "name": "和合·朝代",
+                    "pipeline_override": {
+                        "combine-choose": {
+                            "next": "combine-dynasty"
+                        }
+                    }
+                },
+                {
+                    "name": "和合·船",
+                    "pipeline_override": {
+                        "combine-choose": {
+                            "next": "combine-ship"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择研学主题": {
+            "cases": [
+                {
+                    "name": "山水纪行",
+                    "pipeline_override": {
+                        "naturalist-studies-topic": {
+                            "next": "naturalist-studies-landscape"
+                        }
+                    }
+                },
+                {
+                    "name": "金银纪行",
+                    "pipeline_override": {
+                        "naturalist-studies-topic": {
+                            "next": "naturalist-studies-metallic"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择地图(仅老研学)": {
+            "cases": [
+                {
+                    "name": "雪景寒林图",
+                    "pipeline_override": {
+                        "naturalist-studies-leave": {
+                            "next": [
+                                "naturalist-studies-frigid",
+                                "naturalist-studies-continuous",
+                                "naturalist-studies-frigid-state",
+                                "naturalist-studies-frigid-obtain",
+                                "naturalist-studies-frigid-forward-one",
+                                "naturalist-studies-leave"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "千里江山图 （暂无）",
+                    "pipeline_override": {
+                        "mountain_Research": {
+                            "next": "landscape"
+                        }
+                    }
+                },
+                {
+                    "name": "溪山旅行图 （暂无）",
+                    "pipeline_override": {
+                        "mountain_Research": {
+                            "next": "journey"
+                        }
+                    }
+                },
+                {
+                    "name": "打新研学选择",
+                    "pipeline_override": {
+                        "mountain_Research": {
+                            "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "是否手动选择角色和buff": {
+            "cases": [
+                {
+                    "name": "手动选择角色(选择完成，进入博学地图后才能开始运行)",
+                    "pipeline_override": {
+                        "gold_research": {
+                            "next": [
+                                "action_1",
+                                "jixu-research"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不手动选择，由MWA选择",
+                    "pipeline_override": {
+                        "gold_research": {
+                            "next": [
+                                "choose_boss",
+                                "sub_choose_boss",
+                                "action_1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "分解的装备的最大品质": {
+            "cases": [
+                {
+                    "name": "炽级",
+                    "pipeline_override": {
+                        "select_tier": {
+                            "next": "red"
+                        }
+                    }
+                },
+                {
+                    "name": "耀级",
+                    "pipeline_override": {
+                        "select_tier": {
+                            "next": "yellow"
+                        }
+                    }
+                },
+                {
+                    "name": "凌级",
+                    "pipeline_override": {
+                        "select_tier": {
+                            "next": "blue"
+                        }
+                    }
+                }
+            ]
+        },
+        "征集几个": {
+            "cases": [
+                {
+                    "name": "征集1个",
+                    "pipeline_override": {
+                        "Collect-add-all": {
+                            "next": "Collect-add-one"
+                        }
+                    }
+                },
+                {
+                    "name": "征集2个",
+                    "pipeline_override": {
+                        "Collect-add-all": {
+                            "next": "Collect-add-two"
+                        }
+                    }
+                },
+                {
+                    "name": "征集3个",
+                    "pipeline_override": {
+                        "Collect-add-all": {
+                            "next": "Collect-add-three"
+                        }
+                    }
+                },
+                {
+                    "name": "征集4个",
+                    "pipeline_override": {
+                        "Collect-add-all": {
+                            "next": "Collect-add-four"
+                        }
+                    }
+                }
+            ]
+        },
+        "选择关卡-活动（朔漠）": {
+            "cases": [
+                {
+                    "name": "第一关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-season"
+                        }
+                    }
+                },
+                {
+                    "name": "第二关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Moving"
+                        }
+                    }
+                },
+                {
+                    "name": "第三关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Deer-chirping"
+                        }
+                    }
+                },
+                {
+                    "name": "第四关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Bluebird"
+                        }
+                    }
+                },
+                {
+                    "name": "第五关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-city"
+                        }
+                    }
+                },
+                {
+                    "name": "第六关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Pegasus"
+                        }
+                    }
+                },
+                {
+                    "name": "第七关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Everything"
+                        }
+                    }
+                },
+                {
+                    "name": "第八关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-guard"
+                        }
+                    }
+                },
+                {
+                    "name": "第九关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-river"
+                        }
+                    }
+                },
+                {
+                    "name": "第十关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-longevity"
+                        }
+                    }
+                },
+                {
+                    "name": "第十一关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Miles"
+                        }
+                    }
+                },
+                {
+                    "name": "第十二关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-person"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "version": "v0.0.1"
+}

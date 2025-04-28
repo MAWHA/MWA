@@ -1,1235 +1,374 @@
 {
-    "activity-all": {
-        "next": [
-            "activity-fine",
-            "activity-hundred-home",
-            "activity-hundred-quit"
-        ]
-    },
-    "activity-hundred-home": {
-        "recognition": "TemplateMatch",
-        "template": "Startup\\10.png",
+    "activity-old": {
+        "recognition": "OCR",
+        "expected": "等级",
         "action": "Click",
+        "target": [
+            150,
+            185,
+            0,
+            0
+        ],
         "post_delay": 2000,
         "next": [
-            "activity-fine"
+            "activity-wind"
         ]
     },
-    "activity-hundred-quit": {
-        "recognition": "TemplateMatch",
-        "template": "receive_reward\\01.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-fine",
-            "activity-hundred-home"
-        ]
-    },
-    "activity-fine": {
+    "activity-wind": {
         "recognition": "OCR",
         "expected": [
-            "工巧",
-            "新途"
+            "风",
+            "起",
+            "漠",
+            "朔"
         ],
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-lantern",
-            "activity-taste",
-            "activity-journey",
-            "activity-fine"
+            "activity-Travelling",
+            "activity-wind"
+        ]
+    },
+    "activity-Travelling": {
+        "recognition": "OCR",
+        "expected": [
+            "携游",
+            "携",
+            "游"
         ],
-        "interrupt": [
-            "activity-quit",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "activity-season",
+            "activity-Moving",
+            "activity-Deer-chirping",
+            "activity-Bluebird",
+            "activity-city",
+            "activity-Pegasus",
+            "activity-Everything",
+            "activity-guard",
+            "activity-river",
+            "activity-longevity",
+            "activity-Miles",
+            "activity-person"
+        ]
+    },
+    "activity-season": {
+        "recognition": "OCR",
+        "expected": [
+            "谷",
+            "雨",
+            "谷雨"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-season"
+        ]
+    },
+    "activity-Moving": {
+        "recognition": "OCR",
+        "expected": [
+            "动如",
+            "参商"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Moving"
+        ]
+    },
+    "activity-Deer-chirping": {
+        "recognition": "OCR",
+        "expected": [
+            "鹿鸣",
+            "九色"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Deer-chirping"
+        ]
+    },
+    "activity-Bluebird": {
+        "recognition": "OCR",
+        "expected": [
+            "青鸟",
+            "问路"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Bluebird"
+        ]
+    },
+    "activity-city": {
+        "recognition": "OCR",
+        "expected": [
+            "煌煌",
+            "此城"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-city"
+        ]
+    },
+    "activity-Pegasus": {
+        "recognition": "OCR",
+        "expected": [
+            "天马",
+            "行空"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Pegasus"
+        ]
+    },
+    "activity-Everything": {
+        "recognition": "OCR",
+        "expected": [
+            "万物",
+            "三生"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Everything"
+        ]
+    },
+    "activity-guard": {
+        "recognition": "OCR",
+        "expected": [
+            "守宝",
+            "之龙"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-guard"
+        ]
+    },
+    "activity-river": {
+        "recognition": "OCR",
+        "expected": [
+            "千江",
+            "有水"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-river"
+        ]
+    },
+    "activity-longevity": {
+        "recognition": "OCR",
+        "expected": [
+            "无寿",
+            "者相"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Skip",
+            "activity-Begin",
+            "activity-longevity"
+        ]
+    },
+    "activity-Miles": {
+        "recognition": "OCR",
+        "expected": [
+            "万里",
+            "无云"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-Miles"
+        ]
+    },
+    "activity-person": {
+        "recognition": "OCR",
+        "expected": [
+            "见之",
+            "故人"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "fast",
+            "activity-zhandou",
+            "activity-Begin",
+            "activity-person"
+        ]
+    },
+    "activity-zhandou": {
+        "recognition": "OCR",
+        "expected": [
+            "开始",
+            "开",
+            "始"
+        ],
+        "next": [
+            "activity-Begin",
+            "activity-Skip",
             "activity-home"
-        ]
-    },
-    "activity-lantern": {
-        "recognition": "OCR",
-        "expected": "展会",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-exhibition-one",
-            "activity-Bright-night",
-            "activity-lantern"
-        ]
-    },
-    "activity-exhibition-one": {
-        "recognition": "OCR",
-        "expected": "前期",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-fight"
-        ]
-    },
-    "activity-taste": {
-        "recognition": "OCR",
-        "expected": "筹备",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-taste-one",
-            "activity-taste-two",
-            "activity-taste-three",
-            "activity-taste-four",
-            "activity-taste-five",
-            "activity-taste-six",
-            "activity-taste-seven"
-        ]
-    },
-    "activity-journey": {
-        "recognition": "OCR",
-        "expected": "短途游历",
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            0,
-            244,
-            219,
-            163
-        ],
-        "next": [
-            "activity-task"
-        ]
-    },
-    "activity-task": {
-        "recognition": "OCR",
-        "expected": "任务",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-weekly"
-        ]
-    },
-    "activity-weekly": {
-        "recognition": "OCR",
-        "expected": "周常",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-receive",
-            "activity-accomplishment",
-            "activity-journey-quit"
-        ]
-    },
-    "activity-receive": {
-        "recognition": "OCR",
-        "expected": [
-            "一键",
-            "领取"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            345,
-            496,
-            935,
-            224
-        ],
-        "next": [
-            "activity-give",
-            "activity-receive",
-            "activity-journey-quit"
-        ]
-    },
-    "activity-journey-quit": {
-        "recognition": "TemplateMatch",
-        "template": "receive_reward\\01.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-receive",
-            "activity-give",
-            "activity-quit",
-            "activity-home"
-        ]
-    },
-    "activity-give": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-accomplishment",
-            "activity-give",
-            "activity-quit"
-        ]
-    },
-    "activity-accomplishment": {
-        "recognition": "OCR",
-        "expected": "成就",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-receive",
-            "activity-journey-quit"
-        ]
-    },
-    "activity-taste-one": {
-        "recognition": "OCR",
-        "expected": "琼瑶",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            140,
-            315,
-            92,
-            39
-        ],
-        "next": [
-            "activity-skip-one",
-            "activity-taste-one"
-        ]
-    },
-    "activity-taste-two": {
-        "recognition": "OCR",
-        "expected": "呈新",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            302,
-            551,
-            93,
-            37
-        ],
-        "next": [
-            "activity-skip-two",
-            "activity-taste-two"
-        ]
-    },
-    "activity-taste-three": {
-        "recognition": "OCR",
-        "expected": "熙熙",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            573,
-            443,
-            90,
-            39
-        ],
-        "next": [
-            "activity-skip-three",
-            "activity-taste-three"
-        ]
-    },
-    "activity-taste-four": {
-        "recognition": "OCR",
-        "expected": "鱼龙",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            426,
-            240,
-            97,
-            36
-        ],
-        "next": [
-            "activity-skip-four",
-            "activity-taste-four"
-        ]
-    },
-    "activity-taste-five": {
-        "recognition": "OCR",
-        "expected": "九宾",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            773,
-            239,
-            89,
-            39
-        ],
-        "next": [
-            "activity-skip-five",
-            "activity-taste-five"
-        ]
-    },
-    "activity-taste-six": {
-        "recognition": "OCR",
-        "expected": "万年",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            894,
-            496,
-            86,
-            38
-        ],
-        "next": [
-            "activity-skip-six",
-            "activity-taste-six"
-        ]
-    },
-    "activity-taste-seven": {
-        "recognition": "OCR",
-        "expected": "且",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1076,
-            297,
-            86,
-            38
-        ],
-        "next": [
-            "activity-skip-seven",
-            "activity-taste-seven"
-        ]
-    },
-    "activity-skip-one": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-one",
-            "activity-taste-two",
-            "activity-skip-one"
-        ]
-    },
-    "activity-skip-two": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-two",
-            "activity-taste-three",
-            "activity-skip-two"
-        ]
-    },
-    "activity-skip-three": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-three",
-            "activity-taste-four",
-            "activity-skip-three"
-        ]
-    },
-    "activity-skip-four": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-four",
-            "activity-taste-five",
-            "activity-skip-four"
-        ]
-    },
-    "activity-skip-five": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-five",
-            "activity-taste-six",
-            "activity-skip-five"
-        ]
-    },
-    "activity-skip-six": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-six",
-            "activity-taste-seven",
-            "activity-skip-six"
-        ]
-    },
-    "activity-skip-seven": {
-        "recognition": "TemplateMatch",
-        "template": "activity\\04.png",
-        "action": "Click",
-        "post_delay": 3000,
-        "roi": [
-            1103,
-            0,
-            177,
-            165
-        ],
-        "next": [
-            "activity-taste-give-seven",
-            "activity-quit",
-            "activity-skip-seven"
-        ]
-    },
-    "activity-taste-give-one": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-two",
-            "activity-taste-give-one"
-        ]
-    },
-    "activity-taste-give-two": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-three",
-            "activity-taste-give-two"
-        ]
-    },
-    "activity-taste-give-three": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-four",
-            "activity-taste-give-three"
-        ]
-    },
-    "activity-taste-give-four": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-five",
-            "activity-taste-give-four"
-        ]
-    },
-    "activity-taste-give-five": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-six",
-            "activity-taste-give-five"
-        ]
-    },
-    "activity-taste-give-six": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-taste-seven",
-            "activity-taste-give-six"
-        ]
-    },
-    "activity-taste-give-seven": {
-        "recognition": "OCR",
-        "expected": [
-            "获",
-            "得",
-            "物",
-            "资"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "roi": [
-            964,
-            115,
-            245,
-            487
-        ],
-        "next": [
-            "activity-quit",
-            "activity-taste-give-seven"
-        ]
-    },
-    "activity-quit": {
-        "recognition": "TemplateMatch",
-        "template": "receive_reward\\01.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-home",
-            "activity-quit",
-            "start-convened"
         ]
     },
     "activity-home": {
         "recognition": "TemplateMatch",
         "template": "Startup\\10.png",
         "action": "Click",
-        "post_delay": 2000
-    },
-    "activity-resplendent": {
-        "recognition": "OCR",
-        "expected": [
-            "璀璨"
-        ],
-        "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-fire-one",
-            "activity-fire-two",
-            "activity-fire-three",
-            "activity-fire-four-swipe",
-            "activity-fire-five-swipe",
-            "activity-fire-six-swipe",
-            "activity-resplendent"
+            "start-convened"
         ]
     },
-    "activity-Bright-night": {
-        "recognition": "OCR",
-        "expected": [
-            "华灯夜"
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-combustion-one",
-            "activity-Bright-night"
-        ]
-    },
-    "activity-fire-one": {
-        "recognition": "OCR",
-        "expected": "一",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-fire-two": {
-        "recognition": "OCR",
-        "expected": "二",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-fire-three": {
-        "recognition": "OCR",
-        "expected": "三",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-fire-four-swipe": {
-        "recognition": "OCR",
-        "expected": "取火",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-fire-four"
-        ]
-    },
-    "activity-fire-five-swipe": {
-        "recognition": "OCR",
-        "expected": "取火",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-fire-five"
-        ]
-    },
-    "activity-fire-six-swipe": {
-        "recognition": "OCR",
-        "expected": "取火",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-fire-six"
-        ]
-    },
-    "activity-fire-four": {
-        "recognition": "OCR",
-        "expected": "四",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-fire-five": {
-        "recognition": "OCR",
-        "expected": "五",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-fire-six": {
-        "recognition": "OCR",
-        "expected": "六",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-one": {
-        "recognition": "OCR",
-        "expected": "一",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "activity-tactics",
-            "activity-start",
-            "activity-combustion-one"
-        ]
-    },
-    "activity-combustion-two": {
-        "recognition": "OCR",
-        "expected": "二",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-three": {
-        "recognition": "OCR",
-        "expected": "三",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-four-swipe": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-four"
-        ]
-    },
-    "activity-combustion-four": {
-        "recognition": "OCR",
-        "expected": "四",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-five-swipe": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-five"
-        ]
-    },
-    "activity-combustion-five": {
-        "recognition": "OCR",
-        "expected": "五",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-six-swipe": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-six"
-        ]
-    },
-    "activity-combustion-six": {
-        "recognition": "OCR",
-        "expected": "六",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-seven-swipe-one": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-seven-swipe-two"
-        ]
-    },
-    "activity-combustion-seven-swipe-two": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-seven"
-        ]
-    },
-    "activity-combustion-seven": {
-        "recognition": "OCR",
-        "expected": "七",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-eight-swipe-one": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-eight-swipe-two"
-        ]
-    },
-    "activity-combustion-eight-swipe-two": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-eight"
-        ]
-    },
-    "activity-combustion-eight": {
-        "recognition": "OCR",
-        "expected": "八",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-combustion-nine-swipe-one": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-nine-swipe-two"
-        ]
-    },
-    "activity-combustion-nine-swipe-two": {
-        "recognition": "OCR",
-        "expected": "燃灯",
-        "action": "Swipe",
-        "begin": [
-            650,
-            275,
-            0,
-            0
-        ],
-        "end": [
-            315,
-            275,
-            0,
-            0
-        ],
-        "post_delay": 3000,
-        "next": [
-            "activity-combustion-nine"
-        ]
-    },
-    "activity-combustion-nine": {
-        "recognition": "OCR",
-        "expected": "九",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "fast"
-        ]
-    },
-    "activity-start": {
+    "activity-Begin": {
         "recognition": "OCR",
         "expected": [
             "开始",
-            "继续"
+            "战斗",
+            "始"
         ],
         "action": "Click",
         "post_delay": 3000,
-        "roi": [
-            963,
-            418,
-            314,
-            221
-        ],
         "next": [
-            "activity-tactics",
-            "activity-start"
+            "activity-Begin",
+            "activity-Skip",
+            "activity-attention",
+            "activity-automatic"
         ]
     },
-    "activity-tactics": {
-        "recognition": "OCR",
-        "expected": "策略",
+    "activity-Skip": {
+        "recognition": "TemplateMatch",
+        "template": "activity\\04.png",
         "action": "Click",
-        "target": [
-            360,
-            315,
-            0,
-            0
-        ],
-        "roi": [
-            21,
-            0,
-            266,
-            153
-        ],
         "post_delay": 2000,
         "next": [
-            "activity-fight",
-            "activity-tactics"
+            "activity-obtain",
+            "activity-Begin",
+            "activity-Skip"
         ]
     },
-    "activity-fight": {
-        "recognition": "OCR",
-        "expected": "开始",
-        "action": "Click",
-        "post_delay": 7000,
-        "roi": [
-            722,
-            455,
-            558,
-            265
-        ],
-        "next": [
-            "activity-fight",
-            "activity-substitute-shifts",
-            "activity-automatic",
-            "activity-end"
-        ]
-    },
-    "activity-substitute-shifts": {
+    "activity-obtain": {
         "recognition": "OCR",
         "expected": [
-            "代班中",
+            "获得",
+            "物品"
+        ],
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "activity-Begin",
+            "activity-Skip"
+        ]
+    },
+    "activity-attention": {
+        "recognition": "OCR",
+        "expected": [
+            "留意",
+            "代班",
             "敌方",
-            "留意"
+            "行动"
         ],
         "action": "Click",
         "post_delay": 2000,
-        "roi": [
-            453,
-            0,
-            368,
-            246
-        ],
         "next": [
-            "activity-end",
-            "activity-fail",
-            "activity-substitute-shifts"
+            "activity-Begin",
+            "activity-automatic",
+            "activity-attention",
+            "activity-appraise"
         ]
     },
     "activity-automatic": {
         "recognition": "OCR",
-        "expected": "自动",
+        "expected": [
+            "自动"
+        ],
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "activity-substitute-shifts",
-            "activity-end",
-            "activity-fail",
-            "activity-fight",
-            "activity-automatic"
-        ]
-    },
-    "activity-end": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
-        "post_delay": 7000,
-        "roi": [
-            564,
-            429,
-            716,
-            291
-        ],
-        "next": [
-            "activity-continue",
-            "activity-end"
+            "activity-attention",
+            "activity-Begin"
         ]
     },
     "activity-fail": {
         "recognition": "OCR",
         "expected": [
-            "未能",
-            "达到",
-            "完美",
-            "评价",
-            "结算"
-        ],
-        "roi": [
-            406,
-            248,
-            459,
-            227
+            "未能达到",
+            "是否结算"
         ],
         "action": "Click",
         "target": [
-            775,
-            435,
+            770,
+            430,
             0,
             0
         ],
         "post_delay": 2000,
         "next": [
-            "activity-end",
-            "activity-end-fail",
+            "activity-appraise",
+            "activity-determine",
             "activity-fail"
         ]
     },
-    "activity-end-fail": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
-        "post_delay": 7000,
-        "roi": [
-            564,
-            429,
-            716,
-            291
-        ],
-        "next": [
-            "activity-abandon",
-            "activity-end-fail",
-            "activity-start"
-        ]
-    },
-    "activity-abandon": {
+    "activity-appraise": {
         "recognition": "OCR",
         "expected": [
-            "放弃",
-            "挑战"
+            "评级",
+            "奖励"
         ],
         "action": "Click",
-        "post_delay": 5000,
-        "roi": [
-            992,
-            542,
-            288,
-            178
-        ],
-        "next": [
-            "activity-end-fail",
-            "activity-start"
-        ]
-    },
-    "activity-continue": {
-        "recognition": "OCR",
-        "expected": [
-            "优",
-            "良",
-            "中"
-        ],
-        "action": "Click",
-        "post_delay": 3000,
-        "index": -1,
-        "target_offset": [
-            0,
-            130,
-            0,
-            0
-        ],
-        "roi": [
-            1084,
-            86,
-            134,
-            579
-        ],
-        "next": [
-            "activity-fight",
-            "activity-report",
-            "activity-continue",
-            "activity-fine-swap"
-        ]
-    },
-    "activity-report": {
-        "recognition": "TemplateMatch",
-        "template": "Shop\\01.png",
-        "action": "DoNothing",
         "post_delay": 2000,
-        "next": []
-    },
-    "activity-fine-swap": {
-        "action": "Swipe",
-        "begin": [
-            885,
-            420,
-            0,
-            0
-        ],
-        "end": [
-            885,
-            270,
-            0,
-            0
-        ],
-        "post_delay": 3000,
         "next": [
-            "activity-fight",
-            "activity-continue",
-            "activity-fine-swap"
+            "activity-determine",
+            "activity-appraise"
         ]
     },
-    "activity-fire": {
+    "activity-determine": {
         "recognition": "OCR",
-        "expected": "取火",
-        "post_delay": 3000,
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "activity-quit",
-            "activity-home",
-            "start-convened"
+            "activity-determine",
+            "activity-Skip"
         ]
     }
 }

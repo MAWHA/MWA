@@ -98,6 +98,7 @@
                 "是否手动选择角色和buff"
             ]
         },
+
         {
             "name": "研究学习",
             "entry": "Research and learning",
@@ -122,13 +123,11 @@
             "entry": "visit"
         },
         {
-            "name": "良宵百载",
-            "entry": "activity-all",
+            "name": "若故人来",
+            "entry": "activity-old",
             "option": [
-                "选择进程（短途旅游、观灯、赏味）",
-                "选择关卡-活动",
-                "选择战斗次数",
-                "选择是否放弃(战斗失败时的选择)"
+                "选择关卡-活动（朔漠）",
+                "选择战斗次数"
             ]
         },
         {
@@ -388,22 +387,13 @@
                     }
                 },
                 {
-                    "name": "非战斗选项选择这个(活动“良宵百载”专用！！！）",
+                    "name": "速通不能用的关卡选择此(活动专用)",
                     "pipeline_override": {
-                        "activity-fail": {
+                        "activity-zhandou": {
                             "next": [
-                                "activity-end",
-                                "activity-fire",
-                                "start-convened"
+                                "activity-Begin",
+                                "activity-Skip"
                             ]
-                        }
-                    }
-                },
-                {
-                    "name": "华灯夜选择这个(活动“良宵百载”专用！！！）",
-                    "pipeline_override": {
-                        "activity-fail": {
-                            "next": []
                         }
                     }
                 }
@@ -795,6 +785,7 @@
                 }
             ]
         },
+
         "选择研究学习主题": {
             "cases": [
                 {
@@ -844,163 +835,101 @@
             ]
         },
         "选择进程（短途旅游、观灯、赏味）": {
-            "cases": [
-                {
-                    "name": "短途旅游",
-                    "pipeline_override": {
-                        "activity-hundred": {
-                            "next": "activity-journey"
-                        }
-                    }
-                },
-                {
-                    "name": "璀璨",
-                    "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-resplendent"
-                        }
-                    }
-                },
-                {
-                    "name": "华灯夜",
-                    "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-Bright-night"
-                        }
-                    }
-                },
-                {
-                    "name": "赏味",
-                    "pipeline_override": {
-                        "activity-hundred": {
-                            "next": "activity-taste"
-                        }
-                    }
-                }
-            ]
-        },
-        "选择是否放弃(战斗失败时的选择)": {
-            "cases": [
-                {
-                    "name": "放弃",
-                    "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-end-fail",
-                                "activity-fire",
-                                "start-convened"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "继续",
-                    "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-end",
-                                "activity-fire",
-                                "start-convened"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "打璀璨选择这个",
-                    "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-end",
-                                "activity-fire",
-                                "start-convened"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "非战斗选项选择这个",
-                    "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-end",
-                                "activity-fire",
-                                "start-convened"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择关卡-活动": {
+        "选择关卡-活动（朔漠）": {
             "cases": [
                 {
                     "name": "第一关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-one"
+                        "activity-Travelling": {
+                            "next": "activity-season"
                         }
                     }
                 },
                 {
                     "name": "第二关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-two"
+                        "activity-Travelling": {
+                            "next": "activity-Moving"
                         }
                     }
                 },
                 {
                     "name": "第三关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-three"
+                        "activity-Travelling": {
+                            "next": "activity-Deer-chirping"
                         }
                     }
                 },
                 {
                     "name": "第四关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-four-swipe"
+                        "activity-Travelling": {
+                            "next": "activity-Bluebird"
                         }
                     }
                 },
                 {
                     "name": "第五关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-five-swipe"
+                        "activity-Travelling": {
+                            "next": "activity-city"
                         }
                     }
                 },
                 {
                     "name": "第六关",
                     "pipeline_override": {
-                        "activity-lantern": {
-                            "next": "activity-fire-six-swipe"
+                        "activity-Travelling": {
+                            "next": "activity-Pegasus"
                         }
                     }
                 },
                 {
-                    "name": "非战斗选项选择这个",
+                    "name": "第七关",
                     "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-end",
-                                "activity-fire",
-                                "start-convened"
-                            ]
+                        "activity-Travelling": {
+                            "next": "activity-Everything"
                         }
                     }
                 },
                 {
-                    "name": "华灯夜选这个",
+                    "name": "第八关",
                     "pipeline_override": {
-                        "activity-fail": {
-                            "next": [
-                                "activity-combustion-one",
-                                "activity-Bright-night"
-                            ]
+                        "activity-Travelling": {
+                            "next": "activity-guard"
+                        }
+                    }
+                },
+                {
+                    "name": "第九关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-river"
+                        }
+                    }
+                },
+                {
+                    "name": "第十关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-longevity"
+                        }
+                    }
+                },
+                {
+                    "name": "第十一关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Miles"
+                        }
+                    }
+                },
+                {
+                    "name": "第十二关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-person"
                         }
                     }
                 }
