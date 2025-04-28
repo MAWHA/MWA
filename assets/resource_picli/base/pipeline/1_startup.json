@@ -13,7 +13,7 @@
     },
     "startup": {
         "action": "StartApp",
-        "package": "com.cipaishe.wuhua.bilibili/com.cipaishe.wuhua.bilibili.activity.ONESDKSplashActivity",
+        "package": "com.cipaishe.wuhua.bilibili",
         "post_wait_freezes": 10000,
         "timeout": 120000,
         "next": [
