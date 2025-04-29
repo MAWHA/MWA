@@ -98,15 +98,6 @@
                 "是否手动选择角色和buff"
             ]
         },
-
-        {
-            "name": "研究学习",
-            "entry": "Research and learning",
-            "option": [
-                "选择研究学习主题",
-                "选择研究学习路线"
-            ]
-        },
         {
             "name": "分解装备",
             "entry": "dissect_weapon",
@@ -785,56 +776,6 @@
                 }
             ]
         },
-
-        "选择研究学习主题": {
-            "cases": [
-                {
-                    "name": "金银",
-                    "pipeline_override": {
-                        "Theme-selection": {
-                            "next": [
-                                "gold and silver Theme selection"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "山水",
-                    "pipeline_override": {
-                        "Theme-selection": {
-                            "next": [
-                                "mountains and rivers Theme selection"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择研究学习路线": {
-            "cases": [
-                {
-                    "name": "重复金1得1500分和8报（不能在研学界面开启）",
-                    "pipeline_override": {
-                        "choose-boss": {
-                            "next": [
-                                "repeat Bonecarve gold and silver first Level"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "重复水1得0分和3到17报（不能在研学界面开启）",
-                    "pipeline_override": {
-                        "choose-direction": {
-                            "next": [
-                                "repeat mountain and river snow-scape first Level"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择进程（短途旅游、观灯、赏味）": {
         "选择关卡-活动（朔漠）": {
             "cases": [
                 {
