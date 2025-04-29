@@ -1,0 +1,20 @@
+name: Check interface.json validity
+
+on:
+  pull_request:
+    paths:
+      - 'interface.json'
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout PR code
+      uses: actions/checkout@v4
+
+    - name: Validate interface.json
+      run: |
+        echo "Checking interface.json syntax..."
+        cat interface.json | jq empty
+      shell: bash
