@@ -1,0 +1,91 @@
+{
+    "Research and learning": {
+        "post_delay": 5000,
+        "next": [
+            "enter research and learning",
+            "return-todesktop"
+        ]
+    },
+    "return-todesktop": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "enter research and learning",
+            "return-todesktop"
+        ]
+    },
+    "enter research and learning": {
+        "recognition": "OCR",
+        "expected": [
+            "博物",
+            "研学"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "close-Weekly-rewards",
+            "Theme-selection"
+        ]
+    },
+    "close-Weekly-rewards": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning gold and silver/points.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Theme-selection"
+        ]
+    },
+    "Theme-selection": {
+        "next": [
+            "mountains and rivers Theme selection",
+            "gold and silver Theme selection"
+        ]
+    },
+    "mountains and rivers Theme selection": {
+        "recognition": "OCR",
+        "expected": [
+            "山水画境"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "enter Theme mountains and rivers"
+        ]
+    },
+    "gold and silver Theme selection": {
+        "recognition": "OCR",
+        "expected": [
+            "金银纪行"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "enter Theme gold and silver"
+        ]
+    },
+    "enter Theme gold and silver": {
+        "recognition": "OCR",
+        "expected": [
+            "进入主题"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "set-out-Theme-select gold and silver"
+        ]
+    },
+    "enter Theme mountains and rivers": {
+        "recognition": "OCR",
+        "expected": [
+            "进入主题"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "set-out-Theme-select mountains and rivers"
+        ]
+    }
+}
