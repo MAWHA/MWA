@@ -154,7 +154,8 @@
             "rlmr-down-grade",
             "rlmr-up-grade",
             "rlmr-Pre-war-assessment",
-            "rlmr-continue"
+            "rlmr-continue",
+            "get-Artifact-cards"
         ]
     },
     "rlmr-foundation": {
@@ -355,22 +356,36 @@
         "pre_delay": 4000,
         "action": "Click",
         "next": [
-            "Select-the-battle-status",
-            "Negative-status"
+            "one-Negative-status",
+            "one-Positive-status",
+            "Select-two-Positive-status"
         ]
     },
-    "Negative-status": {
-        "recognition": "TemplateMatch",
-        "template": "research and lenrning mountains and rivers/Negative-status.png",
+    "one-Negative-status": {
+        "recognition": "OCR",
+        "expected": [
+            "获得一个负向战斗状态"
+        ],
         "pre_delay": 4000,
         "action": "Click",
         "next": [
             "rlmr-prepare"
         ]
     },
-    "Select-the-battle-status": {
+    "one-Positive-status": {
+        "recognition": "OCR",
+        "expected": [
+            "获得新的战斗状态"
+        ],
+        "pre_delay": 4000,
+        "action": "Click",
+        "next": [
+            "rlmr-prepare"
+        ]
+    },
+    "Select-two-Positive-status": {
         "recognition": "TemplateMatch",
-        "template": "research and lenrning mountains and rivers/Positive-Combat-status.png",
+        "template": "research and lenrning mountains and rivers/select-Positive-Combat-status.png",
         "action": "Click",
         "target": [
             377,
@@ -401,7 +416,7 @@
     },
     "Select-the-battle-status-get": {
         "recognition": "TemplateMatch",
-        "template": "research and lenrning mountains and rivers/get-new-fight-status.png",
+        "template": "research and lenrning mountains and rivers/Positive-status.png",
         "action": "Click",
         "post_delay": 1000,
         "next": "rlmr-prepare"
@@ -419,6 +434,13 @@
         "action": "Click",
         "post_delay": 1000,
         "next": "rlmr-down-grade"
+    },
+    "get-Artifact-cards": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/get.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "rlmr-continue"
     },
     "rlmr-continue": {
         "recognition": "TemplateMatch",
