@@ -98,6 +98,7 @@
                 "是否手动选择角色和buff"
             ]
         },
+
         {
             "name": "研究学习",
             "entry": "Research and learning",
@@ -784,6 +785,7 @@
                 }
             ]
         },
+
         "选择研究学习主题": {
             "cases": [
                 {
@@ -821,7 +823,7 @@
                     }
                 },
                 {
-                    "name": "重复水1得0分和3到17报（不能在研学界面开启、不能有未完成的研学）",
+                    "name": "重复水1得0分和3到17报（不能在研学界面开启）",
                     "pipeline_override": {
                         "choose-direction": {
                             "next": [
@@ -833,107 +835,106 @@
             ]
         },
         "选择进程（短途旅游、观灯、赏味）": {
-            "选择关卡-活动（朔漠）": {
-                "cases": [
-                    {
-                        "name": "第一关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-season"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第二关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Moving"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第三关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Deer-chirping"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第四关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Bluebird"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第五关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-city"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第六关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Pegasus"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第七关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Everything"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第八关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-guard"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第九关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-river"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第十关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-longevity"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第十一关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-Miles"
-                            }
-                        }
-                    },
-                    {
-                        "name": "第十二关",
-                        "pipeline_override": {
-                            "activity-Travelling": {
-                                "next": "activity-person"
-                            }
+        "选择关卡-活动（朔漠）": {
+            "cases": [
+                {
+                    "name": "第一关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-season"
                         }
                     }
-                ]
-            }
-        },
-        "version": "v0.0.1"
-    }
+                },
+                {
+                    "name": "第二关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Moving"
+                        }
+                    }
+                },
+                {
+                    "name": "第三关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Deer-chirping"
+                        }
+                    }
+                },
+                {
+                    "name": "第四关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Bluebird"
+                        }
+                    }
+                },
+                {
+                    "name": "第五关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-city"
+                        }
+                    }
+                },
+                {
+                    "name": "第六关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Pegasus"
+                        }
+                    }
+                },
+                {
+                    "name": "第七关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Everything"
+                        }
+                    }
+                },
+                {
+                    "name": "第八关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-guard"
+                        }
+                    }
+                },
+                {
+                    "name": "第九关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-river"
+                        }
+                    }
+                },
+                {
+                    "name": "第十关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-longevity"
+                        }
+                    }
+                },
+                {
+                    "name": "第十一关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-Miles"
+                        }
+                    }
+                },
+                {
+                    "name": "第十二关",
+                    "pipeline_override": {
+                        "activity-Travelling": {
+                            "next": "activity-person"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "version": "v0.0.1"
 }

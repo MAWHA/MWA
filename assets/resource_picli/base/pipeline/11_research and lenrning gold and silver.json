@@ -2,15 +2,14 @@
     "set-out-Theme-select gold and silver": {
         "recognition": "OCR",
         "expected": [
-            "继续研学",
-            "研学启程"
+            "研学启程",
+            "继续研学"
         ],
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "rlgr-action-fight",
-            "rlgr-quit",
-            "choose-boss"
+            "choose-boss",
+            "rlgr-recognition"
         ]
     },
     "choose-boss": {
