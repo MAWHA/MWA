@@ -213,60 +213,6 @@
         "expected": "进入研学",
         "action": "Click",
         "post_delay": 20000,
-        "next": [
-            "action-1"
-        ]
-    },
-    "action-1": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Research2/rest2.png"
-        ],
-        "green_mask": true,
-        "post_wait_freezes": 500,
-        "action": "Click",
-        "next": [
-            "rest"
-        ]
-    },
-    "rest": {
-        "recognition": "OCR",
-        "expected": "休息",
-        "post_wait_freezes": 500,
-        "action": "Click",
-        "next": [
-            "sure"
-        ]
-    },
-    "sure": {
-        "recognition": "OCR",
-        "expected": "确认",
-        "post_wait_freezes": 500,
-        "action": "Click"
-    },
-    "action-2": {
-        "recognition": "TemplateMatch",
-        "template": "research and lenrning gold and silver/fight-1.png",
-        "action": "Click",
-        "post_wait_freezes": 500,
-        "next": [
-            "fight",
-            "swipe_map_3"
-        ]
-    },
-    "action-6": {
-        "recognition": "TemplateMatch",
-        "template": "Research2/fight_2.png",
-        "green_mask": true,
-        "action": "Click",
-        "index": 0,
-        "post_wait_freezes": 500,
-        "next": [
-            "fight",
-            "swipe_map_2"
-        ]
-    },
-    "repeat gold and silver first Level": {}
         "next": []
     }
 }
