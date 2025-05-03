@@ -1,0 +1,460 @@
+{
+    "repeat mountain and river snow-scape first Level": {
+        "recognition": "OCR",
+        "expected": [
+            "开始研学"
+        ],
+        "roi": [
+            104,
+            522,
+            283,
+            55
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "next": "rlmr-choose-firstbuff"
+    },
+    "rlmr-choose-firstbuff": {
+        "action": "Click",
+        "target": [
+            637,
+            274,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-sure"
+    },
+    "rlmr-sure": {
+        "recognition": "OCR",
+        "expected": [
+            "确认"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "rlmr-glade-click"
+    },
+    "rlmr-glade-click": {
+        "action": "Click",
+        "target": [
+            625,
+            616,
+            0,
+            0
+        ],
+        "next": "Exhaustive-clicks-1"
+    },
+    "Exhaustive-clicks": {
+        "next": [
+            "Exhaustive-clicks-1",
+            "Exhaustive-clicks-2",
+            "Exhaustive-clicks-3",
+            "Exhaustive-clicks-4",
+            "Exhaustive-clicks-5"
+        ]
+    },
+    "Exhaustive-clicks-1": {
+        "action": "Click",
+        "target": [
+            424,
+            471,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "rlmr-head-for",
+            "Exhaustive-clicks-2",
+            "Exhaustive-clicks-3",
+            "Exhaustive-clicks-4",
+            "Exhaustive-clicks-5",
+            "Exhaustive-clicks-6"
+        ]
+    },
+    "Exhaustive-clicks-2": {
+        "action": "Click",
+        "target": [
+            649,
+            444,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "rlmr-head-for",
+            "Exhaustive-clicks-3",
+            "Exhaustive-clicks-4",
+            "Exhaustive-clicks-5"
+        ]
+    },
+    "Exhaustive-clicks-3": {
+        "action": "Click",
+        "target": [
+            669,
+            453,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "rlmr-head-for",
+            "Exhaustive-clicks-4",
+            "Exhaustive-clicks-5"
+        ]
+    },
+    "Exhaustive-clicks-4": {
+        "action": "Click",
+        "target": [
+            723,
+            605,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "rlmr-head-for",
+            "Exhaustive-clicks-5"
+        ]
+    },
+    "Exhaustive-clicks-5": {
+        "action": "Click",
+        "target": [
+            843,
+            394,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-head-for"
+    },
+    "Exhaustive-clicks-6": {
+        "action": "Click",
+        "target": [
+            418,
+            550,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-head-for"
+    },
+    "rlmr-head-for": {
+        "recognition": "OCR",
+        "expected": [
+            "前往"
+        ],
+        "action": "Click",
+        "next": "rlmr-head-for-2"
+    },
+    "rlmr-head-for-2": {
+        "next": [
+            "rlmr-foundation",
+            "rlmr-sasuga",
+            "rlmr-keyword",
+            "rlmr-down-grade",
+            "rlmr-up-grade",
+            "rlmr-Pre-war-assessment",
+            "rlmr-continue"
+        ]
+    },
+    "rlmr-foundation": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/jijinghui.png",
+        "action": "Click",
+        "target": [
+            728,
+            409,
+            0,
+            0
+        ],
+        "post_delay": 4000,
+        "next": "rlmr-head-for-2"
+    },
+    "rlmr-sasuga": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/sasuga.png",
+        "action": "Click",
+        "post_delay": 4000,
+        "next": "rlmr-head-for-2"
+    },
+    "rlmr-keyword": {
+        "recognition": "TemplateMatch",
+        "template": "Research/15.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "rlmr-head-for-2"
+    },
+    "rlmr-up-grade": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/uplevel.png",
+        "post_delay": 1000,
+        "next": "grade-click"
+    },
+    "rlmr-down-grade": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/downlevel.png",
+        "post_delay": 1000,
+        "next": "grade-click"
+    },
+    "grade-click": {
+        "next": "grade-click-1"
+    },
+    "grade-click-1": {
+        "action": "Click",
+        "target": [
+            265,
+            314,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": "rlmr-choose-click-1"
+    },
+    "rlmr-choose-click-1": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "rlmr-Was-the-upgrade-successful-1",
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Was-the-upgrade-successful-1": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "next": "grade-click-2"
+    },
+    "grade-click-2": {
+        "action": "Click",
+        "target": [
+            212,
+            402,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": "rlmr-choose-click-2"
+    },
+    "rlmr-choose-click-2": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "rlmr-Was-the-upgrade-successful-2",
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Was-the-upgrade-successful-2": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "next": "grade-click-3"
+    },
+    "grade-click-3": {
+        "action": "Click",
+        "target": [
+            319,
+            394,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-choose-click-3"
+    },
+    "rlmr-choose-click-3": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "rlmr-Was-the-upgrade-successful-3",
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Was-the-upgrade-successful-3": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "next": "grade-click-4"
+    },
+    "grade-click-4": {
+        "action": "Click",
+        "target": [
+            600,
+            320,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-choose-click-4"
+    },
+    "rlmr-choose-click-4": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "rlmr-Was-the-upgrade-successful-4",
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Was-the-upgrade-successful-4": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "next": "grade-click-5"
+    },
+    "grade-click-5": {
+        "action": "Click",
+        "target": [
+            550,
+            400,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-choose-click-5"
+    },
+    "rlmr-choose-click-5": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "rlmr-Was-the-upgrade-successful-5",
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Was-the-upgrade-successful-5": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "next": "grade-click-6"
+    },
+    "grade-click-6": {
+        "action": "Click",
+        "target": [
+            650,
+            400,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": "rlmr-choose-click-6"
+    },
+    "rlmr-choose-click-6": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/xuanze.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Exhaustive-clicks"
+        ]
+    },
+    "rlmr-Pre-war-assessment": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/evaluation.png",
+        "pre_delay": 4000,
+        "action": "Click",
+        "next": [
+            "get-two-Positive-status",
+            "Negative-status",
+            "get-one-Positive-status"
+        ]
+    },
+    "Negative-status": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/Negative-status.png",
+        "pre_delay": 4000,
+        "action": "Click",
+        "next": [
+            "rlmr-prepare"
+        ]
+    },
+    "get-one-Positive-status": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/get-one-Positive-status.png",
+        "pre_delay": 4000,
+        "action": "Click",
+        "next": [
+            "rlmr-prepare"
+        ]
+    },
+    "get-two-Positive-status": {
+        "recognition": "OCR",
+        "expected": "选择两个正向战斗状态",
+        "action": "Click",
+        "target": [
+            377,
+            332,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": "Select-the-battle-status-Click-1"
+    },
+    "Select-the-battle-status-Click-1": {
+        "action": "Click",
+        "target": [
+            639,
+            342,
+            0,
+            0
+        ],
+        "post_delay": 1000,
+        "next": "Select-the-battle-status-Click-sure"
+    },
+    "Select-the-battle-status-Click-sure": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/Confirm.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "Select-the-battle-status-get"
+    },
+    "Select-the-battle-status-get": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/get-new-fight-status.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "rlmr-prepare"
+    },
+    "rlmr-prepare": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/prepare.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "check-mark"
+    },
+    "check-mark": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/check-mark.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "rlmr-down-grade"
+    },
+    "rlmr-continue": {
+        "recognition": "TemplateMatch",
+        "template": "research and lenrning mountains and rivers/continue.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "rlmr-returntodesktop-1"
+    },
+    "rlmr-returntodesktop-1": {
+        "next": [
+            "rlmr-returntodesktop"
+        ]
+    },
+    "rlmr-returntodesktop": {
+        "recognition": "TemplateMatch",
+        "template": "Collect/06.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "rlmr-desktop",
+            "rlmr-returntodesktop"
+        ]
+    },
+    "rlmr-desktop": {
+        "recognition": "OCR",
+        "expected": "等级",
+        "action": "DoNothing"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "set-out-Theme-select mountains and rivers": {
+        "recognition": "OCR",
+        "expected": [
+            "研学启程"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "choose-direction"
+        ]
+    },
+    "choose-direction": {
+        "next": [
+            "repeat mountain and river snow-scape first Level",
+            "snow-scape",
+            "river-mountain",
+            "creek-mountain"
+        ]
+    },
+    "snow-scape": {
+        "recognition": "OCR",
+        "expected": [
+            "开始研学"
+        ],
+        "roi": [
+            104,
+            522,
+            283,
+            55
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    },
+    "river-mountain": {
+        "recognition": "OCR",
+        "expected": [
+            "开始研学"
+        ],
+        "roi": [
+            499,
+            519,
+            285,
+            60
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    },
+    "creek-mountain": {
+        "recognition": "OCR",
+        "expected": [
+            "开始研学"
+        ],
+        "roi": [
+            882,
+            520,
+            285,
+            60
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": "choose-role"
+    }
+}
