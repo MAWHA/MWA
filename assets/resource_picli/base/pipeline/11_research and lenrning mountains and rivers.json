@@ -12,10 +12,10 @@
     },
     "choose-direction": {
         "next": [
+            "repeat mountain and river snow-scape first Level",
             "snow-scape",
             "river-mountain",
-            "creek-mountain",
-            "repeat mountain and river snow-scape first Level"
+            "creek-mountain"
         ]
     },
     "snow-scape": {

@@ -27,7 +27,7 @@
         ],
         "action": "Click",
         "post_delay": 2000,
-        "next": "choose-role"
+        "next": "choose-difficulty"
     },
     "nightmare": {
         "recognition": "OCR",
@@ -267,4 +267,6 @@
         ]
     },
     "repeat gold and silver first Level": {}
+        "next": []
+    }
 }

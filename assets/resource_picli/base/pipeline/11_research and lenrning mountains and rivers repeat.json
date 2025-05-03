@@ -355,8 +355,9 @@
         "pre_delay": 4000,
         "action": "Click",
         "next": [
-            "Select-the-battle-status",
-            "Negative-status"
+            "get-two-Positive-status",
+            "Negative-status",
+            "get-one-Positive-status"
         ]
     },
     "Negative-status": {
@@ -368,9 +369,18 @@
             "rlmr-prepare"
         ]
     },
-    "Select-the-battle-status": {
+    "get-one-Positive-status": {
         "recognition": "TemplateMatch",
-        "template": "research and lenrning mountains and rivers/Positive-Combat-status.png",
+        "template": "research and lenrning mountains and rivers/get-one-Positive-status.png",
+        "pre_delay": 4000,
+        "action": "Click",
+        "next": [
+            "rlmr-prepare"
+        ]
+    },
+    "get-two-Positive-status": {
+        "recognition": "OCR",
+        "expected": "选择两个正向战斗状态",
         "action": "Click",
         "target": [
             377,
