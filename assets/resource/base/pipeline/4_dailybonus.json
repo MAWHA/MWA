@@ -11,6 +11,12 @@
     "shangting": {
         "recognition": "OCR",
         "expected": "商亭",
+        "roi": [
+            854,
+            623,
+            142,
+            89
+        ],
         "action": "Click",
         "next": [
             "libao"

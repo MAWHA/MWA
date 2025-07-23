@@ -298,7 +298,7 @@
     },
     "action_5": {
         "recognition": "TemplateMatch",
-        "template": "Research2\\fight.png",
+        "template": "Research2/fight.png",
         "index": 2,
         "green_mask": true,
         "action": "Click",
