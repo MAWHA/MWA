@@ -417,7 +417,7 @@ FodyWeavers.xsd
 !.vscode/settings.json
 # !.vscode/tasks.json
 # !.vscode/launch.json
-# !.vscode/extensions.json
+!.vscode/extensions.json
 *.code-workspace
 
 # Local History for Visual Studio Code
@@ -447,3 +447,10 @@ install
 # Tools
 tools/ImageCropper/**/*.png
 install.zip
+
+config
+debug
+
+# MWA
+MWA
+.nicegui
