@@ -1,1 +1,56 @@
-{}
+{
+    "resource": "B 服",
+    "controller": {
+        "name": "安卓端"
+    },
+    "adb": {
+        "adb_path": "C:/Program Files/YXArkNights-12.0/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "C:/Program Files/YXArkNights-12.0"
+                }
+            }
+        }
+    },
+    "task": [
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "9ce4351f-f229-4f21-ab51-13f83334de49"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "f37c3ce9-6b2b-4d2a-a987-25cb93c7544c"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "91c1e823-b4c1-4356-823d-ceb58003dd0c"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "d881515a-502f-44b1-8ea1-b5451d4e42ad"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "ea1dc47f-4a10-4075-95ca-b032a2aaf7c1"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "2bb89ddd-7935-45e9-b22a-245d1c9c367b"
+        },
+        {
+            "name": "研究学习",
+            "option": [],
+            "__vscKey": "4ea62a52-f231-4e18-8fae-da34e04723ee"
+        }
+    ]
+}

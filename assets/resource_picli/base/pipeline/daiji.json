@@ -1,0 +1,15 @@
+{
+    "daiji": {
+        "action": "Click",
+        "target": [
+            1200,
+            630,
+            0,
+            0
+        ],
+        "post_delay": 500,
+        "next": [
+            "daiji"
+        ]
+    }
+}

@@ -15,6 +15,10 @@
     ],
     "task": [
         {
+            "name": "待机",
+            "entry": "daiji"
+        },
+        {
             "name": "启动",
             "entry": "Start"
         },
