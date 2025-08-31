@@ -50,6 +50,21 @@
             "senior-orders"
         ]
     },
+    "senior-orders-add": {
+        "recognition": "OCR",
+        "expected": "高级",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            50,
+            30,
+            0,
+            0
+        ],
+        "next": [
+            "orders-add"
+        ]
+    },
     "signed-contract": {
         "recognition": "OCR",
         "expected": "签订合同",
@@ -102,7 +117,7 @@
     },
     "weapons-fabricate-quit-Image": {
         "recognition": "TemplateMatch",
-        "template": "Company\\29.png",
+        "template": "Company/29.png",
         "action": "Click",
         "target": [
             1150,
@@ -120,6 +135,24 @@
         "next": [
             "confidential-orders",
             "weapons-fabricate-quit-Image"
+        ]
+    },
+    "weapons-fabricate-quit-Image-add": {
+        "recognition": "TemplateMatch",
+        "template": "Company/29.png",
+        "action": "Click",
+        "target": [
+            1150,
+            70,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "roi": [
+            1050,
+            0,
+            200,
+            190
         ]
     },
     "confidential-orders": {
@@ -140,6 +173,27 @@
             "confidential-orders"
         ]
     },
+    "confidential-orders-add": {
+        "recognition": "OCR",
+        "expected": "绝密",
+        "action": "Click",
+        "post_delay": 2000,
+        "target_offset": [
+            50,
+            30,
+            0,
+            0
+        ],
+        "next": [
+            "orders-add"
+        ]
+    },
+    "orders-add": {
+        "post_delay": 2000,
+        "next": [
+            "weapons-fabricate-quit-two-add"
+        ]
+    },
     "signed-contract-two": {
         "recognition": "OCR",
         "expected": "签订合同",
@@ -155,6 +209,18 @@
             "weapons-fabricate-lack-two",
             "weapons-fabricate-determine-three",
             "signed-contract-two"
+        ]
+    },
+    "signed-contract-two-add": {
+        "recognition": "OCR",
+        "expected": "签订合同",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            835,
+            500,
+            400,
+            210
         ]
     },
     "weapons-fabricate-determine-three": {
@@ -174,6 +240,18 @@
             "weapons-fabricate-full"
         ]
     },
+    "weapons-fabricate-determine-three-add": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            655,
+            400,
+            260,
+            150
+        ]
+    },
     "weapons-fabricate-quit-two": {
         "recognition": "OCR",
         "expected": "等待生产",
@@ -183,6 +261,82 @@
             70,
             0,
             0
+        ],
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-quit-two-add": {
+        "next": [
+            "weapons-fabricate-add-2"
+        ],
+        "interrupt": [
+            "weapons-fabricate-quit-Image-add",
+            "weapons-fabricate-determine-three-add",
+            "signed-contract-two-add",
+            "weapons-fabricate-quit-two-add"
+        ]
+    },
+    "weapons-fabricate-add-1": {
+        "recognition": "OCR",
+        "expected": [
+            "1/1",
+            "1/2",
+            "1/3",
+            "1/4"
+        ],
+        "roi": [
+            439,
+            584,
+            197,
+            40
+        ],
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-add-2": {
+        "recognition": "OCR",
+        "expected": [
+            "2/2",
+            "2/3",
+            "2/4"
+        ],
+        "roi": [
+            439,
+            584,
+            197,
+            40
+        ],
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-add-3": {
+        "recognition": "OCR",
+        "expected": [
+            "3/4"
+        ],
+        "roi": [
+            439,
+            584,
+            197,
+            40
+        ],
+        "next": [
+            "weapons-fabricate-home"
+        ]
+    },
+    "weapons-fabricate-add-4": {
+        "recognition": "OCR",
+        "expected": [
+            "4/4"
+        ],
+        "roi": [
+            439,
+            584,
+            197,
+            40
         ],
         "next": [
             "weapons-fabricate-home"
@@ -217,7 +371,7 @@
     },
     "weapons-fabricate-home": {
         "recognition": "TemplateMatch",
-        "template": "Startup\\10.png",
+        "template": "Startup/10.png",
         "action": "Click"
     }
 }

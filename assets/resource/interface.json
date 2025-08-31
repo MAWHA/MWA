@@ -38,7 +38,11 @@
         },
         {
             "name": "武器制造",
-            "entry": "weapons-fabricate"
+            "entry": "weapons-fabricate",
+            "option": [
+                "订单等级",
+                "制造数量"
+            ]
         },
         {
             "name": "和合",
@@ -878,6 +882,100 @@
                     "pipeline_override": {
                         "activity-Travelling": {
                             "next": "activity-person"
+                        }
+                    }
+                }
+            ]
+        },
+        "订单等级": {
+            "cases": [
+                {
+                    "name": "高级",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "senior-orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "绝密",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "confidential-orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "制造数量": {
+            "cases": [
+                {
+                    "name": "1",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        },
+                        "weapons-fabricate-quit-two-add": {
+                            "next": [
+                                "weapons-fabricate-add-1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "2",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        },
+                        "weapons-fabricate-quit-two-add": {
+                            "next": [
+                                "weapons-fabricate-add-2"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "3",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        },
+                        "weapons-fabricate-quit-two-add": {
+                            "next": [
+                                "weapons-fabricate-add-3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "4",
+                    "pipeline_override": {
+                        "weapons-fabricate-job": {
+                            "next": [
+                                "orders-add",
+                                "weapons-fabricate-job"
+                            ]
+                        },
+                        "weapons-fabricate-quit-two-add": {
+                            "next": [
+                                "weapons-fabricate-add-4"
+                            ]
                         }
                     }
                 }
