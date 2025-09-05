@@ -25,109 +25,7 @@
         "recognition": "TemplateMatch",
         "template": "Research2/choose_role.png",
         "action": "Click",
-        "next": [
-            "rlgr-change-tag-Assassin"
-        ]
-    },
-    "rlgr-change-tag-Assassin": {
-        "recognition": "TemplateMatch",
-        "template": "Research2/filter.png",
-        "roi": [
-            1197,
-            10,
-            61,
-            42
-        ],
-        "action": "Click",
-        "next": [
-            "rlgr-choose-tag-Assassin"
-        ]
-    },
-    "rlgr-choose-tag-Assassin": {
-        "recognition": "OCR",
-        "expected": "轻锐",
-        "roi": [
-            469,
-            207,
-            501,
-            60
-        ],
-        "action": "Click",
-        "next": [
-            "rlgr-ensure-tag"
-        ]
-    },
-    "rlgr-ensure-tag": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
-        "next": [
-            "rlgr-find-shangyang"
-        ],
-        "interrupt": [
-            "rlgr-swipe-page"
-        ]
-    },
-    "rlgr-swipe-page": {
-        "action": "Swipe",
-        "begin": [
-            780,
-            362,
-            0,
-            0
-        ],
-        "end": [
-            475,
-            362,
-            0,
-            0
-        ],
-        "duration": 1000,
-        "post_delay": 500
-    },
-    "rlgr-find-shangyang": {
-        "recognition": "OCR",
-        "expected": "商鞅方升",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "rlgr-change-tag"
-        ]
-    },
-    "rlgr-change-tag": {
-        "recognition": "TemplateMatch",
-        "template": "Research2/filter.png",
-        "roi": [
-            1197,
-            10,
-            61,
-            42
-        ],
-        "post_delay": 1000,
-        "action": "Click",
-        "next": [
-            "rlgr-choose-tag-2"
-        ]
-    },
-    "rlgr-choose-tag-2": {
-        "recognition": "OCR",
-        "expected": "全部",
-        "roi": [
-            469,
-            207,
-            501,
-            60
-        ],
-        "post_delay": 1000,
-        "action": "Click",
-        "next": [
-            "rlgr-ensure-tag-1"
-        ]
-    },
-    "rlgr-ensure-tag-1": {
-        "recognition": "OCR",
-        "expected": "确定",
-        "action": "Click",
+        "post_delay": 2000,
         "next": [
             "rlgr-choose-role-1"
         ]
@@ -136,7 +34,7 @@
         "action": "Click",
         "target": [
             554,
-            511,
+            191,
             1,
             1
         ],
@@ -146,8 +44,8 @@
     "rlgr-choose-role-2": {
         "action": "Click",
         "target": [
-            693,
-            191,
+            554,
+            511,
             1,
             1
         ],
@@ -155,6 +53,17 @@
         "next": "rlgr-choose-role-3"
     },
     "rlgr-choose-role-3": {
+        "action": "Click",
+        "target": [
+            693,
+            191,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": "rlgr-choose-role-4"
+    },
+    "rlgr-choose-role-4": {
         "action": "Click",
         "target": [
             699,
@@ -230,7 +139,7 @@
             351,
             55
         ],
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "action": "Click",
         "next": [
             "rlgr-rest-sure"
@@ -239,7 +148,7 @@
     "rlgr-rest-sure": {
         "recognition": "OCR",
         "expected": "确认",
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "action": "Click",
         "next": [
             "rlgr-recognition"
@@ -255,7 +164,7 @@
             80
         ],
         "action": "Click",
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "next": [
             "rlgr-fight-begin",
             "rlgr-recognition"
@@ -313,13 +222,7 @@
     },
     "rlgr-fight-begin-2": {
         "recognition": "TemplateMatch",
-        "template": "Research2\\begin_fight.png",
-        "roi": [
-            1012,
-            621,
-            268,
-            99
-        ],
+        "template": "Research2//begin_fight.png",
         "action": "Click",
         "next": [
             "rlgr-sure-fightwait",
